@@ -1,0 +1,457 @@
+# Sources for the daily brief. Add, remove or re-weight here; no code change needed.
+#
+# Fields
+#   id        unique short name
+#   name      shown next to the story
+#   topic     home topic (must exist in config/topics.yaml)
+#   also      other topics an item may be tagged to if its keywords fit better
+#   subtopic  default sub-topic when keywords do not decide
+#   type      rss | guardian | hackernews
+#   url       feed URL (rss), or RSS fallback URL (guardian)
+#   section   Guardian API section (guardian only)
+#   weight    0–1, how much the source counts in ranking
+#   access    full = feed text may be summarised; headline_only = title and link only
+#   feed_order  editorial = the feed is ordered by importance, so position counts
+#   require_keywords  item is kept only if its title contains one of these
+#   enabled   false = skipped; `reason` says why
+#
+# Last verified: 2026-11-11 (session 1).
+
+sources:
+  # ---------------------------------------------------------------- Insurance
+  - id: insurance_journal
+    name: Insurance Journal
+    topic: insurance
+    subtopic: corporate
+    type: rss
+    url: https://www.insurancejournal.com/rss/news/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: insurance_journal_intl
+    name: Insurance Journal (International)
+    topic: insurance
+    subtopic: corporate
+    type: rss
+    url: https://www.insurancejournal.com/rss/news/international/
+    weight: 0.75
+    access: full
+    enabled: true
+
+  - id: artemis
+    name: Artemis
+    topic: insurance
+    subtopic: specialty
+    type: rss
+    url: https://www.artemis.bm/feed/
+    weight: 0.8
+    access: full
+    enabled: true
+
+  - id: reinsurance_news
+    name: Reinsurance News
+    topic: insurance
+    subtopic: specialty
+    type: rss
+    url: https://www.reinsurancene.ws/feed/
+    weight: 0.8
+    access: full
+    enabled: true
+
+  - id: carrier_management
+    name: Carrier Management
+    topic: insurance
+    subtopic: corporate
+    type: rss
+    url: https://www.carriermanagement.com/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: insurance_business_uk
+    name: Insurance Business UK
+    topic: insurance
+    subtopic: corporate
+    type: rss
+    url: https://www.insurancebusinessmag.com/uk/rss/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: commercial_risk
+    name: Commercial Risk
+    topic: insurance
+    subtopic: corporate
+    type: rss
+    url: https://www.commercialriskonline.com/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: lloyds_press
+    name: Lloyd's press releases
+    topic: insurance
+    subtopic: specialty
+    type: rss
+    url: https://www.lloyds.com/about-lloyds/media-centre/press-releases
+    weight: 0.9
+    access: full
+    enabled: false
+    reason: No RSS or API; the press page is HTML only (checked 2026-11-11).
+
+  - id: the_insurer
+    name: The Insurer
+    topic: insurance
+    subtopic: specialty
+    type: rss
+    url: https://www.theinsurer.com/rss/
+    weight: 0.8
+    access: headline_only
+    enabled: false
+    reason: Every path returns 401; no public feed (checked 2026-11-11).
+
+  - id: insurance_insider
+    name: Insurance Insider
+    topic: insurance
+    subtopic: specialty
+    type: rss
+    url: https://www.insuranceinsider.com/rss
+    weight: 0.8
+    access: headline_only
+    enabled: false
+    reason: Feed paths return 404; no public feed (checked 2026-11-11).
+
+  # ----------------------------------------------------------- AI and markets
+  - id: verge_ai
+    name: The Verge AI
+    topic: ai_markets
+    type: rss
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: techcrunch_ai
+    name: TechCrunch AI
+    topic: ai_markets
+    type: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: import_ai
+    name: Import AI
+    topic: ai_markets
+    type: rss
+    url: https://importai.substack.com/feed
+    weight: 0.8
+    access: full
+    enabled: true   # weekly (Mondays), so it only appears within 36h of an issue
+
+  - id: hacker_news
+    name: Hacker News
+    topic: ai_markets
+    type: hackernews
+    url: https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=50
+    weight: 0.5
+    access: headline_only   # the API gives a title and link, no article text
+    require_keywords: [AI, LLM, LLMs, GPT, OpenAI, Anthropic, Claude, Gemini, DeepMind, Nvidia, GPU, GPUs, chip, chips, semiconductor, TSMC, datacenter, "data center", "data centre", model, models, agent, agents, inference, "machine learning", "neural"]
+    enabled: true
+
+  - id: ars_ai
+    name: Ars Technica AI
+    topic: ai_markets
+    type: rss
+    url: https://arstechnica.com/ai/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: mit_tech_review
+    name: MIT Technology Review
+    topic: ai_markets
+    type: rss
+    url: https://www.technologyreview.com/feed/
+    weight: 0.75
+    access: full
+    enabled: true
+
+  - id: cnbc_tech
+    name: CNBC technology
+    topic: ai_markets
+    type: rss
+    url: https://www.cnbc.com/id/19854910/device/rss/rss.html
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: reuters_technology
+    name: Reuters technology
+    topic: ai_markets
+    type: rss
+    url: https://www.reuters.com/technology/rss
+    weight: 0.9
+    access: full
+    enabled: false
+    reason: Reuters has no public RSS; returns 401 (checked 2026-11-11).
+
+  # -------------------------------------------------------- Macro and markets
+  - id: guardian_business
+    name: Guardian business
+    topic: macro_markets
+    also: [ai_markets, insurance]
+    type: guardian
+    section: business
+    url: https://www.theguardian.com/business/rss   # used when GUARDIAN_API_KEY is not set
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: boe_news
+    name: Bank of England
+    topic: macro_markets
+    subtopic: central_banks
+    type: rss
+    url: https://www.bankofengland.co.uk/rss/news
+    weight: 1.0
+    access: full
+    enabled: true
+
+  - id: ecb_press
+    name: ECB press releases
+    topic: macro_markets
+    subtopic: central_banks
+    type: rss
+    url: https://www.ecb.europa.eu/rss/press.html
+    weight: 1.0
+    access: full
+    enabled: true
+
+  - id: fed_press
+    name: Federal Reserve press releases
+    topic: macro_markets
+    subtopic: central_banks
+    type: rss
+    url: https://www.federalreserve.gov/feeds/press_all.xml
+    weight: 1.0
+    access: full
+    enabled: true
+
+  - id: ft_alphaville
+    name: FT Alphaville
+    topic: macro_markets
+    also: [ai_markets]
+    type: rss
+    url: https://www.ft.com/alphaville?format=rss
+    weight: 0.7
+    access: headline_only
+    enabled: true
+
+  - id: cnbc_markets
+    name: CNBC markets
+    topic: macro_markets
+    also: [ai_markets]
+    type: rss
+    url: https://www.cnbc.com/id/15839069/device/rss/rss.html
+    weight: 0.75
+    access: full
+    enabled: true
+
+  - id: cnbc_economy
+    name: CNBC economy
+    topic: macro_markets
+    type: rss
+    url: https://www.cnbc.com/id/20910258/device/rss/rss.html
+    weight: 0.75
+    access: full
+    enabled: true
+
+  - id: city_am
+    name: City AM
+    topic: macro_markets
+    also: [insurance, ai_markets]
+    type: rss
+    url: https://www.cityam.com/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: wsj_markets
+    name: WSJ markets
+    topic: macro_markets
+    also: [ai_markets]
+    type: rss
+    url: https://feeds.content.dowjones.io/public/rss/RSSMarketsMain
+    weight: 0.8
+    access: headline_only
+    enabled: true   # paywalled
+
+  - id: economist_finance
+    name: The Economist (finance and economics)
+    topic: macro_markets
+    type: rss
+    url: https://www.economist.com/finance-and-economics/rss.xml
+    weight: 0.8
+    access: headline_only
+    enabled: true   # paywalled
+
+  - id: boe_speeches
+    name: Bank of England speeches
+    topic: macro_markets
+    subtopic: central_banks
+    type: rss
+    url: https://www.bankofengland.co.uk/rss/speeches
+    weight: 0.9
+    access: full
+    enabled: true
+
+  - id: ons_releases
+    name: ONS release calendar
+    topic: macro_markets
+    subtopic: economy
+    type: rss
+    url: https://www.ons.gov.uk/releasecalendar?rss
+    weight: 0.9
+    access: full
+    enabled: true
+
+  - id: reuters_markets
+    name: Reuters markets
+    topic: macro_markets
+    type: rss
+    url: https://www.reuters.com/markets/rss
+    weight: 0.9
+    access: full
+    enabled: false
+    reason: Reuters has no public RSS; returns 401 (checked 2026-11-11).
+
+  # -------------------------------------------------------------- Geopolitics
+  - id: guardian_world
+    name: Guardian world
+    topic: geopolitics
+    also: [top_headlines]
+    type: guardian
+    section: world
+    url: https://www.theguardian.com/world/rss
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: bbc_world
+    name: BBC World
+    topic: geopolitics
+    also: [top_headlines]
+    type: rss
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+    weight: 0.8
+    access: full
+    feed_order: editorial
+    enabled: true
+
+  - id: foreign_policy
+    name: Foreign Policy
+    topic: geopolitics
+    type: rss
+    url: https://foreignpolicy.com/feed/
+    weight: 0.7
+    access: headline_only
+    enabled: true
+
+  - id: al_jazeera
+    name: Al Jazeera
+    topic: geopolitics
+    type: rss
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: france24
+    name: France 24
+    topic: geopolitics
+    type: rss
+    url: https://www.france24.com/en/rss
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: dw
+    name: DW
+    topic: geopolitics
+    type: rss
+    url: https://rss.dw.com/rdf/rss-en-top
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: politico_eu
+    name: Politico Europe
+    topic: geopolitics
+    type: rss
+    url: https://www.politico.eu/feed/
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: wsj_world
+    name: WSJ world
+    topic: geopolitics
+    type: rss
+    url: https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+    weight: 0.8
+    access: headline_only
+    enabled: true   # paywalled
+
+  - id: economist_international
+    name: The Economist (international)
+    topic: geopolitics
+    type: rss
+    url: https://www.economist.com/international/rss.xml
+    weight: 0.8
+    access: headline_only
+    enabled: true   # paywalled
+
+  - id: reuters_world
+    name: Reuters world
+    topic: geopolitics
+    type: rss
+    url: https://www.reuters.com/world/rss
+    weight: 0.9
+    access: full
+    enabled: false
+    reason: Reuters has no public RSS; returns 401 (checked 2026-11-11).
+
+  # ------------------------------------------------------------ Top headlines
+  - id: bbc_top
+    name: BBC top stories
+    topic: top_headlines
+    also: [geopolitics, macro_markets, ai_markets]
+    type: rss
+    url: https://feeds.bbci.co.uk/news/rss.xml
+    weight: 0.9
+    access: full
+    feed_order: editorial
+    enabled: true
+
+  - id: guardian_uk
+    name: Guardian UK
+    topic: top_headlines
+    also: [geopolitics, macro_markets]
+    type: guardian
+    section: uk-news
+    url: https://www.theguardian.com/uk-news/rss
+    weight: 0.7
+    access: full
+    enabled: true
+
+  - id: reuters_top
+    name: Reuters top news
+    topic: top_headlines
+    type: rss
+    url: https://www.reuters.com/world/rss
+    weight: 0.9
+    access: full
+    enabled: false
+    reason: Reuters has no public RSS; returns 401 (checked 2026-11-11).

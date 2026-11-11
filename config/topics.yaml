@@ -1,0 +1,152 @@
+# Topics, daily slots, keywords and the macro watchlist.
+# Edit here to change what gets picked; no code change needed.
+
+settings:
+  max_age_hours: 36          # drop anything older
+  title_similarity: 0.85     # near-identical titles count as duplicates
+  slot_similarity: 0.55      # two picks in one topic may not be this similar
+  score_weights:             # must add up to 1
+    source: 0.35
+    recency: 0.25
+    keyword: 0.40
+  keyword_saturation: 10     # weighted keyword hits that earn full keyword marks
+  priority_boost: 0.10       # added when a topic's priority keyword appears
+  runners_up: 5              # extra ranked items listed per topic for review
+  same_source_penalty: 0.05  # nudges a topic's picks towards different outlets
+  same_subtopic_penalty: 0.15  # nudges a topic's picks towards different sub-topics
+  demote_penalty: 0.15       # taken off when a topic's demote keyword is in the title
+  exclude_title_keywords: ["as it happened", "live updates", "– live", "live blog", "in pictures", "quiz"]   # never stories
+
+# Keyword hits: a match in the title counts 2, a match in the text counts 1.
+# An item needs at least `min_keyword_hits` to be tagged to the topic.
+
+topics:
+  insurance:
+    label: Insurance
+    slots: 2
+    min_keyword_hits: 2
+    thin_fallback: specialty     # if one sub-topic has nothing, give its slot to this one
+    demote_title_keywords: [names, named, appoints, appointed, appointment, hires, hired, joins, promotes, promoted, taps, "steps down", "to lead", "as CEO", "as head"]   # people moves rank lower
+    priority_keywords: [London, "Lloyd's", Lloyds, UK, British, "London Market", PRA, FCA]
+    subtopics:
+      corporate:
+        slots: 1
+        keywords: [insurer, insurers, carrier, carriers, "commercial lines", "P&C", "property and casualty", "property/casualty", "combined ratio", "net income", profit, results, earnings, premium, premiums, pricing, "rate increases", rates, acquisition, acquire, acquires, merger, "M&A", "AM Best", "S&P", "Moody's", Fitch, rating, ratings, upgrade, downgrade, underwriting, claims, reserves, Aviva, AXA, Allianz, Zurich, Chubb, AIG, Travelers, Hiscox, Beazley, "Direct Line", Admiral, RSA, Generali, "Berkshire Hathaway", broker, Aon, Marsh, WTW, Gallagher, Howden]
+      specialty:
+        slots: 1
+        keywords: ["Lloyd's", Lloyds, "London Market", syndicate, syndicates, reinsurance, reinsurer, reinsurers, retrocession, retro, renewal, renewals, "1/1", ILS, "insurance-linked", "cat bond", "cat bonds", "catastrophe bond", "catastrophe bonds", sidecar, "collateralized", MGA, MGAs, "managing general agent", "delegated authority", coverholder, "Swiss Re", "Munich Re", "Hannover Re", SCOR, "Everest", RenaissanceRe, "Arch Capital", Lancashire, Brit, "specialty", "marine", "cyber", "catastrophe", hurricane, "nat cat"]
+
+  ai_markets:
+    label: AI and markets
+    slots: 2
+    min_keyword_hits: 2
+    subtopics:
+      market_development:
+        keywords: [AI, "artificial intelligence", LLM, LLMs, "language model", OpenAI, Anthropic, Claude, ChatGPT, Gemini, DeepMind, "Meta AI", xAI, Mistral, DeepSeek, Nvidia, AMD, TSMC, ASML, chip, chips, semiconductor, semiconductors, GPU, GPUs, compute, "data center", "data centre", datacenter, datacentre, training, inference, agent, agents, "AI Act", "AI regulation", "AI safety", "export controls"]
+      market_implications:
+        keywords: [capex, "capital expenditure", valuation, valuations, bubble, "AI stocks", "AI boom", "AI trade", "Magnificent Seven", hyperscaler, hyperscalers, "power demand", electricity, "market concentration", "market cap", IPO, funding, "funding round", revenue, earnings, investors, "debt financing", Microsoft, Alphabet, Amazon, Meta, Oracle, CoreWeave, SoftBank]
+
+  macro_markets:
+    label: Macro and markets
+    slots: 2                     # the daily "market idea" is written in session 2 (LLM step)
+    min_keyword_hits: 2
+    exclude_title_keywords: ["banking applications", "enforcement action", "approval of application", "approval of two applications", "exchange of letters", "prohibition", "termination of enforcement"]
+    subtopics:
+      central_banks:
+        keywords: ["Bank of England", BoE, MPC, "Monetary Policy Committee", ECB, "European Central Bank", "Federal Reserve", Fed, FOMC, "Bank of Japan", BoJ, "interest rate", "interest rates", "rate cut", "rate cuts", "rate hike", "rate rise", "monetary policy", "quantitative tightening", QT, "Bank Rate", Bailey, Lagarde, Powell]
+      rates:
+        keywords: [gilt, gilts, Treasuries, "Treasury yield", "Treasury yields", "Treasury market", Bund, Bunds, OAT, BTP, yield, yields, "yield curve", "bond market", "bond markets", bonds, "sovereign spread", spread, spreads, "government borrowing", "borrowing costs", "debt issuance", "fiscal", budget, deficit]
+      fx:
+        keywords: [sterling, pound, dollar, euro, yen, yuan, renminbi, currency, currencies, "exchange rate", FX, "foreign exchange"]
+      credit:
+        keywords: [credit, "corporate bonds", "high yield", "investment grade", "private credit", default, defaults, "credit spreads", leveraged]
+      commodities:
+        keywords: [oil, Brent, crude, WTI, OPEC, gas, "natural gas", LNG, gold, copper, commodities, commodity]
+      equities:
+        keywords: ["stock market", "stock markets", stocks, shares, equities, "FTSE 100", FTSE, "S&P 500", Nasdaq, "Dow Jones", "Wall Street", rally, "sell-off", selloff]
+      economy:
+        keywords: [inflation, CPI, GDP, recession, growth, unemployment, wages, "jobs report", payrolls, "consumer prices", tariffs, economy, economic, ONS]
+
+  geopolitics:
+    label: Geopolitics
+    slots: 2                     # brief says 1–2: the second is filled only if it clears the bar below
+    min_slots: 1
+    second_slot_min_score: 0.55
+    min_keyword_hits: 3
+    subtopics:
+      us_china:
+        keywords: [China, Chinese, Beijing, Xi, Taiwan, tariff, tariffs, "trade war", "export controls", "chip ban", "rare earths", "trade deal"]
+      russia_ukraine_europe:
+        keywords: [Russia, Russian, Putin, Ukraine, Ukrainian, Kyiv, Zelenskyy, Zelensky, NATO, "European security", "defence spending", "defense spending", sanctions, Kremlin, ceasefire]
+      middle_east_energy:
+        keywords: [Israel, Israeli, Gaza, Iran, Iranian, "Saudi Arabia", Saudi, Hezbollah, Houthi, Houthis, "Red Sea", "Strait of Hormuz", Lebanon, Syria, Qatar, OPEC, "oil prices", "energy security"]
+      elections:
+        keywords: [election, elections, vote, ballot, "polling day", referendum, coalition, midterms, "prime minister", president, parliament]
+      france:
+        keywords: [Macron, "National Assembly", "Le Pen", "National Rally", "no-confidence", "French government", "French prime minister", "French president", "French politics", "French budget", "French election", "French parliament", "Élysée", Matignon]   # French politics, not France in general
+
+  top_headlines:
+    label: Top headlines
+    slots: 2
+    min_keyword_hits: 0          # no keywords: ranked on source, recency and feed position
+    same_source_penalty: 0       # the biggest stories win, whichever outlet carries them
+    subtopics: {}
+
+# ---------------------------------------------------------------------------
+# Watchlist (macro panel). Built in a later session; endpoints checked 2026-11-11.
+# A marker with no verified free source stays disabled and is never estimated.
+watchlist:
+  - id: uk_10y
+    label: UK 10-year gilt
+    source: Bank of England IADB, series IUDMNZC (10-year nominal zero-coupon yield)
+    url: https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&SeriesCodes=IUDMNZC&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N
+    lag: about 2 working days
+    enabled: true
+  - id: us_10y
+    label: US 10-year Treasury
+    source: US Treasury daily par yield curve CSV
+    url: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve&field_tdr_date_value={year}&page&_format=csv
+    lag: previous close
+    enabled: true
+  - id: de_10y
+    label: German 10-year Bund
+    source: Bundesbank, series BBSIS.D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A
+    url: https://api.statistiken.bundesbank.de/rest/data/BBSIS/D.I.ZAR.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A?format=csv&lastNObservations=3
+    lag: same day
+    enabled: true
+  - id: eurusd
+    label: EUR/USD
+    source: ECB euro reference rates
+    url: https://data-api.ecb.europa.eu/service/data/EXR/D.USD+GBP.EUR.SP00.A?lastNObservations=2&format=csvdata
+    lag: same day (about 15:00 UK)
+    enabled: true
+  - id: gbpusd
+    label: GBP/USD
+    source: ECB euro reference rates (USD per EUR divided by GBP per EUR)
+    url: https://data-api.ecb.europa.eu/service/data/EXR/D.USD+GBP.EUR.SP00.A?lastNObservations=2&format=csvdata
+    lag: same day (about 15:00 UK)
+    enabled: true
+  - id: oat_bund
+    label: OAT–Bund spread
+    enabled: false
+    reason: No free daily French 10-year yield found yet (ECB series is monthly; Stooq blocks automated requests).
+  - id: btp_bund
+    label: BTP–Bund spread
+    enabled: false
+    reason: No free daily Italian 10-year yield found yet (ECB series is monthly; Stooq blocks automated requests).
+  - id: brent
+    label: Brent crude
+    enabled: false
+    reason: Not verified. FRED (DCOILBRENTEU) timed out from this machine; Stooq blocks automated requests.
+  - id: gold
+    label: Gold
+    enabled: false
+    reason: Not verified. Stooq blocks automated requests; no other free daily source confirmed.
+  - id: sp500
+    label: S&P 500
+    enabled: false
+    reason: Not verified. FRED (SP500) timed out from this machine; retry from GitHub Actions.
+  - id: ftse100
+    label: FTSE 100
+    enabled: false
+    reason: Not verified. Stooq blocks automated requests; no other free daily source confirmed.

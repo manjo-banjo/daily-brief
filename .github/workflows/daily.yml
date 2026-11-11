@@ -43,8 +43,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl -sS -i -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
-            https://models.github.ai/catalog/models | head -c 6000 || true
+          H=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -H "Content-Type: application/json")
+          BODY='{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Reply with the word ready."}],"max_tokens":5}'
+          echo "== 1 catalog"; curl -sS -i "${H[@]}" https://models.github.ai/catalog/models | head -c 3000 || true
+          echo; echo "== 2 inference"; curl -sS -i "${H[@]}" -d "$BODY" https://models.github.ai/inference/chat/completions | head -c 3000 || true
+          echo; echo "== 3 inference, no api-version"; curl -sS -i -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$BODY" https://models.github.ai/inference/chat/completions | head -c 2000 || true
+          echo; echo "== 4 legacy azure endpoint"; curl -sS -i -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d '{"model":"gpt-4o-mini","messages":[{"role":"user","content":"Reply with the word ready."}],"max_tokens":5}' https://models.inference.ai.azure.com/chat/completions | head -c 2000 || true
+          echo; echo "== 5 dns"; getent hosts models.github.ai || true
 
       - name: Build the brief
         env:

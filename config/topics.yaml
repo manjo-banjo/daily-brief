@@ -15,7 +15,7 @@ settings:
   same_source_penalty: 0.05  # nudges a topic's picks towards different outlets
   same_subtopic_penalty: 0.15  # nudges a topic's picks towards different sub-topics
   demote_penalty: 0.15       # taken off when a topic's demote keyword is in the title
-  exclude_title_keywords: ["as it happened", "live updates", "– live", "live blog", "in pictures", "quiz"]   # never stories
+  exclude_title_keywords: ["as it happened", "live updates", "– live", "- live", "live blog", "in pictures", "quiz"]   # never stories
 
 # Keyword hits: a match in the title counts 2, a match in the text counts 1.
 # An item needs at least `min_keyword_hits` to be tagged to the topic.

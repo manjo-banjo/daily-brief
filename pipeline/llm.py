@@ -60,12 +60,13 @@ def _github_models(model: str, system: str, user: str, max_tokens: int) -> str:
         raise _RateLimited(response.headers.get("retry-after", ""))
     if response.status_code in (401, 403):
         raise LLMFatal(f"HTTP {response.status_code}: {response.text[:300]}")
-    if response.status_code >= 400:
-        raise LLMError(f"HTTP {response.status_code}: {response.text[:300]}")
+    if response.status_code != 200:
+        where = response.headers.get("location", "")
+        raise LLMError(f"HTTP {response.status_code}{' -> ' + where if where else ''}: {response.text[:300]}")
     try:
         return response.json()["choices"][0]["message"]["content"] or ""
     except (ValueError, KeyError, IndexError, TypeError) as exc:
-        raise LLMError(f"unexpected response shape: {exc}")
+        raise LLMError(f"unexpected response shape ({exc}): {response.text[:300]!r}")
 
 
 class _RateLimited(Exception):

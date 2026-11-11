@@ -43,9 +43,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl -sS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
-            https://models.github.ai/catalog/models \
-            | python -c "import json,sys; [print(m.get('id'), '|', m.get('rate_limit_tier'), '|', (m.get('limits') or {}).get('max_input_tokens'), (m.get('limits') or {}).get('max_output_tokens')) for m in json.load(sys.stdin)]" || true
+          curl -sS -i -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://models.github.ai/catalog/models | head -c 6000 || true
 
       - name: Build the brief
         env:

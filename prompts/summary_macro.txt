@@ -1,0 +1,14 @@
+Extra fields for this section:
+
+- For every story also write "access_note": one factual sentence naming the instrument types through which a UK retail investor can get exposure to the market in the story (for example gilts held directly, bond or commodity ETFs, FX, futures, options, spread bets and CFDs). Instrument types only: no product names, no tickers, no advice.
+
+- Also write one "market_idea": a single trade setup that follows from one of today's stories, explained so the reader learns how such a trade works. It is an explanation, not a recommendation: never tell the reader to buy, sell or hold anything, and never predict a price.
+  - "based_on": the id of the story it follows from.
+  - "title": at most 10 words naming the setup.
+  - "what_the_trade_is": 1–2 sentences on the view being expressed and the story behind it.
+  - "how_it_is_expressed": 1–2 sentences on the structure (for example a curve steepener, a relative-value spread, a carry trade, an outright position, a hedge).
+  - "retail_access": 1–2 sentences on the instrument types a UK retail investor could use, with one point on leverage, margin or tax where relevant.
+  - "what_makes_it_work": one sentence on what has to happen for it to pay off.
+  - "what_breaks_it": one sentence on the main risk.
+  - "concept": the id of the concept from the list that the idea best illustrates.
+

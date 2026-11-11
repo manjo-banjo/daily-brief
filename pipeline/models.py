@@ -45,6 +45,10 @@ class Topic(BaseModel):
     priority_source_boost: float = 0.0
     significance_keywords: List[str] = Field(default_factory=list)  # top headlines: words that signal a major story
     coverage_saturation: int = 3  # top headlines: other outlets carrying the story for full marks
+    lens: str = ""  # what the summary step should look for in this topic
+    concepts: Dict[str, str] = Field(default_factory=dict)  # primer concept id -> label
+    access_note: bool = False  # macro: add a "how this can be accessed" note to each story
+    market_idea: bool = False  # macro: the LLM writes one market idea from the day's stories
     subtopics: Dict[str, Subtopic] = Field(default_factory=dict)
 
 
@@ -97,3 +101,80 @@ class SourceReport(BaseModel):
     items: int = 0
     via: str = ""
     error: Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# The published brief: data/daily/YYYY-MM-DD.json (schema checked before every write).
+
+class Concept(BaseModel):
+    id: str
+    label: str
+
+
+class BriefStory(BaseModel):
+    id: str
+    topic: str
+    subtopic: Optional[str] = None
+    title: str = Field(min_length=1)
+    url: str = Field(pattern=r"^https?://")
+    source: str
+    published: Optional[datetime] = None
+    headline_only: bool = True  # true until a valid summary is attached
+    summary: Optional[str] = None
+    why_it_matters: Optional[str] = None
+    access_note: Optional[str] = None  # macro only
+    concept: Optional[Concept] = None
+
+
+class MarketIdea(BaseModel):
+    id: str = "idea"
+    topic: str
+    title: str = Field(min_length=1)
+    based_on: str  # story id
+    url: str
+    source: str
+    what_the_trade_is: str = Field(min_length=1)
+    how_it_is_expressed: str = Field(min_length=1)
+    retail_access: str = Field(min_length=1)
+    what_makes_it_work: str = Field(min_length=1)
+    what_breaks_it: str = Field(min_length=1)
+    concept: Optional[Concept] = None
+    disclaimer: str = "An explanation of a trade in the news, not a recommendation."
+
+
+class Question(BaseModel):
+    id: str
+    story_id: str
+    topic: str
+    question: str = Field(min_length=1)
+    options: List[str] = Field(min_length=4, max_length=4)
+    answer: int = Field(ge=0, le=3)  # index of the correct option
+    explanation: str = Field(min_length=1)
+    evidence: str = Field(min_length=1)  # the words in the summary that state the answer
+    tests: str = "fact"  # why | fact
+    concept: Optional[Concept] = None
+
+
+class TopicInfo(BaseModel):
+    id: str
+    label: str
+
+
+class LLMInfo(BaseModel):
+    provider: str
+    model: str
+    calls: int = 0
+
+
+class DailyBrief(BaseModel):
+    date: str
+    generated_at: str
+    edition: str = "daily"
+    status: str  # full | partial | headlines_only
+    read_minutes: int = 0
+    topics: List[TopicInfo]
+    stories: List[BriefStory]
+    market_idea: Optional[MarketIdea] = None
+    quiz: List[Question] = Field(default_factory=list)
+    llm: LLMInfo
+    issues: List[str] = Field(default_factory=list)  # what degraded and why

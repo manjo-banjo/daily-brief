@@ -24,6 +24,15 @@ topics:
   insurance:
     label: Insurance
     slots: 2
+    lens: "Commercial P&C carriers (results, M&A, ratings, pricing) and specialty (Lloyd's and the London Market, reinsurance, ILS and cat bonds, MGAs). London first, then US and global."
+    concepts:                    # primer concept tags; the ids become the Foundations cards in session 4
+      insurer_economics: How insurers make money (combined ratio, investment income)
+      underwriting_cycle: The underwriting cycle
+      reinsurance_renewals: Reinsurance and the 1/1 renewals
+      lloyds: How Lloyd's works
+      mgas: MGAs and delegated authority
+      cat_bonds_ils: Cat bonds and ILS
+      capital_rules: Capital rules
     min_keyword_hits: 2
     thin_fallback: specialty     # if one sub-topic has nothing, give its slot to this one
     demote_title_keywords: [names, named, appoints, appointed, appointment, hires, hired, joins, promotes, promoted, taps, "steps down", "to lead", "as CEO", "as head"]   # people moves rank lower
@@ -39,6 +48,16 @@ topics:
   ai_markets:
     label: AI and markets
     slots: 2
+    lens: "AI market development (models, chips, compute, labs' business models, regulation) and what it means for financial markets (capex cycle, valuations, power demand, market concentration)."
+    concepts:
+      what_is_an_llm: What an LLM is
+      training_vs_inference: Training versus inference
+      chip_supply_chain: The chip and compute supply chain
+      hyperscaler_capex: Hyperscaler capex
+      ai_lab_economics: How AI labs make money
+      agents: Agents
+      eu_ai_act: The EU AI Act
+      ai_and_markets: How AI moves markets
     min_keyword_hits: 2
     subtopics:
       market_development:
@@ -48,7 +67,23 @@ topics:
 
   macro_markets:
     label: Macro and markets
-    slots: 2                     # the daily "market idea" is written in session 2 (LLM step)
+    slots: 2                     # story slots; the third macro slot is the LLM-written market idea
+    lens: "Whatever is moving across rates, sovereign spreads, FX, credit, commodities and equity indices, plus central banks, read as a UK retail investor would."
+    access_note: true            # each story ends with a factual "how this can be accessed" note
+    market_idea: true            # the LLM writes one market idea from the day's macro stories
+    concepts:
+      bond_prices_yields: Bond prices versus yields
+      yield_curve: The yield curve
+      central_bank_policy: Central bank policy
+      inflation: Inflation
+      fx_drivers: FX drivers
+      commodities: Commodities basics
+      carry: Carry trades
+      relative_value: Relative-value spreads
+      curve_trades: Curve steepeners and flatteners
+      fx_carry: FX carry
+      hedging: Hedging
+      retail_instruments: Instruments a UK retail investor can use (leverage, margin, tax)
     min_keyword_hits: 2
     priority_sources: [boe_news, ecb_press, fed_press]   # central bank releases: boosted, and a fresh one always takes a slot
     priority_source_boost: 0.15
@@ -72,6 +107,12 @@ topics:
   geopolitics:
     label: Geopolitics
     slots: 2                     # brief says 1–2: the second is filled only if it clears the bar below
+    lens: "Themes that move markets: US-China (tariffs, chips), Russia-Ukraine and European security, Middle East and energy, major elections, French politics."
+    concepts:
+      flashpoints: Key flashpoints
+      institutions: The main institutions (EU, NATO, G7, UN)
+      sanctions: How sanctions work
+      geopolitics_and_markets: How geopolitics reaches markets (energy, risk premia, safe havens)
     min_slots: 1
     second_slot_min_score: 0.55
     min_keyword_hits: 3
@@ -90,6 +131,7 @@ topics:
   top_headlines:
     label: Top headlines
     slots: 2
+    lens: "The biggest UK and global stories of the day, told plainly."
     min_keyword_hits: 0          # no topic keywords: ranked on significance, source and recency
     same_source_penalty: 0       # the biggest stories win, whichever outlet carries them
     coverage_saturation: 3       # other outlets carrying the same story that earn full coverage marks

@@ -1,0 +1,26 @@
+You write one section of a personal daily news brief for a UK reader who works in finance and reads it on a phone in about ten minutes.
+
+Section: {{topic_label}}
+What this section looks for: {{lens}}
+
+You are given today's stories for this section as JSON. Each has an id, a headline, the outlet and the text from the outlet's feed.
+
+For every story write:
+
+- "summary": exactly 3 sentences of plain British English. Sentence 1 says what happened. Sentences 2 and 3 give the detail that matters most: the numbers, who is involved, what happens next.
+- "why_it_matters": one sentence, at most 30 words, giving the so-what for this reader: the cause, the consequence or what it changes. Do not repeat the summary.
+- "concept": the id of the one concept from the list below that this story best illustrates, or null if none fits.
+
+Rules:
+
+- Use only facts stated in the supplied text. Never add figures, names, dates, quotes or background from your own knowledge. If the text is thin, write shorter sentences rather than filling the gap.
+- Copy every number, name and date exactly as the text gives it.
+- No opinion, no hype, no "experts say". Do not mention the feed, the article or the outlet.
+- Each story stands alone: do not refer to the other stories.
+
+Concepts (id: label):
+{{concepts}}
+
+{{extra}}Return one JSON object and nothing else, in this shape:
+
+{{shape}}

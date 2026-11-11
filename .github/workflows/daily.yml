@@ -1,0 +1,91 @@
+name: Daily brief
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC: 06:00 UK in winter, 07:00 in summer (adjust in March)
+  workflow_dispatch:           # the "run now" button
+    inputs:
+      dry_run:
+        description: "Dry run: build the brief but do not commit it or send a push"
+        type: boolean
+        default: false
+  push:                        # TEMPORARY, for the first test run: remove before merging
+    branches: [claude/focused-galileo-v9xq47]
+
+permissions:
+  contents: write              # commit the day's brief
+  models: read                 # GitHub Models through the built-in GITHUB_TOKEN
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+env:
+  DRY_RUN: ${{ github.event_name == 'push' || inputs.dry_run == true }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: List GitHub Models catalogue (temporary)
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -sS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://models.github.ai/catalog/models \
+            | python -c "import json,sys; [print(m.get('id'), '|', m.get('rate_limit_tier'), '|', (m.get('limits') or {}).get('max_input_tokens'), (m.get('limits') or {}).get('max_output_tokens')) for m in json.load(sys.stdin)]" || true
+
+      - name: Build the brief
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}      # optional repository variables;
+          LLM_MODEL: ${{ vars.LLM_MODEL }}            # defaults are in pipeline/llm.py
+          LLM_MAX_CALLS: ${{ vars.LLM_MAX_CALLS }}
+          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            python -m pipeline.run --dry-run --print-brief
+          else
+            python -m pipeline.run
+          fi
+
+      - name: Keep the ranked list and dry-run brief
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-${{ github.run_id }}
+          path: out/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit the brief
+        if: env.DRY_RUN != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Brief $(date -u +%F)"
+          git push || (git pull --rebase && git push)
+
+      - name: Send the push notification
+        if: env.DRY_RUN != 'true'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SITE_URL: ${{ vars.SITE_URL }}              # optional; set once the app is on Pages
+        run: python -m pipeline.notify

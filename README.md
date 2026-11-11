@@ -2,7 +2,7 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 1 of 4 done (sources and ranking). The pipeline fetches 37 sources, then filters and ranks stories locally. There are no summaries, quiz, scheduled job or app yet.
+**Status:** session 1 of 4 done (sources and ranking). The pipeline fetches 37 sources, then filters and ranks stories locally. There are no summaries, quiz, scheduled job or app yet. Ranking fixes and decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
 
 ## Run it
 
@@ -37,7 +37,9 @@ Ranking details worth knowing:
 - **Insurance** takes 1 corporate and 1 specialty story, falls back to 2 specialty if corporate is thin, boosts London and UK stories, and ranks people-move stories lower.
 - **Variety:** within a topic, a second story from the same sub-topic loses 0.15 and one from the same outlet loses 0.05, so picks spread across themes and sources unless one story is clearly stronger.
 - **Geopolitics** always fills 1 slot; the second is filled only if a story scores 0.55 or more.
-- **Top headlines** has no keywords. It uses the BBC's own running order as the importance signal and skips anything already picked for another topic.
+- **Top headlines** has no topic keywords. It ranks on significance: 70% how many other outlets carry the same event, 30% significance keywords (killed, strike, talks, and so on), plus the usual source weight and recency. Running order is not used. Entertainment and celebrity words in the title take 0.35 off. It skips any event already picked for another topic.
+- **Central banks (macro):** BoE, ECB and Fed press releases get +0.15, and the best fresh one always takes one macro slot. This counts everything in those feeds that passes the macro keyword and exclusion rules, so an ECB speech can take the slot.
+- **One event, one slot:** two stories about one event (two or more distinctive headline or URL words in common, making up 40%+ of the shorter story's words) cannot fill two slots, in one topic or across topics. If an event is picked under two topics, the lower-scoring copy is removed and that topic re-picks. Events described in different words are not caught: on 11 Nov the CoreWeave and Anthropic IPO stories under AI and macro still count as two.
 - **Macro** currently fills 2 story slots. The third slot, the "market idea", is written by the LLM in session 2.
 
 ## Source check (11 Nov 2026)
@@ -54,19 +56,20 @@ Ranking details worth knowing:
 
 Reuters no longer publishes public RSS, which removed the main neutral wire source from four topics. The added sources are there to offset that: a market-side and centre-right view (CNBC, City AM, WSJ, The Economist), non-UK views on geopolitics (Al Jazeera, France 24, DW, Politico Europe) and more primary sources for macro.
 
-**Guardian:** the Open Platform API needs a free key. Until `GUARDIAN_API_KEY` is set, the three Guardian sources use the Guardian's public RSS feeds, which carry a few paragraphs rather than full text. The API path is written but has not been run against a real key.
+**Guardian:** stays on the public RSS feeds, which carry a few paragraphs rather than full text. The Open Platform API path is written and switches on if `GUARDIAN_API_KEY` is set, but it has never been run against a real key and is not planned.
 
 **Watchlist data** (panel is built in a later session; sources recorded in `config/topics.yaml`):
 
-| Marker | Status | Source |
-| --- | --- | --- |
-| UK 10-year gilt | Verified | Bank of England database, about 2 working days behind |
-| US 10-year Treasury | Verified | US Treasury daily yield curve CSV |
-| German 10-year Bund | Verified | Bundesbank API |
-| EUR/USD, GBP/USD | Verified | ECB reference rates (GBP/USD derived from the two euro rates) |
-| OAT–Bund, BTP–Bund | No source yet | ECB country yields are monthly only |
-| Brent, S&P 500 | Not verified | FRED timed out from this machine; retry from GitHub Actions |
-| Gold, FTSE 100 | No source yet | Stooq blocks automated requests |
+The watchlist is cut to the five markers with a verified free source (decision recorded in BRIEF.md). The other six were removed from the config.
+
+| Marker | Source |
+| --- | --- |
+| UK 10-year gilt | Bank of England database, about 2 working days behind |
+| US 10-year Treasury | US Treasury daily yield curve CSV |
+| German 10-year Bund | Bundesbank API |
+| EUR/USD, GBP/USD | ECB reference rates (GBP/USD derived from the two euro rates) |
+
+Dropped: OAT–Bund and BTP–Bund (ECB country yields are monthly only), Brent and S&P 500 (FRED timed out), gold and FTSE 100 (Stooq blocks automated requests).
 
 ## How to add or change a source
 
@@ -103,8 +106,7 @@ site/                   empty until session 3
 
 Open items carried over from session 1:
 
-- One event can still appear under two topics from different angles (CoreWeave results under both AI and macro on 11 Nov)
-- Top headlines still relies on the BBC's running order alone
-- Register a Guardian API key and test the API path
-- Find free daily sources for the six unverified watchlist markers, or drop them
+- Events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov); the LLM step could judge this better
+- Top headlines significance is a proxy (outlet coverage plus keywords); an entertainment story with no keyword in its title can still get through
+- `feed_order: editorial` in `config/sources.yaml` is no longer used by the ranker
 - Ranking has been tuned against one day of news only; review the keyword lists after a few runs

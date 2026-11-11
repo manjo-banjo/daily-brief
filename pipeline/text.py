@@ -56,3 +56,36 @@ def title_similarity(a: str, b: str) -> float:
         return jaccard
     ratio = SequenceMatcher(None, " ".join(sorted(ta)), " ".join(sorted(tb))).ratio()
     return max(jaccard, ratio)
+
+
+# Words too common in headlines to show two stories are about the same event.
+_EVENT_STOP = _STOP | frozenset(
+    "news live update updates latest report reports reported could would will may "
+    "more most than into amid about back first year years week day today market markets "
+    "million billion percent says analysts expected weighs hits".split()
+)
+
+
+@lru_cache(maxsize=None)
+def event_tokens(title: str, url: str) -> FrozenSet[str]:
+    """Distinctive words from the headline and the readable part of the URL, lightly stemmed."""
+    words = list(_WORD.findall(title.lower()))
+    slug = urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1]
+    if slug.count("-") >= 2:  # real slugs, not opaque ids like c95y15830k77o
+        words += re.findall(r"[a-z]+", slug.lower())
+    tokens = set()
+    for word in words:
+        if word in _EVENT_STOP or len(word) < 3 or word.isdigit():
+            continue
+        if len(word) > 4 and word.endswith("s"):
+            word = word[:-1]
+        tokens.add(word)
+    return frozenset(tokens)
+
+
+def same_event(title_a: str, url_a: str, title_b: str, url_b: str) -> bool:
+    """True when two stories are very likely about one news event: at least two distinctive
+    words in common, and those make up 40%+ of the shorter story's words."""
+    ta, tb = event_tokens(title_a, url_a), event_tokens(title_b, url_b)
+    shared = len(ta & tb)
+    return shared >= 2 and shared / min(len(ta), len(tb)) >= 0.4

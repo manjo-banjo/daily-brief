@@ -39,7 +39,12 @@ class Topic(BaseModel):
     priority_keywords: List[str] = Field(default_factory=list)
     exclude_title_keywords: List[str] = Field(default_factory=list)
     demote_title_keywords: List[str] = Field(default_factory=list)
+    demote_penalty: Optional[float] = None  # overrides settings.demote_penalty for this topic
     same_source_penalty: Optional[float] = None
+    priority_sources: List[str] = Field(default_factory=list)  # source ids that get a boost and one guaranteed slot
+    priority_source_boost: float = 0.0
+    significance_keywords: List[str] = Field(default_factory=list)  # top headlines: words that signal a major story
+    coverage_saturation: int = 3  # top headlines: other outlets carrying the story for full marks
     subtopics: Dict[str, Subtopic] = Field(default_factory=dict)
 
 

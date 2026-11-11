@@ -58,8 +58,9 @@ def main(argv: List[str] = None) -> int:
     items, reports = fetch_all(source_list)
     used = load_used_urls(ROOT / "data" / "daily", today)
     kept, stats = filter_items(items, sources, settings, now, used)
-    selected, runners, untagged = rank_and_allocate(kept, sources, topics, settings, now)
+    selected, runners, untagged, cross_dupes = rank_and_allocate(kept, sources, topics, settings, now)
     stats["untagged"] = untagged
+    stats["cross_topic_duplicates"] = cross_dupes
 
     total = sum(len(v) for v in selected.values())
     output = {
@@ -106,7 +107,7 @@ def _print_report(now, reports, source_list, stats, topics, selected: Dict[str, 
         f"\nFILTER  fetched {stats['fetched']} · older than cutoff {stats['too_old']} · "
         f"no date {stats['no_date']} · live blogs etc. {stats['excluded_title']} · already used {stats['already_used']} · "
         f"duplicates {stats['duplicate_url'] + stats['duplicate_title']} · kept {stats['kept']} · "
-        f"no topic match {stats['untagged']}"
+        f"no topic match {stats['untagged']} · same event under two topics (weaker copy removed) {stats['cross_topic_duplicates']}"
     )
     print(f"\nRANKED LIST  ({total} stories)")
     for name, topic in topics.items():

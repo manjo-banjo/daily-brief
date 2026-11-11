@@ -179,3 +179,14 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | Geopolitics scope | The five market-moving themes in Topics |
 | Watchlist | About 10 markers across rates, spreads, FX, commodities and equities |
 | Notifications | ntfy.sh push now, WhatsApp later |
+
+## Decisions after session 1 (11 Nov 2026)
+
+| Decision | Setting |
+| --- | --- |
+| Guardian | Stays on the public RSS feeds. The Open Platform API path is written but not used, so `GUARDIAN_API_KEY` is optional and full text is not required |
+| Extra sources | The 17 sources added in session 1 are accepted, bringing the enabled list to 37. They replace Reuters, which has no public RSS, and widen the range of outlets |
+| Watchlist | Reduced to the markers with a verified free source: UK 10-year gilt, US 10-year Treasury, German 10-year Bund, EUR/USD and GBP/USD. OAT–Bund, BTP–Bund, Brent, gold, S&P 500 and FTSE 100 are dropped, not estimated. The brief's "about 10 markers" no longer applies. Note: that is five verified markers, not four as first stated |
+| One event, one slot | A news event fills one slot across all topics, in the topic where it scores highest. Top headlines takes only what the other topics leave |
+| Central banks | Fresh BoE, ECB and Fed press releases are boosted, and the best one always takes a macro slot |
+| Top headlines | Ranked by significance (how many other outlets carry the story, plus significance keywords), not by the outlet's running order. Entertainment and celebrity stories are marked down |

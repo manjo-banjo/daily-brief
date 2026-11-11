@@ -50,6 +50,8 @@ topics:
     label: Macro and markets
     slots: 2                     # the daily "market idea" is written in session 2 (LLM step)
     min_keyword_hits: 2
+    priority_sources: [boe_news, ecb_press, fed_press]   # central bank releases: boosted, and a fresh one always takes a slot
+    priority_source_boost: 0.15
     exclude_title_keywords: ["banking applications", "enforcement action", "approval of application", "approval of two applications", "exchange of letters", "prohibition", "termination of enforcement"]
     subtopics:
       central_banks:
@@ -88,13 +90,18 @@ topics:
   top_headlines:
     label: Top headlines
     slots: 2
-    min_keyword_hits: 0          # no keywords: ranked on source, recency and feed position
+    min_keyword_hits: 0          # no topic keywords: ranked on significance, source and recency
     same_source_penalty: 0       # the biggest stories win, whichever outlet carries them
+    coverage_saturation: 3       # other outlets carrying the same story that earn full coverage marks
+    demote_penalty: 0.35         # entertainment and celebrity stories drop well down the list
+    demote_title_keywords: [celebrity, celebrities, actor, actress, singer, comedian, presenter, broadcaster, author, novelist, publishing, film, films, movie, album, concert, Hollywood, Oscars, BAFTA, Strictly, "reality TV", "TV star", "pop star", influencer, "red carpet", "box office", royal, royals]
+    significance_keywords: [killed, dead, deaths, attack, strike, strikes, war, ceasefire, election, resigns, resignation, crisis, emergency, protest, protests, clashes, sanctions, shooting, explosion, earthquake, hurricane, flood, collapse, summit, talks, verdict, court, inflation, "interest rates"]
     subtopics: {}
 
 # ---------------------------------------------------------------------------
 # Watchlist (macro panel). Built in a later session; endpoints checked 2026-11-11.
-# A marker with no verified free source stays disabled and is never estimated.
+# Only markers with a verified free source are listed; none is ever estimated.
+# Dropped for want of a source: OAT–Bund, BTP–Bund, Brent, gold, S&P 500, FTSE 100.
 watchlist:
   - id: uk_10y
     label: UK 10-year gilt
@@ -126,27 +133,3 @@ watchlist:
     url: https://data-api.ecb.europa.eu/service/data/EXR/D.USD+GBP.EUR.SP00.A?lastNObservations=2&format=csvdata
     lag: same day (about 15:00 UK)
     enabled: true
-  - id: oat_bund
-    label: OAT–Bund spread
-    enabled: false
-    reason: No free daily French 10-year yield found yet (ECB series is monthly; Stooq blocks automated requests).
-  - id: btp_bund
-    label: BTP–Bund spread
-    enabled: false
-    reason: No free daily Italian 10-year yield found yet (ECB series is monthly; Stooq blocks automated requests).
-  - id: brent
-    label: Brent crude
-    enabled: false
-    reason: Not verified. FRED (DCOILBRENTEU) timed out from this machine; Stooq blocks automated requests.
-  - id: gold
-    label: Gold
-    enabled: false
-    reason: Not verified. Stooq blocks automated requests; no other free daily source confirmed.
-  - id: sp500
-    label: S&P 500
-    enabled: false
-    reason: Not verified. FRED (SP500) timed out from this machine; retry from GitHub Actions.
-  - id: ftse100
-    label: FTSE 100
-    enabled: false
-    reason: Not verified. Stooq blocks automated requests; no other free daily source confirmed.

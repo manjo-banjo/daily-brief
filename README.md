@@ -59,7 +59,7 @@ How the LLM step behaves:
 
 ## First run (11 Nov 2026)
 
-Five dry runs in GitHub Actions from the session branch, on Python 3.12.
+Six dry runs in GitHub Actions from the session branch, on Python 3.12: five from a temporary push trigger (since removed) and one manual run.
 
 | Step | Result |
 | --- | --- |
@@ -68,7 +68,7 @@ Five dry runs in GitHub Actions from the session branch, on Python 3.12.
 | Summaries and quiz | Not tested. `models.github.ai` answered every request with HTTP 200 and the plain text "OK": any path, with or without a token, and the same for GitHub's own `actions/ai-inference` action. That points to GitHub's side, not this repo's token or code |
 | Fallback | Worked each time: a schema-valid headlines-only brief with the reason listed under `issues` |
 | Commit, prune and ntfy push | Not tested: dry runs skip them. The first real run on main is their first test |
-| Manual "Run workflow" button | Not tested: GitHub only shows it once the workflow file is on main |
+| Manual run with "Dry run" ticked | Worked (started through the API against the session branch): brief built, commit and push skipped |
 
 Away from GitHub, the summarise, quiz, validate, archive and prune code was run against a scripted stand-in for the model: full brief, a rejected question that passes on retry, a rejected question that is dropped, one topic failing twice, unusable replies, no token, and a crash inside the LLM step. All behaved as described above.
 

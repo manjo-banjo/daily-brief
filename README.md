@@ -2,7 +2,11 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with GitHub Models, and commits the day's brief as JSON. There is no app yet (session 3). Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
+**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with GitHub Models, and commits the day's brief as JSON. There is no app yet (session 3).
+
+**Not yet proven:** the summaries and quiz have never run against a real model. On 11 Nov GitHub Models was not serving its API (see "First run" below), so every test run published the headlines-only fallback. Run the workflow as a dry run once GitHub Models answers again, and check the output before relying on the 06:00 job.
+
+Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
 
 ## Run it
 
@@ -52,6 +56,23 @@ How the LLM step behaves:
 - **Answer order:** options are shuffled in code, so the correct answer is not always in the same place.
 - **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Session 4 writes one card per id. Top headlines has none.
 - **Review queue:** not added by the pipeline. Which questions were missed is known only on the phone, so the app (session 3) draws review questions from the archive.
+
+## First run (11 Nov 2026)
+
+Five dry runs in GitHub Actions from the session branch, on Python 3.12.
+
+| Step | Result |
+| --- | --- |
+| Fetch | 36 of 37 sources returned items. Import AI returns 403 to GitHub's runners every time. On the first run Insurance Journal (both feeds) and Carrier Management timed out, then worked on later runs |
+| Filter and rank | 10 stories across all five topics, 2 per topic |
+| Summaries and quiz | Not tested. `models.github.ai` answered every request with HTTP 200 and the plain text "OK": any path, with or without a token, and the same for GitHub's own `actions/ai-inference` action. That points to GitHub's side, not this repo's token or code |
+| Fallback | Worked each time: a schema-valid headlines-only brief with the reason listed under `issues` |
+| Commit, prune and ntfy push | Not tested: dry runs skip them. The first real run on main is their first test |
+| Manual "Run workflow" button | Not tested: GitHub only shows it once the workflow file is on main |
+
+Away from GitHub, the summarise, quiz, validate, archive and prune code was run against a scripted stand-in for the model: full brief, a rejected question that passes on retry, a rejected question that is dropped, one topic failing twice, unusable replies, no token, and a crash inside the LLM step. All behaved as described above.
+
+One ranking fix came out of the first run: a Guardian live blog titled "... - live" reached Top headlines because only the "– live" spelling was excluded. Both are now excluded.
 
 ## Output files
 
@@ -165,6 +186,8 @@ Not built yet, and not assigned to a session in the brief:
 
 Open items:
 
+- **GitHub Models:** confirm it serves real replies, then check a dry run's summaries and questions. The default model id `openai/gpt-4.1-mini` could not be checked against the catalogue for the same reason; if it is rejected, set the `LLM_MODEL` variable
+- Import AI blocks GitHub's runners (403), so it never contributes; switch it off or find another feed
 - Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text
 - The 06:00 cron can start late: GitHub delays scheduled jobs at busy times, often by 5–30 minutes
 - Events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov)

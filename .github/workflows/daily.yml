@@ -9,8 +9,6 @@ on:
         description: "Dry run: build the brief but do not commit it or send a push"
         type: boolean
         default: false
-  push:                        # TEMPORARY, for the first test run: remove before merging
-    branches: [claude/focused-galileo-v9xq47]
 
 permissions:
   contents: write              # commit the day's brief
@@ -21,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DRY_RUN: ${{ github.event_name == 'push' || inputs.dry_run == true }}
+  DRY_RUN: ${{ inputs.dry_run == true }}
 
 jobs:
   build:
@@ -37,36 +35,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Probe GitHub Models (temporary)
-        if: github.event_name == 'push'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          H=(-H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -H "Content-Type: application/json")
-          BODY='{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Reply with the word ready."}],"max_tokens":5}'
-          echo "== 1 inference verbose"; curl -sS -v "${H[@]}" -d "$BODY" https://models.github.ai/inference/chat/completions 2>&1 | grep -vi "authorization" | head -c 5000 || true
-          echo; echo "== 2 root"; curl -sS -i https://models.github.ai/ | head -c 800 || true
-          echo; echo "== 3 nonsense path"; curl -sS -i "${H[@]}" https://models.github.ai/definitely/not/a/path | head -c 800 || true
-          echo; echo "== 4 api.github.com catalog"; curl -sS -i "${H[@]}" https://api.github.com/models/catalog | head -c 1200 || true
-          echo; echo "== 5 no auth"; curl -sS -i -H "Content-Type: application/json" -d "$BODY" https://models.github.ai/inference/chat/completions | head -c 800 || true
-          echo; echo "== 6 user-agent python"; curl -sS -i -A "python-httpx/0.28.1" "${H[@]}" -d "$BODY" https://models.github.ai/inference/chat/completions | head -c 800 || true
-
-      - name: Probe with the official action (temporary)
-        if: github.event_name == 'push'
-        id: probe
-        continue-on-error: true
-        uses: actions/ai-inference@v1
-        with:
-          prompt: "Reply with the word ready."
-          model: openai/gpt-4.1-mini
-          max-tokens: 5
-
-      - name: Show the official action's reply (temporary)
-        if: github.event_name == 'push'
-        env:
-          REPLY: ${{ steps.probe.outputs.response }}
-        run: echo "official action outcome=${{ steps.probe.outcome }} reply=[$REPLY]"
 
       - name: Build the brief
         env:

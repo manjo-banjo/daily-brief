@@ -2,31 +2,77 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 1 of 4 done (sources and ranking). The pipeline fetches 37 sources, then filters and ranks stories locally. There are no summaries, quiz, scheduled job or app yet. Ranking fixes and decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
+**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with GitHub Models, and commits the day's brief as JSON. There is no app yet (session 3). Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
 
 ## Run it
 
-One-time setup:
+**In GitHub (the normal way):** Actions → Daily brief → Run workflow. Tick "Dry run" to build the brief without committing it or sending a push; the result is then in the run's log and its `out` artifact.
+
+**Locally:**
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 
-Run the pipeline:
-
 ```bash
-.venv/bin/python -m pipeline.run
+.venv/bin/python -m pipeline.run --dry-run
 ```
 
-It prints a report (source health, filter counts, the ranked list with the next-best stories per topic) and saves `out/ranked-YYYY-MM-DD.json`. The `out/` folder is not committed.
+| Flag | Effect |
+| --- | --- |
+| (none) | Writes `data/daily/YYYY-MM-DD.json`, updates `data/archive/YYYY-MM.json`, prunes old daily files |
+| `--dry-run` | Writes `out/brief-YYYY-MM-DD.json` only; `data/` is not touched |
+| `--no-llm` | Skips summaries and quiz: headlines-only brief |
+| `--print-brief` | Also prints the finished brief JSON |
+| `--quiet` | No ranking report |
 
-The code runs on Python 3.9 and later. This Mac has 3.9; GitHub Actions will use 3.12, as the brief specifies.
+Every run prints the ranking report and saves `out/ranked-YYYY-MM-DD.json`. The `out/` folder is not committed. Without a `GITHUB_TOKEN` that can read GitHub Models, a local run produces a headlines-only brief, which is the fallback working as designed.
+
+The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief specifies.
+
+## What session 2 built
+
+| Pipeline step | Where | What it does |
+| --- | --- | --- |
+| 1. Trigger | `.github/workflows/daily.yml` | Cron at 06:00 UTC plus the "Run workflow" button, with a dry-run option |
+| 5. Summarise | `pipeline/summarise.py`, `prompts/summary.txt`, `prompts/summary_macro.txt` | One LLM call per topic: 3-sentence summary, "why it matters" line and primer concept tag per story. Macro also gets a "how this can be accessed" note per story and the daily market idea |
+| 6. Quiz | `pipeline/quiz.py`, `prompts/quiz.txt` | One LLM call: one 4-option question per summarised story and one on the market idea |
+| 7. Validate | `pipeline/validate.py`, `pipeline/models.py` | Content checks on every summary and question, one retry, then the fallback. The finished brief is checked against the `DailyBrief` schema before it is written |
+| 8. Write and prune | `pipeline/output.py` | Writes the daily file, adds the quiz and links to the monthly archive, deletes daily files more than 7 days old |
+| 9. Notify | `pipeline/notify.py` | ntfy.sh push after the commit. Deploying to Pages is session 3 |
+| LLM wrapper | `pipeline/llm.py` | Provider and model from environment variables; hard cap on calls per run |
+
+How the LLM step behaves:
+
+- **Calls per run:** 6 when all goes well (5 topics plus the quiz), 12 at most with retries. The cap is 14 (`LLM_MAX_CALLS`).
+- **Feed text only:** stories from headline-only sources (FT Alphaville, WSJ, The Economist, Foreign Policy, Hacker News) and stories with under 80 characters of feed text are never sent to the LLM. They appear as headline and link, with no quiz question.
+- **Answer stated in the summary:** each question must quote, word for word, the part of the summary, "why it matters" line or access note that states its answer. A question whose quote is not found, or whose correct option uses a number that is not in that text, is rejected.
+- **Retry and fallback:** a failed topic call or rejected item gets one retry with the reasons attached. After that, only what failed degrades: the story stays headline and link, or the question is dropped. If nothing can be summarised (no token, GitHub Models down, any crash in the LLM step), the brief is still published as headlines only.
+- **Status:** each brief is marked `full`, `partial` or `headlines_only`, and lists what degraded under `issues`.
+- **Answer order:** options are shuffled in code, so the correct answer is not always in the same place.
+- **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Session 4 writes one card per id. Top headlines has none.
+- **Review queue:** not added by the pipeline. Which questions were missed is known only on the phone, so the app (session 3) draws review questions from the archive.
+
+## Output files
+
+`data/daily/YYYY-MM-DD.json` (kept 7 days):
+
+| Field | Content |
+| --- | --- |
+| `date`, `generated_at`, `edition`, `status`, `read_minutes`, `issues` | Run facts; `status` is `full`, `partial` or `headlines_only` |
+| `topics` | The five topics in display order (`id`, `label`) |
+| `stories` | `id`, `topic`, `subtopic`, `title`, `url`, `source`, `published`, `headline_only`, `summary`, `why_it_matters`, `access_note` (macro), `concept` (`id`, `label`) |
+| `market_idea` | `title`, `based_on` (story id), `url`, `source`, `what_the_trade_is`, `how_it_is_expressed`, `retail_access`, `what_makes_it_work`, `what_breaks_it`, `concept`, `disclaimer` |
+| `quiz` | `id`, `story_id`, `topic`, `question`, `options` (4), `answer` (index 0–3), `explanation`, `evidence`, `tests` (`why` or `fact`), `concept` |
+| `llm` | `provider`, `model`, `calls` |
+
+`data/archive/YYYY-MM.json` (kept indefinitely): one entry per day with the stories as headline, link and source, and the questions with options, answer, explanation, concept tag, headline and link. No summaries.
 
 ## What session 1 built
 
 | Pipeline step | Where | What it does |
 | --- | --- | --- |
-| 1. Trigger | `pipeline/run.py` | Local manual run only. The 06:00 cron and "run now" button are session 2 |
+| 1. Trigger | `pipeline/run.py` | Runs every step in order |
 | 2. Fetch | `pipeline/fetch.py` | Pulls every enabled source in parallel and normalises to title, URL, source, published time, text. One failing source never stops the run. Headline-only sources never carry article text forward |
 | 3. Filter | `pipeline/filter.py` | Drops items older than 36 hours, items with no date, live blogs, duplicate URLs, near-identical titles, and anything in an earlier `data/daily/*.json` |
 | 4. Rank and allocate | `pipeline/rank.py` | Tags each item to a topic and sub-topic by keyword, scores it on source weight, recency and keyword match, then fills the slots per topic |
@@ -40,7 +86,7 @@ Ranking details worth knowing:
 - **Top headlines** has no topic keywords. It ranks on significance: 70% how many other outlets carry the same event, 30% significance keywords (killed, strike, talks, and so on), plus the usual source weight and recency. Running order is not used. Entertainment and celebrity words in the title take 0.35 off. It skips any event already picked for another topic.
 - **Central banks (macro):** BoE, ECB and Fed press releases get +0.15, and the best fresh one always takes one macro slot. This counts everything in those feeds that passes the macro keyword and exclusion rules, so an ECB speech can take the slot.
 - **One event, one slot:** two stories about one event (two or more distinctive headline or URL words in common, making up 40%+ of the shorter story's words) cannot fill two slots, in one topic or across topics. If an event is picked under two topics, the lower-scoring copy is removed and that topic re-picks. Events described in different words are not caught: on 11 Nov the CoreWeave and Anthropic IPO stories under AI and macro still count as two.
-- **Macro** currently fills 2 story slots. The third slot, the "market idea", is written by the LLM in session 2.
+- **Macro** fills 2 story slots. The third slot, the "market idea", is written by the LLM from those stories.
 
 ## Source check (11 Nov 2026)
 
@@ -58,7 +104,7 @@ Reuters no longer publishes public RSS, which removed the main neutral wire sour
 
 **Guardian:** stays on the public RSS feeds, which carry a few paragraphs rather than full text. The Open Platform API path is written and switches on if `GUARDIAN_API_KEY` is set, but it has never been run against a real key and is not planned.
 
-**Watchlist data** (panel is built in a later session; sources recorded in `config/topics.yaml`):
+**Watchlist data** (not fetched yet; sources recorded in `config/topics.yaml`):
 
 The watchlist is cut to the five markers with a verified free source (decision recorded in BRIEF.md). The other six were removed from the config.
 
@@ -75,38 +121,53 @@ Dropped: OAT–Bund and BTP–Bund (ECB country yields are monthly only), Brent 
 
 Edit `config/sources.yaml`; the fields are explained at the top of the file. Set `access: headline_only` for anything paywalled. To switch a source off, set `enabled: false` and add a `reason`.
 
-Slots, keywords, score weights and the watchlist live in `config/topics.yaml`.
+Slots, keywords, score weights, the summary lens, concept tags and the watchlist live in `config/topics.yaml`. To tune summaries or questions, edit the text files in `prompts/`.
 
-## Secrets and environment variables
+## Secrets and settings
 
-| Name | Needed for | Status |
-| --- | --- | --- |
-| `GUARDIAN_API_KEY` | Guardian full text (free key from open-platform.theguardian.com) | Optional; RSS fallback without it |
-| `NTFY_TOPIC` | Push notification | Session 3 |
+Set under the repo's Settings → Secrets and variables → Actions.
+
+| Name | Kind | Needed for | Status |
+| --- | --- | --- | --- |
+| `GITHUB_TOKEN` | Built in | GitHub Models (the workflow grants `models: read`) and committing the brief | Nothing to set up |
+| `NTFY_TOPIC` | Secret | Push notification | Required; without it the run warns and sends no push |
+| `GUARDIAN_API_KEY` | Secret | Guardian full text | Optional and not planned; RSS is used without it |
+| `LLM_MODEL` | Variable | Changing the model | Optional; default `openai/gpt-4.1-mini` |
+| `LLM_PROVIDER` | Variable | Changing the provider | Optional; default `github_models`, the only one built |
+| `LLM_MAX_CALLS` | Variable | Call cap per run | Optional; default 14 |
+| `SITE_URL` | Variable | Makes the push open the app when tapped | Set in session 3 |
 
 ## Repo layout
 
 ```
-config/sources.yaml     feeds, topics, weights
-config/topics.yaml      slots, keywords, scoring, watchlist
-pipeline/               run, fetch, filter, rank (plus models, config, text helpers)
-prompts/                empty until session 2
-data/daily|archive|primers/   empty until sessions 2 and 4
-site/                   empty until session 3
-.github/workflows/      empty until session 2
+.github/workflows/daily.yml   06:00 cron + manual run
+config/sources.yaml           feeds, topics, weights
+config/topics.yaml            slots, keywords, scoring, lens, concept tags, watchlist
+pipeline/                     run, fetch, filter, rank, summarise, quiz, validate, output, notify, llm
+prompts/                      summary.txt, summary_macro.txt, quiz.txt
+data/daily/                   last 7 days, full
+data/archive/                 quizzes and links, one file per month
+data/primers/                 empty until session 4
+site/                         empty until session 3
 ```
 
-## Next: session 2 (content and automation)
+## Next: session 3 (app)
 
-- Summaries and quiz via GitHub Models, with prompts in `prompts/`
-- Validation against a schema, with the headlines-only fallback
-- Write `data/daily/YYYY-MM-DD.json`, append to the archive, prune after 7 days
-- `.github/workflows/daily.yml`: 06:00 cron plus manual run, on Python 3.12
-- The macro "market idea" slot and the weekend lighter edition
+- Today and Quiz screens, streak, review queue drawn from the archive
+- Deploy to GitHub Pages from the workflow, then set `SITE_URL`
+- Confirm the ntfy push arrives on the phone
 
-Open items carried over from session 1:
+Not built yet, and not assigned to a session in the brief:
 
-- Events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov); the LLM step could judge this better
+- **Watchlist data:** the five markers are in config but nothing fetches them, so the daily file has no watchlist yet. The Today screen needs it
+- **Weekend lighter edition:** deferred; weekends run the normal edition
+- **Claude fallback provider:** the wrapper takes a second provider, but only GitHub Models is built
+
+Open items:
+
+- Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text
+- The 06:00 cron can start late: GitHub delays scheduled jobs at busy times, often by 5–30 minutes
+- Events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov)
 - Top headlines significance is a proxy (outlet coverage plus keywords); an entertainment story with no keyword in its title can still get through
 - `feed_order: editorial` in `config/sources.yaml` is no longer used by the ranker
-- Ranking has been tuned against one day of news only; review the keyword lists after a few runs
+- Ranking and prompts have been tuned against very few days of news; review after a week of runs

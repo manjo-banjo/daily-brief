@@ -58,7 +58,7 @@ def build_brief(
         read_minutes=_read_minutes(stories, idea),
         topics=[TopicInfo(id=key, label=topic.label) for key, topic in topics.items()],
         stories=stories, market_idea=idea, quiz=quiz,
-        llm=LLMInfo(provider=llm.provider, model=llm.model, calls=llm.calls), issues=issues,
+        llm=LLMInfo(provider=llm.provider, model=llm.model or "default", calls=llm.calls), issues=issues,
     )
     # Round-trip so every nested value is re-checked, including ones set after creation.
     return DailyBrief.model_validate(brief.model_dump())

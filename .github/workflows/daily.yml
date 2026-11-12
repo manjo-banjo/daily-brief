@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: write              # commit the day's brief
-  models: read                 # GitHub Models through the built-in GITHUB_TOKEN
 
 concurrency:
   group: daily-brief
@@ -36,9 +35,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install the Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Build the brief
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}   # Claude subscription token
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}      # optional repository variables;
           LLM_MODEL: ${{ vars.LLM_MODEL }}            # defaults are in pipeline/llm.py
           LLM_MAX_CALLS: ${{ vars.LLM_MAX_CALLS }}

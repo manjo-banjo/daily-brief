@@ -190,3 +190,12 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | One event, one slot | A news event fills one slot across all topics, in the topic where it scores highest. Top headlines takes only what the other topics leave |
 | Central banks | Fresh BoE, ECB and Fed press releases are boosted, and the best one always takes a macro slot |
 | Top headlines | Ranked by significance (how many other outlets carry the story, plus significance keywords), not by the outlet's running order. Entertainment and celebrity stories are marked down |
+
+## Decisions after session 2 (12 Nov 2026)
+
+| Decision | Setting |
+| --- | --- |
+| LLM provider | GitHub Models was retired on 30 July 2026, so the free tier this brief planned around no longer exists. The LLM step uses the named fallback: Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`, made with `claude setup-token`), called with the Claude Code CLI from the workflow. No extra cost beyond the existing subscription; calls count against its usage allowance |
+| Partial failures | Only what failed degrades: a topic whose summaries fail twice shows headlines and links, and a question that fails validation twice is dropped. The whole brief goes headlines-only only when nothing can be summarised |
+| Weekend edition | Deferred. Weekends run the normal edition until it is built |
+| Review queue | Added by the app, not the pipeline: which questions were missed is known only on the phone |

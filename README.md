@@ -2,9 +2,9 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with GitHub Models, and commits the day's brief as JSON. There is no app yet (session 3).
+**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, and commits the day's brief as JSON. There is no app yet (session 3).
 
-**Not yet proven:** the summaries and quiz have never run against a real model. On 11 Nov GitHub Models was not serving its API (see "First run" below), so every test run published the headlines-only fallback. Run the workflow as a dry run once GitHub Models answers again, and check the output before relying on the 06:00 job.
+**Not yet proven:** the summaries and quiz have never run against a real model. GitHub Models, the brief's first choice, was retired on 30 July 2026, so the LLM step now uses the brief's fallback: Claude through a subscription token. It needs the `CLAUDE_CODE_OAUTH_TOKEN` secret (see "Secrets and settings"). Until that secret is added, every run publishes the headlines-only fallback. After adding it, run the workflow as a dry run and check the output before relying on the 06:00 job.
 
 Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
 
@@ -30,7 +30,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `--print-brief` | Also prints the finished brief JSON |
 | `--quiet` | No ranking report |
 
-Every run prints the ranking report and saves `out/ranked-YYYY-MM-DD.json`. The `out/` folder is not committed. Without a `GITHUB_TOKEN` that can read GitHub Models, a local run produces a headlines-only brief, which is the fallback working as designed.
+Every run prints the ranking report and saves `out/ranked-YYYY-MM-DD.json`. The `out/` folder is not committed. Without the Claude Code CLI installed and `CLAUDE_CODE_OAUTH_TOKEN` set, a local run produces a headlines-only brief, which is the fallback working as designed.
 
 The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief specifies.
 
@@ -44,14 +44,14 @@ The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief sp
 | 7. Validate | `pipeline/validate.py`, `pipeline/models.py` | Content checks on every summary and question, one retry, then the fallback. The finished brief is checked against the `DailyBrief` schema before it is written |
 | 8. Write and prune | `pipeline/output.py` | Writes the daily file, adds the quiz and links to the monthly archive, deletes daily files more than 7 days old |
 | 9. Notify | `pipeline/notify.py` | ntfy.sh push after the commit. Deploying to Pages is session 3 |
-| LLM wrapper | `pipeline/llm.py` | Provider and model from environment variables; hard cap on calls per run |
+| LLM wrapper | `pipeline/llm.py` | Runs the Claude Code CLI (`claude -p`) with all tools off, one question and one answer per call. Provider and model from environment variables; hard cap on calls per run |
 
 How the LLM step behaves:
 
 - **Calls per run:** 6 when all goes well (5 topics plus the quiz), 12 at most with retries. The cap is 14 (`LLM_MAX_CALLS`).
 - **Feed text only:** stories from headline-only sources (FT Alphaville, WSJ, The Economist, Foreign Policy, Hacker News) and stories with under 80 characters of feed text are never sent to the LLM. They appear as headline and link, with no quiz question.
 - **Answer stated in the summary:** each question must quote, word for word, the part of the summary, "why it matters" line or access note that states its answer. A question whose quote is not found, or whose correct option uses a number that is not in that text, is rejected.
-- **Retry and fallback:** a failed topic call or rejected item gets one retry with the reasons attached. After that, only what failed degrades: the story stays headline and link, or the question is dropped. If nothing can be summarised (no token, GitHub Models down, any crash in the LLM step), the brief is still published as headlines only.
+- **Retry and fallback:** a failed topic call or rejected item gets one retry with the reasons attached. After that, only what failed degrades: the story stays headline and link, or the question is dropped. If nothing can be summarised (no token, Claude unavailable, plan limit reached, any crash in the LLM step), the brief is still published as headlines only.
 - **Status:** each brief is marked `full`, `partial` or `headlines_only`, and lists what degraded under `issues`.
 - **Answer order:** options are shuffled in code, so the correct answer is not always in the same place.
 - **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Session 4 writes one card per id. Top headlines has none.
@@ -59,18 +59,18 @@ How the LLM step behaves:
 
 ## First run (11 Nov 2026)
 
-Six dry runs in GitHub Actions from the session branch, on Python 3.12: five from a temporary push trigger (since removed) and one manual run.
+Seven dry runs in GitHub Actions (11 and 12 Nov) from the session branch, on Python 3.12: five from a temporary push trigger (since removed) and two manual runs.
 
 | Step | Result |
 | --- | --- |
 | Fetch | 36 of 37 sources returned items. Import AI returns 403 to GitHub's runners every time. On the first run Insurance Journal (both feeds) and Carrier Management timed out, then worked on later runs |
 | Filter and rank | 10 stories across all five topics, 2 per topic |
-| Summaries and quiz | Not tested. `models.github.ai` answered every request with HTTP 200 and the plain text "OK": any path, with or without a token, and the same for GitHub's own `actions/ai-inference` action. That points to GitHub's side, not this repo's token or code |
+| Summaries and quiz | Not tested. The runs used GitHub Models: `models.github.ai` answered every request with HTTP 200 and the plain text "OK": any path, with or without a token, and the same for GitHub's own `actions/ai-inference` action. The cause: GitHub retired GitHub Models on 30 July 2026. The provider was then switched to Claude (12 Nov), which is untested until the token secret exists |
 | Fallback | Worked each time: a schema-valid headlines-only brief with the reason listed under `issues` |
 | Commit, prune and ntfy push | Not tested: dry runs skip them. The first real run on main is their first test |
 | Manual run with "Dry run" ticked | Worked (started through the API against the session branch): brief built, commit and push skipped |
 
-Away from GitHub, the summarise, quiz, validate, archive and prune code was run against a scripted stand-in for the model: full brief, a rejected question that passes on retry, a rejected question that is dropped, one topic failing twice, unusable replies, no token, and a crash inside the LLM step. All behaved as described above.
+Away from GitHub, the Claude provider was run against a stand-in CLI (good reply, refused login, rate limit, unreadable reply, CLI missing, no token), and the summarise, quiz, validate, archive and prune code was run against a scripted stand-in for the model: full brief, a rejected question that passes on retry, a rejected question that is dropped, one topic failing twice, unusable replies, no token, and a crash inside the LLM step. All behaved as described above.
 
 One ranking fix came out of the first run: a Guardian live blog titled "... - live" reached Top headlines because only the "– live" spelling was excluded. Both are now excluded.
 
@@ -150,13 +150,15 @@ Set under the repo's Settings → Secrets and variables → Actions.
 
 | Name | Kind | Needed for | Status |
 | --- | --- | --- | --- |
-| `GITHUB_TOKEN` | Built in | GitHub Models (the workflow grants `models: read`) and committing the brief | Nothing to set up |
+| `CLAUDE_CODE_OAUTH_TOKEN` | Secret | Summaries and quiz, through your Claude subscription | Required; without it every brief is headlines only |
 | `NTFY_TOPIC` | Secret | Push notification | Required; without it the run warns and sends no push |
 | `GUARDIAN_API_KEY` | Secret | Guardian full text | Optional and not planned; RSS is used without it |
-| `LLM_MODEL` | Variable | Changing the model | Optional; default `openai/gpt-4.1-mini` |
-| `LLM_PROVIDER` | Variable | Changing the provider | Optional; default `github_models`, the only one built |
+| `LLM_MODEL` | Variable | Choosing the Claude model, for example `sonnet` or `haiku` | Optional; empty uses the CLI's default for your plan |
+| `LLM_PROVIDER` | Variable | Changing the provider | Optional; default `claude_code`, the only one built |
 | `LLM_MAX_CALLS` | Variable | Call cap per run | Optional; default 14 |
 | `SITE_URL` | Variable | Makes the push open the app when tapped | Set in session 3 |
+
+**Creating the Claude token (once a year):** on a computer with [Claude Code](https://code.claude.com/docs/en/setup) installed, run `claude setup-token`, approve it in the browser with the account that holds your Claude subscription, and copy the token it prints. Save it as the repository secret `CLAUDE_CODE_OAUTH_TOKEN`. The token lasts one year and can only make model requests. The daily job's calls (6 to 12 short ones) count against your subscription's usage allowance. The built-in `GITHUB_TOKEN` needs no setup; it is only used to commit the brief.
 
 ## Repo layout
 
@@ -182,11 +184,11 @@ Not built yet, and not assigned to a session in the brief:
 
 - **Watchlist data:** the five markers are in config but nothing fetches them, so the daily file has no watchlist yet. The Today screen needs it
 - **Weekend lighter edition:** deferred; weekends run the normal edition
-- **Claude fallback provider:** the wrapper takes a second provider, but only GitHub Models is built
 
 Open items:
 
-- **GitHub Models:** confirm it serves real replies, then check a dry run's summaries and questions. The default model id `openai/gpt-4.1-mini` could not be checked against the catalogue for the same reason; if it is rejected, set the `LLM_MODEL` variable
+- **Claude step:** add the `CLAUDE_CODE_OAUTH_TOKEN` secret, then check a dry run's summaries and questions. Nothing about the real model's output has been seen yet
+- Each run installs the Claude Code CLI with npm (about 20 seconds); the version is not pinned
 - Import AI blocks GitHub's runners (403), so it never contributes; switch it off or find another feed
 - Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text
 - The 06:00 cron can start late: GitHub delays scheduled jobs at busy times, often by 5–30 minutes

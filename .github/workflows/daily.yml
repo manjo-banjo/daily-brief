@@ -1,0 +1,82 @@
+name: Daily brief
+
+on:
+  schedule:
+    - cron: "0 6 * * *"        # 06:00 UTC: 06:00 UK in winter, 07:00 in summer (adjust in March)
+  workflow_dispatch:           # the "run now" button
+    inputs:
+      dry_run:
+        description: "Dry run: build the brief but do not commit it or send a push"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write              # commit the day's brief
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+env:
+  DRY_RUN: ${{ inputs.dry_run == true }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install the Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Build the brief
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}   # Claude subscription token
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}      # optional repository variables;
+          LLM_MODEL: ${{ vars.LLM_MODEL }}            # defaults are in pipeline/llm.py
+          LLM_MAX_CALLS: ${{ vars.LLM_MAX_CALLS }}
+          GUARDIAN_API_KEY: ${{ secrets.GUARDIAN_API_KEY }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            python -m pipeline.run --dry-run --print-brief
+          else
+            python -m pipeline.run
+          fi
+
+      - name: Keep the ranked list and dry-run brief
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-${{ github.run_id }}
+          path: out/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit the brief
+        if: env.DRY_RUN != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Brief $(date -u +%F)"
+          git push || (git pull --rebase && git push)
+
+      - name: Send the push notification
+        if: env.DRY_RUN != 'true'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SITE_URL: ${{ vars.SITE_URL }}              # optional; set once the app is on Pages
+        run: python -m pipeline.notify

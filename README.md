@@ -2,7 +2,7 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 3 of 4 done (app). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today and Quiz screens, the streak and the review queue. It is not live yet: Pages has to be switched on once (see "Go live" below).
+**Status:** session 4 of 4 done (primers and fixes). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today, Quiz and Foundations screens, the streak and the review queue. If Pages is not switched on yet, see "Go live" below.
 
 **LLM step:** Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`), because GitHub Models, the brief's first choice, was retired on 30 July 2026. A dry run on 13 Nov produced a full brief: 10 summaries, the market idea and 11 quiz questions in 6 calls. The commit step and the ntfy push have not run yet; the first real run on main is their first test.
 
@@ -51,6 +51,51 @@ mkdir -p _site && cp -r site/. _site/ && cp -r data _site/data && python3 -m htt
 
 The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief specifies.
 
+## What session 4 built
+
+| Part | Where | What it does |
+| --- | --- | --- |
+| Foundations decks | `data/primers/*.json` | Five decks, 31 cards, 47 quiz questions. One card per concept id in `config/topics.yaml`, each under 120 words with an "In the news" line. `index.json` lists the decks in display order |
+| Foundations screen | `site/app.js`, `site/styles.css` | One deck per row with cards read, best quiz score and the "Foundations complete" badge. Inside a deck: one card at a time, then the primer quiz |
+| Concept tags | `site/app.js` | The tag on a story, and on the market idea, opens its Foundations card. "Back to the brief" returns to the same place in the brief |
+| Quiz tuning | `prompts/quiz.txt`, `pipeline/validate.py`, `pipeline/quiz.py` | New prompt rules for option length and for "why" questions, plus two checks in code (below) |
+| Ranking fixes | `pipeline/rank.py`, `pipeline/text.py`, `pipeline/filter.py`, `config/topics.yaml` | One slot for a dominant event, live blogs and clips excluded, routine central bank notices no longer take the guaranteed slot (below) |
+
+The five decks:
+
+| Deck | File | Cards | Questions |
+| --- | --- | --- | --- |
+| Insurance | `insurance.json` | 7 | 9 |
+| AI and markets | `ai_markets.json` | 8 | 10 |
+| Macro: the fundamentals | `macro_markets.json` | 6 | 10 |
+| Macro: trades and instruments | `macro_trades.json` | 6 | 9 |
+| Geopolitics | `geopolitics.json` | 4 | 9 |
+
+Top headlines has no concepts and no deck, as the brief says. Macro's 12 concepts are split across two decks to make five (decision recorded in BRIEF.md).
+
+How Foundations behaves:
+
+- **Badge:** a deck is complete when its best quiz score is 80% or higher. The quiz can be retaken at any time; a lower score later does not remove the badge.
+- **Primer quiz:** instant feedback with the explanation and the card it came from; the result lists the cards behind any missed question. A quiz left half way starts again.
+- **Progress:** cards read, best score and attempts are stored on the phone with the rest of the progress, and are included in export and import.
+- **Editing a deck:** edit the JSON by hand. A card's `id` must match a concept id in `config/topics.yaml`; each question names its card in `concept`. A push to `data/primers/` on main republishes the app.
+- **If the decks fail to load:** the brief still shows, and tags are plain labels.
+
+Quiz tuning, for the two tells found on 13 Nov:
+
+- **Correct option often the longest:** the prompt now has the model write the correct option first and short, then match the wrong options to it. In code, a question whose correct option is more than 20% longer than every wrong option (and by 10 characters or more) is sent back once for a rewrite.
+- **Questions restating the "why it matters" line:** the prompt now bans lifting that line and asks for the mechanism or consequence in different words. In code, a correct option that copies five or more words in a row from the text is sent back once.
+- Both checks are style checks: if the rewrite is no better, the first version is kept, so they never cost a question. Run against the 13 Nov quiz, they flag 8 of its 10 questions.
+- **Not tested with Claude:** the new prompt has not been run against the model, because the CLI on this Mac is not logged in. The first run on GitHub is its first test; a dry run from this branch will show the result.
+
+Ranking fixes:
+
+- **One event, several slots:** a name that appears in the headlines of 12 or more outlets on the day (`big_story_min_outlets`) marks a dominant event. Every story with that name in its headline counts as the same event, so it fills one slot in the whole brief, in the topic where it scores highest. On 13 Nov the markers were Nvidia, Huang and Microsoft: the Nvidia story went from three slots to one and the Microsoft outage from two to one. This also removes loosely related stories (Nvidia's chip-tracking plan) on such a day.
+- **Live blogs:** titles with "Live:" or "live:" after any words, titles ending in "live", and "Watch:", "Listen:", "Video:" and "Podcast:" clips are dropped (`exclude_title_patterns`, regular expressions).
+- **Central bank slot:** only a policy release takes the boost and the guaranteed macro slot: one with a policy word in its title, such as "monetary policy", "Bank Rate", "FOMC statement", "minutes" or "Financial Stability Report" (`priority_title_keywords`). Other notices from the BoE, ECB and Fed feeds lose 0.10 and compete like any story. On a day with no policy release, both macro slots go to the best macro stories.
+
+Tested: the ranker against live feeds on 13 Nov (37 of 37 sources); the giveaway checks against the 13 Nov quiz and a scripted stand-in for the model; the Foundations screen in a browser at iPhone size, light and dark (tag opens its card, return to the same place in the brief, card by card through a deck, quiz at 78%, 89% and 33%, badge kept, progress saved). **Not tested:** the app on a real iPhone, and the new quiz prompt with Claude.
+
 ## What session 3 built
 
 | Part | Where | What it does |
@@ -70,7 +115,7 @@ How the app behaves:
 - **Closing mid-quiz:** answers are saved one by one; reopening resumes at the next unanswered question. A finished quiz cannot be retaken (retakes belong to the Archive screen, phase 2).
 - **Review queue details:** a review question answered correctly leaves the queue. One missed at the 7-day stage returns every 7 days until answered correctly (the brief does not say what happens then). A queued question no longer in the archive is dropped.
 - **Headline-only stories:** shown as headline and link. A headlines-only brief has no quiz unless review questions are due.
-- **Concept tags:** plain labels for now; they open Foundations cards in session 4.
+- **Concept tags:** open their Foundations card (session 4).
 - **Watchlist panel:** not shown; nothing fetches the data yet.
 - **Push link:** none. The push is a reminder; open the brief from the home-screen icon. iOS opens any link from ntfy in Safari, never in the home-screen app, and Safari keeps its own separate progress.
 - **Dry runs:** build only; nothing is published or pushed.
@@ -97,7 +142,7 @@ How the LLM step behaves:
 - **Retry and fallback:** a failed topic call or rejected item gets one retry with the reasons attached. After that, only what failed degrades: the story stays headline and link, or the question is dropped. If nothing can be summarised (no token, Claude unavailable, plan limit reached, any crash in the LLM step), the brief is still published as headlines only.
 - **Status:** each brief is marked `full`, `partial` or `headlines_only`, and lists what degraded under `issues`.
 - **Answer order:** options are shuffled in code, so the correct answer is not always in the same place.
-- **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Session 4 writes one card per id. Top headlines has none.
+- **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Each id has one card in `data/primers/`. Top headlines has none.
 - **Review queue:** not added by the pipeline. Which questions were missed is known only on the phone, so the app draws review questions from the archive.
 
 ## First run (11 Nov 2026)
@@ -139,7 +184,7 @@ One ranking fix came out of the first run: a Guardian live blog titled "... - li
 | --- | --- | --- |
 | 1. Trigger | `pipeline/run.py` | Runs every step in order |
 | 2. Fetch | `pipeline/fetch.py` | Pulls every enabled source in parallel and normalises to title, URL, source, published time, text. One failing source never stops the run. Headline-only sources never carry article text forward |
-| 3. Filter | `pipeline/filter.py` | Drops items older than 36 hours, items with no date, live blogs, duplicate URLs, near-identical titles, and anything in an earlier `data/daily/*.json` |
+| 3. Filter | `pipeline/filter.py` | Drops items older than 36 hours, items with no date, live blogs and clips, duplicate URLs, near-identical titles, and anything in an earlier `data/daily/*.json` |
 | 4. Rank and allocate | `pipeline/rank.py` | Tags each item to a topic and sub-topic by keyword, scores it on source weight, recency and keyword match, then fills the slots per topic |
 
 Ranking details worth knowing:
@@ -149,8 +194,8 @@ Ranking details worth knowing:
 - **Variety:** within a topic, a second story from the same sub-topic loses 0.15 and one from the same outlet loses 0.05, so picks spread across themes and sources unless one story is clearly stronger.
 - **Geopolitics** always fills 1 slot; the second is filled only if a story scores 0.55 or more.
 - **Top headlines** has no topic keywords. It ranks on significance: 70% how many other outlets carry the same event, 30% significance keywords (killed, strike, talks, and so on), plus the usual source weight and recency. Running order is not used. Entertainment and celebrity words in the title take 0.35 off. It skips any event already picked for another topic.
-- **Central banks (macro):** BoE, ECB and Fed press releases get +0.15, and the best fresh one always takes one macro slot. This counts everything in those feeds that passes the macro keyword and exclusion rules, so an ECB speech can take the slot.
-- **One event, one slot:** two stories about one event (two or more distinctive headline or URL words in common, making up 40%+ of the shorter story's words) cannot fill two slots, in one topic or across topics. If an event is picked under two topics, the lower-scoring copy is removed and that topic re-picks. Events described in different words are not caught: on 11 Nov the CoreWeave and Anthropic IPO stories under AI and macro still count as two.
+- **Central banks (macro):** BoE, ECB and Fed policy releases get +0.15, and the best fresh one always takes one macro slot. Since session 4 this needs a policy word in the title; routine notices lose 0.10.
+- **One event, one slot:** two stories about one event (two or more distinctive headline or URL words in common, making up 40%+ of the shorter story's words) cannot fill two slots, in one topic or across topics. If an event is picked under two topics, the lower-scoring copy is removed and that topic re-picks. Since session 4, a name in 12 or more outlets' headlines also marks one event. Smaller events described in different words are still not caught: on 11 Nov the CoreWeave and Anthropic IPO stories under AI and macro still count as two.
 - **Macro** fills 2 story slots. The third slot, the "market idea", is written by the LLM from those stories.
 
 ## Source check (11 Nov 2026)
@@ -208,22 +253,26 @@ Set under the repo's Settings → Secrets and variables → Actions.
 
 ```
 .github/workflows/daily.yml   06:00 cron + manual run: build, commit, publish, push
-.github/workflows/pages.yml   publishes the app when site/ changes
+.github/workflows/pages.yml   publishes the app when site/ or data/primers/ changes
 config/sources.yaml           feeds, topics, weights
 config/topics.yaml            slots, keywords, scoring, lens, concept tags, watchlist
 pipeline/                     run, fetch, filter, rank, summarise, quiz, validate, output, notify, llm
 prompts/                      summary.txt, summary_macro.txt, quiz.txt
 data/daily/                   last 7 days, full
 data/archive/                 quizzes and links, one file per month
-data/primers/                 empty until session 4
+data/primers/                 five Foundations decks and index.json; edited by hand
 site/                         index.html, app.js, styles.css, manifest, icons
 ```
 
 ## Next
 
-1. **Go live:** the four steps at the top. The first real 06:00 run is the first test of the commit, prune, deploy and push steps
-2. **No Fable day:** use the app for a day; list bugs and weak questions
-3. **Session 4 (primers and fixes):** the five Foundations decks and their quizzes, concept tags that open their cards, the bug list, prompt tuning
+Phase 1's four sessions are done. What is left before phase 2:
+
+1. **Dry run from this branch:** Actions → Daily brief → Run workflow → pick the branch, tick "Dry run". This is the first test of the new quiz prompt; check the questions in the run's `out` artifact
+2. **Your bug list and weak questions:** session 4's prompt had placeholders for both, so nothing from your day of use has been fixed yet. Send them and they can go into a follow-up
+3. **Read the decks:** the cards and questions were written in one pass and not reviewed by you. Correct anything in `data/primers/` by hand
+4. **Phase 1 checklist in BRIEF.md:** three unattended 06:00 runs in a row, and a spot-check of 20 quiz answers against their summaries
+5. **Phase 2 (Sonnet or Opus):** Archive and Progress screens, including the weekly recap that links most-missed concepts to their cards
 
 Not built yet, and not assigned to a session in the brief:
 
@@ -237,13 +286,16 @@ Open items:
 - **Progress is per browser:** Safari and the home-screen app can keep separate storage on iOS, so do the quiz in the home-screen app; export and import moves progress between them
 
 - **Summary accuracy:** validation checks the quiz against the summary, not the summary against the article. Slips like the wrong name above get through; spot-check during the trial days
-- **Quiz tells:** the correct option is often the longest, and several questions restate the "why it matters" line closely. Tune `prompts/quiz.txt` in session 4
-- **Ranking, seen on 13 Nov:** one event (the Nvidia chief's exit) took three slots under different wording; a City AM "FTSE 100 Live:" blog took a macro slot (only "– live" and "- live" are excluded); a Fed notice on payment-service pricing took the guaranteed central-bank slot
+- **Quiz tells:** prompt and checks changed in session 4, but untested with Claude; review the first few quizzes
+- **Primer accuracy:** the cards state rules that change (UK tax on gilts, spread bets and CFDs, FCA leverage limits, EU AI Act dates). They were written from general knowledge on 13 Nov 2026 and not checked against sources
+- **Big-story rule:** the 12-outlet threshold was set on one day's news. A name that is in the news every day (Trump, China) reached 8 or 9 outlets on 13 Nov; if one reaches 12 on an ordinary day, unrelated stories about it will share one slot. Raise `big_story_min_outlets` if that happens
+- **Opinion pieces:** a City AM comment piece ("Britain is growing in spite of Labour") took a macro slot on 13 Nov. Nothing marks comment apart from news in the feeds
+- **Macro on a quiet day:** with no policy release, the second macro slot can go to a headline-only source (WSJ), which gets no summary or question
 - Each run installs the Claude Code CLI with npm (about 20 seconds); the version is not pinned
 - Import AI blocks GitHub's runners (403), so it never contributes; switch it off or find another feed
 - Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text
 - The 06:00 cron can start late: GitHub delays scheduled jobs at busy times, often by 5–30 minutes
-- Events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov)
+- Smaller events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov)
 - Top headlines significance is a proxy (outlet coverage plus keywords); an entertainment story with no keyword in its title can still get through
 - `feed_order: editorial` in `config/sources.yaml` is no longer used by the ranker
 - Ranking and prompts have been tuned against very few days of news; review after a week of runs

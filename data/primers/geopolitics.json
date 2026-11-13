@@ -1,0 +1,151 @@
+{
+  "id": "geopolitics",
+  "topic": "geopolitics",
+  "label": "Geopolitics",
+  "intro": "The flashpoints this brief follows, the bodies that respond to them, and the routes by which they reach markets.",
+  "cards": [
+    {
+      "id": "flashpoints",
+      "title": "Key flashpoints",
+      "body": "Five themes move markets most. US–China: tariffs, limits on chip exports and the status of Taiwan, where most advanced chips are made. Russia–Ukraine: the war, sanctions and how Europe pays for its own defence. The Middle East: conflict that threatens oil and gas supply, above all through the Strait of Hormuz, which carries about a fifth of the world's oil. Elections: changes of government that shift trade, tax and spending. French politics: a divided parliament that struggles to pass budgets, which matters because France is one of the euro area's largest borrowers.",
+      "in_the_news": "Each geopolitics story in the brief belongs to one of these five themes."
+    },
+    {
+      "id": "institutions",
+      "title": "The main institutions (EU, NATO, G7, UN)",
+      "body": "The EU is a union of 27 states with a single market. The Commission proposes laws and runs trade policy; foreign policy and sanctions need all member governments to agree, so one can block. NATO is a military alliance of 32 countries; under Article 5 an attack on one is treated as an attack on all. The G7 is an informal club of large advanced economies (US, UK, Canada, France, Germany, Italy, Japan) that coordinates sanctions and economic policy. The UN Security Council can pass binding resolutions, but any of five permanent members (US, UK, France, Russia, China) can veto them.",
+      "in_the_news": "Ask of any summit: can this body decide, and who can block it?"
+    },
+    {
+      "id": "sanctions",
+      "title": "How sanctions work",
+      "body": "Sanctions are penalties used to change a state's behaviour without force. The main types are asset freezes on people and companies; trade bans, including export controls on technology; and financial limits, such as cutting banks off from the SWIFT payments network or freezing central bank reserves. Secondary sanctions go further: they threaten firms in other countries that deal with the target, which works because few banks will risk losing access to the dollar. Sanctions seldom bite quickly. Trade reroutes through other countries, and the sender pays a cost too, often through energy prices.",
+      "in_the_news": "The US enforces through OFAC and the UK through OFSI; the EU needs all 27 members to renew its measures."
+    },
+    {
+      "id": "geopolitics_and_markets",
+      "title": "How geopolitics reaches markets",
+      "body": "There are three main routes. Energy: threats to supply raise oil and gas prices, which feeds inflation and can delay rate cuts. Risk premium: investors demand more return to hold assets exposed to the trouble, so those shares, bonds and currencies fall. Safe havens: money moves to the dollar, US Treasuries, gold, the Swiss franc and the yen. Other effects are narrower, such as defence shares rising or supply chains being moved. Most shocks fade within weeks. The ones that last are those that change the supply of something, the path of inflation or government policy.",
+      "in_the_news": "The \"why it matters\" line on a geopolitics story will usually name one of these routes."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "geopolitics-q1",
+      "concept": "flashpoints",
+      "question": "Why does the Strait of Hormuz matter to markets?",
+      "options": [
+        "About a fifth of world oil passes through",
+        "It is the main route for Russian gas to Europe",
+        "Most advanced chips are shipped through it",
+        "It carries most trade between China and the US"
+      ],
+      "answer": 0,
+      "explanation": "A threat to the strait is a threat to a large share of oil supply."
+    },
+    {
+      "id": "geopolitics-q2",
+      "concept": "flashpoints",
+      "question": "Why do investors pay attention to French budget disputes?",
+      "options": [
+        "France sets the interest rate for the euro area",
+        "France is among the euro area's top borrowers",
+        "France holds a veto over the ECB's bond buying",
+        "French law caps the debt of other EU members"
+      ],
+      "answer": 1,
+      "explanation": "Doubts about French finances show up in its borrowing costs and in the euro area's."
+    },
+    {
+      "id": "geopolitics-q3",
+      "concept": "institutions",
+      "question": "Why can a single EU member hold up new sanctions?",
+      "options": [
+        "Sanctions need all member governments to agree",
+        "Each member enforces sanctions in its own courts",
+        "The Commission needs NATO's approval first",
+        "The European Parliament votes by country"
+      ],
+      "answer": 0,
+      "explanation": "Foreign policy decisions in the EU require unanimity."
+    },
+    {
+      "id": "geopolitics-q4",
+      "concept": "institutions",
+      "question": "What does NATO's Article 5 commit members to?",
+      "options": [
+        "Imposing sanctions agreed by the G7 members",
+        "Treating an attack on one as an attack on all",
+        "Spending a fixed share of GDP on defence",
+        "Following resolutions of the UN Security Council"
+      ],
+      "answer": 1,
+      "explanation": "Article 5 is the collective defence clause."
+    },
+    {
+      "id": "geopolitics-q5",
+      "concept": "institutions",
+      "question": "What limits the UN Security Council's power to act?",
+      "options": [
+        "It needs every UN member state to vote in favour",
+        "Its resolutions are advisory and never binding",
+        "Any of five permanent members can veto it",
+        "It can meet only when the G7 has asked it to"
+      ],
+      "answer": 2,
+      "explanation": "The US, UK, France, Russia and China each hold a veto."
+    },
+    {
+      "id": "geopolitics-q6",
+      "concept": "sanctions",
+      "question": "Why do secondary sanctions work on firms in third countries?",
+      "options": [
+        "They freeze those firms' assets held at home",
+        "The UN fines any firm that ignores them",
+        "Few banks will risk losing dollar access",
+        "Their own governments enforce them by treaty"
+      ],
+      "answer": 2,
+      "explanation": "The threat is exclusion from the US financial system."
+    },
+    {
+      "id": "geopolitics-q7",
+      "concept": "sanctions",
+      "question": "Why do sanctions seldom bite quickly?",
+      "options": [
+        "Asset freezes take years to come into force",
+        "Trade is rerouted through other countries",
+        "Central banks offset them by cutting rates",
+        "Courts suspend them while appeals are heard"
+      ],
+      "answer": 1,
+      "explanation": "Targets find other buyers and suppliers, which blunts the effect."
+    },
+    {
+      "id": "geopolitics-q8",
+      "concept": "geopolitics_and_markets",
+      "question": "How can a conflict in an oil-producing region delay interest rate cuts?",
+      "options": [
+        "Central banks hold more gold in a crisis",
+        "Defence spending is counted as inflation",
+        "Safe-haven buying pushes bond yields higher",
+        "Dearer energy feeds through into inflation"
+      ],
+      "answer": 3,
+      "explanation": "Higher oil and gas prices raise inflation, which central banks must respond to."
+    },
+    {
+      "id": "geopolitics-q9",
+      "concept": "geopolitics_and_markets",
+      "question": "Which geopolitical shocks tend to have a lasting market effect?",
+      "options": [
+        "Those that begin outside normal trading hours",
+        "Those that involve more than two countries",
+        "Those that cause the largest one-day price move",
+        "Those that change supply, inflation or policy"
+      ],
+      "answer": 3,
+      "explanation": "Most shocks fade within weeks unless they alter something fundamental."
+    }
+  ]
+}

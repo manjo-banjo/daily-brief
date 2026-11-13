@@ -16,6 +16,11 @@ settings:
   same_subtopic_penalty: 0.15  # nudges a topic's picks towards different sub-topics
   demote_penalty: 0.15       # taken off when a topic's demote keyword is in the title
   exclude_title_keywords: ["as it happened", "live updates", "– live", "- live", "live blog", "in pictures", "quiz"]   # never stories
+  exclude_title_patterns:    # never stories either; regular expressions, upper or lower case
+    - '\blive\s*[:|–—-]'                 # "FTSE 100 Live: ...", "Microsoft outage live: ..."
+    - '\blive$'                          # "... – Europe live"
+    - '^(watch|listen|video|podcast)\s*:'  # clips, not articles
+  big_story_min_outlets: 12  # a name in the headlines of this many outlets marks one dominant event, which then fills one slot in the whole brief; 0 = off
 
 # Keyword hits: a match in the title counts 2, a match in the text counts 1.
 # An item needs at least `min_keyword_hits` to be tagged to the topic.
@@ -85,8 +90,14 @@ topics:
       hedging: Hedging
       retail_instruments: Instruments a UK retail investor can use (leverage, margin, tax)
     min_keyword_hits: 2
-    priority_sources: [boe_news, ecb_press, fed_press]   # central bank releases: boosted, and a fresh one always takes a slot
+    priority_sources: [boe_news, ecb_press, fed_press]   # central bank releases
     priority_source_boost: 0.15
+    # Only a policy release (one of these in its title) gets the boost and the guaranteed slot.
+    # The words name what was decided or published, not the committee: "FOMC" alone would let a
+    # meeting-schedule notice through.
+    # Other notices from those feeds (payment-service pricing, joint projects) lose the penalty below.
+    priority_title_keywords: ["monetary policy", "Bank Rate", "interest rate", "interest rates", "rate decision", "policy rate", "policy rates", "FOMC statement", "Monetary Policy Summary", minutes, "economic projections", "macroeconomic projections", "Monetary Policy Report", "Financial Stability Report", "Financial Stability Review", "Financial Policy Committee", "financial stability", "stress test", "stress tests", "balance sheet", "quantitative tightening", "asset purchase", "asset purchases", inflation, "Beige Book", "discount rate", "Economic Bulletin", "countercyclical capital buffer", "reserve requirements"]
+    routine_release_penalty: 0.10
     exclude_title_keywords: ["banking applications", "enforcement action", "approval of application", "approval of two applications", "exchange of letters", "prohibition", "termination of enforcement"]
     subtopics:
       central_banks:

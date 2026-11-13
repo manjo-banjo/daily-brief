@@ -1,0 +1,188 @@
+{
+  "id": "ai_markets",
+  "topic": "ai_markets",
+  "label": "AI and markets",
+  "intro": "What the technology is, who supplies it, who pays for it, and why markets watch it so closely.",
+  "cards": [
+    {
+      "id": "what_is_an_llm",
+      "title": "What an LLM is",
+      "body": "A large language model (LLM) is software trained to predict the next piece of text. It learns from a very large body of writing by adjusting billions of internal numbers, called parameters, until its predictions are good. Text is handled in tokens, which are words or parts of words. Asked a question, the model produces an answer one token at a time. It has no database of facts to look things up in, which is why it can state something false with confidence. The context window is how much text it can take in at once.",
+      "in_the_news": "Model launches are described by size, context window, price per token and benchmark scores."
+    },
+    {
+      "id": "training_vs_inference",
+      "title": "Training versus inference",
+      "body": "Training is building the model: running huge amounts of text through thousands of chips for weeks or months. It is a large, one-off cost for each model. Inference is using the finished model: every question answered is an inference job. Each one is cheap, but the total grows with every user and every request, so it becomes the larger and more lasting cost as products spread. The split matters for chip demand. Training needs the most powerful chips in dense clusters; inference can use a wider range of cheaper chips, which opens the market to competitors.",
+      "in_the_news": "Stories about \"inference demand\" or \"cost per token\" are about the running cost, not the build cost."
+    },
+    {
+      "id": "chip_supply_chain",
+      "title": "The chip and compute supply chain",
+      "body": "AI runs on specialised chips, and the chain that makes them is narrow. Nvidia designs most of the processors (GPUs) used for AI. TSMC in Taiwan manufactures them. ASML in the Netherlands is the only maker of the lithography machines needed for the most advanced chips. Fast memory comes mainly from SK Hynix, Samsung and Micron. Finished chips go into data centres, which need land, cooling and a great deal of electricity. A shortage at any step limits everyone, and US export controls restrict which chips can be sold to China.",
+      "in_the_news": "Watch for supply bottlenecks, Taiwan risk, export controls and power shortages at data centres."
+    },
+    {
+      "id": "hyperscaler_capex",
+      "title": "Hyperscaler capex",
+      "body": "Hyperscalers are the companies that run the largest cloud platforms: Microsoft, Alphabet, Amazon and Meta, with Oracle close behind. Capex (capital expenditure) is their spending on data centres, chips and power. Together they spend hundreds of billions of dollars a year, and most AI chip sales depend on it. Their spending is other companies' revenue, so each quarter's capex guidance moves chipmakers, builders and utilities. The open question is the return: this spending is written off over several years, so profits suffer if AI revenue does not grow fast enough to cover it.",
+      "in_the_news": "Earnings season headlines turn on whether capex guidance rose and how it is being financed."
+    },
+    {
+      "id": "ai_lab_economics",
+      "title": "How AI labs make money",
+      "body": "AI labs such as OpenAI and Anthropic earn revenue in three main ways: subscriptions to their chat products, fees from businesses that use their models through an API (priced per token), and larger enterprise contracts. Their main cost is compute, for both training new models and serving users, followed by research staff. Revenue is growing quickly but most labs still spend more than they earn, so they rely on large funding rounds and on deals with cloud providers and chipmakers, some of whom are also their investors.",
+      "in_the_news": "Funding rounds, valuations, revenue run-rates and compute deals are the numbers to follow."
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "body": "An agent is an AI system that carries out a task in several steps rather than answering one question. The model plans, uses tools such as a web browser, code or company software, checks the result and continues until the job is done. That moves AI from giving advice to doing work, which is where businesses expect the largest savings. There are two catches. Errors add up over many steps, so reliability matters more. And an agent uses far more compute than a single chat answer, which raises demand for inference.",
+      "in_the_news": "Product launches now centre on agents that write code, handle customer service or make purchases."
+    },
+    {
+      "id": "eu_ai_act",
+      "title": "The EU AI Act",
+      "body": "The EU AI Act is the first broad law on AI. It regulates by risk. A few uses are banned, such as social scoring by governments. High-risk uses, including hiring, credit scoring and critical infrastructure, must meet rules on testing, documentation and human oversight. Makers of general-purpose models have transparency duties, with more for the most powerful models. The Act came into force in 2024 and applies in stages over the following years. Fines can reach 7% of global turnover. It covers any company selling into the EU, wherever it is based.",
+      "in_the_news": "Coverage follows deadlines, calls to delay them and how US labs respond."
+    },
+    {
+      "id": "ai_and_markets",
+      "title": "How AI moves markets",
+      "body": "AI reaches markets through four routes. Concentration: a handful of AI-linked companies make up a large share of US indices, so their results move the whole market. Earnings: chipmaker results and hyperscaler capex guidance act as a verdict on the theme each quarter. Spillovers: data centres lift demand for power, cooling and construction, and are increasingly funded with debt, which ties in credit markets. Valuation: prices assume years of fast growth, so a small disappointment can cause a large fall.",
+      "in_the_news": "When one large AI name falls sharply, check what it does to the index, to suppliers and to credit."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "ai_markets-q1",
+      "concept": "what_is_an_llm",
+      "question": "Why can an LLM state something false with confidence?",
+      "options": [
+        "It predicts likely text, not checked facts",
+        "Its context window is too small to hold the facts",
+        "It is built to favour short answers over true ones",
+        "Its training data is limited to a few sources"
+      ],
+      "answer": 0,
+      "explanation": "The model generates the most likely next token; it has no store of checked facts."
+    },
+    {
+      "id": "ai_markets-q2",
+      "concept": "training_vs_inference",
+      "question": "Why does inference become the larger cost as AI products spread?",
+      "options": [
+        "Inference chips cost more than training chips",
+        "Each inference job needs more chips than training",
+        "Models must be retrained after each question",
+        "It is paid again on every single request"
+      ],
+      "answer": 3,
+      "explanation": "Training is a one-off per model; inference is paid for on every use."
+    },
+    {
+      "id": "ai_markets-q3",
+      "concept": "training_vs_inference",
+      "question": "Why does the growth of inference open the chip market to competitors?",
+      "options": [
+        "Inference needs no data centres or extra power",
+        "Export controls do not apply to inference chips",
+        "It can run on a wider range of cheaper chips",
+        "Training chips can no longer be manufactured"
+      ],
+      "answer": 2,
+      "explanation": "Training needs the most powerful chips; inference does not always."
+    },
+    {
+      "id": "ai_markets-q4",
+      "concept": "chip_supply_chain",
+      "question": "What is ASML's place in the AI supply chain?",
+      "options": [
+        "Largest designer of the processors used for AI",
+        "Only maker of advanced lithography machines",
+        "Leading supplier of fast memory for AI servers",
+        "Main manufacturer of chips designed by Nvidia"
+      ],
+      "answer": 1,
+      "explanation": "ASML makes the lithography machines; Nvidia designs, TSMC manufactures."
+    },
+    {
+      "id": "ai_markets-q5",
+      "concept": "hyperscaler_capex",
+      "question": "Why does hyperscaler capex guidance move chipmakers' shares?",
+      "options": [
+        "Capex is reported before chipmakers' own results",
+        "Guidance sets the price chipmakers may charge",
+        "Hyperscalers own large stakes in the chipmakers",
+        "That spending is the chipmakers' AI revenue"
+      ],
+      "answer": 3,
+      "explanation": "Hyperscalers are the main buyers, so their spending plans are chip demand."
+    },
+    {
+      "id": "ai_markets-q6",
+      "concept": "hyperscaler_capex",
+      "question": "What is the main risk to hyperscalers from very high capex?",
+      "options": [
+        "Regulators cap the amount they are allowed to spend",
+        "Rivals copy their data centres at lower cost",
+        "Chip prices fall before the data centres open",
+        "Write-offs outrun the AI revenue it earns"
+      ],
+      "answer": 3,
+      "explanation": "The spending is depreciated over years and needs revenue to cover it."
+    },
+    {
+      "id": "ai_markets-q7",
+      "concept": "ai_lab_economics",
+      "question": "What is the largest cost for an AI lab?",
+      "options": [
+        "Salaries and share awards for research staff",
+        "Compute for training and serving users",
+        "Licence fees paid for the training data",
+        "Marketing to win subscribers and businesses"
+      ],
+      "answer": 1,
+      "explanation": "Compute comes first, then research staff."
+    },
+    {
+      "id": "ai_markets-q8",
+      "concept": "agents",
+      "question": "Why do agents raise demand for inference?",
+      "options": [
+        "Each agent needs a newly trained model to run",
+        "One task takes many model calls, not one",
+        "They store every result in the context window",
+        "Agents run only on the most powerful chips"
+      ],
+      "answer": 1,
+      "explanation": "An agent plans, acts and checks over many steps, each using compute."
+    },
+    {
+      "id": "ai_markets-q9",
+      "concept": "eu_ai_act",
+      "question": "How does the EU AI Act decide which rules apply to an AI system?",
+      "options": [
+        "By the amount of data used to train it",
+        "By the size of the company that built it",
+        "By the risk of the use it is put to",
+        "By the country where its maker is based"
+      ],
+      "answer": 2,
+      "explanation": "It is risk-based: banned uses, high-risk uses with duties, and lighter rules below that."
+    },
+    {
+      "id": "ai_markets-q10",
+      "concept": "ai_and_markets",
+      "question": "Why can a fall in a few AI-linked shares move a whole US index?",
+      "options": [
+        "They report results before the rest of the market",
+        "Index rules force other shares to follow them",
+        "Their suppliers are all listed in the same index",
+        "They make up a large share of the index's value"
+      ],
+      "answer": 3,
+      "explanation": "Market concentration means a handful of companies carry much of the index weight."
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "id": "macro_trades",
+  "topic": "macro_markets",
+  "label": "Macro: trades and instruments",
+  "intro": "How views are turned into positions, and what a UK retail investor can actually use. Explanation, not advice.",
+  "cards": [
+    {
+      "id": "carry",
+      "title": "Carry trades",
+      "body": "Carry is the return you earn from simply holding a position, if prices do not move. A carry trade borrows where interest is low and invests where it is higher, keeping the difference. A simple case is holding a bond that yields 5% funded with money that costs 4%. The trade earns a small, steady income in calm markets. The risk is a sudden move in price that wipes out months of income in days, which tends to happen when many investors hold the same position and leave together.",
+      "in_the_news": "\"Carry unwind\" means investors are closing these positions at once, which exaggerates market moves."
+    },
+    {
+      "id": "relative_value",
+      "title": "Relative-value spreads",
+      "body": "A relative-value trade bets on the gap between two related assets, not on the direction of the market. The investor buys one and sells the other. The classic case in Europe is a sovereign spread: the yield on French (OAT) or Italian (BTP) bonds minus the yield on German Bunds. If you expect France to look riskier, you sell OATs and buy Bunds; you profit if the spread widens, whether yields overall rise or fall. The risk is that the gap moves against you, or that the two assets stop moving together.",
+      "in_the_news": "\"The OAT–Bund spread widened to 80 basis points\" means investors want more to hold French debt."
+    },
+    {
+      "id": "curve_trades",
+      "title": "Curve steepeners and flatteners",
+      "body": "A curve trade bets on the shape of the yield curve, not its level. A steepener profits when the gap between long and short yields widens: buy short-dated bonds and sell long-dated ones. A flattener is the reverse and profits when the gap narrows. Positions are sized so that a move up or down in all yields together makes no difference. Steepeners tend to work when rate cuts are coming or when governments are borrowing heavily. Flatteners tend to work when a central bank is raising rates.",
+      "in_the_news": "\"2s10s\" is the 10-year yield minus the 2-year yield, the most quoted measure of the curve."
+    },
+    {
+      "id": "fx_carry",
+      "title": "FX carry",
+      "body": "FX carry is the carry trade done with currencies. The investor borrows a currency with low interest rates, traditionally the yen or the Swiss franc, and buys one with high rates, such as the Mexican peso or the Brazilian real, earning the gap. It pays as long as the high-rate currency does not fall by more than that gap. In a scare the pattern reverses fast: investors sell the risky currency and buy back the funding one, so the funding currency jumps. Gains build slowly and losses arrive quickly.",
+      "in_the_news": "A sharp rise in the yen on a bad day for shares is often a carry trade being unwound."
+    },
+    {
+      "id": "hedging",
+      "title": "Hedging",
+      "body": "Hedging means taking a second position that gains when your main one loses, to cut a risk you do not want. A UK investor in US shares can hedge the dollar, so that only the shares' performance counts. A bond holder can sell futures to reduce exposure to rising yields. A share investor can buy put options, which pay out if prices fall. Every hedge has a cost: a premium, a fee or upside given up. And few are exact: basis risk is the chance that the hedge and the holding do not move together.",
+      "in_the_news": "\"Currency-hedged\" in a fund's name means the fund removes most of the exchange-rate effect for you."
+    },
+    {
+      "id": "retail_instruments",
+      "title": "Instruments a UK retail investor can use",
+      "body": "Gilts can be bought directly; gains are free of capital gains tax, but interest is taxed as income. Bond, commodity and currency-hedged ETFs can be held in an ISA or pension, where returns are tax-free. Spread bets and CFDs give leveraged exposure to rates, FX and indices: you put up a deposit (margin), but gains and losses are on the full position. FCA rules cap leverage at 30:1 on major currencies and less elsewhere, and losses cannot exceed your account. Spread bet profits are currently tax-free; CFD profits are not, and tax rules change. Futures and options need a specialist account.",
+      "in_the_news": "The \"how this can be accessed\" note under each macro story names the instrument types from this card."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "macro_trades-q1",
+      "concept": "carry",
+      "question": "When does a carry trade make money?",
+      "options": [
+        "When many investors close the position at once",
+        "When markets fall sharply and volatility rises",
+        "When prices stay broadly where they are",
+        "When the funding rate rises above the yield"
+      ],
+      "answer": 2,
+      "explanation": "Carry is the income earned from holding the position if nothing moves."
+    },
+    {
+      "id": "macro_trades-q2",
+      "concept": "carry",
+      "question": "Why can a carry trade lose months of income within days?",
+      "options": [
+        "The borrowed money must be repaid every week",
+        "Crowded positions are all closed at once",
+        "The interest earned is paid only once a year",
+        "Central banks tax the income when markets fall"
+      ],
+      "answer": 1,
+      "explanation": "A sudden price move, made worse by a crowded exit, outweighs the small steady income."
+    },
+    {
+      "id": "macro_trades-q3",
+      "concept": "relative_value",
+      "question": "You sell French OATs and buy German Bunds. What makes the trade profit?",
+      "options": [
+        "The euro strengthens against the dollar",
+        "The ECB cuts its policy rate at the next meeting",
+        "French and German yields both fall together",
+        "The gap between French and German yields widens"
+      ],
+      "answer": 3,
+      "explanation": "The position is on the spread, not on the direction of yields."
+    },
+    {
+      "id": "macro_trades-q4",
+      "concept": "curve_trades",
+      "question": "What is a steepener a bet on?",
+      "options": [
+        "Short yields rising relative to long yields",
+        "All yields rising by about the same amount",
+        "All yields falling by about the same amount",
+        "Long yields rising relative to short ones"
+      ],
+      "answer": 3,
+      "explanation": "A steepener profits when the gap between long and short yields widens."
+    },
+    {
+      "id": "macro_trades-q5",
+      "concept": "curve_trades",
+      "question": "Which backdrop tends to favour a flattener?",
+      "options": [
+        "A central bank that is raising rates",
+        "A government sharply increasing its borrowing",
+        "A central bank that is about to cut rates",
+        "A sharp fall in short-dated bond yields"
+      ],
+      "answer": 0,
+      "explanation": "Rate rises lift short yields relative to long ones, narrowing the gap."
+    },
+    {
+      "id": "macro_trades-q6",
+      "concept": "fx_carry",
+      "question": "In a market scare, what typically happens to the funding currency in an FX carry trade?",
+      "options": [
+        "It jumps, as investors buy it back",
+        "It is unchanged, as only risky currencies move",
+        "It falls, as investors sell everything at once",
+        "It falls, as its central bank cuts rates"
+      ],
+      "answer": 0,
+      "explanation": "Unwinding means selling the high-rate currency and buying back the borrowed one."
+    },
+    {
+      "id": "macro_trades-q7",
+      "concept": "hedging",
+      "question": "What is basis risk?",
+      "options": [
+        "The premium paid for the hedge rises over time",
+        "The hedge is closed before the holding is sold",
+        "The hedge and holding fail to move together",
+        "The broker cannot pay out when the hedge gains"
+      ],
+      "answer": 2,
+      "explanation": "Few hedges match the holding exactly, so some risk remains."
+    },
+    {
+      "id": "macro_trades-q8",
+      "concept": "retail_instruments",
+      "question": "How are gains on gilts held directly treated for UK tax?",
+      "options": [
+        "Gains are tax-free; interest is income",
+        "Both gains and interest are taxed as income",
+        "Both gains and interest are free of all tax",
+        "Gains are taxed; the interest is tax-free"
+      ],
+      "answer": 0,
+      "explanation": "Gilts are exempt from capital gains tax, but the coupon is income."
+    },
+    {
+      "id": "macro_trades-q9",
+      "concept": "retail_instruments",
+      "question": "What does trading on margin mean for a spread bet or CFD?",
+      "options": [
+        "Gains and losses are on the full position",
+        "Profits are paid out only when the bet expires",
+        "The broker shares in any loss on the position",
+        "Losses are limited to a tenth of the deposit"
+      ],
+      "answer": 0,
+      "explanation": "You put up a deposit, but the exposure, and so the profit or loss, is on the whole position."
+    }
+  ]
+}

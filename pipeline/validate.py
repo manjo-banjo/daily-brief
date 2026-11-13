@@ -14,6 +14,9 @@ from .models import Topic
 MAX_SUMMARY_SENTENCES = 5   # the prompt asks for 3; sentence counting is approximate ("U.S." etc.)
 MAX_WHY_WORDS = 45          # the prompt asks for 30
 MAX_EVIDENCE_WORDS = 60     # the prompt asks for 40
+LONGEST_RATIO = 1.2         # tell: the correct option is this much longer than any wrong one...
+LONGEST_MIN_CHARS = 10      # ...and by at least this many characters
+COPIED_RUN_WORDS = 5        # tell: the correct option lifts this many words in a row from the text
 IDEA_FIELDS = ["title", "what_the_trade_is", "how_it_is_expressed", "retail_access",
                "what_makes_it_work", "what_breaks_it"]
 
@@ -117,3 +120,26 @@ def check_question(raw: dict, text: str) -> Tuple[Optional[dict], str]:
     tests = raw.get("tests") if raw.get("tests") in ("why", "fact") else "fact"
     return {"question": question, "options": options, "answer": answer,
             "explanation": explanation, "evidence": evidence, "tests": tests}, ""
+
+
+def _words(text: str) -> List[str]:
+    return re.findall(r"[a-z0-9']+", _normalise(text))
+
+
+def question_tell(fields: dict, text: str) -> str:
+    """A giveaway that lets the reader pick the answer without understanding the story; empty when
+    there is none. These are style faults, not errors: the quiz step asks once for a rewrite and
+    keeps the question if the rewrite is no better."""
+    options, answer = fields["options"], fields["answer"]
+    longest_wrong = max(len(o) for i, o in enumerate(options) if i != answer)
+    if (len(options[answer]) > LONGEST_RATIO * longest_wrong
+            and len(options[answer]) - longest_wrong >= LONGEST_MIN_CHARS):
+        return ("the correct option is clearly the longest of the four; shorten it or lengthen the "
+                "wrong options so all four are about the same length")
+    haystack = " " + " ".join(_words(text)) + " "
+    right = _words(options[answer])
+    for start in range(len(right) - COPIED_RUN_WORDS + 1):
+        if " " + " ".join(right[start:start + COPIED_RUN_WORDS]) + " " in haystack:
+            return ("the correct option copies a run of words from the item text; say the same idea "
+                    "in different words, so the question tests understanding and not recognition")
+    return ""

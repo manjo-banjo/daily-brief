@@ -1,0 +1,169 @@
+{
+  "id": "insurance",
+  "topic": "insurance",
+  "label": "Insurance",
+  "intro": "How insurers earn, why prices move in cycles, and how the London and reinsurance markets fit together.",
+  "cards": [
+    {
+      "id": "insurer_economics",
+      "title": "How insurers make money",
+      "body": "An insurer collects premiums now and pays claims later. It earns in two ways. Underwriting profit is premiums minus claims and expenses, measured by the combined ratio: claims plus expenses, divided by earned premiums. Below 100% means an underwriting profit; 95% means 5p kept from each £1 of premium. Investment income is the return on the money held between collecting premiums and paying claims, known as the float. When interest rates are high, investment income can carry a weak underwriting year. When they are low, underwriting has to pay its own way.",
+      "in_the_news": "Results stories lead with the combined ratio (often shortened to CoR) and premium growth."
+    },
+    {
+      "id": "underwriting_cycle",
+      "title": "The underwriting cycle",
+      "body": "Insurance prices move in a cycle. After heavy losses or a shortage of capital, insurers raise prices and tighten terms: a hard market. High prices bring good profits, which attract new capital and competition. Insurers then cut prices and loosen terms to win business: a soft market. Margins thin until the next large loss resets the cycle. Each line of business has its own cycle, so cyber can be softening while casualty is hardening.",
+      "in_the_news": "Watch for \"rate increases\", \"rate adequacy\", \"softening\" and \"discipline\" in results and broker reports."
+    },
+    {
+      "id": "reinsurance_renewals",
+      "title": "Reinsurance and the 1/1 renewals",
+      "body": "Reinsurance is insurance for insurers. An insurer pays a reinsurer to take part of its risk, which protects its capital against large losses and lets it write more business. Most contracts (treaties) run for a year, and more than half renew on 1 January, so \"1/1\" sets the tone for pricing. Other key dates are 1 April (Japan) and 1 June and 1 July (Florida, the wider US, Australia). Two terms matter: the price, and the attachment point, which is the size of loss at which the reinsurer starts to pay.",
+      "in_the_news": "From October to January, coverage centres on how far reinsurance rates will rise or fall at 1/1."
+    },
+    {
+      "id": "lloyds",
+      "title": "How Lloyd's works",
+      "body": "Lloyd's is a market, not an insurance company. Risk is underwritten by syndicates, each run by a managing agent and backed by capital from members, which are mostly companies and investment funds. Brokers bring business to the market, and syndicates often share one risk: a lead underwriter sets the terms and others follow. The Corporation of Lloyd's oversees the market, approves syndicates' business plans and holds the Central Fund, which pays valid claims if a member cannot. That shared backing is why every syndicate trades on the Lloyd's credit rating.",
+      "in_the_news": "Stories cover market-wide results, new syndicates and the capital that members put up each year."
+    },
+    {
+      "id": "mgas",
+      "title": "MGAs and delegated authority",
+      "body": "A managing general agent (MGA) prices and sells insurance on behalf of an insurer, using authority the insurer has delegated to it. The MGA does the underwriting but does not carry the risk: claims are paid by the insurer or Lloyd's syndicate behind it, called the capacity provider. The MGA earns commission, often with a share of profit if the business performs. The model suits specialist niches and lets capital enter a line without building a team. Its weak point is alignment: the party choosing the risks is not the one paying the claims.",
+      "in_the_news": "Look for capacity deals, MGA launches and insurers withdrawing capacity after poor results."
+    },
+    {
+      "id": "cat_bonds_ils",
+      "title": "Cat bonds and ILS",
+      "body": "Insurance-linked securities (ILS) pass insurance risk to capital market investors. The best known is the catastrophe bond. Investors buy the bond and their money is held as collateral. They receive a coupon made up of the return on that collateral plus a risk spread. If a defined event happens, such as a Florida hurricane above a set loss, some or all of the collateral pays the sponsor and investors lose that money. Otherwise they are repaid in full, usually after three years. Investors like that the returns have little link to share and bond markets.",
+      "in_the_news": "Coverage tracks new issues, spreads and how much \"alternative capital\" is competing with reinsurers."
+    },
+    {
+      "id": "capital_rules",
+      "title": "Capital rules",
+      "body": "Insurers must hold enough capital to pay claims in a very bad year. In the UK the regime is Solvency UK, the successor to the EU's Solvency II, supervised by the Prudential Regulation Authority. The main test is the solvency capital requirement: enough capital to survive a loss expected once in 200 years. A solvency ratio of 200% means twice that amount. Rating agencies such as AM Best and S&P run their own capital models, and their ratings decide whom brokers and clients will trade with. Spare capital funds growth, dividends and buybacks.",
+      "in_the_news": "Results quote the solvency ratio; rating actions and capital returns follow from it."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "insurance-q1",
+      "concept": "insurer_economics",
+      "question": "An insurer reports a combined ratio of 104%. What does that tell you?",
+      "options": [
+        "It made a loss on underwriting on its own",
+        "It grew premiums by 4% over the previous year",
+        "It made a 4% underwriting profit on its premiums",
+        "It holds 4% more capital than regulators require"
+      ],
+      "answer": 0,
+      "explanation": "Above 100% means claims and expenses exceeded earned premiums."
+    },
+    {
+      "id": "insurance-q2",
+      "concept": "insurer_economics",
+      "question": "Why can an insurer with a combined ratio just above 100% still report a profit?",
+      "options": [
+        "Returns on the float can exceed the loss",
+        "Regulators let it release capital to cover the gap",
+        "Reinsurers refund premiums when claims run high",
+        "Expenses are left out of the combined ratio"
+      ],
+      "answer": 0,
+      "explanation": "Investment income on premiums held before claims are paid is the second source of profit."
+    },
+    {
+      "id": "insurance-q3",
+      "concept": "underwriting_cycle",
+      "question": "What usually ends a hard market?",
+      "options": [
+        "Regulators cap the rate rises insurers can charge",
+        "New capital arrives and competes on price",
+        "A run of large losses forces insurers to cut prices",
+        "Falling interest rates reduce the cost of claims"
+      ],
+      "answer": 1,
+      "explanation": "Good returns draw in capital, and insurers compete on price until margins thin."
+    },
+    {
+      "id": "insurance-q4",
+      "concept": "reinsurance_renewals",
+      "question": "Why does the 1 January renewal get so much attention?",
+      "options": [
+        "Over half of reinsurance treaties renew then",
+        "Lloyd's syndicates must publish their results then",
+        "Cat bond coupons are reset on that date each year",
+        "The hurricane season's losses are settled that day"
+      ],
+      "answer": 0,
+      "explanation": "With most treaties renewing at once, 1/1 sets pricing for the year."
+    },
+    {
+      "id": "insurance-q5",
+      "concept": "reinsurance_renewals",
+      "question": "A reinsurer raises the attachment point on a treaty. What changes for the insurer?",
+      "options": [
+        "It pays a lower share of each claim to policyholders",
+        "It receives a larger commission from the reinsurer",
+        "It keeps more of each loss before reinsurance pays",
+        "It can cancel the treaty earlier than before"
+      ],
+      "answer": 2,
+      "explanation": "The attachment point is the loss size at which the reinsurer starts to pay."
+    },
+    {
+      "id": "insurance-q6",
+      "concept": "lloyds",
+      "question": "What does the Central Fund do at Lloyd's?",
+      "options": [
+        "Sets the premium rates that syndicates must charge",
+        "Invests the premiums that syndicates collect",
+        "Lends syndicates the capital to start trading",
+        "Pays valid claims if a member cannot meet them"
+      ],
+      "answer": 3,
+      "explanation": "It is the shared backstop behind every syndicate, which supports the market's rating."
+    },
+    {
+      "id": "insurance-q7",
+      "concept": "mgas",
+      "question": "Who pays the claims on a policy sold by an MGA?",
+      "options": [
+        "The insurer or syndicate behind the MGA",
+        "The MGA itself, from the commission it has earned",
+        "The broker that placed the policy with the MGA",
+        "The Central Fund, on behalf of all MGAs"
+      ],
+      "answer": 0,
+      "explanation": "An MGA underwrites with delegated authority but the capacity provider carries the risk."
+    },
+    {
+      "id": "insurance-q8",
+      "concept": "cat_bonds_ils",
+      "question": "What happens to cat bond investors if the defined catastrophe does not occur?",
+      "options": [
+        "They receive the collateral but forfeit coupons",
+        "They must renew the bond for another three years",
+        "They share the sponsor's underwriting profit",
+        "They get their money back plus the coupons paid"
+      ],
+      "answer": 3,
+      "explanation": "With no trigger, the collateral is returned at maturity and coupons are kept."
+    },
+    {
+      "id": "insurance-q9",
+      "concept": "capital_rules",
+      "question": "What is the solvency capital requirement designed to cover?",
+      "options": [
+        "The average claims of the past five years",
+        "A loss expected about once in 200 years",
+        "One full year of premiums at current rates",
+        "The largest single claim the insurer has paid"
+      ],
+      "answer": 1,
+      "explanation": "Solvency UK asks for capital to survive a 1-in-200-year loss."
+    }
+  ]
+}

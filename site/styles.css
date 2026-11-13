@@ -35,6 +35,21 @@ header.top { display: flex; justify-content: space-between; align-items: flex-en
 .access { color: var(--muted); font-size: .95rem; }
 .meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: .6rem; font-size: .88rem; }
 .tag { background: var(--tag); border-radius: 99px; padding: .1rem .65rem; color: var(--muted); }
+a.tag { color: var(--accent); text-decoration: none; padding: .3rem .75rem; }
+a.tag::after { content: " ›"; }
+.nav { display: flex; gap: .4rem; margin: .9rem 0 .6rem; border-bottom: 1px solid var(--line); }
+.nav a { padding: .55rem .9rem; text-decoration: none; color: var(--muted); font-weight: 650; border-bottom: 3px solid transparent; margin-bottom: -1px; }
+.nav a.on { color: var(--fg); border-bottom-color: var(--accent); }
+a.deck { display: block; color: inherit; text-decoration: none; }
+a.deck p { margin: .4rem 0 0; }
+.badge { display: inline-block; background: color-mix(in srgb, var(--good) 16%, var(--card)); color: var(--good); border-radius: 99px; padding: .1rem .7rem; font-weight: 650; font-size: .88rem; white-space: nowrap; }
+.primer p { margin: .7rem 0 0; }
+.crumbs { margin: 0 0 .8rem; color: var(--muted); }
+.row.two > * { flex: 1 1 0; }
+a.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+ol.cards { padding-left: 1.4rem; margin: .6rem 0 1.2rem; }
+ol.cards li { padding: .3rem 0; }
+ol.cards li.here a { font-weight: 700; color: var(--fg); text-decoration: none; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; margin-top: 1rem; }
 .card dt { font-weight: 650; margin-top: .7rem; }
 .card dd { margin: .15rem 0 0; }

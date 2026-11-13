@@ -4,7 +4,7 @@ A personal daily brief: 10–11 stories across five topics, then a short quiz. T
 
 **Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, and commits the day's brief as JSON. There is no app yet (session 3).
 
-**Not yet proven:** the summaries and quiz have never run against a real model. GitHub Models, the brief's first choice, was retired on 30 July 2026, so the LLM step now uses the brief's fallback: Claude through a subscription token. It needs the `CLAUDE_CODE_OAUTH_TOKEN` secret (see "Secrets and settings"). Until that secret is added, every run publishes the headlines-only fallback. After adding it, run the workflow as a dry run and check the output before relying on the 06:00 job.
+**LLM step:** Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`), because GitHub Models, the brief's first choice, was retired on 30 July 2026. A dry run on 13 Nov produced a full brief: 10 summaries, the market idea and 11 quiz questions in 6 calls. The commit step and the ntfy push have not run yet; the first real run on main is their first test.
 
 Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
 
@@ -59,14 +59,15 @@ How the LLM step behaves:
 
 ## First run (11 Nov 2026)
 
-Seven dry runs in GitHub Actions (11 and 12 Nov) from the session branch, on Python 3.12: five from a temporary push trigger (since removed) and two manual runs.
+Nine dry runs in GitHub Actions (11 to 13 Nov) from the session branch, on Python 3.12: five from a temporary push trigger (since removed) and four manual runs. The last one, on 13 Nov, was the first with the Claude token.
 
 | Step | Result |
 | --- | --- |
 | Fetch | 36 of 37 sources returned items. Import AI returns 403 to GitHub's runners every time. On the first run Insurance Journal (both feeds) and Carrier Management timed out, then worked on later runs |
 | Filter and rank | 10 stories across all five topics, 2 per topic |
 | Summaries and quiz | Not tested. The runs used GitHub Models: `models.github.ai` answered every request with HTTP 200 and the plain text "OK": any path, with or without a token, and the same for GitHub's own `actions/ai-inference` action. The cause: GitHub retired GitHub Models on 30 July 2026. The provider was then switched to Claude (12 Nov), which is untested until the token secret exists |
-| Fallback | Worked each time: a schema-valid headlines-only brief with the reason listed under `issues` |
+| Summaries and quiz with Claude (13 Nov) | Worked: status `full`, 10 of 10 stories summarised, market idea written, 11 questions (9 test the why), every question passed validation first time, 6 calls, about 50 seconds, read time about 7 minutes. One slip seen in a summary: "Nvidia chief executive Nvidia" where the name Jensen Huang belonged |
+| Fallback | Worked on each of the eight runs before the token existed: a schema-valid headlines-only brief with the reason listed under `issues` |
 | Commit, prune and ntfy push | Not tested: dry runs skip them. The first real run on main is their first test |
 | Manual run with "Dry run" ticked | Worked (started through the API against the session branch): brief built, commit and push skipped |
 
@@ -187,7 +188,9 @@ Not built yet, and not assigned to a session in the brief:
 
 Open items:
 
-- **Claude step:** add the `CLAUDE_CODE_OAUTH_TOKEN` secret, then check a dry run's summaries and questions. Nothing about the real model's output has been seen yet
+- **Summary accuracy:** validation checks the quiz against the summary, not the summary against the article. Slips like the wrong name above get through; spot-check during the trial days
+- **Quiz tells:** the correct option is often the longest, and several questions restate the "why it matters" line closely. Tune `prompts/quiz.txt` in session 4
+- **Ranking, seen on 13 Nov:** one event (the Nvidia chief's exit) took three slots under different wording; a City AM "FTSE 100 Live:" blog took a macro slot (only "– live" and "- live" are excluded); a Fed notice on payment-service pricing took the guaranteed central-bank slot
 - Each run installs the Claude Code CLI with npm (about 20 seconds); the version is not pinned
 - Import AI blocks GitHub's runners (403), so it never contributes; switch it off or find another feed
 - Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text

@@ -113,7 +113,7 @@ jobs:
       - name: Send the push notification
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          SITE_URL: ${{ vars.SITE_URL || steps.deploy.outputs.page_url }}   # tapping the push opens the app
+          SITE_URL: ${{ vars.SITE_URL }}   # leave unset: a link would open Safari, not the home-screen app
         run: |
           pip install -r requirements.txt
           python -m pipeline.notify

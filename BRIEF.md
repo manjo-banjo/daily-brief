@@ -207,3 +207,5 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | Pages deploy | Published from the workflow as a Pages artifact (`site/` plus `data/`), with Pages' source set to "GitHub Actions". No `gh-pages` branch |
 | Watchlist panel | Left out of the Today screen until something fetches the data |
 | Concept tags | Plain labels until the Foundations decks exist (session 4) |
+| Push link | Removed. iOS opens links from ntfy in Safari, not the home-screen app, and Safari keeps separate progress. The push is a reminder only |
+| Push that opens the app | Added to phase 2: send the push from the app itself (web push) in place of ntfy, so tapping it opens the home-screen app |

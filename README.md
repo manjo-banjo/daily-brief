@@ -72,7 +72,7 @@ How the app behaves:
 - **Headline-only stories:** shown as headline and link. A headlines-only brief has no quiz unless review questions are due.
 - **Concept tags:** plain labels for now; they open Foundations cards in session 4.
 - **Watchlist panel:** not shown; nothing fetches the data yet.
-- **Push link:** tapping the push opens the Pages address automatically. `SITE_URL` is only needed to override it.
+- **Push link:** none. The push is a reminder; open the brief from the home-screen icon. iOS opens any link from ntfy in Safari, never in the home-screen app, and Safari keeps its own separate progress.
 - **Dry runs:** build only; nothing is published or pushed.
 
 Tested in a headless browser emulating an iPhone against the 13 Nov brief: Today renders 10 stories and the market idea, the quiz unlocks on scroll, a reload mid-quiz resumes, the score and streak update, due review questions are added and rescheduled, light and dark mode. **Not tested:** the Pages deploy and the ntfy push, which can only run on GitHub after merge, and the app on a real iPhone.
@@ -200,7 +200,7 @@ Set under the repo's Settings → Secrets and variables → Actions.
 | `LLM_MODEL` | Variable | Choosing the Claude model, for example `sonnet` or `haiku` | Optional; empty uses the CLI's default for your plan |
 | `LLM_PROVIDER` | Variable | Changing the provider | Optional; default `claude_code`, the only one built |
 | `LLM_MAX_CALLS` | Variable | Call cap per run | Optional; default 14 |
-| `SITE_URL` | Variable | Overrides the address the push opens | Optional; the Pages address is used by default |
+| `SITE_URL` | Variable | Adds a link to the push | Leave unset: on iPhone the link opens Safari, not the home-screen app |
 
 **Creating the Claude token (once a year):** on a computer with [Claude Code](https://code.claude.com/docs/en/setup) installed, run `claude setup-token`, approve it in the browser with the account that holds your Claude subscription, and copy the token it prints. Save it as the repository secret `CLAUDE_CODE_OAUTH_TOKEN`. The token lasts one year and can only make model requests. The daily job's calls (6 to 12 short ones) count against your subscription's usage allowance. The built-in `GITHUB_TOKEN` needs no setup; it is only used to commit the brief.
 
@@ -229,6 +229,7 @@ Not built yet, and not assigned to a session in the brief:
 
 - **Watchlist data and panel:** the five markers are in config but nothing fetches them, so the Today screen has no watchlist panel
 - **Weekend lighter edition:** deferred; weekends run the normal edition
+- **Push that opens the home-screen app:** planned for phase 2. It means sending the push from the app itself (web push) in place of ntfy: a service worker, a one-off "allow notifications" tap and two new secrets
 
 Open items:
 

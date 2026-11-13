@@ -72,7 +72,7 @@ def event_tokens(title: str, url: str) -> FrozenSet[str]:
     words = list(_WORD.findall(title.lower()))
     slug = urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1]
     if slug.count("-") >= 2:  # real slugs, not opaque ids like c95y15830k77o
-        words += re.findall(r"[a-z]+", slug.lower())
+        words += re.findall(r"[a-z]+", re.sub(r"\.(html?|aspx?|php)$", "", slug.lower()))
     tokens = set()
     for word in words:
         if word in _EVENT_STOP or len(word) < 3 or word.isdigit():
@@ -83,9 +83,57 @@ def event_tokens(title: str, url: str) -> FrozenSet[str]:
     return frozenset(tokens)
 
 
-def same_event(title_a: str, url_a: str, title_b: str, url_b: str) -> bool:
+def _is_title_case(title: str) -> bool:
+    """US-style headlines capitalise nearly every word, so capitals there say nothing."""
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z'’]+", title) if len(w) > 3]
+    return len(words) >= 3 and sum(w[0].isupper() for w in words) / len(words) >= 0.8
+
+
+@lru_cache(maxsize=None)
+def name_tokens(title: str) -> FrozenSet[str]:
+    """Words in a headline that look like names (Nvidia, Huang, Lloyd's): capitalised and not the
+    first word. Empty for headlines written in title case, where that test cannot work."""
+    if _is_title_case(title):
+        return frozenset()
+    names = set()
+    for word in re.findall(r"[A-Za-z0-9]+", title)[1:]:
+        if word[0].isupper():
+            lower = word.lower()
+            if lower in _EVENT_STOP or len(lower) < 3:
+                continue
+            names.add(lower[:-1] if len(lower) > 4 and lower.endswith("s") else lower)
+    return frozenset(names)
+
+
+def big_story_markers(headlines, min_outlets: int) -> FrozenSet[str]:
+    """Names carried in the headlines of at least `min_outlets` different outlets today: the
+    mark of one dominant event (a chief executive's exit, a global outage). `headlines` is an
+    iterable of (title, source id). 0 switches the rule off."""
+    if min_outlets <= 0:
+        return frozenset()
+    outlets, as_name, plain = {}, {}, {}
+    for title, source_id in headlines:
+        tokens = event_tokens(title, "")
+        names = name_tokens(title)
+        title_case = _is_title_case(title)
+        for token in tokens:
+            outlets.setdefault(token, set()).add(source_id)
+            if token in names:
+                as_name[token] = as_name.get(token, 0) + 1
+            elif not title_case:
+                plain[token] = plain.get(token, 0) + 1
+    return frozenset(t for t, seen in outlets.items()
+                     if len(seen) >= min_outlets and as_name.get(t, 0) > plain.get(t, 0))
+
+
+def same_event(title_a: str, url_a: str, title_b: str, url_b: str,
+               markers: FrozenSet[str] = frozenset()) -> bool:
     """True when two stories are very likely about one news event: at least two distinctive
-    words in common, and those make up 40%+ of the shorter story's words."""
+    words in common, making up 40%+ of the shorter story's words; or both headlines carry the
+    name of one of today's big stories (`markers`), however differently they are worded."""
     ta, tb = event_tokens(title_a, url_a), event_tokens(title_b, url_b)
-    shared = len(ta & tb)
-    return shared >= 2 and shared / min(len(ta), len(tb)) >= 0.4
+    common = ta & tb
+    if len(common) >= 2 and len(common) / min(len(ta), len(tb)) >= 0.4:
+        return True
+    return bool(markers and common & markers
+                and event_tokens(title_a, "") & event_tokens(title_b, "") & markers)

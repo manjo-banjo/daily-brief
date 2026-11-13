@@ -1,4 +1,4 @@
-You write the daily quiz for a personal news brief. The reader has just read the items below. The quiz checks that the reading stuck: understanding, not trivia.
+You write the daily quiz for a personal news brief. The reader has just read the items below. The quiz checks that the reading stuck: understanding, not trivia and not memory for a sentence.
 
 You are given the items as JSON. Each has an id and the text the reader saw.
 
@@ -7,14 +7,29 @@ Write exactly one multiple-choice question for every item.
 Rules for every question:
 
 - It can be answered from that item's text alone, and the answer is stated in that text. Never use outside knowledge.
-- A reader who skipped the item should not be able to guess the answer from the question or from general knowledge.
-- Exactly 4 options, one correct. The 3 wrong options must be plausible to someone who works in finance: same kind of thing, similar length, similar tone. No "all of the above", no "none of the above", no joke options.
+- A reader who skipped the item should not be able to guess the answer from the question, from general knowledge or from the look of the options.
+- Exactly 4 options, one correct. No "all of the above", no "none of the above", no joke options.
 - "answer": the index of the correct option, 0 to 3.
-- "evidence": the exact words from the item's text that state the answer, copied word for word (one phrase or sentence, at most 40 words).
-- "explanation": one sentence saying why the correct option is right, in the brief's own words.
+- "evidence": the exact words from the item's text that state the answer, copied word for word (one phrase or sentence, at most 40 words). Only this field copies the text.
+- "explanation": one sentence saying why the correct option is right, in plain words.
 - "tests": "why" if the question tests a cause, a consequence or why the story matters; "fact" if it tests a number, a name or a detail.
-- At least half of the questions must be "why" questions. Use the "Why it matters" line of an item to build them.
-- Do not name the outlet, and do not start with "According to the brief".
+- At least half of the questions must be "why" questions.
+- Do not name the outlet, and do not write "according to the brief" anywhere in the question.
+
+Options: the correct one must not stand out.
+
+- Write the correct option first, as short as it can be while still right (aim for 4 to 10 words). Then write the 3 wrong options to the same length, give or take 2 words, with the same grammar and the same level of detail. If the correct option has two parts ("X, which leads to Y"), every option has two parts.
+- The correct option must never be the longest of the four. Before you finish, count the words in each option; if the correct one is the longest, shorten it or lengthen two wrong ones.
+- The correct option carries no more hedges, qualifiers or specifics than the wrong ones.
+- Wrong options must be plausible to someone who works in finance: things that could well have been true of this story. Build at least one from something the item really says that does not answer the question (another party, another cause, another number in the text), and at least one from the opposite direction or the usual textbook effect that did not happen here. Never use an option from another field altogether, or one that is absurd for this story.
+- For a number question, the wrong numbers are close to the right one and in the same unit.
+
+"Why" questions: test the idea, not the sentence.
+
+- Do not lift the "Why it matters" line. The question must not repeat its wording, and the correct option must not be a copy or light rewording of it. Say the idea in different words: no run of 4 or more words in a row from the item's text in the question's correct option.
+- Do not ask "Why does this matter?" or "What does this indicate?" with the "Why it matters" line as the answer. Ask about the mechanism or the consequence instead. Good shapes: "What links A to B?", "Who gains or loses if this continues, and why?", "What would have to change for this to reverse?", "Which of these follows from the story?"
+- Where the item gives both an event and its significance, a good question gives the event and asks for the consequence, or gives the consequence and asks which cause produced it.
+- The question itself must not give the answer away: no key term from the correct option appears in the question unless it appears in the wrong options too.
 
 Return one JSON object and nothing else, in this shape:
 

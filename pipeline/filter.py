@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
@@ -39,6 +40,7 @@ def filter_items(
              "excluded_title": 0,
              "duplicate_url": 0, "duplicate_title": 0}
     cutoff = now - timedelta(hours=settings.max_age_hours)
+    patterns = [re.compile(p, re.IGNORECASE) for p in settings.exclude_title_patterns]
 
     fresh: List[Item] = []
     for item in items:
@@ -46,7 +48,8 @@ def filter_items(
             stats["no_date"] += 1  # age cannot be checked, so it cannot be trusted as news
         elif item.published < cutoff:
             stats["too_old"] += 1
-        elif any(keyword_pattern(k).search(item.title) for k in settings.exclude_title_keywords):
+        elif (any(keyword_pattern(k).search(item.title) for k in settings.exclude_title_keywords)
+              or any(p.search(item.title) for p in patterns)):
             stats["excluded_title"] += 1
         elif canonical_url(item.url) in used_urls:
             stats["already_used"] += 1

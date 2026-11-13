@@ -1,12 +1,12 @@
 name: Deploy app
 
-# Publishes the app straight away when its files change, without waiting for the 06:00 job.
+# Publishes the app straight away when its files or the Foundations decks change, without waiting for the 06:00 job.
 # The daily job (daily.yml) publishes the same way after it commits the brief.
 
 on:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/pages.yml"]
+    paths: ["site/**", "data/primers/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:

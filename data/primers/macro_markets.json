@@ -1,0 +1,176 @@
+{
+  "id": "macro_markets",
+  "topic": "macro_markets",
+  "label": "Macro: the fundamentals",
+  "intro": "The six ideas behind most macro headlines: bonds, the curve, central banks, inflation, currencies and commodities.",
+  "cards": [
+    {
+      "id": "bond_prices_yields",
+      "title": "Bond prices versus yields",
+      "body": "A bond pays fixed interest (the coupon) and returns its face value at maturity. Its yield is the return you get if you buy at today's price and hold to the end. Because the payments are fixed, price and yield move in opposite directions: if new bonds pay more, an older bond must get cheaper to compete. The longer the bond, the more its price moves for a given change in yield. That sensitivity is called duration. A 10-year gilt falls roughly 8% in price if its yield rises by one percentage point.",
+      "in_the_news": "\"Gilt yields rose\" means gilt prices fell and government borrowing got more expensive."
+    },
+    {
+      "id": "yield_curve",
+      "title": "The yield curve",
+      "body": "The yield curve plots government bond yields from short maturities to long ones. The short end follows the central bank's policy rate and where markets expect it to go next. The long end reflects expected growth and inflation over many years, plus extra return for the risk of holding a long bond and for the amount of debt the government must sell. The curve normally slopes upward. When short yields are above long yields it is inverted, which says markets expect rate cuts and has often come before a recession.",
+      "in_the_news": "\"Steepening\" means the gap between long and short yields is widening; \"flattening\" means it is narrowing."
+    },
+    {
+      "id": "central_bank_policy",
+      "title": "Central bank policy",
+      "body": "Central banks aim to keep inflation near a target, which is 2% for the Bank of England, the ECB and the Fed. The main tool is the policy rate: Bank Rate in the UK, set by the nine-member Monetary Policy Committee eight times a year. Raising it makes borrowing dearer and slows spending; cutting it does the reverse, with a delay of a year or more. The second tool is the balance sheet: buying bonds (quantitative easing) pushes long yields down, and selling them (quantitative tightening) does the opposite. Guidance about future moves matters as much as the moves.",
+      "in_the_news": "Markets react to the vote split, the forecasts and the wording, not only to the decision."
+    },
+    {
+      "id": "inflation",
+      "title": "Inflation",
+      "body": "Inflation is the rate at which prices rise, usually measured over 12 months by the consumer prices index (CPI). Core inflation leaves out food and energy, which swing sharply, to show the underlying trend. Services inflation is watched closely because it follows wages and is slow to fall. Inflation matters to markets in two ways: it drives what central banks do next, and it erodes the fixed payments from bonds. The real yield is a bond's yield minus expected inflation, and it is the return that counts.",
+      "in_the_news": "A CPI figure moves markets by how far it differs from the forecast, not by its level."
+    },
+    {
+      "id": "fx_drivers",
+      "title": "FX drivers",
+      "body": "A currency's value is always relative to another. The main short-term driver is the gap in interest rates: money flows towards the currency that pays more, so a currency tends to rise when its central bank is expected to keep rates higher than others. Growth prospects and trade balances matter over longer periods; a country that imports more than it exports needs steady foreign money coming in. Mood matters too: in a scare, investors buy the dollar, the yen and the Swiss franc and sell riskier currencies.",
+      "in_the_news": "\"Sterling fell after the Bank's decision\" usually means markets now expect lower UK rates."
+    },
+    {
+      "id": "commodities",
+      "title": "Commodities basics",
+      "body": "Commodity prices are set by physical supply and demand, and traded mostly through futures: contracts to buy or sell at a set price on a later date. Oil is quoted as Brent (the international benchmark) or WTI (the US one), and supply is steered by the OPEC+ producers' group. Gold pays no income, so it tends to rise when real yields fall or when investors want safety. Copper follows industrial demand and is read as a gauge of global growth. Most funds hold futures, not the physical goods, so their return can differ from the headline price.",
+      "in_the_news": "Oil stories turn on OPEC+ decisions, stock levels and risks to supply routes."
+    }
+  ],
+  "quiz": [
+    {
+      "id": "macro_markets-q1",
+      "concept": "bond_prices_yields",
+      "question": "The yield on an existing gilt rises. What has happened to its price?",
+      "options": [
+        "It has risen, because the gilt now pays more",
+        "It is unchanged, because the coupon is fixed",
+        "It has fallen, as its payments are fixed",
+        "It has risen, because demand for it has grown"
+      ],
+      "answer": 2,
+      "explanation": "Price and yield move in opposite directions."
+    },
+    {
+      "id": "macro_markets-q2",
+      "concept": "bond_prices_yields",
+      "question": "Yields rise by the same amount on a 2-year and a 30-year gilt. Which price falls more?",
+      "options": [
+        "The 2-year, because it matures much sooner",
+        "Neither, because the rise in yield is equal",
+        "The 2-year, because its coupon is smaller",
+        "The 30-year, as it has longer duration"
+      ],
+      "answer": 3,
+      "explanation": "Longer bonds are more sensitive to a given change in yield."
+    },
+    {
+      "id": "macro_markets-q3",
+      "concept": "yield_curve",
+      "question": "What mainly drives the short end of the yield curve?",
+      "options": [
+        "The policy rate and its expected path",
+        "Demand from pension funds for long bonds",
+        "Long-run forecasts for growth and inflation",
+        "The amount of long-dated debt being issued"
+      ],
+      "answer": 0,
+      "explanation": "Short yields track the central bank; long yields reflect growth, inflation and supply."
+    },
+    {
+      "id": "macro_markets-q4",
+      "concept": "yield_curve",
+      "question": "What is an inverted yield curve usually taken to signal?",
+      "options": [
+        "Rate cuts ahead, often before a recession",
+        "The government is about to borrow far more",
+        "Markets expect inflation to rise for many years",
+        "The central bank has started buying long bonds"
+      ],
+      "answer": 0,
+      "explanation": "Short yields above long yields imply lower rates ahead."
+    },
+    {
+      "id": "macro_markets-q5",
+      "concept": "central_bank_policy",
+      "question": "How does quantitative tightening affect long-dated bond yields?",
+      "options": [
+        "It pushes them up, as more bonds are sold",
+        "It leaves them flat and moves only short rates",
+        "It pushes them down, as policy becomes tighter",
+        "It pushes them down, as bond supply shrinks"
+      ],
+      "answer": 0,
+      "explanation": "Selling bonds adds supply, which lowers prices and raises yields."
+    },
+    {
+      "id": "macro_markets-q6",
+      "concept": "central_bank_policy",
+      "question": "Why do markets study the vote split at a Bank of England decision?",
+      "options": [
+        "It decides how large the rate change will be",
+        "It sets the yield on newly issued gilts",
+        "It shows which members will leave the committee",
+        "It hints at which way the next move will go"
+      ],
+      "answer": 3,
+      "explanation": "Guidance about future moves matters as much as the decision."
+    },
+    {
+      "id": "macro_markets-q7",
+      "concept": "inflation",
+      "question": "Why is services inflation watched so closely?",
+      "options": [
+        "It is the largest part of energy and food costs",
+        "It moves ahead of the oil price by a few months",
+        "It follows wages and is slow to come down",
+        "It is the measure the 2% target is written for"
+      ],
+      "answer": 2,
+      "explanation": "Services prices are driven by pay, which makes them persistent."
+    },
+    {
+      "id": "macro_markets-q8",
+      "concept": "inflation",
+      "question": "A bond yields 4.5% and inflation is expected to run at 3%. What is the real yield?",
+      "options": [
+        "About 1.5%",
+        "About 0.7%",
+        "About 3.0%",
+        "About 7.5%"
+      ],
+      "answer": 0,
+      "explanation": "Real yield is the yield minus expected inflation."
+    },
+    {
+      "id": "macro_markets-q9",
+      "concept": "fx_drivers",
+      "question": "Markets come to expect UK rates to stay higher than US rates for longer. What is the likely effect on sterling?",
+      "options": [
+        "It is unchanged, as only trade moves currencies",
+        "It falls, as higher rates slow the UK economy",
+        "It rises, as money moves to the higher return",
+        "It falls, as investors move into safe havens"
+      ],
+      "answer": 2,
+      "explanation": "The interest-rate gap is the main short-term driver of a currency."
+    },
+    {
+      "id": "macro_markets-q10",
+      "concept": "commodities",
+      "question": "Why does gold tend to rise when real yields fall?",
+      "options": [
+        "Mining output drops when interest rates fall",
+        "Central banks must buy it when they cut rates",
+        "It is priced in dollars, which then strengthen",
+        "It pays no income, so holding it costs less"
+      ],
+      "answer": 3,
+      "explanation": "With lower real yields, less income is given up by holding gold."
+    }
+  ]
+}

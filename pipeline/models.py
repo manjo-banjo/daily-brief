@@ -43,6 +43,8 @@ class Topic(BaseModel):
     same_source_penalty: Optional[float] = None
     priority_sources: List[str] = Field(default_factory=list)  # source ids that get a boost and one guaranteed slot
     priority_source_boost: float = 0.0
+    priority_title_keywords: List[str] = Field(default_factory=list)  # a priority-source item needs one in its title for the boost and the slot
+    routine_release_penalty: float = 0.0  # taken off priority-source items without one (routine notices)
     significance_keywords: List[str] = Field(default_factory=list)  # top headlines: words that signal a major story
     coverage_saturation: int = 3  # top headlines: other outlets carrying the story for full marks
     lens: str = ""  # what the summary step should look for in this topic
@@ -70,6 +72,8 @@ class Settings(BaseModel):
     demote_penalty: float = 0.15
     same_subtopic_penalty: float = 0.0
     exclude_title_keywords: List[str] = Field(default_factory=list)
+    exclude_title_patterns: List[str] = Field(default_factory=list)  # regular expressions, case-insensitive
+    big_story_min_outlets: int = 0  # a name in this many outlets' headlines marks one big event; 0 = off
 
 
 class Item(BaseModel):

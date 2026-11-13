@@ -209,3 +209,13 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | Concept tags | Plain labels until the Foundations decks exist (session 4) |
 | Push link | Removed. iOS opens links from ntfy in Safari, not the home-screen app, and Safari keeps separate progress. The push is a reminder only |
 | Push that opens the app | Added to phase 2: send the push from the app itself (web push) in place of ntfy, so tapping it opens the home-screen app |
+
+## Decisions after session 4 (13 Nov 2026)
+
+| Decision | Setting |
+| --- | --- |
+| Five decks | Top headlines has no concepts, so macro's 12 concepts are split into two decks: "Macro: the fundamentals" (6 cards) and "Macro: trades and instruments" (6 cards). With Insurance (7), AI and markets (8) and Geopolitics (4) that makes five decks, one card per concept id. Each macro deck has its own quiz and badge |
+| Cards per deck | One card per concept id, so decks have 4 to 8 cards, not the 8–12 first planned |
+| Central banks | Changes the session 1 rule: only a policy release (a policy word in its title) is boosted and guaranteed a macro slot. Routine notices from the same feeds are marked down |
+| Dominant events | A name in the headlines of 12 or more outlets marks one event, which fills one slot in the whole brief |
+| Bug list and weak questions | Not supplied for session 4; only the README's open items were fixed |

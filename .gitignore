@@ -4,3 +4,4 @@ __pycache__/
 out/
 .env
 .DS_Store
+_site/

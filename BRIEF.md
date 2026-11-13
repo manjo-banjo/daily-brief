@@ -199,3 +199,11 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | Partial failures | Only what failed degrades: a topic whose summaries fail twice shows headlines and links, and a question that fails validation twice is dropped. The whole brief goes headlines-only only when nothing can be summarised |
 | Weekend edition | Deferred. Weekends run the normal edition until it is built |
 | Review queue | Added by the app, not the pipeline: which questions were missed is known only on the phone |
+
+## Decisions after session 3 (13 Nov 2026)
+
+| Decision | Setting |
+| --- | --- |
+| Pages deploy | Published from the workflow as a Pages artifact (`site/` plus `data/`), with Pages' source set to "GitHub Actions". No `gh-pages` branch |
+| Watchlist panel | Left out of the Today screen until something fetches the data |
+| Concept tags | Plain labels until the Foundations decks exist (session 4) |

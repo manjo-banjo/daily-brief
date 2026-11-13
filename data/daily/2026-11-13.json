@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T08:54:01+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 7,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s5f9a80a6",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Aviva premiums surge as Direct Line takeover drives growth",
+      "url": "https://www.cityam.com/aviva-premiums-surge-as-direct-line-takeover-drives-growth/",
+      "source": "City AM",
+      "published": "2026-11-13T07:45:04Z",
+      "headline_only": false,
+      "summary": "Aviva's total group premiums rose 19 per cent in the first nine months of the year to £11.8bn, up from £10bn the prior year, helped by its acquisition of Direct Line. UK and Ireland premiums grew 27 per cent to £8.5bn and personal lines rose 54 per cent to £5.5bn, while commercial lines fell five per cent to £2.9bn on \"softer market conditions\". The £3.7bn deal, completed in July 2025, gives Aviva control of a fifth of the UK motor insurance market, and shares rose 2.1 per cent in early trading to 754.6p.",
+      "why_it_matters": "The Direct Line deal has driven personal lines growth, while the fall in commercial premiums reflects softer market conditions in that part of the business.",
+      "access_note": null,
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "s03ddd3d7",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "IUAI to strengthen industry knowledge and expertise with Reinsurance and Data Study Group",
+      "url": "https://www.reinsurancene.ws/iuai-to-strengthen-industry-knowledge-and-expertise-with-reinsurance-and-data-study-group/",
+      "source": "Reinsurance News",
+      "published": "2026-11-13T06:00:43Z",
+      "headline_only": false,
+      "summary": "The International Union of Aerospace Insurers (IUAI) has formed a new Reinsurance and Data Study Group (RDSG), its seventh Study Group. The group will develop aviation statistics and data and educate members on reinsurance concepts and their role in aerospace insurance. Its five founding members come from Munich Re, GDV, PartnerRe, SCOR and La Réunion Aérienne, and its first formal meeting is in January 2027 in London.",
+      "why_it_matters": "Reinsurers from Munich Re, PartnerRe and SCOR are helping build shared aviation data and reinsurance education, which feeds the technical understanding behind aerospace risk.",
+      "access_note": null,
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "s9c5e821f",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Microsoft struggling to restore Outlook and Teams after global outage",
+      "url": "https://www.cityam.com/microsoft-struggling-to-restore-outlook-and-teams-after-global-outage/",
+      "source": "City AM",
+      "published": "2026-11-13T07:30:43Z",
+      "headline_only": false,
+      "summary": "Microsoft is struggling to restore Outlook, Teams and its AI assistant Copilot after a global outage that has lasted more than 14 hours. The disruption affects users in 74 countries, and reports of Outlook problems peaked at nearly 140,000 globally around 6pm GMT on Thursday, according to Downdetector. Microsoft attributed it to servers becoming unexpectedly unavailable, which strained its remaining infrastructure, and ruled out a cyber attack.",
+      "why_it_matters": "A single failure at one provider hit banks, courts and AI services including OpenAI and Anthropic, showing how concentrated the infrastructure behind business and AI is.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "sbb40e4d8",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "Cerebras surges 17% after beating on quarterly revenue and announcing Microsoft deal",
+      "url": "https://www.cnbc.com/2026/11/12/cerebras-systems-cbrs-q3-earnings-report-2026.html",
+      "source": "CNBC technology",
+      "published": "2026-11-13T02:43:26Z",
+      "headline_only": false,
+      "summary": "Cerebras announced a new deal with Microsoft. It follows partnerships with the major cloud providers Amazon and Oracle. The headline says its shares surged 17% after it beat on quarterly revenue.",
+      "why_it_matters": "Cloud providers are signing up with Cerebras, and the market is rewarding it, which suggests investors see demand for alternative AI compute suppliers.",
+      "access_note": null,
+      "concept": {
+        "id": "chip_supply_chain",
+        "label": "The chip and compute supply chain"
+      }
+    },
+    {
+      "id": "sae153025",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+      "source": "Federal Reserve press releases",
+      "published": "2026-11-12T18:30:00Z",
+      "headline_only": false,
+      "summary": "The Federal Reserve Board has announced pricing for payment services that the Federal Reserve Banks provide to banks and credit unions. The pricing takes effect on January 1, 2027. The Board also announced changes to streamline and adjust the Reserve Banks' check services.",
+      "why_it_matters": "This is operational pricing for bank services rather than a change in interest rates or monetary policy, so it bears on bank costs rather than on rates or markets directly.",
+      "access_note": "A UK retail investor could get indirect exposure to US banks through shares, equity ETFs, and spread bets or CFDs on bank shares.",
+      "concept": null
+    },
+    {
+      "id": "s1a031d33",
+      "topic": "macro_markets",
+      "subtopic": "equities",
+      "title": "FTSE 100 Live: Stocks fall; tech slumps after Jensen Huang Nvidia exit",
+      "url": "https://www.cityam.com/ftse-100-live-stocks-to-fall-tech-slumps-after-jensen-huang-nvidia-exit/",
+      "source": "City AM",
+      "published": "2026-11-13T06:31:00Z",
+      "headline_only": false,
+      "summary": "Tech stocks were pointing lower on Friday morning as investors digested the resignation of Nvidia chief executive Jensen Huang. He was ousted following reports of multiple affairs, including one with an alleged Chinese spy. The world's most valuable chipmaker has lost about $500bn in market value since Huang admitted the initial affair, and a new interim CEO has been named.",
+      "why_it_matters": "A leadership shock at the most valuable chipmaker is dragging on tech shares more broadly, showing how one company's problems can shift sentiment across a sector.",
+      "access_note": "A UK retail investor could get exposure through shares held directly, technology or semiconductor equity ETFs, options, and spread bets or CFDs on the shares or on equity indices.",
+      "concept": null
+    },
+    {
+      "id": "s536b3ab7",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "5 things to watch at the Dublin EU leaders’ summit",
+      "url": "https://www.politico.eu/article/5-things-to-watch-dublin-eu-leaders-summit-european-council/",
+      "source": "Politico Europe",
+      "published": "2026-11-13T03:00:00Z",
+      "headline_only": false,
+      "summary": "EU leaders meet in Dublin on Friday for their first dedicated discussion on artificial intelligence, but the agenda is also crowded with Ukraine, the bloc's next budget and who will lead the European Central Bank. Leaders will debate whether Europe should build frontier AI models to rival US and Chinese developers or focus on applications, and how to fund the computing capacity needed. On Ukraine, US envoy Steve Witkoff said Europeans will be invited to the next round of negotiations after meeting Vladimir Putin in Moscow, and Volodymyr Zelenskyy has said Europe needs to choose a single representative, ideally by the end of this month.",
+      "why_it_matters": "Europe's choice of a single negotiator and its willingness to fund AI will shape its leverage in Ukraine peace talks and its position against US and Chinese tech.",
+      "access_note": null,
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "sc1a5614e",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
+      "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo",
+      "source": "BBC top stories",
+      "published": "2026-11-13T02:01:35Z",
+      "headline_only": false,
+      "summary": "Ukrainian President Volodymyr Zelensky has welcomed the US bringing Europe into Russia-Ukraine peace talks. He says it makes sense for European leaders to be involved. He added that Ukraine hopes to eventually join the EU.",
+      "why_it_matters": "European involvement in talks could shape the terms of any settlement and strengthens the link between Ukraine's security outcome and its path towards EU membership.",
+      "access_note": null,
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "s2a446254",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
+      "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o",
+      "source": "BBC top stories",
+      "published": "2026-11-13T03:57:01Z",
+      "headline_only": false,
+      "summary": "Jensen Huang has been summoned to testify before Congress about an affair with an alleged Chinese spy. Huang abruptly quit on Thursday as head of Nvidia, one of the world's most valuable companies. His departure followed revelations of alleged extramarital affairs.",
+      "why_it_matters": "The sudden exit of the head of one of the world's most valuable companies, with a congressional summons attached, raises questions about leadership and scrutiny at Nvidia.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "sea50fd89",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "A baffling trail from Australia to Singapore: what is Megaspeed, the company implicated in downfall of Nvidia’s Jensen Huang?",
+      "url": "https://www.theguardian.com/technology/2026/nov/13/a-baffling-trail-from-australia-to-singapore-what-is-megaspeed-the-company-implicated-in-downfall-of-nvidias-jensen-huang",
+      "source": "Guardian world",
+      "published": "2026-11-13T07:07:41Z",
+      "headline_only": false,
+      "summary": "Megaspeed International, the company linked to the downfall of Nvidia chief Jensen Huang, has proved hard to pin down. It is a cloud computing firm registered in Singapore, with registered affiliates across the US, Asia and Australia, and its former director Alice Huang has been accused of being a Chinese spy. Its known footprint includes a lottery retailer in rural Australia, a dilapidated storefront in Kuala Lumpur and a near-empty office in Singapore, and individuals at its offices say they know nothing about it.",
+      "why_it_matters": "Little is known about the firm at the centre of a global spy scandal, so the full nature of its links to Nvidia's chief remains unclear.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Protecting a tech-heavy portfolio with put options",
+    "based_on": "s1a031d33",
+    "url": "https://www.cityam.com/ftse-100-live-stocks-to-fall-tech-slumps-after-jensen-huang-nvidia-exit/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is not a bet on direction but a wish to limit losses if tech shares keep falling. Nvidia has lost about $500bn in market value since the resignation of its chief executive, and tech stocks were pointing lower.",
+    "how_it_is_expressed": "A hedge: the investor holds the shares and buys put options on them or on a tech index. A put gains value if the price falls, which offsets part of the loss on the shares.",
+    "retail_access": "A UK retail investor could use listed options, or spread bets and CFDs to take a short position against the holding. Spread bets and CFDs are leveraged and require margin, so losses can exceed the initial deposit, and option premiums are a cost paid up front.",
+    "what_makes_it_work": "Tech shares need to fall far enough, within the life of the hedge, for the gain on the put or short position to offset losses on the shares.",
+    "what_breaks_it": "If tech shares recover or hold steady, the hedge costs money (the option premium or short-position losses) and the protection expires worthless.",
+    "concept": {
+      "id": "hedging",
+      "label": "Hedging"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-13-s5f9a80a6",
+      "story_id": "s5f9a80a6",
+      "topic": "insurance",
+      "question": "What explains the fall in Aviva's commercial lines premiums over the first nine months, even as group premiums rose?",
+      "options": [
+        "The loss of commercial clients after the Direct Line deal",
+        "A deliberate withdrawal from UK and Ireland commercial business",
+        "Softer market conditions in the commercial insurance market",
+        "Higher reinsurance costs that reduced written premiums"
+      ],
+      "answer": 2,
+      "explanation": "Commercial premiums fell because of softer market conditions, while the Direct Line deal drove growth in personal lines.",
+      "evidence": "commercial lines fell five per cent to £2.9bn on \"softer market conditions\"",
+      "tests": "why",
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "2026-11-13-s03ddd3d7",
+      "story_id": "s03ddd3d7",
+      "topic": "insurance",
+      "question": "What is the stated purpose of the IUAI's new Reinsurance and Data Study Group?",
+      "options": [
+        "To develop aviation statistics and data and educate members on reinsurance concepts",
+        "To set minimum capital standards for aerospace reinsurers",
+        "To produce annual loss rankings for aerospace insurers",
+        "To negotiate shared reinsurance treaties on behalf of members"
+      ],
+      "answer": 0,
+      "explanation": "The group exists to build aviation data and teach members how reinsurance works in aerospace insurance.",
+      "evidence": "The group will develop aviation statistics and data and educate members on reinsurance concepts and their role in aerospace insurance.",
+      "tests": "fact",
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "2026-11-13-s9c5e821f",
+      "story_id": "s9c5e821f",
+      "topic": "ai_markets",
+      "question": "What does the Microsoft outage's impact on banks, courts and AI services illustrate?",
+      "options": [
+        "That the infrastructure behind business and AI is concentrated in few providers",
+        "That cyber attacks are now the main cause of cloud failures",
+        "That regulators have failed to require backup systems at banks",
+        "That AI services are less reliable than traditional software"
+      ],
+      "answer": 0,
+      "explanation": "A single failure at one provider hit many sectors, showing how concentrated the underlying infrastructure is.",
+      "evidence": "showing how concentrated the infrastructure behind business and AI is",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-13-sbb40e4d8",
+      "story_id": "sbb40e4d8",
+      "topic": "ai_markets",
+      "question": "What do Cerebras's new cloud partnerships and the share price reaction suggest, according to the brief?",
+      "options": [
+        "Investors expect AI spending to slow in the coming year",
+        "Cloud providers are abandoning their in-house chips",
+        "Investors see demand for alternative AI compute suppliers",
+        "Cerebras has overtaken the leading chipmaker in revenue"
+      ],
+      "answer": 2,
+      "explanation": "Cloud providers signing on and the market rewarding Cerebras point to investor belief in demand for alternative AI compute.",
+      "evidence": "Cloud providers are signing up with Cerebras, and the market is rewarding it, which suggests investors see demand for alternative AI compute suppliers.",
+      "tests": "why",
+      "concept": {
+        "id": "chip_supply_chain",
+        "label": "The chip and compute supply chain"
+      }
+    },
+    {
+      "id": "2026-11-13-sae153025",
+      "story_id": "sae153025",
+      "topic": "macro_markets",
+      "question": "Why is the Federal Reserve Board's announcement on payment services pricing described as bearing on bank costs rather than markets directly?",
+      "options": [
+        "It takes effect too far in the future to influence markets",
+        "It sets the interest rate banks earn on reserves",
+        "It is operational pricing for bank services, not a change in rates or monetary policy",
+        "It only applies to credit unions and not to banks"
+      ],
+      "answer": 2,
+      "explanation": "The announcement concerns pricing of services, not interest rates or monetary policy, so its effect is on bank costs.",
+      "evidence": "This is operational pricing for bank services rather than a change in interest rates or monetary policy",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-13-s1a031d33",
+      "story_id": "s1a031d33",
+      "topic": "macro_markets",
+      "question": "Why does the departure of Nvidia's chief executive matter beyond Nvidia itself?",
+      "options": [
+        "It forces other chipmakers to replace their own leadership",
+        "It shows one company's problems can shift sentiment across a whole sector",
+        "It signals that chip demand from China is collapsing",
+        "It triggers automatic index rebalancing across technology funds"
+      ],
+      "answer": 1,
+      "explanation": "A leadership shock at the most valuable chipmaker is dragging on tech shares more broadly.",
+      "evidence": "showing how one company's problems can shift sentiment across a sector",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-13-s536b3ab7",
+      "story_id": "s536b3ab7",
+      "topic": "geopolitics",
+      "question": "What did Volodymyr Zelenskyy say Europe needs to do regarding peace negotiations with Russia?",
+      "options": [
+        "Send a delegation from each member state to the talks",
+        "Hold a separate summit with Vladimir Putin",
+        "Increase military aid before talks begin",
+        "Choose a single representative, ideally by the end of this month"
+      ],
+      "answer": 3,
+      "explanation": "Zelenskyy wants Europe to speak through one representative, ideally chosen by month end.",
+      "evidence": "Volodymyr Zelenskyy has said Europe needs to choose a single representative, ideally by the end of this month.",
+      "tests": "fact",
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "2026-11-13-sc1a5614e",
+      "story_id": "sc1a5614e",
+      "topic": "geopolitics",
+      "question": "Why does European involvement in the Russia-Ukraine talks matter, according to the brief?",
+      "options": [
+        "It could shape the terms of a settlement and ties Ukraine's security outcome to its EU path",
+        "It commits the EU to immediate Ukrainian membership",
+        "It removes the US from the negotiating process",
+        "It guarantees a ceasefire will be signed this year"
+      ],
+      "answer": 0,
+      "explanation": "Europe's role could influence settlement terms and links Ukraine's security outcome with its EU membership path.",
+      "evidence": "European involvement in talks could shape the terms of any settlement and strengthens the link between Ukraine's security outcome and its path towards EU membership.",
+      "tests": "why",
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "2026-11-13-s2a446254",
+      "story_id": "s2a446254",
+      "topic": "top_headlines",
+      "question": "What has Jensen Huang been summoned to testify before Congress about?",
+      "options": [
+        "Nvidia's market dominance in AI chips",
+        "Nvidia's export of chips to China",
+        "Insider share sales ahead of his resignation",
+        "An affair with an alleged Chinese spy"
+      ],
+      "answer": 3,
+      "explanation": "The congressional summons concerns his affair with an alleged Chinese spy.",
+      "evidence": "Jensen Huang has been summoned to testify before Congress about an affair with an alleged Chinese spy.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-13-sea50fd89",
+      "story_id": "sea50fd89",
+      "topic": "top_headlines",
+      "question": "Why does the brief say the full nature of Megaspeed's links to Nvidia's chief remains unclear?",
+      "options": [
+        "Nvidia has denied any connection to the company",
+        "Singapore law keeps the firm's ownership records sealed",
+        "Little is known about the firm, with a thin footprint and staff who know nothing about it",
+        "Megaspeed has refused all requests for comment"
+      ],
+      "answer": 2,
+      "explanation": "The firm has proved hard to pin down, with a sparse footprint, so its links to Nvidia's chief remain unclear.",
+      "evidence": "Little is known about the firm at the centre of a global spy scandal",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-13-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "In the put option hedge on a tech-heavy portfolio, what happens if tech shares recover or hold steady?",
+      "options": [
+        "The put gains value and offsets gains on the shares",
+        "The hedge costs money and the protection expires worthless",
+        "The investor receives the premium back at expiry",
+        "The investor is forced to sell the underlying shares"
+      ],
+      "answer": 1,
+      "explanation": "Without a fall in tech shares, the premium paid is lost and the protection expires worthless.",
+      "evidence": "If tech shares recover or hold steady, the hedge costs money (the option premium or short-position losses) and the protection expires worthless.",
+      "tests": "why",
+      "concept": {
+        "id": "hedging",
+        "label": "Hedging"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 6
+  },
+  "issues": []
+}

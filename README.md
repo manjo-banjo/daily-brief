@@ -287,7 +287,7 @@ Open items:
 
 - **Summary accuracy:** validation checks the quiz against the summary, not the summary against the article. Slips like the wrong name above get through; spot-check during the trial days
 - **Quiz tells:** prompt and checks changed in session 4, but untested with Claude; review the first few quizzes
-- **Primer accuracy:** the cards state rules that change (UK tax on gilts, spread bets and CFDs, FCA leverage limits, EU AI Act dates). They were written from general knowledge on 13 Nov 2026 and not checked against sources
+- **Primer accuracy:** the cards state rules that change. Checked by web search on 13 Nov 2026, against law-firm and broker summaries, not the official texts: UK tax on spread bets and CFDs, FCA leverage limits, Solvency UK, NATO membership (all unchanged) and the EU AI Act, where the card now says the high-risk rules were pushed back to December 2027. The rest of the cards are from general knowledge
 - **Big-story rule:** the 12-outlet threshold was set on one day's news. A name that is in the news every day (Trump, China) reached 8 or 9 outlets on 13 Nov; if one reaches 12 on an ordinary day, unrelated stories about it will share one slot. Raise `big_story_min_outlets` if that happens
 - **Opinion pieces:** a City AM comment piece ("Britain is growing in spite of Labour") took a macro slot on 13 Nov. Nothing marks comment apart from news in the feeds
 - **Macro on a quiet day:** with no policy release, the second macro slot can go to a headline-only source (WSJ), which gets no summary or question

@@ -1,0 +1,62 @@
+:root {
+  --bg: #faf8f4; --fg: #1d1c18; --muted: #6b675d; --line: #e3ded3; --card: #fff;
+  --accent: #1f3a5f; --accent-fg: #fff; --good: #1b7a46; --bad: #b3261e; --tag: #efe9db;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16150f; --fg: #ece8dc; --muted: #a09b8c; --line: #302e25; --card: #1e1d16;
+    --accent: #8fb4e8; --accent-fg: #10161f; --good: #5fcf8e; --bad: #f08a82; --tag: #2a281f;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.55 -apple-system, "Segoe UI", system-ui, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main { max-width: 40rem; margin: 0 auto; padding: 1.25rem 1.1rem 4rem; }
+h1, h2, h3 { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; line-height: 1.25; margin: 0; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 2.2rem 0 .4rem; border-bottom: 1px solid var(--line); padding-bottom: .4rem; font-family: -apple-system, system-ui, sans-serif; font-weight: 650; }
+h3 { font-size: 1.3rem; font-weight: 700; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+.small { font-size: .88rem; }
+header.top { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: .3rem; }
+.streak { text-align: right; white-space: nowrap; }
+.streak b { font-size: 1.6rem; font-family: Georgia, serif; display: block; line-height: 1; }
+.story { padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.story:last-child { border-bottom: 0; }
+.story p { margin: .55rem 0 0; }
+.why { border-left: 3px solid var(--accent); padding-left: .7rem; }
+.why b, .access b { font-weight: 650; }
+.access { color: var(--muted); font-size: .95rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: .6rem; font-size: .88rem; }
+.tag { background: var(--tag); border-radius: 99px; padding: .1rem .65rem; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; margin-top: 1rem; }
+.card dt { font-weight: 650; margin-top: .7rem; }
+.card dd { margin: .15rem 0 0; }
+button, .btn {
+  font: inherit; font-weight: 650; border: 0; border-radius: 12px; background: var(--accent); color: var(--accent-fg);
+  padding: .85rem 1.2rem; width: 100%; cursor: pointer; display: block; text-align: center; text-decoration: none;
+}
+button:disabled { opacity: .4; cursor: default; }
+button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+button.inline { width: auto; display: inline-block; padding: .5rem .9rem; font-size: .9rem; }
+.end { margin-top: 2rem; }
+.options { display: grid; gap: .6rem; margin: 1.2rem 0; }
+.opt { text-align: left; background: var(--card); color: var(--fg); border: 1px solid var(--line); font-weight: 450; }
+.opt.right { border-color: var(--good); background: color-mix(in srgb, var(--good) 14%, var(--card)); }
+.opt.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, var(--card)); }
+.progress { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; margin: .6rem 0 1.4rem; }
+.progress i { display: block; height: 100%; background: var(--accent); }
+.feedback { margin: 1rem 0; padding: .8rem 1rem; border-radius: 10px; background: var(--tag); }
+.feedback .ok { color: var(--good); font-weight: 700; } .feedback .no { color: var(--bad); font-weight: 700; }
+.big { font-family: Georgia, serif; font-size: 3.2rem; line-height: 1.1; margin: 1rem 0 .2rem; }
+.row { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
+.notice { background: var(--tag); border-radius: 10px; padding: .7rem .9rem; margin: 1rem 0; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.sentinel { height: 1px; }
+[hidden] { display: none !important; }

@@ -2,11 +2,22 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 2 of 4 done (content and automation). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, and commits the day's brief as JSON. There is no app yet (session 3).
+**Status:** session 3 of 4 done (app). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today and Quiz screens, the streak and the review queue. It is not live yet: Pages has to be switched on once (see "Go live" below).
 
 **LLM step:** Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`), because GitHub Models, the brief's first choice, was retired on 30 July 2026. A dry run on 13 Nov produced a full brief: 10 summaries, the market idea and 11 quiz questions in 6 calls. The commit step and the ntfy push have not run yet; the first real run on main is their first test.
 
 Decisions from review are recorded at the end of [BRIEF.md](BRIEF.md).
+
+## Go live (one-off, after this is merged)
+
+| Step | Where |
+| --- | --- |
+| 1. Switch Pages on | Settings → Pages → Source: **GitHub Actions** |
+| 2. Publish | Actions → Deploy app → Run workflow (or wait for the 06:00 job). The run shows the site address |
+| 3. Phone | Open the address in Safari → Share → Add to Home Screen |
+| 4. Push | Install the ntfy app, subscribe to your topic, and check the `NTFY_TOPIC` secret matches it |
+
+Until step 1 is done, the daily job's `publish` part fails and no push is sent; the brief is still committed.
 
 ## Run it
 
@@ -32,7 +43,39 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 Every run prints the ranking report and saves `out/ranked-YYYY-MM-DD.json`. The `out/` folder is not committed. Without the Claude Code CLI installed and `CLAUDE_CODE_OAUTH_TOKEN` set, a local run produces a headlines-only brief, which is the fallback working as designed.
 
+**The app locally:** it reads `data/` from beside its own files, so assemble the two the way the workflow does and serve the result:
+
+```bash
+mkdir -p _site && cp -r site/. _site/ && cp -r data _site/data && python3 -m http.server -d _site 8000
+```
+
 The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief specifies.
+
+## What session 3 built
+
+| Part | Where | What it does |
+| --- | --- | --- |
+| Today screen | `site/app.js`, `site/styles.css` | Date, streak, story count and read time; stories grouped by topic with summary, "why it matters", access note (macro), concept tag and source link; the market idea card under macro; "Take the quiz" at the end |
+| Quiz screen | `site/app.js` | One question at a time; after each answer the correct option, the explanation and a link back to the story; score overall and by topic at the end |
+| Streak | `site/app.js` | A day counts when its quiz is finished. Stored on the phone, so it survives closing the app |
+| Review queue | `site/app.js` | A missed question returns 3 days later, then 7 days later if missed again; up to 3 a day, added after the day's own questions and read from `data/archive/` |
+| Export and import | Foot of the Today screen | Saves progress to a file and loads it back |
+| Home screen | `site/index.html`, `site/manifest.webmanifest`, icons | Opens full screen from the iPhone home screen; light and dark mode follow the phone |
+| Deploy | `.github/workflows/daily.yml` (`publish` job), `.github/workflows/pages.yml` | The daily job publishes `site/` plus `data/` to Pages after committing the brief, then sends the push. `pages.yml` publishes at once when anything in `site/` changes on main |
+
+How the app behaves:
+
+- **Which brief:** the newest daily file from the last 8 days, by UK date. Before the 06:00 run it shows the previous day's brief with a note.
+- **Quiz unlock:** the button is disabled until the end of the brief has been scrolled into view.
+- **Closing mid-quiz:** answers are saved one by one; reopening resumes at the next unanswered question. A finished quiz cannot be retaken (retakes belong to the Archive screen, phase 2).
+- **Review queue details:** a review question answered correctly leaves the queue. One missed at the 7-day stage returns every 7 days until answered correctly (the brief does not say what happens then). A queued question no longer in the archive is dropped.
+- **Headline-only stories:** shown as headline and link. A headlines-only brief has no quiz unless review questions are due.
+- **Concept tags:** plain labels for now; they open Foundations cards in session 4.
+- **Watchlist panel:** not shown; nothing fetches the data yet.
+- **Push link:** tapping the push opens the Pages address automatically. `SITE_URL` is only needed to override it.
+- **Dry runs:** build only; nothing is published or pushed.
+
+Tested in a headless browser emulating an iPhone against the 13 Nov brief: Today renders 10 stories and the market idea, the quiz unlocks on scroll, a reload mid-quiz resumes, the score and streak update, due review questions are added and rescheduled, light and dark mode. **Not tested:** the Pages deploy and the ntfy push, which can only run on GitHub after merge, and the app on a real iPhone.
 
 ## What session 2 built
 
@@ -43,7 +86,7 @@ The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief sp
 | 6. Quiz | `pipeline/quiz.py`, `prompts/quiz.txt` | One LLM call: one 4-option question per summarised story and one on the market idea |
 | 7. Validate | `pipeline/validate.py`, `pipeline/models.py` | Content checks on every summary and question, one retry, then the fallback. The finished brief is checked against the `DailyBrief` schema before it is written |
 | 8. Write and prune | `pipeline/output.py` | Writes the daily file, adds the quiz and links to the monthly archive, deletes daily files more than 7 days old |
-| 9. Notify | `pipeline/notify.py` | ntfy.sh push after the commit. Deploying to Pages is session 3 |
+| 9. Notify | `pipeline/notify.py` | ntfy.sh push after the deploy |
 | LLM wrapper | `pipeline/llm.py` | Runs the Claude Code CLI (`claude -p`) with all tools off, one question and one answer per call. Provider and model from environment variables; hard cap on calls per run |
 
 How the LLM step behaves:
@@ -55,7 +98,7 @@ How the LLM step behaves:
 - **Status:** each brief is marked `full`, `partial` or `headlines_only`, and lists what degraded under `issues`.
 - **Answer order:** options are shuffled in code, so the correct answer is not always in the same place.
 - **Concept tags:** the list of primer concepts per topic is in `config/topics.yaml` (`concepts`), taken from the brief's Foundations column. Session 4 writes one card per id. Top headlines has none.
-- **Review queue:** not added by the pipeline. Which questions were missed is known only on the phone, so the app (session 3) draws review questions from the archive.
+- **Review queue:** not added by the pipeline. Which questions were missed is known only on the phone, so the app draws review questions from the archive.
 
 ## First run (11 Nov 2026)
 
@@ -157,14 +200,15 @@ Set under the repo's Settings → Secrets and variables → Actions.
 | `LLM_MODEL` | Variable | Choosing the Claude model, for example `sonnet` or `haiku` | Optional; empty uses the CLI's default for your plan |
 | `LLM_PROVIDER` | Variable | Changing the provider | Optional; default `claude_code`, the only one built |
 | `LLM_MAX_CALLS` | Variable | Call cap per run | Optional; default 14 |
-| `SITE_URL` | Variable | Makes the push open the app when tapped | Set in session 3 |
+| `SITE_URL` | Variable | Overrides the address the push opens | Optional; the Pages address is used by default |
 
 **Creating the Claude token (once a year):** on a computer with [Claude Code](https://code.claude.com/docs/en/setup) installed, run `claude setup-token`, approve it in the browser with the account that holds your Claude subscription, and copy the token it prints. Save it as the repository secret `CLAUDE_CODE_OAUTH_TOKEN`. The token lasts one year and can only make model requests. The daily job's calls (6 to 12 short ones) count against your subscription's usage allowance. The built-in `GITHUB_TOKEN` needs no setup; it is only used to commit the brief.
 
 ## Repo layout
 
 ```
-.github/workflows/daily.yml   06:00 cron + manual run
+.github/workflows/daily.yml   06:00 cron + manual run: build, commit, publish, push
+.github/workflows/pages.yml   publishes the app when site/ changes
 config/sources.yaml           feeds, topics, weights
 config/topics.yaml            slots, keywords, scoring, lens, concept tags, watchlist
 pipeline/                     run, fetch, filter, rank, summarise, quiz, validate, output, notify, llm
@@ -172,21 +216,24 @@ prompts/                      summary.txt, summary_macro.txt, quiz.txt
 data/daily/                   last 7 days, full
 data/archive/                 quizzes and links, one file per month
 data/primers/                 empty until session 4
-site/                         empty until session 3
+site/                         index.html, app.js, styles.css, manifest, icons
 ```
 
-## Next: session 3 (app)
+## Next
 
-- Today and Quiz screens, streak, review queue drawn from the archive
-- Deploy to GitHub Pages from the workflow, then set `SITE_URL`
-- Confirm the ntfy push arrives on the phone
+1. **Go live:** the four steps at the top. The first real 06:00 run is the first test of the commit, prune, deploy and push steps
+2. **No Fable day:** use the app for a day; list bugs and weak questions
+3. **Session 4 (primers and fixes):** the five Foundations decks and their quizzes, concept tags that open their cards, the bug list, prompt tuning
 
 Not built yet, and not assigned to a session in the brief:
 
-- **Watchlist data:** the five markers are in config but nothing fetches them, so the daily file has no watchlist yet. The Today screen needs it
+- **Watchlist data and panel:** the five markers are in config but nothing fetches them, so the Today screen has no watchlist panel
 - **Weekend lighter edition:** deferred; weekends run the normal edition
 
 Open items:
+
+- **No offline mode:** the app needs a connection to load the brief; there is no service worker
+- **Progress is per browser:** Safari and the home-screen app can keep separate storage on iOS, so do the quiz in the home-screen app; export and import moves progress between them
 
 - **Summary accuracy:** validation checks the quiz against the summary, not the summary against the article. Slips like the wrong name above get through; spot-check during the trial days
 - **Quiz tells:** the correct option is often the longest, and several questions restate the "why it matters" line closely. Tune `prompts/quiz.txt` in session 4

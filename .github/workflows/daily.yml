@@ -12,6 +12,8 @@ on:
 
 permissions:
   contents: write              # commit the day's brief
+  pages: write                 # publish the app to GitHub Pages
+  id-token: write              # required by actions/deploy-pages
 
 concurrency:
   group: daily-brief
@@ -74,9 +76,44 @@ jobs:
           git commit -m "Brief $(date -u +%F)"
           git push || (git pull --rebase && git push)
 
+  # Publish the app and the new brief to GitHub Pages, then tell the phone.
+  publish:
+    needs: build
+    if: inputs.dry_run != true
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}          # the branch head, which now includes today's brief
+
+      # The published site is the app (site/) with the data folder beside it.
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data _site/data
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
       - name: Send the push notification
-        if: env.DRY_RUN != 'true'
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          SITE_URL: ${{ vars.SITE_URL }}              # optional; set once the app is on Pages
-        run: python -m pipeline.notify
+          SITE_URL: ${{ vars.SITE_URL || steps.deploy.outputs.page_url }}   # tapping the push opens the app
+        run: |
+          pip install -r requirements.txt
+          python -m pipeline.notify

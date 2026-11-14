@@ -219,3 +219,12 @@ Phase 1 is four focused Fable sessions, each with one goal, finishing before Mon
 | Central banks | Changes the session 1 rule: only a policy release (a policy word in its title) is boosted and guaranteed a macro slot. Routine notices from the same feeds are marked down |
 | Dominant events | A name in the headlines of 12 or more outlets marks one event, which fills one slot in the whole brief |
 | Bug list and weak questions | Not supplied for session 4; only the README's open items were fixed |
+
+## Decisions after session 5 (14 Nov 2026)
+
+| Decision | Setting |
+| --- | --- |
+| Archive retakes | Practice only: a retake shows its own score and changes nothing stored. Progress uses first attempts only |
+| Late quizzes | A past day's quiz taken for the first time from the Archive counts for scores and the review queue, not for the streak |
+| Weekly recap | Always in Progress for the current Monday-to-Sunday week, with earlier weeks one tap away; on Sundays Today links to it |
+| Progress extras | Longest streak, days completed and average score sit beside the streak; most-missed concepts are also shown for all time (top 5) |

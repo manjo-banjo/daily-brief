@@ -24,6 +24,7 @@ function el(tag, attrs, ...kids) {
 }
 function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
 function link(url, text) { return el("a", { href: safeUrl(url), target: "_blank", rel: "noopener noreferrer" }, text); }
+function sentence(t) { return /[.!?]$/.test(t) ? t : t + "."; }   // no double full stop after an option
 function render(...nodes) { app.replaceChildren(...nodes); window.scrollTo(0, 0); }
 
 /* Dates are plain YYYY-MM-DD strings; "today" is the UK calendar day. */
@@ -281,7 +282,7 @@ function showQuestion() {
     });
     feedback.replaceChildren(el("div", { class: "feedback" },
       el("div", { class: a.ok ? "ok" : "no" }, a.ok ? "Correct" : "Not quite"),
-      el("p", {}, `${q.options[q.answer]}. ${q.explanation}`),
+      el("p", {}, `${sentence(q.options[q.answer])} ${q.explanation}`),
       q.url ? el("p", { class: "small" }, link(q.url, `Back to the story: ${q.headline || ""}`)) : null,
       !a.ok ? el("p", { class: "muted small" }, "This one comes back for review.") : null));
     next.hidden = false;
@@ -404,7 +405,7 @@ function showPrimerQuestion() {
     });
     feedback.replaceChildren(el("div", { class: "feedback" },
       el("div", { class: ok ? "ok" : "no" }, ok ? "Correct" : "Not quite"),
-      el("p", {}, `${q.options[q.answer]}. ${q.explanation}`),
+      el("p", {}, `${sentence(q.options[q.answer])} ${q.explanation}`),
       card ? el("p", { class: "small" }, "From the card: ", card.title) : null));
     next.hidden = false;
   }

@@ -43,8 +43,8 @@
     {
       "id": "eu_ai_act",
       "title": "The EU AI Act",
-      "body": "The EU AI Act is the first broad law on AI. It regulates by risk. A few uses are banned, such as social scoring by governments. High-risk uses, including hiring, credit scoring and critical infrastructure, must meet rules on testing, documentation and human oversight. Makers of general-purpose models have transparency duties, with more for the most powerful models. The Act came into force in 2024 and applies in stages over the following years. Fines can reach 7% of global turnover. It covers any company selling into the EU, wherever it is based.",
-      "in_the_news": "Coverage follows deadlines, calls to delay them and how US labs respond."
+      "body": "The EU AI Act, the first broad law on AI, regulates by risk. A few uses are banned, such as social scoring by governments. High-risk uses, including hiring, credit scoring and critical infrastructure, must meet rules on testing, documentation and human oversight. Makers of general-purpose models have transparency duties, with more for the most powerful models. The Act came into force in 2024 and applies in stages. In 2026 the EU pushed the main high-risk rules back to December 2027; the general-purpose model duties already apply. Fines can reach 7% of global turnover. It covers any company selling into the EU, wherever based.",
+      "in_the_news": "Coverage follows the deadlines, further calls to delay them and how US labs respond."
     },
     {
       "id": "ai_and_markets",

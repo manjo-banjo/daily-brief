@@ -2,7 +2,7 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 4 of 4 done (primers and fixes). A GitHub Actions job runs at 06:00 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today, Quiz and Foundations screens, the streak and the review queue. If Pages is not switched on yet, see "Go live" below.
+**Status:** session 4 of 4 done (primers and fixes). A GitHub Actions job runs at 05:43 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today, Quiz and Foundations screens, the streak and the review queue. If Pages is not switched on yet, see "Go live" below.
 
 **LLM step:** Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`), because GitHub Models, the brief's first choice, was retired on 30 July 2026. A dry run on 13 Nov produced a full brief: 10 summaries, the market idea and 11 quiz questions in 6 calls. The commit step and the ntfy push have not run yet; the first real run on main is their first test.
 
@@ -126,7 +126,7 @@ Tested in a headless browser emulating an iPhone against the 13 Nov brief: Today
 
 | Pipeline step | Where | What it does |
 | --- | --- | --- |
-| 1. Trigger | `.github/workflows/daily.yml` | Cron at 06:00 UTC plus the "Run workflow" button, with a dry-run option |
+| 1. Trigger | `.github/workflows/daily.yml` | Cron at 05:43 UTC plus the "Run workflow" button, with a dry-run option |
 | 5. Summarise | `pipeline/summarise.py`, `prompts/summary.txt`, `prompts/summary_macro.txt` | One LLM call per topic: 3-sentence summary, "why it matters" line and primer concept tag per story. Macro also gets a "how this can be accessed" note per story and the daily market idea |
 | 6. Quiz | `pipeline/quiz.py`, `prompts/quiz.txt` | One LLM call: one 4-option question per summarised story and one on the market idea |
 | 7. Validate | `pipeline/validate.py`, `pipeline/models.py` | Content checks on every summary and question, one retry, then the fallback. The finished brief is checked against the `DailyBrief` schema before it is written |
@@ -287,14 +287,14 @@ Open items:
 
 - **Summary accuracy:** validation checks the quiz against the summary, not the summary against the article. Slips like the wrong name above get through; spot-check during the trial days
 - **Quiz tells:** prompt and checks changed in session 4, but untested with Claude; review the first few quizzes
-- **Primer accuracy:** the cards state rules that change (UK tax on gilts, spread bets and CFDs, FCA leverage limits, EU AI Act dates). They were written from general knowledge on 13 Nov 2026 and not checked against sources
+- **Primer accuracy:** the cards state rules that change. Checked by web search on 13 Nov 2026, against law-firm and broker summaries, not the official texts: UK tax on spread bets and CFDs, FCA leverage limits, Solvency UK, NATO membership (all unchanged) and the EU AI Act, where the card now says the high-risk rules were pushed back to December 2027. The rest of the cards are from general knowledge
 - **Big-story rule:** the 12-outlet threshold was set on one day's news. A name that is in the news every day (Trump, China) reached 8 or 9 outlets on 13 Nov; if one reaches 12 on an ordinary day, unrelated stories about it will share one slot. Raise `big_story_min_outlets` if that happens
 - **Opinion pieces:** a City AM comment piece ("Britain is growing in spite of Labour") took a macro slot on 13 Nov. Nothing marks comment apart from news in the feeds
 - **Macro on a quiet day:** with no policy release, the second macro slot can go to a headline-only source (WSJ), which gets no summary or question
 - Each run installs the Claude Code CLI with npm (about 20 seconds); the version is not pinned
 - Import AI blocks GitHub's runners (403), so it never contributes; switch it off or find another feed
 - Feeds that carry one or two sentences (BBC, some Guardian items) give short summaries, because the LLM may only use feed text
-- The 06:00 cron can start late: GitHub delays scheduled jobs at busy times, often by 5–30 minutes
+- **Schedule:** the first scheduled run, 06:00 UTC on 14 Nov, never started (GitHub delays or drops scheduled jobs on the hour at busy times); that day's brief was started by hand. The cron is now 05:43 UTC. If runs are still missed, the fix is an outside trigger, which the brief does not cover
 - Smaller events described in different words can still fill two slots (CoreWeave results under macro and the Anthropic IPO under AI on 11 Nov)
 - Top headlines significance is a proxy (outlet coverage plus keywords); an entertainment story with no keyword in its title can still get through
 - `feed_order: editorial` in `config/sources.yaml` is no longer used by the ranker

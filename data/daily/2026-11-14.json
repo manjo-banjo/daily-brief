@@ -1,0 +1,377 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T10:44:47+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 6,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s8e2556ff",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Aviva GI premiums increase 19%, CoR improves to 93.8% in 9M’26",
+      "url": "https://www.reinsurancene.ws/aviva-gi-premiums-increase-19-cor-improves-to-93-8-in-9m26/",
+      "source": "Reinsurance News",
+      "published": "2026-11-13T15:30:52Z",
+      "headline_only": false,
+      "summary": "Aviva reported a 19% rise in general insurance premiums to £11.8 billion in the first nine months of 2026, up from £10 billion a year earlier. Its group undiscounted combined ratio improved 0.6 percentage points to 93.8%, from 94.4% in 9M’25, and the discounted ratio was 89.8%, down from 90.4%. UK&I premiums rose 27% to £8.5 billion, helped by the Direct Line acquisition, while commercial lines were 5% lower as Aviva held back to protect profitability.",
+      "why_it_matters": "Aviva is accepting lower commercial volume to protect margins, while rate adequacy and positive prior-year reserve development lift profitability despite heavier Canadian weather losses.",
+      "access_note": null,
+      "concept": {
+        "id": "insurer_economics",
+        "label": "How insurers make money (combined ratio, investment income)"
+      }
+    },
+    {
+      "id": "s24ee2def",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "ILS seeks growth beyond property cat as investors explore new opportunities: PwC Insurance Summit",
+      "url": "https://www.artemis.bm/news/ils-seeks-growth-beyond-property-cat-as-investors-explore-new-opportunities-pwc-insurance-summit/",
+      "source": "Artemis",
+      "published": "2026-11-13T14:00:19Z",
+      "headline_only": false,
+      "summary": "A panel at PwC’s Insurance Summit in Bermuda said the insurance-linked securities market is entering a new phase, looking beyond property catastrophe to specialty, casualty and cyber risks. Michael Millette of Hudson Structured Capital Management estimated that capital markets provide about $140 billion of the roughly $500 billion in global catastrophe limits. Chris Parry of RenaissanceRe Capital Partners said the investor base has moved from opportunistic investors towards long-term pools of capital, including pension funds and sovereign wealth funds.",
+      "why_it_matters": "Longer-term investors and a side-by-side relationship with traditional insurers could widen the capital available to risks beyond property catastrophe, such as casualty and cyber.",
+      "access_note": null,
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "sadf3a2ec",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Nvidia shares slip again as Wall Street weighs chip giant’s future",
+      "url": "https://www.cityam.com/nvidia-shares-slip-again-as-wall-street-weighs-chip-giants-future/",
+      "source": "City AM",
+      "published": "2026-11-13T15:55:49Z",
+      "headline_only": false,
+      "summary": "Nvidia shares fell more than two per cent as Wall Street opened on Friday, slipping 2.5 per cent to around $162 and pushing its market value below $4 trillion. The fall follows the resignation of founder and chief executive Jensen Huang after 33 years, who stepped down following reports of multiple extramarital affairs. Chief financial officer Colette Kress is interim chief executive while the board searches for a permanent successor, and AMD, Broadcom and Intel fell around two per cent in sympathy.",
+      "why_it_matters": "A leadership shock at the sector's largest chipmaker is spreading to other semiconductor stocks, showing how concentrated AI-linked market sentiment is around a single company.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "s84db177e",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "Microsoft says services fully restored after day-long global outage",
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o",
+      "source": "BBC top stories",
+      "published": "2026-11-14T06:42:27Z",
+      "headline_only": false,
+      "summary": "Microsoft says services are fully restored after a day-long global outage. The outage affected Outlook, Teams and Copilot. The company says efforts to address the underlying problem are complete.",
+      "why_it_matters": "Disruption to Copilot and core Microsoft tools shows how dependent workplaces are on a single provider's AI and productivity services.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "scaaca116",
+      "topic": "macro_markets",
+      "subtopic": "economy",
+      "title": "What’s the point in making young people work-ready if there are no jobs?",
+      "url": "https://www.cityam.com/whats-the-point-in-making-young-people-work-ready-if-there-are-no-jobs/",
+      "source": "City AM",
+      "published": "2026-11-14T06:10:00Z",
+      "headline_only": false,
+      "summary": "Helen Dickinson argues that preparing young people for work is of little use unless government also lowers the cost of employment so more jobs are created. Nearly 1m young people are not in education, employment or training (NEET), costing the economy £125bn a year, a figure currently expected to rise. Alan Milburn's report into Young People and Work is expected next week, and retail's employment costs are set to rise by around £8.5bn between 2024 and 2027.",
+      "why_it_matters": "Rising employment costs for big entry-level employers like retail bear on hiring and on public finances, which links labour-market weakness to the UK's fiscal and growth picture.",
+      "access_note": "UK retail investors can get exposure to the UK retail sector through directly held shares, equity or sector ETFs, options, spread bets and CFDs.",
+      "concept": null
+    },
+    {
+      "id": "sef7eb4b0",
+      "topic": "macro_markets",
+      "subtopic": "commodities",
+      "title": "U.S. Natural Gas Futures Relinquish Some Gains",
+      "url": "https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-futures-return-some-gains-1b28586d?mod=rss_markets_main",
+      "source": "WSJ markets",
+      "published": "2026-11-13T20:38:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s3408ea7d",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "US proposed Ukraine cedes Donbas in exchange for joining NATO, Zelensky says",
+      "url": "https://www.france24.com/en/europe/20261114-us-negotiators-suggest-ukraine-cedes-territory-in-exchange-for-nato-membership",
+      "source": "France 24",
+      "published": "2026-11-14T10:30:04Z",
+      "headline_only": false,
+      "summary": "President Zelensky said the US had proposed that Ukraine cede Donbas to Russia in exchange for Ukrainian membership of NATO. He made the comments after the latest round of peace talks in Abu Dhabi this week. He said Kyiv was not willing to retreat from its territory and warned that the Kremlin's bid to change the continent's security architecture could lead to more wars.",
+      "why_it_matters": "A proposed trade of territory for NATO membership shows how far the peace talks hinge on European security terms, which shapes risk sentiment toward European assets.",
+      "access_note": null,
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "scac0c721",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Trump to Hold Talks With China’s Xi and Russia’s Putin Next Week",
+      "url": "https://www.wsj.com/world/china/trump-to-hold-talks-with-chinas-xi-and-russias-putin-next-week-29a58e91?mod=rss_worldnews",
+      "source": "WSJ world",
+      "published": "2026-11-14T01:34:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "sd84dad30",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "What we know about the US ground stop and what to do if your flight is affected",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo",
+      "source": "BBC top stories",
+      "published": "2026-11-14T07:42:11Z",
+      "headline_only": false,
+      "summary": "A ground stop in the US disrupted flights. US officials say the disruption was caused by old equipment overloading. They say it was not a cyber-attack.",
+      "why_it_matters": "The cause was ageing equipment rather than a hostile attack, which points to an infrastructure reliability problem rather than a security one.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s6dca3980",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Setback for SpaceX Starship rocket's double-catch test",
+      "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo",
+      "source": "BBC top stories",
+      "published": "2026-11-14T00:01:01Z",
+      "headline_only": false,
+      "summary": "SpaceX aborted an attempted catch of the Starship rocket's booster during a double-catch test. The booster came down in the ocean instead. The company is led by Elon Musk.",
+      "why_it_matters": "The aborted catch is a setback for the double-catch test, which is part of SpaceX's work on Starship.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Pair trade: UK retail shares versus the broad market",
+    "based_on": "scaaca116",
+    "url": "https://www.cityam.com/whats-the-point-in-making-young-people-work-ready-if-there-are-no-jobs/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is that retailers face a heavier cost burden than the wider UK market, since the text says retail's employment costs will rise by around £8.5bn between 2024 and 2027. It is a view on relative performance, not on whether the market as a whole rises or falls.",
+    "how_it_is_expressed": "A relative-value pair: a short position in a basket of UK retail shares against a long position in a broad UK equity index of similar size. The gain or loss comes from the gap between the two, which strips out much of the general market move.",
+    "retail_access": "A UK retail investor could use spread bets or CFDs to go short the retail sector, and an index ETF or index spread bet for the long leg. Spread bets and CFDs are leveraged, so losses can exceed the initial margin, and the tax treatment differs from that of shares held directly.",
+    "what_makes_it_work": "Retail shares have to underperform the broad index as the higher employment costs weigh on the sector.",
+    "what_breaks_it": "Retailers could offset the costs or the sector could rally for other reasons, so the short leg loses money, and short positions carry financing costs while they are held.",
+    "concept": {
+      "id": "relative_value",
+      "label": "Relative-value spreads"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-14-s8e2556ff",
+      "story_id": "s8e2556ff",
+      "topic": "insurance",
+      "question": "What explains the 5% decline in Aviva's commercial lines premiums?",
+      "options": [
+        "Customers leaving following the Direct Line acquisition deal",
+        "Softening prices as rivals competed harder",
+        "Heavy Canadian weather reducing commercial demand",
+        "Deliberate restraint to favor margin over growth"
+      ],
+      "answer": 3,
+      "explanation": "Aviva chose to write less commercial business on purpose so that its profitability would not suffer.",
+      "evidence": "commercial lines were 5% lower as Aviva held back to protect profitability",
+      "tests": "why",
+      "concept": {
+        "id": "insurer_economics",
+        "label": "How insurers make money (combined ratio, investment income)"
+      }
+    },
+    {
+      "id": "2026-11-14-s24ee2def",
+      "story_id": "s24ee2def",
+      "topic": "insurance",
+      "question": "What change in the ILS investor base was described as helping the market look beyond property catastrophe?",
+      "options": [
+        "A move to retail-focused ILS funds",
+        "A shift toward long-term capital pools",
+        "A fall in traditional insurer participation",
+        "A rise in short-term hedge fund money"
+      ],
+      "answer": 1,
+      "explanation": "The panel said the investor base moved from opportunistic investors to long-term capital such as pension and sovereign funds.",
+      "evidence": "the investor base has moved from opportunistic investors towards long-term pools of capital, including pension funds and sovereign wealth funds",
+      "tests": "why",
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "2026-11-14-sadf3a2ec",
+      "story_id": "sadf3a2ec",
+      "topic": "ai_markets",
+      "question": "Why did AMD, Broadcom and Intel shares fall alongside Nvidia?",
+      "options": [
+        "They announced their own executive departures",
+        "Nvidia's leadership shock hit sector sentiment",
+        "Investors rotated into Nvidia from rivals",
+        "Nvidia's results missed chip demand forecasts"
+      ],
+      "answer": 1,
+      "explanation": "The peers fell in sympathy with Nvidia after its chief executive resigned, showing sentiment is tied to the sector leader.",
+      "evidence": "AMD, Broadcom and Intel fell around two per cent in sympathy",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-14-s84db177e",
+      "story_id": "s84db177e",
+      "topic": "ai_markets",
+      "question": "Which set of Microsoft products was named as affected by the day-long outage?",
+      "options": [
+        "Windows, Copilot and LinkedIn",
+        "Outlook, OneDrive and Azure",
+        "Azure, Teams and Xbox",
+        "Outlook, Teams and Copilot"
+      ],
+      "answer": 3,
+      "explanation": "The text lists Outlook, Teams and Copilot as the affected services.",
+      "evidence": "The outage affected Outlook, Teams and Copilot.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-14-scaaca116",
+      "story_id": "scaaca116",
+      "topic": "macro_markets",
+      "question": "What does Helen Dickinson argue government must do for work-readiness efforts for young people to pay off?",
+      "options": [
+        "Raise the minimum wage for youths",
+        "Cut taxes on retail property",
+        "Expand training for NEET young people",
+        "Lower the cost of employment"
+      ],
+      "answer": 3,
+      "explanation": "She says readiness is of little use unless lower employment costs create more jobs.",
+      "evidence": "preparing young people for work is of little use unless government also lowers the cost of employment so more jobs are created",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-14-s3408ea7d",
+      "story_id": "s3408ea7d",
+      "topic": "geopolitics",
+      "question": "What did Zelensky say the US proposed in exchange for Ukraine joining NATO?",
+      "options": [
+        "Holding early national elections",
+        "Demilitarising its eastern border",
+        "Ceding Donbas to Russia",
+        "Ceding Crimea to Russia"
+      ],
+      "answer": 2,
+      "explanation": "Zelensky said the proposal was for Ukraine to give up Donbas in return for NATO membership.",
+      "evidence": "the US had proposed that Ukraine cede Donbas to Russia in exchange for Ukrainian membership of NATO",
+      "tests": "fact",
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "2026-11-14-sd84dad30",
+      "story_id": "sd84dad30",
+      "topic": "top_headlines",
+      "question": "What do US officials say caused the ground stop?",
+      "options": [
+        "Old equipment overloading",
+        "Severe weather across hubs",
+        "A cyber-attack on systems",
+        "A software update failure"
+      ],
+      "answer": 0,
+      "explanation": "Officials blamed old equipment overloading and ruled out a cyber-attack.",
+      "evidence": "US officials say the disruption was caused by old equipment overloading.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-14-s6dca3980",
+      "story_id": "s6dca3980",
+      "topic": "top_headlines",
+      "question": "Where did the Starship booster end up after SpaceX aborted the catch attempt?",
+      "options": [
+        "It exploded on the launch pad",
+        "It was recovered on a floating platform",
+        "It was caught by the launch tower",
+        "It splashed down in the sea"
+      ],
+      "answer": 3,
+      "explanation": "With the catch aborted, the booster descended into the ocean rather than being caught.",
+      "evidence": "The booster came down in the ocean instead.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-14-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "In the UK retail versus broad market pair trade, why does the structure suit a view on retailers' costs?",
+      "options": [
+        "Both legs gain when the market rises",
+        "Leverage caps losses at the initial margin",
+        "The gap between legs strips out market moves",
+        "The long leg offsets all financing costs"
+      ],
+      "answer": 2,
+      "explanation": "Because the result depends on the gap between the two legs, general market moves largely cancel out.",
+      "evidence": "The gain or loss comes from the gap between the two, which strips out much of the general market move.",
+      "tests": "why",
+      "concept": {
+        "id": "relative_value",
+        "label": "Relative-value spreads"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 7
+  },
+  "issues": []
+}

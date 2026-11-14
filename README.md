@@ -2,7 +2,7 @@
 
 A personal daily brief: 10–11 stories across five topics, then a short quiz. The full plan is in [BRIEF.md](BRIEF.md).
 
-**Status:** session 4 of 4 done (primers and fixes). A GitHub Actions job runs at 05:43 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has the Today, Quiz and Foundations screens, the streak and the review queue. If Pages is not switched on yet, see "Go live" below.
+**Status:** session 5 done (Archive and Progress screens), the first of phase 2. A GitHub Actions job runs at 05:43 UTC, fetches 37 sources, picks the stories, writes summaries and a quiz with Claude, commits the day's brief as JSON, publishes the app to GitHub Pages and sends a push. The app has all five screens (Today, Quiz, Foundations, Archive, Progress), the streak and the review queue. If Pages is not switched on yet, see "Go live" below.
 
 **LLM step:** Claude through a subscription token (`CLAUDE_CODE_OAUTH_TOKEN`), because GitHub Models, the brief's first choice, was retired on 30 July 2026. A dry run on 13 Nov produced a full brief: 10 summaries, the market idea and 11 quiz questions in 6 calls. The commit step and the ntfy push have not run yet; the first real run on main is their first test.
 
@@ -50,6 +50,36 @@ mkdir -p _site && cp -r site/. _site/ && cp -r data _site/data && python3 -m htt
 ```
 
 The code runs on Python 3.9 and later; GitHub Actions uses 3.12, as the brief specifies.
+
+## What session 5 built
+
+| Part | Where | What it does |
+| --- | --- | --- |
+| Archive screen | `site/app.js`, `site/styles.css` | Lists past days. The last 7 days open as the full brief (from `data/daily/`); older days open as headlines, links and their quiz (from `data/archive/`) |
+| Archive quizzes | `site/app.js` | Any past day's quiz can be taken or retaken, with the same instant feedback and link back to the story |
+| Progress screen | `site/app.js`, `site/styles.css` | Streak, longest streak, days completed, average score; the weekly recap; score by topic over time; most-missed concepts |
+| Weekly recap | Progress screen | Monday to Sunday: days completed, score by topic, the 3 most-missed concepts, each linked to its Foundations card |
+| Navigation | `site/app.js` | Four tabs: Today, Foundations, Archive, Progress |
+
+How the Archive behaves:
+
+- **What is listed:** every day except the one on the Today screen. "Last 7 days" are the daily files that still exist; "Older" comes from the monthly archive files, this month and last to begin with. "Show earlier" loads one more month at a time and disappears at the first missing month.
+- **Retake (quiz already finished):** practice only. It shows its own score and records nothing: the first score, the streak and the review queue stay as they were.
+- **Late quiz (never taken):** a first attempt. Answers are saved one by one (closing mid-quiz resumes), the score feeds Progress and misses join the review queue (back in 3 days). The day is marked late and never counts towards the streak, so a streak cannot be back-filled. A late quiz has the day's own questions only, no review questions.
+- **Today's day:** opening it in the Archive goes to the Today screen; its quiz is the normal daily quiz.
+- **Concept tags** on a full past brief open their Foundations card, as on Today.
+
+How Progress behaves:
+
+- **Weekly recap:** always there, for the current Monday-to-Sunday week, with "Earlier week" and "Later week" to move about. On Sundays the Today screen also shows a link to it. Each day shows as completed, done late (L) or not done.
+- **Score by topic over time:** one small bar chart for all topics and one per topic, one bar per week, up to the last 8 weeks, all on a 0–100% scale with the brief's 70% target as a dashed line. Tap a bar for that week's numbers.
+- **What counts:** every recorded answer, under the day of the brief it belongs to: daily questions, review questions (under the day they were answered) and late Archive quizzes. Practice retakes never count.
+- **Most-missed concepts:** ranked by number of misses, then by miss rate; top 3 in the recap, top 5 for all time. Top headlines questions have no concept, so they never appear here.
+- **Export and import** buttons are on Progress as well as Today.
+
+Also fixed: the quiz question on the market idea had no "Back to the story" link on the Today quiz; it has one now.
+
+Tested in a headless browser emulating an iPhone, light and dark, against the real 13 and 14 Nov data plus made-up copies for earlier days and months (test copies only, not committed): the Archive list and "Show earlier", a full day and a headlines day, a late quiz with a reload half way, a practice retake leaving stored progress untouched, the Today quiz and streak after the change, the recap for this week and earlier weeks, a most-missed concept opening its card, the chart, the Sunday link, and Progress with no data. **Not tested:** on a real iPhone, and with real data older than 7 days, since the repo holds only two days so far.
 
 ## What session 4 built
 
@@ -112,7 +142,7 @@ How the app behaves:
 
 - **Which brief:** the newest daily file from the last 8 days, by UK date. Before the 06:00 run it shows the previous day's brief with a note.
 - **Quiz unlock:** the button is disabled until the end of the brief has been scrolled into view.
-- **Closing mid-quiz:** answers are saved one by one; reopening resumes at the next unanswered question. A finished quiz cannot be retaken (retakes belong to the Archive screen, phase 2).
+- **Closing mid-quiz:** answers are saved one by one; reopening resumes at the next unanswered question. A finished quiz is retaken from the Archive screen, as practice (session 5).
 - **Review queue details:** a review question answered correctly leaves the queue. One missed at the 7-day stage returns every 7 days until answered correctly (the brief does not say what happens then). A queued question no longer in the archive is dropped.
 - **Headline-only stories:** shown as headline and link. A headlines-only brief has no quiz unless review questions are due.
 - **Concept tags:** open their Foundations card (session 4).
@@ -266,21 +296,25 @@ site/                         index.html, app.js, styles.css, manifest, icons
 
 ## Next
 
-Phase 1's four sessions are done. What is left before phase 2:
+Phase 1's four sessions and the first phase 2 session (Archive and Progress) are done. What is left:
 
 1. **Dry run from this branch:** Actions → Daily brief → Run workflow → pick the branch, tick "Dry run". This is the first test of the new quiz prompt; check the questions in the run's `out` artifact
 2. **Your bug list and weak questions:** session 4's prompt had placeholders for both, so nothing from your day of use has been fixed yet. Send them and they can go into a follow-up
 3. **Read the decks:** the cards and questions were written in one pass and not reviewed by you. Correct anything in `data/primers/` by hand
 4. **Phase 1 checklist in BRIEF.md:** three unattended 06:00 runs in a row, and a spot-check of 20 quiz answers against their summaries
-5. **Phase 2 (Sonnet or Opus):** Archive and Progress screens, including the weekly recap that links most-missed concepts to their cards
+5. **Try the new screens on the phone:** Archive and Progress have only run in a test browser. Real data older than 7 days first appears on 21 Nov
+6. **Rest of phase 2:** the items below
 
 Not built yet, and not assigned to a session in the brief:
 
 - **Watchlist data and panel:** the five markers are in config but nothing fetches them, so the Today screen has no watchlist panel
 - **Weekend lighter edition:** deferred; weekends run the normal edition
-- **Push that opens the home-screen app:** planned for phase 2. It means sending the push from the app itself (web push) in place of ntfy: a service worker, a one-off "allow notifications" tap and two new secrets
+- **Push that opens the home-screen app:** planned for phase 2, not yet built. It means sending the push from the app itself (web push) in place of ntfy: a service worker, a one-off "allow notifications" tap and two new secrets
 
 Open items:
+
+- **Archive depends on the daily job:** a day appears under "Older" only if the job wrote it to the monthly archive. "Show earlier" stops at the first month with no file, so months before a gap of a whole month cannot be reached
+- **Scores by week use the brief's date:** a quiz taken late changes the score of the week it belongs to, not the week it was taken in
 
 - **No offline mode:** the app needs a connection to load the brief; there is no service worker
 - **Progress is per browser:** Safari and the home-screen app can keep separate storage on iOS, so do the quiz in the home-screen app; export and import moves progress between them

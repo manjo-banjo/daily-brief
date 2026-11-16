@@ -754,6 +754,242 @@
           "source": "Guardian UK"
         }
       ]
+    },
+    {
+      "date": "2026-11-16",
+      "stories": [
+        {
+          "id": "s86962fa6",
+          "topic": "insurance",
+          "headline": "European commercial insurance rates to fall further next year: S&P",
+          "url": "https://www.commercialriskonline.com/european-commercial-insurance-rates-to-fall-further-next-year-sp/",
+          "source": "Commercial Risk"
+        },
+        {
+          "id": "sd1483e41",
+          "topic": "insurance",
+          "headline": "Deutsche Rück sponsoring its first catastrophe bond, €100m Pontgaia Re DAC",
+          "url": "https://www.artemis.bm/news/deutsche-ruck-sponsoring-its-first-catastrophe-bond-e100m-pontgaia-re-dac/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s93ce59c5",
+          "topic": "ai_markets",
+          "headline": "Nvidia earnings, Anthropic IPO Ahead in New Test for AI Economy",
+          "url": "https://www.wsj.com/cfo-journal/nvidia-earnings-anthropic-ipo-ahead-in-new-test-for-ai-economy-7dced222?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s8f0e2e78",
+          "topic": "ai_markets",
+          "headline": "The Investors Set to Win Big in Anthropic’s IPO",
+          "url": "https://www.wsj.com/finance/investing/the-investors-set-to-win-big-in-anthropics-ipo-a2fc795c?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s4427f912",
+          "topic": "macro_markets",
+          "headline": "U.S. Treasury Yields Decline but Fed Rate-Hike Prospects in Focus",
+          "url": "https://www.wsj.com/finance/investing/u-s-treasury-yields-decline-but-fed-rate-hike-prospects-in-focus-1257629b?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s62364741",
+          "topic": "macro_markets",
+          "headline": "Britain is a land of opportunity – as Lord Mayor, I will help the City unlock it",
+          "url": "https://www.cityam.com/britain-is-a-land-of-opportunity-as-lord-mayor-i-will-help-the-city-unlock-it/",
+          "source": "City AM"
+        },
+        {
+          "id": "sd4a4edda",
+          "topic": "geopolitics",
+          "headline": "Albanese treads tightrope in upcoming Trump meeting, wanting Indo-Pacific engagement and end to Iran and Ukraine wars",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
+          "source": "Guardian world"
+        },
+        {
+          "id": "s8be1703e",
+          "topic": "geopolitics",
+          "headline": "Xi, Trump and Putin to discuss 'world peace' at Shenzhen summit, China says",
+          "url": "https://www.france24.com/en/asia-pacific/20261116-xi-trump-putin-discuss-world-peace-shenzhen-summit-china-says",
+          "source": "France 24"
+        },
+        {
+          "id": "s3a7ee9f3",
+          "topic": "top_headlines",
+          "headline": "Elon Musk joins 'Bring Jensen Back' campaign to reinstate the former Nvidia boss",
+          "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "s99029e26",
+          "topic": "top_headlines",
+          "headline": "Two mass shootings in South Africa leave 17 dead",
+          "url": "https://www.bbc.co.uk/news/articles/c8y5x3n4kywpo",
+          "source": "BBC World"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-16-s86962fa6",
+          "story_id": "s86962fa6",
+          "topic": "insurance",
+          "question": "Why would falling commercial insurance rates be a concern for European insurers given the risks S&P describes?",
+          "options": [
+            "Private equity losses would force asset sales",
+            "Regulators would raise capital requirements sharply",
+            "Premiums shrink while claims risk stays high",
+            "Reinsurance costs would fall faster than premiums"
+          ],
+          "answer": 2,
+          "explanation": "Lower rates cut premium income while geopolitical and cyber risks stay elevated, so underwriting margins get squeezed.",
+          "concept": {
+            "id": "underwriting_cycle",
+            "label": "The underwriting cycle"
+          },
+          "headline": "European commercial insurance rates to fall further next year: S&P",
+          "url": "https://www.commercialriskonline.com/european-commercial-insurance-rates-to-fall-further-next-year-sp/",
+          "source": "Commercial Risk"
+        },
+        {
+          "id": "2026-11-16-sd1483e41",
+          "story_id": "sd1483e41",
+          "topic": "insurance",
+          "question": "What does the Pontgaia Re DAC catastrophe bond protect Deutsche Rück against?",
+          "options": [
+            "Cyber losses at public insurers",
+            "Windstorm losses across Europe",
+            "Flood losses in Germany",
+            "Earthquake losses in Germany"
+          ],
+          "answer": 3,
+          "explanation": "The bond covers earthquake losses in Germany, with flood cover only an option from year two.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "Deutsche Rück sponsoring its first catastrophe bond, €100m Pontgaia Re DAC",
+          "url": "https://www.artemis.bm/news/deutsche-ruck-sponsoring-its-first-catastrophe-bond-e100m-pontgaia-re-dac/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-16-s62364741",
+          "story_id": "s62364741",
+          "topic": "macro_markets",
+          "question": "What gap does the Lord Mayor's pipeline effort point to in UK funding?",
+          "options": [
+            "UK pension funds overpaying for private equity",
+            "Too few UK scale-ups seeking outside capital",
+            "Domestic savings not reaching growing UK firms",
+            "Overseas investors avoiding UK infrastructure projects"
+          ],
+          "answer": 2,
+          "explanation": "International pension funds invest far more than UK ones in UK-managed funds, so UK savings are not funding UK growth firms.",
+          "concept": null,
+          "headline": "Britain is a land of opportunity – as Lord Mayor, I will help the City unlock it",
+          "url": "https://www.cityam.com/britain-is-a-land-of-opportunity-as-lord-mayor-i-will-help-the-city-unlock-it/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-16-sd4a4edda",
+          "story_id": "sd4a4edda",
+          "topic": "geopolitics",
+          "question": "What is Australia doing with the US and Japan on technology, as mentioned around the Quad summit?",
+          "options": [
+            "Funding a joint AI research lab in Manila",
+            "Protecting AI technologies from Chinese dominance",
+            "Drafting rules to end the Ukraine war",
+            "Setting shared tariffs on Chinese chip exports"
+          ],
+          "answer": 1,
+          "explanation": "The text says Australia, the US and Japan are joining to protect AI technologies as China tries to dominate them.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "Albanese treads tightrope in upcoming Trump meeting, wanting Indo-Pacific engagement and end to Iran and Ukraine wars",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-16-s8be1703e",
+          "story_id": "s8be1703e",
+          "topic": "geopolitics",
+          "question": "By what route could a first three-way meeting of the US, Chinese and Russian leaders affect financial markets?",
+          "options": [
+            "By changing expectations that drive investor sentiment",
+            "By cutting Russia's energy exports immediately",
+            "By imposing binding tariff cuts on APEC members",
+            "By directly setting central bank interest rates"
+          ],
+          "answer": 0,
+          "explanation": "The meeting could change expectations on trade, security and the wars involving Russia, and that in turn moves investors' willingness to take risk.",
+          "concept": {
+            "id": "geopolitics_and_markets",
+            "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+          },
+          "headline": "Xi, Trump and Putin to discuss 'world peace' at Shenzhen summit, China says",
+          "url": "https://www.france24.com/en/asia-pacific/20261116-xi-trump-putin-discuss-world-peace-shenzhen-summit-china-says",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-16-s3a7ee9f3",
+          "story_id": "s3a7ee9f3",
+          "topic": "top_headlines",
+          "question": "Whom is the 'Bring Jensen Back' campaign aimed at persuading?",
+          "options": [
+            "Elon Musk's companies",
+            "Nvidia's largest shareholders",
+            "Nvidia's board",
+            "US market regulators"
+          ],
+          "answer": 2,
+          "explanation": "The campaign wants the board of the AI chip giant to give Jensen Huang his job back.",
+          "concept": null,
+          "headline": "Elon Musk joins 'Bring Jensen Back' campaign to reinstate the former Nvidia boss",
+          "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-16-s99029e26",
+          "story_id": "s99029e26",
+          "topic": "top_headlines",
+          "question": "In which provinces did the two mass shootings that left 17 dead take place?",
+          "options": [
+            "KwaZulu-Natal and Gauteng",
+            "Eastern Cape and Free State",
+            "KwaZulu-Natal and Limpopo",
+            "Western Cape and Gauteng"
+          ],
+          "answer": 0,
+          "explanation": "The text names KwaZulu-Natal and Gauteng as the two locations.",
+          "concept": null,
+          "headline": "Two mass shootings in South Africa leave 17 dead",
+          "url": "https://www.bbc.co.uk/news/articles/c8y5x3n4kywpo",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-16-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "What must happen for the long UK growth and infrastructure position to work?",
+          "options": [
+            "Money must actually flow into UK businesses and projects",
+            "Leveraged products must replace funds and shares",
+            "UK assets must outperform a matching short position",
+            "International pension funds must exit UK private equity"
+          ],
+          "answer": 0,
+          "explanation": "The trade is an outright long position that relies on the investment pipeline turning into real funded capital flows.",
+          "concept": {
+            "id": "retail_instruments",
+            "label": "Instruments a UK retail investor can use (leverage, margin, tax)"
+          },
+          "headline": "Outright exposure to UK growth and infrastructure investment",
+          "url": "https://www.cityam.com/britain-is-a-land-of-opportunity-as-lord-mayor-i-will-help-the-city-unlock-it/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

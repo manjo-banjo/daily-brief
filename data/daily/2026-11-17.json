@@ -1,0 +1,412 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T14:53:13+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 7,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s1d4d0fdc",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "P&C soft market deepens, but profitability cushion will gradually erode: Swiss Re",
+      "url": "https://www.artemis.bm/news/pc-soft-market-deepens-but-profitability-cushion-will-gradually-erode-swiss-re/",
+      "source": "Artemis",
+      "published": "2026-11-17T09:00:12Z",
+      "headline_only": false,
+      "summary": "Swiss Re has forecast that global non-life insurance premium growth will accelerate over the next two years, even as the P&C and reinsurance market continues to soften. Its Institute's sigma report sees real premium growth of 1.0% in 2027 and 2.0% in 2028, from a 0.5% base in 2026, with growth shifting from pricing-led to exposure-led. Non-life insurer return-on-equity is forecast to fall from 12.7% in 2026 to 10.3% in 2027, and then towards a cost of capital of approximately 7.3% over the medium term.",
+      "why_it_matters": "Capital built up from recent profits is pushing prices down, so underwriting margins and returns are expected to shrink towards the cost of capital.",
+      "access_note": null,
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "sfdce5aae",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "Supercede expands reinsurance technology partnerships with Inigo and Ascot",
+      "url": "https://www.reinsurancene.ws/supercede-expands-reinsurance-technology-partnerships-with-inigo-and-ascot/",
+      "source": "Reinsurance News",
+      "published": "2026-11-17T11:30:56Z",
+      "headline_only": false,
+      "summary": "Reinsurance technology provider Supercede has agreed deals with Lloyd's insurer Inigo and specialty re/insurance group Ascot to use its Placement Intelligence platform. The London-based company announced both agreements on 17 November 2026, and they let the two firms manage parts of their ceded reinsurance programmes, including broker communications, placement information and market engagement. Inigo has committed to a three-year partnership following a trial, and Supercede already works with companies including Hiscox, Convex, QBE, Allianz and Generali.",
+      "why_it_matters": "Carriers are investing in data tools to run multi-line, multi-broker reinsurance buying more consistently, and Supercede's client list is growing across the London market.",
+      "access_note": null,
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "scb5c0e33",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "London-listed Nvidia investors slide ahead of crunch results",
+      "url": "https://www.cityam.com/london-listed-nvidia-investors-slide-ahead-of-crunch-results/",
+      "source": "City AM",
+      "published": "2026-11-17T12:46:37Z",
+      "headline_only": false,
+      "summary": "London-listed technology trusts fell again on Tuesday morning ahead of Nvidia's first results since Jensen Huang's departure. Nvidia's share price sank 4.1 per cent in pre-market trading to $156.1 (£118.3), having plunged as much as 13 per cent last week, and the stock has fallen 32 per cent from its October peak. Polar Capital Technology Trust fell 2.1 per cent to 547.9p and is down 13.9 per cent through the month, while Allianz Technology Trust shed 1.4 per cent and Manchester & London Investment Trust slipped 1.1 per cent.",
+      "why_it_matters": "Heavy Nvidia holdings, from 9.5 per cent to 12.9 per cent in the largest trusts named, mean one stock's turmoil is feeding straight into UK-listed technology trust prices.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "saa294150",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Nvidia faces ‘complete evaporation of confidence’ as board rules out Huang return",
+      "url": "https://www.cityam.com/nvidia-faces-complete-evaporation-of-confidence-as-board-rules-out-huang-return/",
+      "source": "City AM",
+      "published": "2026-11-17T11:42:27Z",
+      "headline_only": false,
+      "summary": "Nvidia shares slipped further on Tuesday ahead of its third-quarter earnings, as analysts warned of a \"complete evaporation of confidence\" without a clear stabilisation plan. The stock closed 4.1 per cent lower at $156.14 on Monday and fell a further 0.5 per cent in pre-market trading, extending a sell-off that has wiped roughly $2 trillion from its valuation since October. Wall Street expects revenue of approximately $109bn, up around 90 per cent year on year, while Reuters reported the board is not considering bringing back Huang and is focused on finding a permanent successor.",
+      "why_it_matters": "Strong demand may no longer be enough to support the share price, as leadership uncertainty and tighter US export restrictions shift the focus to guidance, margins and succession.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "s39a201c2",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "December interest rate rise ‘difficult to avoid’ after employment jump",
+      "url": "https://www.cityam.com/interest-rate-hike-difficult-do-avoid/",
+      "source": "City AM",
+      "published": "2026-11-17T12:57:11Z",
+      "headline_only": false,
+      "summary": "UK unemployment fell to 4.6 per cent in the three months to September, the lowest rate since April 2025, according to the Office for National Statistics. Full-time employment rose by 22,000 month-on-month, while pay growth excluding bonuses slowed to 3.5 per cent from 3.7 per cent the previous month. Economists say a second consecutive Bank of England rate rise in December will be \"difficult to avoid\", and traders have added to bets on it, while vacancies fell a further 22,000 to 690,000.",
+      "why_it_matters": "Stronger jobs data and pay growth above the 2 per cent target make a further rate rise more likely, which would affect gilt yields, mortgage costs and sterling.",
+      "access_note": "UK retail investors can get exposure to rate expectations through gilts held directly, bond ETFs, sterling FX, futures, options, and spread bets and CFDs.",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "sa8992f4c",
+      "topic": "macro_markets",
+      "subtopic": "commodities",
+      "title": "U.S. Natural Gas Futures Extend Retreat",
+      "url": "https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-futures-extend-retreat-985bb896?mod=rss_markets_main",
+      "source": "WSJ markets",
+      "published": "2026-11-17T14:30:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s8b0cc272",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "Zelenskyy gives details on Ukraine’s Crimea bridge operation",
+      "url": "https://www.politico.eu/article/zelenskyy-gives-details-on-ukraine-crimea-bridge-operation/",
+      "source": "Politico Europe",
+      "published": "2026-11-17T13:52:18Z",
+      "headline_only": false,
+      "summary": "Ukraine destroyed part of the Kerch Bridge linking Russia to Crimea in a carefully planned operation using Ukrainian weapons, President Volodymyr Zelenskyy said on Tuesday. The Russia-installed governor of Crimea, Sergei Aksenov, confirmed the strike and said the bridge was closed until further notice, while the Russian transport ministry said limited traffic will resume on a single railway track. The road portion has collapsed, the damage to the parallel rail bridge is uncertain, and Ukraine says the strike answers a Russian bombing campaign against Ukrainian bridges that began on Oct. 1.",
+      "why_it_matters": "The $3.7 billion bridge is a key supply line for Crimea's 2.5 million people and Russian forces there, so losing it pushes Russia onto ferries and overland routes that Kyiv can attack.",
+      "access_note": null,
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "s379b354b",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Trump kicks off Asia tour ahead of major talks with Putin, Xi in China",
+      "url": "https://www.dw.com/en/trump-kicks-off-asia-tour-ahead-of-major-talks-with-putin-xi-in-china/live-79964719?maca=en-rss-en-top-1022-rdf",
+      "source": "DW",
+      "published": "2026-11-17T07:34:00Z",
+      "headline_only": false,
+      "summary": "US President Donald Trump flew into Manila for a Quad meeting. He will then travel to China for a much anticipated meeting with his Russian and Chinese counterparts. No further details of the agenda are given.",
+      "why_it_matters": "A meeting of the US, Russian and Chinese leaders could shape trade, security and sanctions policy, so markets will watch for any signals from it.",
+      "access_note": null,
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "s4fc2a197",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Batman to James Bond: The clues about what to expect from Robert Pattinson's 007",
+      "url": "https://www.bbc.co.uk/news/articles/c8x2r6gyy2pzo",
+      "source": "BBC top stories",
+      "published": "2026-11-17T13:15:38Z",
+      "headline_only": false,
+      "summary": "Robert Pattinson's past film roles are being examined for clues about what he might be like as James Bond. The text links the Batman role to the Bond question. It gives no further detail on casting, timing or the film.",
+      "why_it_matters": "Casting shapes how the Bond franchise is pitched to audiences, though the supplied text offers no detail on release plans or commercial expectations.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s862e7dff",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "UK sanctions firms over Israeli West Bank settlements",
+      "url": "https://www.bbc.co.uk/news/articles/cvglr977x3z0o",
+      "source": "BBC top stories",
+      "published": "2026-11-17T13:10:06Z",
+      "headline_only": false,
+      "summary": "The UK has imposed sanctions on firms over Israeli settlements in the West Bank. It is the first set of sanctions since the UK announced a tougher approach to Israeli actions in the territory. The text does not name the firms or give the scale of the measures.",
+      "why_it_matters": "It shows the UK is acting on its stated tougher stance, which could affect companies with exposure to West Bank settlement activity.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Expressing a view on a second Bank of England hike",
+    "based_on": "s39a201c2",
+    "url": "https://www.cityam.com/interest-rate-hike-difficult-do-avoid/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is that a stronger jobs market, with unemployment at 4.6 per cent and pay growth of 3.5 per cent, could lead the Bank of England to raise rates again in December. Traders have already added to bets on this, so the idea is about whether the move is fully priced.",
+    "how_it_is_expressed": "One structure is an outright position in short-dated gilt yields rising, which means gilt prices falling. Another is a position on sterling strengthening against a currency whose central bank is less likely to raise rates.",
+    "retail_access": "A UK retail investor could use short-dated gilt ETFs, gilts held directly, sterling FX pairs, or spread bets and CFDs on gilt futures or sterling. Spread bets and CFDs use leverage and margin, so losses can exceed the initial stake, while gilts held directly are generally free of capital gains tax.",
+    "what_makes_it_work": "The Bank of England has to raise rates in December by more than markets have already priced in, or signal further tightening.",
+    "what_breaks_it": "Weaker data, such as the continued fall in vacancies, could lead the Bank to hold rates and cause the market to reverse its rate-rise bets.",
+    "concept": {
+      "id": "central_bank_policy",
+      "label": "Central bank policy"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-17-s1d4d0fdc",
+      "story_id": "s1d4d0fdc",
+      "topic": "insurance",
+      "question": "Why does Swiss Re expect non-life insurer returns to drift down toward the cost of capital?",
+      "options": [
+        "Claims from natural disasters are rising sharply",
+        "Surplus capital from past earnings is cutting prices",
+        "Regulators are capping premium increases for insurers",
+        "Rising interest rates are lowering investment income"
+      ],
+      "answer": 1,
+      "explanation": "Accumulated capital from recent profits increases competition and pushes prices down, which squeezes margins and returns.",
+      "evidence": "Capital built up from recent profits is pushing prices down, so underwriting margins and returns are expected to shrink towards the cost of capital.",
+      "tests": "why",
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "2026-11-17-sfdce5aae",
+      "story_id": "sfdce5aae",
+      "topic": "insurance",
+      "question": "Which commitment did Inigo make in its agreement with Supercede?",
+      "options": [
+        "A one-year pilot before any renewal",
+        "A five-year deal after an acquisition",
+        "A two-year partnership without any trial",
+        "A three-year partnership after a trial"
+      ],
+      "answer": 3,
+      "explanation": "The text says Inigo committed to three years following a trial.",
+      "evidence": "Inigo has committed to a three-year partnership following a trial",
+      "tests": "fact",
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "2026-11-17-scb5c0e33",
+      "story_id": "scb5c0e33",
+      "topic": "ai_markets",
+      "question": "Why did London-listed technology trusts fall alongside Nvidia's share price?",
+      "options": [
+        "They are all managed by Nvidia's board",
+        "They hold large stakes in Nvidia",
+        "They had reported weak earnings themselves",
+        "They are exposed to tighter UK export rules"
+      ],
+      "answer": 1,
+      "explanation": "The trusts' large Nvidia positions pass the stock's fall straight into their prices.",
+      "evidence": "Heavy Nvidia holdings, from 9.5 per cent to 12.9 per cent in the largest trusts named",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-17-saa294150",
+      "story_id": "saa294150",
+      "topic": "ai_markets",
+      "question": "Which development is reported about Nvidia's board and leadership?",
+      "options": [
+        "It has named a permanent successor",
+        "It is split over whether to replace Huang",
+        "It plans to reinstate Huang after results",
+        "It is not considering Huang's return"
+      ],
+      "answer": 3,
+      "explanation": "Reuters reported the board is looking for a permanent successor rather than a Huang return.",
+      "evidence": "the board is not considering bringing back Huang and is focused on finding a permanent successor",
+      "tests": "fact",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-17-s39a201c2",
+      "story_id": "s39a201c2",
+      "topic": "macro_markets",
+      "question": "Why do economists think a December rate rise is hard to avoid despite slower pay growth?",
+      "options": [
+        "Vacancies jumped to a record high",
+        "Pay growth fell below the 2 per cent target",
+        "Unemployment fell and employment rose",
+        "Gilt yields dropped sharply last month"
+      ],
+      "answer": 2,
+      "explanation": "A tighter jobs market, with pay growth still above target, supports another hike.",
+      "evidence": "UK unemployment fell to 4.6 per cent in the three months to September",
+      "tests": "why",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "2026-11-17-s8b0cc272",
+      "story_id": "s8b0cc272",
+      "topic": "geopolitics",
+      "question": "Why does losing the Kerch Bridge hurt Russia's position in Crimea?",
+      "options": [
+        "The bridge's repair cost exceeds Russia's budget",
+        "Russia loses its only railway into Ukraine",
+        "Supplies must shift to ferries and overland routes",
+        "Crimea's population must be evacuated by sea"
+      ],
+      "answer": 2,
+      "explanation": "The bridge is a key supply line, so its loss forces Russia onto routes Ukraine can attack.",
+      "evidence": "losing it pushes Russia onto ferries and overland routes that Kyiv can attack.",
+      "tests": "why",
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "2026-11-17-s379b354b",
+      "story_id": "s379b354b",
+      "topic": "geopolitics",
+      "question": "Where did Trump fly to for a Quad meeting before going to China?",
+      "options": [
+        "Seoul",
+        "Beijing",
+        "Tokyo",
+        "Manila"
+      ],
+      "answer": 3,
+      "explanation": "The text states Trump flew into Manila for the Quad meeting.",
+      "evidence": "US President Donald Trump flew into Manila for a Quad meeting.",
+      "tests": "fact",
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "2026-11-17-s4fc2a197",
+      "story_id": "s4fc2a197",
+      "topic": "top_headlines",
+      "question": "What does the text link to the question of Pattinson as Bond?",
+      "options": [
+        "His earlier spy films",
+        "His work as a producer",
+        "His Batman role",
+        "His past television work"
+      ],
+      "answer": 2,
+      "explanation": "The text ties Pattinson's Batman role to the Bond question.",
+      "evidence": "The text links the Batman role to the Bond question.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-17-s862e7dff",
+      "story_id": "s862e7dff",
+      "topic": "top_headlines",
+      "question": "What does the UK's latest move on West Bank settlements show about its policy?",
+      "options": [
+        "It is coordinating penalties with other countries",
+        "It is targeting only the largest settlement firms",
+        "It is following through on its tougher stance",
+        "It is reversing its earlier position on sanctions"
+      ],
+      "answer": 2,
+      "explanation": "These are the first sanctions since the UK announced a tougher approach, so it is acting on that stance.",
+      "evidence": "It is the first set of sanctions since the UK announced a tougher approach to Israeli actions in the territory.",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-17-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "What would most likely lead the Bank of England to hold rates and unwind the trade?",
+      "options": [
+        "Weaker data, such as falling vacancies",
+        "Sterling weakening against other currencies",
+        "Unemployment rising above its current level",
+        "Pay growth accelerating beyond 3.5 per cent"
+      ],
+      "answer": 0,
+      "explanation": "Weaker data like falling vacancies could persuade the Bank to hold, causing the market to reverse its bets on a hike.",
+      "evidence": "Weaker data, such as the continued fall in vacancies, could lead the Bank to hold rates and cause the market to reverse its rate-rise bets.",
+      "tests": "why",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 7
+  },
+  "issues": []
+}

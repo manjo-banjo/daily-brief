@@ -1271,6 +1271,266 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-18",
+      "stories": [
+        {
+          "id": "s8abb44a9",
+          "topic": "insurance",
+          "headline": "Aurora eyes growth with IA Capital investment",
+          "url": "https://www.reinsurancene.ws/aurora-eyes-growth-with-ia-capital-investment/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s39c8f57f",
+          "topic": "insurance",
+          "headline": "Lancashire enters cat bond market seeking $175m S6 Re aggregate peak peril retro",
+          "url": "https://www.artemis.bm/news/lancashire-enters-cat-bond-market-seeking-175m-s6-re-aggregate-peak-peril-retro/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s7644ff6c",
+          "topic": "ai_markets",
+          "headline": "Shares in London-listed Anthropic investors rise ahead of blockbuster IPO",
+          "url": "https://www.cityam.com/shares-in-london-listed-anthropic-investors-rise-ahead-of-blockbuster-ipo/",
+          "source": "City AM"
+        },
+        {
+          "id": "sc001a2df",
+          "topic": "ai_markets",
+          "headline": "Nasdaq Futures Rise as Nvidia Earnings Calm AI Fears, Attention Turns to Anthropic",
+          "url": "https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s2e6e89e4",
+          "topic": "macro_markets",
+          "headline": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+          "source": "ECB press releases"
+        },
+        {
+          "id": "sd209fb24",
+          "topic": "macro_markets",
+          "headline": "The scale of Healey’s inflation problem is coming into full view",
+          "url": "https://www.cityam.com/healey-inflation-problem-winter/",
+          "source": "City AM"
+        },
+        {
+          "id": "s3a8351ff",
+          "topic": "geopolitics",
+          "headline": "Xi personally welcomes Trump to China for high-stakes summit",
+          "url": "https://www.politico.eu/article/xi-jinping-donald-trump-china-summit/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s6bde5a45",
+          "topic": "geopolitics",
+          "headline": "France’s Philippe steps up attacks on Le Pen and Mélenchon as his poll numbers slide",
+          "url": "https://www.politico.eu/article/france-edouard-philippe-steps-up-attacks-on-marine-le-pen-and-jean-luc-melenchon-as-his-poll-numbers-slide/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s88a72223",
+          "topic": "top_headlines",
+          "headline": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+          "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "s5904c952",
+          "topic": "top_headlines",
+          "headline": "Who to watch in Spain's election race",
+          "url": "https://www.bbc.co.uk/news/articles/cxr5g4lyp94no",
+          "source": "BBC World"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-18-s8abb44a9",
+          "story_id": "s8abb44a9",
+          "topic": "insurance",
+          "question": "What does the live QBE deployment of Aurora's model most directly show about algorithmic underwriting?",
+          "options": [
+            "It lets insurers quote specialty risks much faster",
+            "It lets insurers drop human brokers from specialty lines",
+            "It lets insurers cut specialty premiums below market rates",
+            "It lets insurers exit marine cover with lower losses"
+          ],
+          "answer": 0,
+          "explanation": "The QBE yacht product went from days to under 10 minutes from quote to bind, showing speed gains on specialty lines.",
+          "concept": {
+            "id": "mgas",
+            "label": "MGAs and delegated authority"
+          },
+          "headline": "Aurora eyes growth with IA Capital investment",
+          "url": "https://www.reinsurancene.ws/aurora-eyes-growth-with-ia-capital-investment/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-18-s39c8f57f",
+          "story_id": "s39c8f57f",
+          "topic": "insurance",
+          "question": "What does Lancashire's first cat bond suggest about peak peril protection?",
+          "options": [
+            "Capital markets are taking a larger role",
+            "Lloyd's syndicates are losing underwriting capacity",
+            "Investors now avoid multi-year retrocession terms",
+            "Traditional reinsurers are withdrawing from the market"
+          ],
+          "answer": 0,
+          "explanation": "A long-standing Lloyd's market underwriter turning to cat bond investors signals more capital markets involvement.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "Lancashire enters cat bond market seeking $175m S6 Re aggregate peak peril retro",
+          "url": "https://www.artemis.bm/news/lancashire-enters-cat-bond-market-seeking-175m-s6-re-aggregate-peak-peril-retro/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-18-s7644ff6c",
+          "story_id": "s7644ff6c",
+          "topic": "ai_markets",
+          "question": "What lifted London-listed trusts holding Anthropic stakes on Wednesday morning?",
+          "options": [
+            "Strong Nvidia earnings improving AI sentiment",
+            "Heavy oversubscription announced by Anthropic's bankers",
+            "Confirmation of Anthropic's $1.4 trillion valuation",
+            "Anthropic's IPO pricing above its target range"
+          ],
+          "answer": 0,
+          "explanation": "The trusts rose because Nvidia's results boosted sentiment towards AI.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Shares in London-listed Anthropic investors rise ahead of blockbuster IPO",
+          "url": "https://www.cityam.com/shares-in-london-listed-anthropic-investors-rise-ahead-of-blockbuster-ipo/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-18-sd209fb24",
+          "story_id": "sd209fb24",
+          "topic": "macro_markets",
+          "question": "By how much did Cornwall Insight warn the energy price cap would rise in January?",
+          "options": [
+            "£534",
+            "£344",
+            "£2,166",
+            "£443"
+          ],
+          "answer": 3,
+          "explanation": "Cornwall Insight forecast a £443 increase.",
+          "concept": {
+            "id": "inflation",
+            "label": "Inflation"
+          },
+          "headline": "The scale of Healey’s inflation problem is coming into full view",
+          "url": "https://www.cityam.com/healey-inflation-problem-winter/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-18-s3a8351ff",
+          "story_id": "s3a8351ff",
+          "topic": "geopolitics",
+          "question": "Why are near-term market-moving outcomes from the Trump-Xi-Putin meeting seen as limited?",
+          "options": [
+            "Officials call it an opening conversation with low expectations",
+            "Trump will only attend the Thursday bilateral talks",
+            "Xi and Putin have already agreed the arms treaty terms",
+            "The Iran war is not on the agenda"
+          ],
+          "answer": 0,
+          "explanation": "Because officials expect no breakthroughs, the talks are unlikely to produce big market-moving results soon.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "Xi personally welcomes Trump to China for high-stakes summit",
+          "url": "https://www.politico.eu/article/xi-jinping-donald-trump-china-summit/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-18-s6bde5a45",
+          "story_id": "s6bde5a45",
+          "topic": "geopolitics",
+          "question": "What makes a far-right versus far-left runoff plausible in France's 2027 race?",
+          "options": [
+            "The centre-right primary has already picked one nominee",
+            "Moderate candidates are divided and losing ground in polls",
+            "Le Pen and Mélenchon have agreed to a joint ticket",
+            "Philippe has withdrawn from the presidential race"
+          ],
+          "answer": 1,
+          "explanation": "Moderates are splitting support and falling in polls while Le Pen and Mélenchon advance.",
+          "concept": {
+            "id": "geopolitics_and_markets",
+            "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+          },
+          "headline": "France’s Philippe steps up attacks on Le Pen and Mélenchon as his poll numbers slide",
+          "url": "https://www.politico.eu/article/france-edouard-philippe-steps-up-attacks-on-marine-le-pen-and-jean-luc-melenchon-as-his-poll-numbers-slide/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-18-s88a72223",
+          "story_id": "s88a72223",
+          "topic": "top_headlines",
+          "question": "By what share are typical household energy bills expected to rise from January?",
+          "options": [
+            "26%",
+            "16%",
+            "36%",
+            "44%"
+          ],
+          "answer": 0,
+          "explanation": "The item states a 26% rise for a typical household.",
+          "concept": null,
+          "headline": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+          "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-18-s5904c952",
+          "story_id": "s5904c952",
+          "topic": "top_headlines",
+          "question": "Why could investors outside Spain pay attention to this vote?",
+          "options": [
+            "Conservative win would replace a long-serving left-led government",
+            "A split result could leave Spain without a clear government",
+            "Socialist win would end a long conservative spell in power",
+            "Conservatives lead polls, so markets already price in the outcome"
+          ],
+          "answer": 0,
+          "explanation": "A conservative victory would change the country's political direction after years of Socialist-led rule, which investors with European exposure may watch.",
+          "concept": null,
+          "headline": "Who to watch in Spain's election race",
+          "url": "https://www.bbc.co.uk/news/articles/cxr5g4lyp94no",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-18-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "What must happen for the index-linked position to beat conventional bonds?",
+          "options": [
+            "The Bank of England must cut rates sharply",
+            "Real yields must climb as price rises cool",
+            "Energy bills must stay flat through January",
+            "Price rises must surprise above market expectations"
+          ],
+          "answer": 3,
+          "explanation": "The trade pays off only if actual inflation exceeds what the market has already built into index-linked bond prices.",
+          "concept": {
+            "id": "inflation",
+            "label": "Inflation"
+          },
+          "headline": "Inflation hedge using index-linked gilts",
+          "url": "https://www.cityam.com/healey-inflation-problem-winter/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

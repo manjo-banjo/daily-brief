@@ -1,0 +1,389 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T14:33:10+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 6,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s8abb44a9",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Aurora eyes growth with IA Capital investment",
+      "url": "https://www.reinsurancene.ws/aurora-eyes-growth-with-ia-capital-investment/",
+      "source": "Reinsurance News",
+      "published": "2026-11-18T14:00:11Z",
+      "headline_only": false,
+      "summary": "Aurora, an MGA and algorithmic underwriting-as-a-service business, has secured investment from IA Capital Group to fund its next phase of growth under Co-founder and CEO Bijal Patel. Its model is already live in production with QBE Insurance, and in March 2026 it launched QBE's British Marine Yacht Protection & Indemnity (P&I) product, cutting quote-to-bind time from days to under 10 minutes. Rick Viton of IA Capital Group and James Orchard, CEO of QBE Ventures, have been appointed to Aurora's board, and the firm plans to re-platform as AI-native and scale across more products and insurers.",
+      "why_it_matters": "Outside investment and a live QBE deployment show algorithmic underwriting being backed as a way for insurers to quote faster on specialty lines while keeping pricing consistent.",
+      "access_note": null,
+      "concept": {
+        "id": "mgas",
+        "label": "MGAs and delegated authority"
+      }
+    },
+    {
+      "id": "s39c8f57f",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "Lancashire enters cat bond market seeking $175m S6 Re aggregate peak peril retro",
+      "url": "https://www.artemis.bm/news/lancashire-enters-cat-bond-market-seeking-175m-s6-re-aggregate-peak-peril-retro/",
+      "source": "Artemis",
+      "published": "2026-11-18T08:00:29Z",
+      "headline_only": false,
+      "summary": "Lancashire Holdings has entered the catastrophe bond market for the first time, seeking $175 million of multi-year collateralised aggregate peak peril retrocession through its debut S6 Re Limited (Series 2027-1) notes. The single Class A tranche would fully collateralise a retrocession agreement with Lancashire Insurance Company, covering it and other Lancashire subsidiaries over a five year term on an annual aggregate and weighted industry loss index trigger. The covered perils are North America named storm, North America earthquake, Japan earthquake, Japan typhoon and European windstorm.",
+      "why_it_matters": "A long-standing London and Lloyd's market underwriter turning to cat bond investors for five-year annual aggregate retro shows capital markets taking a bigger role in peak peril protection.",
+      "access_note": null,
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "s7644ff6c",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "Shares in London-listed Anthropic investors rise ahead of blockbuster IPO",
+      "url": "https://www.cityam.com/shares-in-london-listed-anthropic-investors-rise-ahead-of-blockbuster-ipo/",
+      "source": "City AM",
+      "published": "2026-11-18T12:56:05Z",
+      "headline_only": false,
+      "summary": "London-listed tech trusts with stakes in Anthropic rose on Wednesday morning after Nvidia's earnings lifted sentiment towards the AI sector. Anthropic is due to debut on the Nasdaq in less than 24 hours, seeking to raise as much as $90.4bn at a $1.4 trillion (£1.1 trillion) valuation, with shares nearly seven times oversubscribed. Nvidia reported adjusted earnings per share of $2.68 against expectations of $2.47, and data centre revenue up 110 per cent to $107.6bn, while Baillie Gifford US Growth Trust rose 1.5 per cent to 347p and Scottish Mortgage Investment Trust rose 1.6 per cent.",
+      "why_it_matters": "Strong Nvidia results lifted the trusts, but further gains now depend on Anthropic's debut meeting very high expectations, so UK holders carry concentrated AI exposure.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "sc001a2df",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Nasdaq Futures Rise as Nvidia Earnings Calm AI Fears, Attention Turns to Anthropic",
+      "url": "https://www.wsj.com/finance/commodities-futures/stock-futures-rally-as-nvidia-earnings-calm-ai-trade-fears-96f51546?mod=rss_markets_main",
+      "source": "WSJ markets",
+      "published": "2026-11-18T13:22:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s2e6e89e4",
+      "topic": "macro_markets",
+      "subtopic": "rates",
+      "title": "Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+      "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html",
+      "source": "ECB press releases",
+      "published": "2026-11-18T09:00:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "sd209fb24",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "The scale of Healey’s inflation problem is coming into full view",
+      "url": "https://www.cityam.com/healey-inflation-problem-winter/",
+      "source": "City AM",
+      "published": "2026-11-18T13:04:08Z",
+      "headline_only": false,
+      "summary": "UK inflation rose to 3.6 per cent in the year to October, further above the Bank of England's two per cent target. Food inflation softened and core inflation was little changed from September's reading, while oil prices remain above $90 per barrel. Cornwall Insight warned the energy price cap would rise by £443 in January, taking annualised household energy bills to £2,166, and the Bank expects inflation to keep rising for at least another half year.",
+      "why_it_matters": "Energy-led inflation that stays well above target limits how far the Bank of England can cut rates, which affects gilt yields, mortgage costs and sterling.",
+      "access_note": "UK retail investors can get exposure through gilts held directly, bond ETFs, index-linked gilts, sterling FX, and spread bets or CFDs on rates, FX and oil.",
+      "concept": {
+        "id": "inflation",
+        "label": "Inflation"
+      }
+    },
+    {
+      "id": "s3a8351ff",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Xi personally welcomes Trump to China for high-stakes summit",
+      "url": "https://www.politico.eu/article/xi-jinping-donald-trump-china-summit/",
+      "source": "Politico Europe",
+      "published": "2026-11-18T10:54:33Z",
+      "headline_only": false,
+      "summary": "President Donald Trump was welcomed on the tarmac in Shenzhen on Wednesday by Chinese President Xi Jinping, which is historically extremely rare for China's top leader. Trump is due to hold bilateral talks with Xi on Thursday, then join Xi and Russian President Vladimir Putin for a trilateral meeting on the sidelines of the Asia-Pacific Economic Cooperation summit, the first time the three have met together. Topics include a new framework for nuclear arms control after the last U.S.-Russia nuclear arms treaty expired in February, and the Iran war, though U.S. officials describe the talks as an opening conversation and expectations for breakthroughs are low.",
+      "why_it_matters": "A first three-way meeting between the US, China and Russia could shape arms control and the Iran war, but low expectations limit the scope for near-term market-moving outcomes.",
+      "access_note": null,
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "s6bde5a45",
+      "topic": "geopolitics",
+      "subtopic": "elections",
+      "title": "France’s Philippe steps up attacks on Le Pen and Mélenchon as his poll numbers slide",
+      "url": "https://www.politico.eu/article/france-edouard-philippe-steps-up-attacks-on-marine-le-pen-and-jean-luc-melenchon-as-his-poll-numbers-slide/",
+      "source": "Politico Europe",
+      "published": "2026-11-18T13:52:43Z",
+      "headline_only": false,
+      "summary": "Centre-right presidential hopeful Edouard Philippe sharpened his attacks on rivals Marine Le Pen and Jean-Luc Mélenchon in a speech on Wednesday, accusing both of an “unhealthy fascination” with Vladimir Putin and of economic plans that could push France into a financial crisis. Polls now show Le Pen and Mélenchon advancing to the runoff next spring, while Philippe, Gabriel Attal and Bruno Retailleau have lost ground. Attal, Retailleau and David Lisnard agreed on Tuesday to hold a primary in January with a few televised debates, but have not agreed on who should take part, and Philippe says he will not join a contest that would likely deepen divisions.",
+      "why_it_matters": "Polls pointing to a far-right versus far-left runoff, with moderates divided, raise the prospect of France's costly fiscal proposals shaping the 2027 race and French debt sentiment.",
+      "access_note": null,
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "s88a72223",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+      "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo",
+      "source": "BBC top stories",
+      "published": "2026-11-18T13:17:06Z",
+      "headline_only": false,
+      "summary": "Energy bills are expected to jump by 26% a year for a typical household. The headline puts the rise at £443 a year from January. It comes as UK inflation hits its highest rate for a year.",
+      "why_it_matters": "Higher household energy costs add to the inflation pressure that is already rising, which bears on household budgets and on the outlook for UK prices.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s5904c952",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Who to watch in Spain's election race",
+      "url": "https://www.bbc.co.uk/news/articles/cxr5g4lyp94no",
+      "source": "BBC World",
+      "published": "2026-11-18T11:44:25Z",
+      "headline_only": false,
+      "summary": "Spain votes on 29 November. The conservatives are leading most polls. This follows eight years of Socialist-led rule.",
+      "why_it_matters": "A win for the conservatives would end eight years of Socialist-led government in Spain, a change of direction that markets and investors with European exposure may watch.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Inflation hedge using index-linked gilts",
+    "based_on": "sd209fb24",
+    "url": "https://www.cityam.com/healey-inflation-problem-winter/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is that UK inflation, at 3.6 per cent in the year to October, will keep rising for at least another half year, as the Bank of England expects, with energy bills set to climb in January. The position aims to protect against, or profit from, inflation running above what is expected.",
+    "how_it_is_expressed": "An outright position in inflation-linked bonds, whose payments rise with inflation, is a simple form of hedge. The same view can be expressed against conventional bonds, which lose value in real terms when inflation is higher.",
+    "retail_access": "A UK retail investor could use index-linked gilts held directly, or ETFs holding inflation-linked bonds. Gilts held directly are generally free of capital gains tax, whereas spread bets and CFDs use leverage and margin, which magnify losses as well as gains.",
+    "what_makes_it_work": "Inflation needs to come in higher than the level already priced into index-linked bonds, which would raise their returns relative to conventional bonds.",
+    "what_breaks_it": "If energy prices fall and inflation eases faster than expected, or real yields rise, the bonds could lose value.",
+    "concept": {
+      "id": "inflation",
+      "label": "Inflation"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-18-s8abb44a9",
+      "story_id": "s8abb44a9",
+      "topic": "insurance",
+      "question": "What does the live QBE deployment of Aurora's model most directly show about algorithmic underwriting?",
+      "options": [
+        "It lets insurers quote specialty risks much faster",
+        "It lets insurers drop human brokers from specialty lines",
+        "It lets insurers cut specialty premiums below market rates",
+        "It lets insurers exit marine cover with lower losses"
+      ],
+      "answer": 0,
+      "explanation": "The QBE yacht product went from days to under 10 minutes from quote to bind, showing speed gains on specialty lines.",
+      "evidence": "cutting quote-to-bind time from days to under 10 minutes",
+      "tests": "why",
+      "concept": {
+        "id": "mgas",
+        "label": "MGAs and delegated authority"
+      }
+    },
+    {
+      "id": "2026-11-18-s39c8f57f",
+      "story_id": "s39c8f57f",
+      "topic": "insurance",
+      "question": "What does Lancashire's first cat bond suggest about peak peril protection?",
+      "options": [
+        "Capital markets are taking a larger role",
+        "Lloyd's syndicates are losing underwriting capacity",
+        "Investors now avoid multi-year retrocession terms",
+        "Traditional reinsurers are withdrawing from the market"
+      ],
+      "answer": 0,
+      "explanation": "A long-standing Lloyd's market underwriter turning to cat bond investors signals more capital markets involvement.",
+      "evidence": "shows capital markets taking a bigger role in peak peril protection",
+      "tests": "why",
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "2026-11-18-s7644ff6c",
+      "story_id": "s7644ff6c",
+      "topic": "ai_markets",
+      "question": "What lifted London-listed trusts holding Anthropic stakes on Wednesday morning?",
+      "options": [
+        "Strong Nvidia earnings improving AI sentiment",
+        "Heavy oversubscription announced by Anthropic's bankers",
+        "Confirmation of Anthropic's $1.4 trillion valuation",
+        "Anthropic's IPO pricing above its target range"
+      ],
+      "answer": 0,
+      "explanation": "The trusts rose because Nvidia's results boosted sentiment towards AI.",
+      "evidence": "rose on Wednesday morning after Nvidia's earnings lifted sentiment towards the AI sector",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-18-sd209fb24",
+      "story_id": "sd209fb24",
+      "topic": "macro_markets",
+      "question": "By how much did Cornwall Insight warn the energy price cap would rise in January?",
+      "options": [
+        "£534",
+        "£344",
+        "£2,166",
+        "£443"
+      ],
+      "answer": 3,
+      "explanation": "Cornwall Insight forecast a £443 increase.",
+      "evidence": "the energy price cap would rise by £443 in January",
+      "tests": "fact",
+      "concept": {
+        "id": "inflation",
+        "label": "Inflation"
+      }
+    },
+    {
+      "id": "2026-11-18-s3a8351ff",
+      "story_id": "s3a8351ff",
+      "topic": "geopolitics",
+      "question": "Why are near-term market-moving outcomes from the Trump-Xi-Putin meeting seen as limited?",
+      "options": [
+        "Officials call it an opening conversation with low expectations",
+        "Trump will only attend the Thursday bilateral talks",
+        "Xi and Putin have already agreed the arms treaty terms",
+        "The Iran war is not on the agenda"
+      ],
+      "answer": 0,
+      "explanation": "Because officials expect no breakthroughs, the talks are unlikely to produce big market-moving results soon.",
+      "evidence": "U.S. officials describe the talks as an opening conversation and expectations for breakthroughs are low",
+      "tests": "why",
+      "concept": {
+        "id": "institutions",
+        "label": "The main institutions (EU, NATO, G7, UN)"
+      }
+    },
+    {
+      "id": "2026-11-18-s6bde5a45",
+      "story_id": "s6bde5a45",
+      "topic": "geopolitics",
+      "question": "What makes a far-right versus far-left runoff plausible in France's 2027 race?",
+      "options": [
+        "The centre-right primary has already picked one nominee",
+        "Moderate candidates are divided and losing ground in polls",
+        "Le Pen and Mélenchon have agreed to a joint ticket",
+        "Philippe has withdrawn from the presidential race"
+      ],
+      "answer": 1,
+      "explanation": "Moderates are splitting support and falling in polls while Le Pen and Mélenchon advance.",
+      "evidence": "Polls now show Le Pen and Mélenchon advancing to the runoff next spring, while Philippe, Gabriel Attal and Bruno Retailleau have lost ground.",
+      "tests": "why",
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "2026-11-18-s88a72223",
+      "story_id": "s88a72223",
+      "topic": "top_headlines",
+      "question": "By what share are typical household energy bills expected to rise from January?",
+      "options": [
+        "26%",
+        "16%",
+        "36%",
+        "44%"
+      ],
+      "answer": 0,
+      "explanation": "The item states a 26% rise for a typical household.",
+      "evidence": "Energy bills are expected to jump by 26% a year for a typical household.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-18-s5904c952",
+      "story_id": "s5904c952",
+      "topic": "top_headlines",
+      "question": "Why could investors outside Spain pay attention to this vote?",
+      "options": [
+        "Conservative win would replace a long-serving left-led government",
+        "A split result could leave Spain without a clear government",
+        "Socialist win would end a long conservative spell in power",
+        "Conservatives lead polls, so markets already price in the outcome"
+      ],
+      "answer": 0,
+      "explanation": "A conservative victory would change the country's political direction after years of Socialist-led rule, which investors with European exposure may watch.",
+      "evidence": "A win for the conservatives would end eight years of Socialist-led government in Spain",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-18-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "What must happen for the index-linked position to beat conventional bonds?",
+      "options": [
+        "The Bank of England must cut rates sharply",
+        "Real yields must climb as price rises cool",
+        "Energy bills must stay flat through January",
+        "Price rises must surprise above market expectations"
+      ],
+      "answer": 3,
+      "explanation": "The trade pays off only if actual inflation exceeds what the market has already built into index-linked bond prices.",
+      "evidence": "Inflation needs to come in higher than the level already priced into index-linked bonds",
+      "tests": "why",
+      "concept": {
+        "id": "inflation",
+        "label": "Inflation"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 7
+  },
+  "issues": []
+}

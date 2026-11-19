@@ -1531,6 +1531,308 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-19",
+      "stories": [
+        {
+          "id": "s9aff36f8",
+          "topic": "insurance",
+          "headline": "Capital markets signal resilience for Lloyd’s despite rate softening narratives: ICMR",
+          "url": "https://www.artemis.bm/news/capital-markets-signal-resilience-for-lloyds-despite-rate-softening-narratives-icmr/",
+          "source": "Artemis"
+        },
+        {
+          "id": "sf79b7fce",
+          "topic": "insurance",
+          "headline": "MS Amlin reports 8% rise in insurance revenue for H1’26",
+          "url": "https://www.reinsurancene.ws/ms-amlin-reports-8-rise-in-insurance-revenue-for-h126/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s195eb880",
+          "topic": "ai_markets",
+          "headline": "The Download: a living liver, a billion-dollar battery deal, and AI hype",
+          "url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "s5bdaa07d",
+          "topic": "ai_markets",
+          "headline": "UK retail investors snap up $300m of Anthropic shares ahead of blockbuster IPO",
+          "url": "https://www.cityam.com/uk-retail-investors-snap-up-300m-anthropic-shares-ahead-of-blockbuster-ipo/",
+          "source": "City AM"
+        },
+        {
+          "id": "sc4ae5389",
+          "topic": "macro_markets",
+          "headline": "Minutes of the Market Participants Group meeting – 18 November 2026",
+          "url": "https://www.bankofengland.co.uk/minutes/2026/november/market-participants-group-meeting-18-november-2026",
+          "source": "Bank of England"
+        },
+        {
+          "id": "sa7e36599",
+          "topic": "macro_markets",
+          "headline": "Gold loses its shine as prices sink to 14 month low",
+          "url": "https://www.cityam.com/gold-loses-its-shine-as-prices-sink-to-14-month-low/",
+          "source": "City AM"
+        },
+        {
+          "id": "s4f3feaf2",
+          "topic": "geopolitics",
+          "headline": "First Thing: Trump, Xi and Putin hold historic trilateral meeting in China",
+          "url": "https://www.theguardian.com/us-news/2026/nov/19/first-thing-trump-xi-and-putin-hold-historic-trilateral-meeting-in-china",
+          "source": "Guardian world"
+        },
+        {
+          "id": "sc226dd5b",
+          "topic": "geopolitics",
+          "headline": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
+          "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
+          "source": "BBC World"
+        },
+        {
+          "id": "s7205e859",
+          "topic": "top_headlines",
+          "headline": "Myanmar committed genocide against Rohingya minority, world’s top court rules",
+          "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
+          "source": "Guardian world"
+        },
+        {
+          "id": "s45fcafef",
+          "topic": "top_headlines",
+          "headline": "Venezuela signs military deal with US less than a year after Maduro's removal",
+          "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo",
+          "source": "BBC World"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-19-s9aff36f8",
+          "story_id": "s9aff36f8",
+          "topic": "insurance",
+          "question": "What risk does ICMR see in the eight new syndicates planned for next year, given current market conditions?",
+          "options": [
+            "They could force Lloyd's to tighten its admission rules",
+            "They could add capacity to classes already under falling rates",
+            "They could raise reinsurance costs for established syndicates",
+            "They could pull capital away from classes with rising rates"
+          ],
+          "answer": 1,
+          "explanation": "ICMR warns the new syndicates may add capacity to classes where rates are already falling.",
+          "concept": {
+            "id": "underwriting_cycle",
+            "label": "The underwriting cycle"
+          },
+          "headline": "Capital markets signal resilience for Lloyd’s despite rate softening narratives: ICMR",
+          "url": "https://www.artemis.bm/news/capital-markets-signal-resilience-for-lloyds-despite-rate-softening-narratives-icmr/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-19-sf79b7fce",
+          "story_id": "sf79b7fce",
+          "topic": "insurance",
+          "question": "MS Amlin's revenue grew in the half year, yet adjusted profit dropped. What drove the drop in profit?",
+          "options": [
+            "Conflict-related losses and weaker bond fund returns",
+            "Higher natural catastrophe claims across its portfolio",
+            "Unfavourable attritional losses on its core lines",
+            "A fall in insurance revenue against last year"
+          ],
+          "answer": 0,
+          "explanation": "Profit fell because losses from the Middle East conflict and weaker bond fund returns outweighed the good attritional and catastrophe experience.",
+          "concept": {
+            "id": "insurer_economics",
+            "label": "How insurers make money (combined ratio, investment income)"
+          },
+          "headline": "MS Amlin reports 8% rise in insurance revenue for H1’26",
+          "url": "https://www.reinsurancene.ws/ms-amlin-reports-8-rise-in-insurance-revenue-for-h126/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-19-s195eb880",
+          "story_id": "s195eb880",
+          "topic": "ai_markets",
+          "question": "How much did Anthropic raise in its IPO, as described in this item?",
+          "options": [
+            "$98 billion",
+            "$81 billion",
+            "$70 billion",
+            "$26 billion"
+          ],
+          "answer": 1,
+          "explanation": "The item states Anthropic raised $81 billion.",
+          "concept": {
+            "id": "ai_lab_economics",
+            "label": "How AI labs make money"
+          },
+          "headline": "The Download: a living liver, a billion-dollar battery deal, and AI hype",
+          "url": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "2026-11-19-s5bdaa07d",
+          "story_id": "s5bdaa07d",
+          "topic": "ai_markets",
+          "question": "Anthropic increased the size of its share offering and priced above the expected range. What does this most directly reflect?",
+          "options": [
+            "Nvidia and Google pulled out of the private placement",
+            "Weak early interest forced a lower valuation target",
+            "Orders far exceeded the shares on offer",
+            "UK retail buyers alone absorbed the whole offering"
+          ],
+          "answer": 2,
+          "explanation": "Demand well above supply let the company sell more shares at a higher price than planned.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "UK retail investors snap up $300m of Anthropic shares ahead of blockbuster IPO",
+          "url": "https://www.cityam.com/uk-retail-investors-snap-up-300m-anthropic-shares-ahead-of-blockbuster-ipo/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-19-sc4ae5389",
+          "story_id": "sc4ae5389",
+          "topic": "macro_markets",
+          "question": "What is the Market Participants Group's role in relation to the Monetary Policy Committee?",
+          "options": [
+            "It carries market views to committee members",
+            "It votes on the committee's membership",
+            "It audits the committee's published forecasts",
+            "It sets the committee's interest rate decisions"
+          ],
+          "answer": 0,
+          "explanation": "The group is a forum where market participants share views with MPC members.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Minutes of the Market Participants Group meeting – 18 November 2026",
+          "url": "https://www.bankofengland.co.uk/minutes/2026/november/market-participants-group-meeting-18-november-2026",
+          "source": "Bank of England"
+        },
+        {
+          "id": "2026-11-19-sa7e36599",
+          "story_id": "sa7e36599",
+          "topic": "macro_markets",
+          "question": "Why is gold falling at the same time as riskier assets have sold off sharply?",
+          "options": [
+            "Record highs in January triggered forced central bank selling",
+            "Investors are rotating from gold into riskier assets",
+            "A rate cut by the Fed has lowered demand",
+            "Uncertainty over a possible Fed hike is weighing on it"
+          ],
+          "answer": 3,
+          "explanation": "The prospect of higher US rates, with Waller calling for a hike, is pressuring gold.",
+          "concept": {
+            "id": "commodities",
+            "label": "Commodities basics"
+          },
+          "headline": "Gold loses its shine as prices sink to 14 month low",
+          "url": "https://www.cityam.com/gold-loses-its-shine-as-prices-sink-to-14-month-low/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-19-s4f3feaf2",
+          "story_id": "s4f3feaf2",
+          "topic": "geopolitics",
+          "question": "What did Putin say the US, Russia and China had in common regarding conflicts such as Ukraine?",
+          "options": [
+            "Overlapping interests in ending them",
+            "A shared plan for a ceasefire deal",
+            "Agreed terms for sanctions relief",
+            "Equal responsibility for starting them"
+          ],
+          "answer": 0,
+          "explanation": "Putin said the three countries have converging interests in resolving conflicts, without citing any agreed plan.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "First Thing: Trump, Xi and Putin hold historic trilateral meeting in China",
+          "url": "https://www.theguardian.com/us-news/2026/nov/19/first-thing-trump-xi-and-putin-hold-historic-trilateral-meeting-in-china",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-19-sc226dd5b",
+          "story_id": "sc226dd5b",
+          "topic": "geopolitics",
+          "question": "How did Putin describe the Crimean Bridge when promising a harsher response to Ukraine's strikes?",
+          "options": [
+            "Civilian infrastructure",
+            "A military supply route",
+            "A symbol of annexation",
+            "Shared international property"
+          ],
+          "answer": 0,
+          "explanation": "Putin called the bridge civilian infrastructure, a description Kyiv disputes.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
+          "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-19-s7205e859",
+          "story_id": "s7205e859",
+          "topic": "top_headlines",
+          "question": "What makes the ICJ's Rohingya ruling a legal precedent?",
+          "options": [
+            "It named individual military commanders as guilty",
+            "No state had been found responsible before",
+            "It was the first ruling on a 2017 campaign",
+            "It followed the shortest case in the court's history"
+          ],
+          "answer": 1,
+          "explanation": "The ICJ had never before held a state responsible for genocide, so the ruling sets a first.",
+          "concept": null,
+          "headline": "Myanmar committed genocide against Rohingya minority, world’s top court rules",
+          "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-19-s45fcafef",
+          "story_id": "s45fcafef",
+          "topic": "top_headlines",
+          "question": "How did the US Secretary of Defence describe Venezuela's shift after Maduro's removal?",
+          "options": [
+            "From regional ally to strategic competitor",
+            "From compliant partner to aggressive regional threat",
+            "From neutral observer to active trade partner",
+            "From aggressive regional threat to compliant security partner"
+          ],
+          "answer": 3,
+          "explanation": "The Secretary said Venezuela changed from a threat to a compliant security partner.",
+          "concept": null,
+          "headline": "Venezuela signs military deal with US less than a year after Maduro's removal",
+          "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-19-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "Why might a short gold position lose money, according to the idea?",
+          "options": [
+            "Gold may keep falling below $3,730 an ounce",
+            "Investors may return to gold as a safe haven",
+            "The Fed may raise rates by more than expected",
+            "Put option premiums may rise sharply in value"
+          ],
+          "answer": 1,
+          "explanation": "A rebound in gold driven by safe-haven buying would push the price up, hurting anyone short.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Gold under pressure from a possible US rate hike",
+          "url": "https://www.cityam.com/gold-loses-its-shine-as-prices-sink-to-14-month-low/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

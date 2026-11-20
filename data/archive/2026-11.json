@@ -1833,6 +1833,281 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-20",
+      "stories": [
+        {
+          "id": "sb65d765c",
+          "topic": "insurance",
+          "headline": "AM Best expects more measured growth in delegated underwriting market",
+          "url": "https://www.reinsurancene.ws/am-best-expects-more-measured-growth-in-delegated-underwriting-market/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "sfc26b731",
+          "topic": "insurance",
+          "headline": "MS Amlin syndicate’s Kanata Re cat bond still $150m, expected to price towards upper-end",
+          "url": "https://www.artemis.bm/news/ms-amlin-syndicates-kanata-re-cat-bond-still-150m-expected-to-price-towards-upper-end/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s1b86d4ca",
+          "topic": "ai_markets",
+          "headline": "Tech stocks fall as Anthropic fails to revive AI trade",
+          "url": "https://www.cityam.com/tech-stocks-fall-as-anthropic-fails-to-revive-ai-trade/",
+          "source": "City AM"
+        },
+        {
+          "id": "s41c23672",
+          "topic": "ai_markets",
+          "headline": "Anthropic tops $2trillion valuation after blockbuster IPO",
+          "url": "https://www.cityam.com/us-stocks-open-higher-as-anthropic-makes-blockbuster-debut/",
+          "source": "City AM"
+        },
+        {
+          "id": "s61c689c2",
+          "topic": "macro_markets",
+          "headline": "Government borrowing rose higher than expected before Budget",
+          "url": "https://www.cityam.com/healey-saw-government-borrowing-shoot-before-budget/",
+          "source": "City AM"
+        },
+        {
+          "id": "s13148a74",
+          "topic": "macro_markets",
+          "headline": "Grade I interiors, gold bars, cost fears: Bank of England faces headache over £160m revamp",
+          "url": "https://www.theguardian.com/business/2026/nov/19/bank-of-england-revamp",
+          "source": "Guardian business"
+        },
+        {
+          "id": "s132e10cc",
+          "topic": "geopolitics",
+          "headline": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
+          "url": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s5fd06b9b",
+          "topic": "geopolitics",
+          "headline": "Former French prime minister Dominique de Villepin announces presidential bid",
+          "url": "https://www.france24.com/en/france/20261120-former-french-prime-minister-dominique-de-villepin-to-announce-presidential-bid",
+          "source": "France 24"
+        },
+        {
+          "id": "s1443e306",
+          "topic": "top_headlines",
+          "headline": "Russian missiles and drone reportedly hit Poland during attacks on Ukraine",
+          "url": "https://www.theguardian.com/world/2026/nov/20/russian-missiles-drone-poland-attacks-ukraine",
+          "source": "Guardian world"
+        },
+        {
+          "id": "s8a841e32",
+          "topic": "top_headlines",
+          "headline": "US reacts cautiously to Myanmar genocide ruling as EU praises ‘critical’ role of UN’s top court",
+          "url": "https://www.theguardian.com/law/2026/nov/20/us-eu-reaction-myanmar-rohingya-genocide-icj-ruling-trump-international-law",
+          "source": "Guardian world"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-20-sb65d765c",
+          "story_id": "sb65d765c",
+          "topic": "insurance",
+          "question": "What will increasingly decide how far delegated underwriting grows, according to the rating agency's outlook?",
+          "options": [
+            "Cheaper reinsurance from capacity providers",
+            "Rising premium rates across the wider industry",
+            "Oversight quality and consistent underwriting results",
+            "Expansion into new international markets"
+          ],
+          "answer": 2,
+          "explanation": "Capacity providers and regulators are focusing on governance, transparency and steady loss ratios rather than premium volume.",
+          "concept": {
+            "id": "mgas",
+            "label": "MGAs and delegated authority"
+          },
+          "headline": "AM Best expects more measured growth in delegated underwriting market",
+          "url": "https://www.reinsurancene.ws/am-best-expects-more-measured-growth-in-delegated-underwriting-market/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-20-s1b86d4ca",
+          "story_id": "s1b86d4ca",
+          "topic": "ai_markets",
+          "question": "What did the market reaction to Anthropic's debut reveal about investor mood toward AI-linked stocks?",
+          "options": [
+            "Rate fears hit tech more than AI concerns did",
+            "Valuation worries outweighed enthusiasm for a big listing",
+            "Investors rotated out of chipmakers into software firms",
+            "Weak earnings from TSMC drove the Asian selloff"
+          ],
+          "answer": 1,
+          "explanation": "Even a heavily hyped listing failed to lift stocks because concerns about AI valuations dominated sentiment.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Tech stocks fall as Anthropic fails to revive AI trade",
+          "url": "https://www.cityam.com/tech-stocks-fall-as-anthropic-fails-to-revive-ai-trade/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-20-s41c23672",
+          "story_id": "s41c23672",
+          "topic": "ai_markets",
+          "question": "How many shares did Anthropic offer after raising the size of its IPO in response to demand?",
+          "options": [
+            "890m shares",
+            "825m shares",
+            "1.1bn shares",
+            "980m shares"
+          ],
+          "answer": 3,
+          "explanation": "The offering was raised from 825m to 980m shares because demand was strong.",
+          "concept": {
+            "id": "ai_lab_economics",
+            "label": "How AI labs make money"
+          },
+          "headline": "Anthropic tops $2trillion valuation after blockbuster IPO",
+          "url": "https://www.cityam.com/us-stocks-open-higher-as-anthropic-makes-blockbuster-debut/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-20-s61c689c2",
+          "story_id": "s61c689c2",
+          "topic": "macro_markets",
+          "question": "Why would October's borrowing figure matter for gilt prices?",
+          "options": [
+            "Lower debt interest costs reduce gilt supply",
+            "A smaller deficit raises demand for gilts",
+            "More government debt for the market to absorb",
+            "Benefit spending falls, easing the bond market"
+          ],
+          "answer": 2,
+          "explanation": "Borrowing above forecast means more debt must be sold to investors, which can weigh on gilt prices.",
+          "concept": {
+            "id": "bond_prices_yields",
+            "label": "Bond prices versus yields"
+          },
+          "headline": "Government borrowing rose higher than expected before Budget",
+          "url": "https://www.cityam.com/healey-saw-government-borrowing-shoot-before-budget/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-20-s13148a74",
+          "story_id": "s13148a74",
+          "topic": "macro_markets",
+          "question": "What is the main risk the Bank of England's £160m revamp poses to the central bank?",
+          "options": [
+            "A shift in its interest rate policy",
+            "Loss of its Grade I listed status",
+            "A clash with the Treasury over funding",
+            "Damage to its reputation for careful spending"
+          ],
+          "answer": 3,
+          "explanation": "Cost overruns would hurt a bank whose credibility rests on prudent spending, not its rate policy.",
+          "concept": null,
+          "headline": "Grade I interiors, gold bars, cost fears: Bank of England faces headache over £160m revamp",
+          "url": "https://www.theguardian.com/business/2026/nov/19/bank-of-england-revamp",
+          "source": "Guardian business"
+        },
+        {
+          "id": "2026-11-20-s132e10cc",
+          "story_id": "s132e10cc",
+          "topic": "geopolitics",
+          "question": "How many locations in southeastern Poland did the Russian objects fall at, according to the defence minister?",
+          "options": [
+            "Four",
+            "Two",
+            "Five",
+            "Three"
+          ],
+          "answer": 3,
+          "explanation": "The defence minister said objects fell at three separate locations.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
+          "url": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-20-s5fd06b9b",
+          "story_id": "s5fd06b9b",
+          "topic": "geopolitics",
+          "question": "What did Dominique de Villepin's stance on Iraq and Gaza earn him, according to the item?",
+          "options": [
+            "Attention from younger voters",
+            "Support from French investors",
+            "A lead in early opinion polls",
+            "Backing from the conservative party"
+          ],
+          "answer": 0,
+          "explanation": "His positions on international affairs drew interest from younger voters, though their votes are not assured.",
+          "concept": null,
+          "headline": "Former French prime minister Dominique de Villepin announces presidential bid",
+          "url": "https://www.france24.com/en/france/20261120-former-french-prime-minister-dominique-de-villepin-to-announce-presidential-bid",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-20-s1443e306",
+          "story_id": "s1443e306",
+          "topic": "top_headlines",
+          "question": "Why is the Polish prime minister's reaction to the missile and drone debris significant for the wider war?",
+          "options": [
+            "It shows Poland plans to join the fighting directly",
+            "It hints the conflict could spread to NATO neighbours",
+            "It proves Russia has shifted focus away from Ukraine",
+            "It suggests the allied exercises provoked the attacks"
+          ],
+          "answer": 1,
+          "explanation": "Debris landing in Poland, described as deliberate provocation, signals the war could extend beyond Ukraine.",
+          "concept": null,
+          "headline": "Russian missiles and drone reportedly hit Poland during attacks on Ukraine",
+          "url": "https://www.theguardian.com/world/2026/nov/20/russian-missiles-drone-poland-attacks-ukraine",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-20-s8a841e32",
+          "story_id": "s8a841e32",
+          "topic": "top_headlines",
+          "question": "Why could the ICJ's Myanmar ruling matter for future cases?",
+          "options": [
+            "It settles the case against Israel",
+            "It gives China authority over the court",
+            "It forces the US to join the court",
+            "It is the first genocide finding against a state"
+          ],
+          "answer": 3,
+          "explanation": "Because no state had been found responsible before, the ruling could set a precedent for later claims.",
+          "concept": null,
+          "headline": "US reacts cautiously to Myanmar genocide ruling as EU praises ‘critical’ role of UN’s top court",
+          "url": "https://www.theguardian.com/law/2026/nov/20/us-eu-reaction-myanmar-rohingya-genocide-icj-ruling-trump-international-law",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-20-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "What must happen for the short gilt position to make money?",
+          "options": [
+            "Gilt yields fall and gilt prices rise",
+            "Borrowing concerns fade and prices recover",
+            "Gilt yields and prices both rise",
+            "Gilt yields rise and gilt prices fall"
+          ],
+          "answer": 3,
+          "explanation": "Bond prices move inversely to yields, so a short position gains when yields rise and prices fall.",
+          "concept": {
+            "id": "bond_prices_yields",
+            "label": "Bond prices versus yields"
+          },
+          "headline": "Gilt exposure when borrowing runs above forecast",
+          "url": "https://www.cityam.com/healey-saw-government-borrowing-shoot-before-budget/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

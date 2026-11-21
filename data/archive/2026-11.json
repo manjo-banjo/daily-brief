@@ -2108,6 +2108,284 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-21",
+      "stories": [
+        {
+          "id": "s5bf2befd",
+          "topic": "insurance",
+          "headline": "Allianz Commercial warns AI-related insurance claims could mask greater financial exposure",
+          "url": "https://www.reinsurancene.ws/allianz-commercial-warns-ai-related-insurance-claims-could-mask-greater-financial-exposure/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s7e13d0c1",
+          "topic": "insurance",
+          "headline": "NC Farm Bureau sponsoring its third catastrophe bond, $475m Blue Ridge Re 2026-1",
+          "url": "https://www.artemis.bm/news/nc-farm-bureau-sponsoring-its-third-catastrophe-bond-475m-blue-ridge-re-2026-1/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s9344c0f2",
+          "topic": "ai_markets",
+          "headline": "Anthropic shares plunge as AI fears erase debut gains",
+          "url": "https://www.cityam.com/anthropic-shares-plunges-as-ai-fears-erase-debut-gains/",
+          "source": "City AM"
+        },
+        {
+          "id": "sdabbfcbe",
+          "topic": "ai_markets",
+          "headline": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+          "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
+          "source": "CNBC technology"
+        },
+        {
+          "id": "se3512f07",
+          "topic": "macro_markets",
+          "headline": "Exclusive: Timms welfare review to dismiss change to Pip eligibility",
+          "url": "https://www.cityam.com/exclusive-timms-welfare-review-to-dismiss-change-to-pip-eligibility/",
+          "source": "City AM"
+        },
+        {
+          "id": "scf6916df",
+          "topic": "macro_markets",
+          "headline": "U.S. Natural Gas Futures Rise With Support From LNG Exports",
+          "url": "https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-futures-edge-up-in-early-trading-2b513864?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "sb77bd470",
+          "topic": "geopolitics",
+          "headline": "Houthis launch strikes on Saudi Arabia",
+          "url": "https://www.france24.com/en/houthis-launch-strikes-on-saudi-arabia",
+          "source": "France 24"
+        },
+        {
+          "id": "s793909f8",
+          "topic": "geopolitics",
+          "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+          "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "s2ee7d10e",
+          "topic": "top_headlines",
+          "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+          "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno",
+          "source": "BBC World"
+        },
+        {
+          "id": "se4dd0b51",
+          "topic": "top_headlines",
+          "headline": "What we know about the latest Russian missile strikes on Ukraine",
+          "url": "https://www.bbc.co.uk/news/videos/c65y19wy3xl8o",
+          "source": "BBC World"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-21-s5bf2befd",
+          "story_id": "s5bf2befd",
+          "topic": "insurance",
+          "question": "Why might confirmed AI-related claims figures understate the true financial exposure insurers face?",
+          "options": [
+            "AI losses are reinsured outside the market",
+            "Insurers exclude AI losses from all policies",
+            "AI losses are booked under other existing covers",
+            "AI incidents are mostly too small to be claimed"
+          ],
+          "answer": 2,
+          "explanation": "Because AI is not named as the cause, losses appear under other lines and so are not counted as AI claims.",
+          "concept": {
+            "id": "insurer_economics",
+            "label": "How insurers make money (combined ratio, investment income)"
+          },
+          "headline": "Allianz Commercial warns AI-related insurance claims could mask greater financial exposure",
+          "url": "https://www.reinsurancene.ws/allianz-commercial-warns-ai-related-insurance-claims-could-mask-greater-financial-exposure/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-21-s7e13d0c1",
+          "story_id": "s7e13d0c1",
+          "topic": "insurance",
+          "question": "What is the size of the Blue Ridge Re Ltd. Series 2026-1 issuance sponsored by NC Farm Bureau?",
+          "options": [
+            "$475 million",
+            "$575 million",
+            "$400 million",
+            "$375 million"
+          ],
+          "answer": 0,
+          "explanation": "The text states the 2026-1 issuance is $475 million, larger than the $400 million 2023-1 cover.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "NC Farm Bureau sponsoring its third catastrophe bond, $475m Blue Ridge Re 2026-1",
+          "url": "https://www.artemis.bm/news/nc-farm-bureau-sponsoring-its-third-catastrophe-bond-475m-blue-ridge-re-2026-1/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-21-s9344c0f2",
+          "story_id": "s9344c0f2",
+          "topic": "ai_markets",
+          "question": "Anthropic's strong debut did not hold on Friday. What does this suggest about the market backdrop?",
+          "options": [
+            "Wider worries about AI spending outweighed good company news",
+            "Chip makers' earnings reports drew money away from it",
+            "Investors doubted the company's own first-day pricing",
+            "Rate rise fears hit all newly listed shares equally"
+          ],
+          "answer": 0,
+          "explanation": "The sell-off came from broad concerns about debt-funded AI spending and slower data centre building, which overpowered the positive listing.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Anthropic shares plunge as AI fears erase debut gains",
+          "url": "https://www.cityam.com/anthropic-shares-plunges-as-ai-fears-erase-debut-gains/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-21-sdabbfcbe",
+          "story_id": "sdabbfcbe",
+          "topic": "ai_markets",
+          "question": "What did Anthropic's debut coinciding with a heavy tech sell-off suggest about how markets price AI?",
+          "options": [
+            "Sector-wide mood matters more than individual deals",
+            "Individual listings set the direction of the sector",
+            "Record IPOs shield stocks from sector sell-offs",
+            "Nvidia's results alone drive AI valuations"
+          ],
+          "answer": 0,
+          "explanation": "A landmark listing could not escape a broad sell-off, so overall sentiment dominates pricing.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+          "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
+          "source": "CNBC technology"
+        },
+        {
+          "id": "2026-11-21-se3512f07",
+          "story_id": "se3512f07",
+          "topic": "macro_markets",
+          "question": "How much of the roughly £183bn welfare bill excluding pensioner spending is personal independence payments expected to make up this year?",
+          "options": [
+            "About £40bn",
+            "About £60bn",
+            "About £83bn",
+            "About £50bn"
+          ],
+          "answer": 3,
+          "explanation": "The text states PIP accounts for about £50bn of the welfare bill.",
+          "concept": null,
+          "headline": "Exclusive: Timms welfare review to dismiss change to Pip eligibility",
+          "url": "https://www.cityam.com/exclusive-timms-welfare-review-to-dismiss-change-to-pip-eligibility/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-21-sb77bd470",
+          "story_id": "sb77bd470",
+          "topic": "geopolitics",
+          "question": "Why does repeated missile fire at Riyadh matter for markets, per the item?",
+          "options": [
+            "It raises escalation risk in an oil-critical region",
+            "It lowers energy risk premia in the Gulf",
+            "It signals an imminent ceasefire in Yemen",
+            "It directly cuts Saudi oil output this month"
+          ],
+          "answer": 0,
+          "explanation": "Escalation in the Gulf threatens oil supply and so affects energy-market risk premia.",
+          "concept": {
+            "id": "geopolitics_and_markets",
+            "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+          },
+          "headline": "Houthis launch strikes on Saudi Arabia",
+          "url": "https://www.france24.com/en/houthis-launch-strikes-on-saudi-arabia",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-21-s793909f8",
+          "story_id": "s793909f8",
+          "topic": "geopolitics",
+          "question": "How many Russian aerial attacks on bridges in Ukraine did Zelensky say preceded Kyiv's strikes on the Crimean Bridge?",
+          "options": [
+            "109",
+            "90",
+            "190",
+            "119"
+          ],
+          "answer": 0,
+          "explanation": "Zelensky cited 109 separate Russian aerial attacks as the reason for Kyiv's action.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+          "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-21-s2ee7d10e",
+          "story_id": "s2ee7d10e",
+          "topic": "top_headlines",
+          "question": "What step did Denmark take against Russia after accusing it of the alleged assassination plot?",
+          "options": [
+            "Expelled Russia's defence attaché",
+            "Imposed sanctions on Russian banks",
+            "Recalled its own ambassador",
+            "Closed the Russian embassy"
+          ],
+          "answer": 0,
+          "explanation": "The item says the defence attaché was expelled.",
+          "concept": null,
+          "headline": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+          "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-21-se4dd0b51",
+          "story_id": "se4dd0b51",
+          "topic": "top_headlines",
+          "question": "Why would hitting bridges and railway stations in Kyiv matter beyond the physical damage?",
+          "options": [
+            "It forces the government to leave the capital",
+            "It raises the number of civilian casualties sharply",
+            "It hampers travel and freight to and from the city",
+            "It cuts the city's electricity and heating supply"
+          ],
+          "answer": 2,
+          "explanation": "Bridges and stations carry people and cargo, so damaging them makes it harder to move either in or out of Kyiv.",
+          "concept": null,
+          "headline": "What we know about the latest Russian missile strikes on Ukraine",
+          "url": "https://www.bbc.co.uk/news/videos/c65y19wy3xl8o",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-21-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "Under the hedging idea, what must happen for a gilt holder's hedge to gain while the bonds lose value?",
+          "options": [
+            "Gilt prices and yields both fall",
+            "Gilt yields stay flat while prices rise",
+            "Gilt yields fall and prices rise",
+            "Gilt yields rise and prices fall"
+          ],
+          "answer": 3,
+          "explanation": "Bond prices move inversely to yields, so rising yields hurt the gilts but benefit the opposing hedge position.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Hedging gilt exposure against fiscal pressure",
+          "url": "https://www.cityam.com/exclusive-timms-welfare-review-to-dismiss-change-to-pip-eligibility/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

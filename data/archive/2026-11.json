@@ -2386,6 +2386,249 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-22",
+      "stories": [
+        {
+          "id": "sa2b0b71c",
+          "topic": "ai_markets",
+          "headline": "Can Anthropic afford to put safety first?",
+          "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+          "source": "The Verge AI"
+        },
+        {
+          "id": "s85c8df5e",
+          "topic": "ai_markets",
+          "headline": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
+          "url": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+          "source": "Guardian business"
+        },
+        {
+          "id": "s9bf43c6d",
+          "topic": "macro_markets",
+          "headline": "Inflation voters’ top concern as Iran war bites",
+          "url": "https://www.cityam.com/inflation-voters-top-concern-as-iran-war-bites/",
+          "source": "City AM"
+        },
+        {
+          "id": "sc442c85b",
+          "topic": "macro_markets",
+          "headline": "Top Wall Street analysts favor these 3 dividend stocks for strong returns",
+          "url": "https://www.cnbc.com/2026/11/22/top-wall-street-analysts-favor-these-stocks-for-strong-returns.html",
+          "source": "CNBC markets"
+        },
+        {
+          "id": "s05358ac7",
+          "topic": "geopolitics",
+          "headline": "14 missing after Russian strike as Zelenskyy presses US over Patriot missiles",
+          "url": "https://www.politico.eu/article/14-missing-after-russian-strike-zelenskyy-presses-us-patriot-missiles/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s430a6fce",
+          "topic": "geopolitics",
+          "headline": "‘Just wrong’: British right distances itself from Trump after Putin ‘friend’ post",
+          "url": "https://www.theguardian.com/politics/2026/nov/22/british-right-reform-tory-party-distances-itself-from-trump-putin-friend-post",
+          "source": "Guardian UK"
+        },
+        {
+          "id": "s5b58ad86",
+          "topic": "top_headlines",
+          "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "s763d94ad",
+          "topic": "top_headlines",
+          "headline": "Theresa May 'aghast' at Burnham's EU plans and says 'Brexit is done'",
+          "url": "https://www.bbc.co.uk/news/articles/cvj6l8y3x1x4o",
+          "source": "BBC top stories"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-22-sa2b0b71c",
+          "story_id": "sa2b0b71c",
+          "topic": "ai_markets",
+          "question": "Why is Anthropic's safety-first approach being tested now that it is listed?",
+          "options": [
+            "Its largest rival listed first and set a lower cost benchmark",
+            "Public investors now hold voting control over its research",
+            "Regulators have capped how much it can spend on safety",
+            "Huge compute bills need rising revenue, which shareholders will demand"
+          ],
+          "answer": 3,
+          "explanation": "Large compute commitments force revenue growth, and shareholders expect it, which could squeeze safety spending.",
+          "concept": {
+            "id": "ai_lab_economics",
+            "label": "How AI labs make money"
+          },
+          "headline": "Can Anthropic afford to put safety first?",
+          "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+          "source": "The Verge AI"
+        },
+        {
+          "id": "2026-11-22-s85c8df5e",
+          "story_id": "s85c8df5e",
+          "topic": "ai_markets",
+          "question": "Why does CoreWeave's heavy borrowing make it a symbol of risk in the AI boom?",
+          "options": [
+            "Rising interest rates have already forced it to sell datacentres",
+            "Its customers have cancelled most of their AI contracts",
+            "Its debt is owed mostly to angry local residents",
+            "Weak AI returns would leave little margin to repay lenders"
+          ],
+          "answer": 3,
+          "explanation": "With so much debt, any shortfall in AI returns would quickly hurt those who funded the buildout.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
+          "url": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+          "source": "Guardian business"
+        },
+        {
+          "id": "2026-11-22-s9bf43c6d",
+          "story_id": "s9bf43c6d",
+          "topic": "macro_markets",
+          "question": "By how much is UK inflation on course to exceed the Bank of England's target in May?",
+          "options": [
+            "About one and a half times the target",
+            "About two and a half times the target",
+            "About double the target",
+            "About one percentage point above target"
+          ],
+          "answer": 2,
+          "explanation": "Nearly four per cent against a two per cent target is about double.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Inflation voters’ top concern as Iran war bites",
+          "url": "https://www.cityam.com/inflation-voters-top-concern-as-iran-war-bites/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-22-sc442c85b",
+          "story_id": "sc442c85b",
+          "topic": "macro_markets",
+          "question": "The item says analysts can help narrow down dividend stocks. What does it say about how their recommendations are supported?",
+          "options": [
+            "They rest on insider access to management",
+            "They rest on past dividend payout streaks",
+            "They rest on study of company financials",
+            "They rest on sector-wide yield comparisons"
+          ],
+          "answer": 2,
+          "explanation": "The text says the analysts' recommendations are backed by analysis of company financials.",
+          "concept": null,
+          "headline": "Top Wall Street analysts favor these 3 dividend stocks for strong returns",
+          "url": "https://www.cnbc.com/2026/11/22/top-wall-street-analysts-favor-these-stocks-for-strong-returns.html",
+          "source": "CNBC markets"
+        },
+        {
+          "id": "2026-11-22-s05358ac7",
+          "story_id": "s05358ac7",
+          "topic": "geopolitics",
+          "question": "How many drones did Ukrainian defences shoot down or disable out of those Russia launched overnight?",
+          "options": [
+            "141",
+            "161",
+            "186",
+            "168"
+          ],
+          "answer": 1,
+          "explanation": "The text states 161 of the 186 drones were shot down or disabled.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "14 missing after Russian strike as Zelenskyy presses US over Patriot missiles",
+          "url": "https://www.politico.eu/article/14-missing-after-russian-strike-zelenskyy-presses-us-patriot-missiles/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-22-s430a6fce",
+          "story_id": "s430a6fce",
+          "topic": "geopolitics",
+          "question": "What does criticism of Trump from both Reform UK and the Conservatives suggest about British right-wing politics?",
+          "options": [
+            "A divide over how to handle Russia",
+            "A growing rift over China policy",
+            "A shared push for tougher tariffs",
+            "A united stance on the Ukraine war"
+          ],
+          "answer": 0,
+          "explanation": "Criticising Trump's tone toward Putin signals that the British right is divided with Trump over Russia policy, which could affect its Ukraine and sanctions positions.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "‘Just wrong’: British right distances itself from Trump after Putin ‘friend’ post",
+          "url": "https://www.theguardian.com/politics/2026/nov/22/british-right-reform-tory-party-distances-itself-from-trump-putin-friend-post",
+          "source": "Guardian UK"
+        },
+        {
+          "id": "2026-11-22-s5b58ad86",
+          "story_id": "s5b58ad86",
+          "topic": "top_headlines",
+          "question": "Who do Finnish defence forces say was likely behind the drone attack on the ship?",
+          "options": [
+            "Ukraine",
+            "Russia",
+            "A private militant group",
+            "Belarus"
+          ],
+          "answer": 0,
+          "explanation": "Finnish defence forces attributed the attack to Ukraine.",
+          "concept": null,
+          "headline": "Russia-bound ship still on fire after attack in Gulf of Finland",
+          "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-22-s763d94ad",
+          "story_id": "s763d94ad",
+          "topic": "top_headlines",
+          "question": "What was Theresa May's message about Brexit in her BBC interview?",
+          "options": [
+            "Rejoin the single market",
+            "Hold a second referendum",
+            "Reopen talks with the EU",
+            "Accept it and move on"
+          ],
+          "answer": 3,
+          "explanation": "May said Brexit is done and urged people to accept it.",
+          "concept": null,
+          "headline": "Theresa May 'aghast' at Burnham's EU plans and says 'Brexit is done'",
+          "url": "https://www.bbc.co.uk/news/articles/cvj6l8y3x1x4o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-22-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "What would undermine the inflation-linked gilt hedge even if inflation stays high?",
+          "options": [
+            "A further rate rise pushing real yields up",
+            "Gilts being held directly rather than via ETFs",
+            "Energy bills falling sharply in January",
+            "Inflation coming in above what is priced"
+          ],
+          "answer": 0,
+          "explanation": "Higher real yields cut bond prices, which can outweigh the inflation uplift.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Inflation-linked gilts as a hedge against rising prices",
+          "url": "https://www.cityam.com/inflation-voters-top-concern-as-iran-war-bites/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

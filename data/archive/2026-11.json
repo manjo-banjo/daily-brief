@@ -2629,6 +2629,287 @@
           "source": "City AM"
         }
       ]
+    },
+    {
+      "date": "2026-11-23",
+      "stories": [
+        {
+          "id": "s3b5b1395",
+          "topic": "insurance",
+          "headline": "ILS and alternative capital expanding footprint into DUAE market: AM Best",
+          "url": "https://www.artemis.bm/news/ils-and-alternative-capital-expanding-footprint-into-duae-market-am-best/",
+          "source": "Artemis"
+        },
+        {
+          "id": "see667e47",
+          "topic": "insurance",
+          "headline": "Atrium and CRC launch Fractal Re II third-party capital backed reinsurance portfolio at Lloyd’s",
+          "url": "https://www.artemis.bm/news/atrium-and-crc-launch-fractal-re-ii-third-party-capital-backed-reinsurance-portfolio-at-lloyds/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s635eaac4",
+          "topic": "ai_markets",
+          "headline": "Tech stocks surge as Jensen Huang is reinstated as Nvidia chief executive",
+          "url": "https://www.cityam.com/tech-stocks-surge-as-jensen-huang-is-reinstated-as-nvidia-chief-executive/",
+          "source": "City AM"
+        },
+        {
+          "id": "s74ad9bf9",
+          "topic": "ai_markets",
+          "headline": "The Download: AI’s judgment problem and carbon removal’s crop threat",
+          "url": "https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "sc30c7647",
+          "topic": "macro_markets",
+          "headline": "Philip R. Lane: Climate change and monetary policy",
+          "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261123~b5816801a0.en.pdf",
+          "source": "ECB press releases"
+        },
+        {
+          "id": "sc6e842f1",
+          "topic": "macro_markets",
+          "headline": "Wild stock market swings: will I lose money, and is there anything I can do?",
+          "url": "https://www.theguardian.com/business/2026/nov/23/falling-markets-will-i-lose-money-shares-tech-ai-investments",
+          "source": "Guardian business"
+        },
+        {
+          "id": "s9615b455",
+          "topic": "geopolitics",
+          "headline": "Ukraine takes the war against Russia far from its borders",
+          "url": "https://www.politico.eu/article/ukraine-takes-war-russia-far-from-borders/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "sfe1ecfed",
+          "topic": "geopolitics",
+          "headline": "Macron moves to ‘trap’ successors with new budget rule",
+          "url": "https://www.politico.eu/article/emmanuel-macron-trap-successors-budget-rule-france/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s811badf8",
+          "topic": "top_headlines",
+          "headline": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "s69a09d67",
+          "topic": "top_headlines",
+          "headline": "Ukraine shares video of strikes on Russian ships off Libya",
+          "url": "https://www.bbc.co.uk/news/videos/c6wy93q5wwqvo",
+          "source": "BBC World"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-23-s3b5b1395",
+          "story_id": "s3b5b1395",
+          "topic": "insurance",
+          "question": "What do DUAEs with volatile results risk, as capacity becomes tied to specific partners?",
+          "options": [
+            "Struggling to find capital backers",
+            "Being forced into sidecar structures",
+            "Losing their stable outlook rating",
+            "Facing caps on premium growth"
+          ],
+          "answer": 0,
+          "explanation": "When capacity depends on partner relationships, erratic performers are less attractive to backers, while disciplined ones gain access to capital.",
+          "concept": {
+            "id": "mgas",
+            "label": "MGAs and delegated authority"
+          },
+          "headline": "ILS and alternative capital expanding footprint into DUAE market: AM Best",
+          "url": "https://www.artemis.bm/news/ils-and-alternative-capital-expanding-footprint-into-duae-market-am-best/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-23-see667e47",
+          "story_id": "see667e47",
+          "topic": "insurance",
+          "question": "How much collateralized reinsurance capacity did the earlier Fractal Re quota share sidecar secure?",
+          "options": [
+            "$350 million",
+            "$720 million",
+            "$207 million",
+            "$270 million"
+          ],
+          "answer": 3,
+          "explanation": "The 2024 Fractal Re sidecar secured $270 million of capacity.",
+          "concept": {
+            "id": "lloyds",
+            "label": "How Lloyd's works"
+          },
+          "headline": "Atrium and CRC launch Fractal Re II third-party capital backed reinsurance portfolio at Lloyd’s",
+          "url": "https://www.artemis.bm/news/atrium-and-crc-launch-fractal-re-ii-third-party-capital-backed-reinsurance-portfolio-at-lloyds/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-23-s635eaac4",
+          "story_id": "s635eaac4",
+          "topic": "ai_markets",
+          "question": "Why did one leadership announcement at a single company lift the broader indices so sharply?",
+          "options": [
+            "Anthropic shares fell and pushed money into tech",
+            "Investors expected interest rate cuts",
+            "Nvidia carries heavy weight in US indices",
+            "Nvidia's October peak was suddenly restored"
+          ],
+          "answer": 2,
+          "explanation": "Because Nvidia is such a large index component, news about it moves the whole index.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Tech stocks surge as Jensen Huang is reinstated as Nvidia chief executive",
+          "url": "https://www.cityam.com/tech-stocks-surge-as-jensen-huang-is-reinstated-as-nvidia-chief-executive/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-23-s74ad9bf9",
+          "story_id": "s74ad9bf9",
+          "topic": "ai_markets",
+          "question": "What did METR's updated time horizon plot show about model performance on open-ended tasks?",
+          "options": [
+            "Models showed no exponential improvement anywhere",
+            "Models matched human experts on judgment",
+            "Models struggled more than at coding",
+            "Models improved faster than at coding"
+          ],
+          "answer": 2,
+          "explanation": "Judgment-heavy tasks like scoring philosophical arguments were harder for models than coding.",
+          "concept": {
+            "id": "what_is_an_llm",
+            "label": "What an LLM is"
+          },
+          "headline": "The Download: AI’s judgment problem and carbon removal’s crop threat",
+          "url": "https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "2026-11-23-sc6e842f1",
+          "story_id": "sc6e842f1",
+          "topic": "macro_markets",
+          "question": "Why would a pension fund holding mostly US tech index trackers be hit hard by the recent market moves?",
+          "options": [
+            "Rising interest rates are hurting all bond holdings equally",
+            "A weaker pound is cutting the value of overseas assets",
+            "Anthropic's market debut drew money out of index funds",
+            "Investor doubts about AI firms are pushing tech shares down"
+          ],
+          "answer": 3,
+          "explanation": "Worries about AI company prospects are causing tech shares to fall, so funds concentrated in tech lose the most.",
+          "concept": {
+            "id": "retail_instruments",
+            "label": "Instruments a UK retail investor can use (leverage, margin, tax)"
+          },
+          "headline": "Wild stock market swings: will I lose money, and is there anything I can do?",
+          "url": "https://www.theguardian.com/business/2026/nov/23/falling-markets-will-i-lose-money-shares-tech-ai-investments",
+          "source": "Guardian business"
+        },
+        {
+          "id": "2026-11-23-s9615b455",
+          "story_id": "s9615b455",
+          "topic": "geopolitics",
+          "question": "What makes the Merkury strike different from earlier Ukrainian attacks, according to the story?",
+          "options": [
+            "It was the first attack Finland confirmed",
+            "It was the first drone attack on cargo",
+            "It is Ukraine's most distant claimed strike",
+            "It was the first strike on a warship"
+          ],
+          "answer": 2,
+          "explanation": "The story says Ukraine had never before claimed credit for a strike this far away.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "Ukraine takes the war against Russia far from its borders",
+          "url": "https://www.politico.eu/article/ukraine-takes-war-russia-far-from-borders/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-23-sfe1ecfed",
+          "story_id": "sfe1ecfed",
+          "topic": "geopolitics",
+          "question": "What would let a constitutional deficit rule pass without a referendum?",
+          "options": [
+            "Three-fifths majority in both chambers",
+            "Unanimous backing from centrist parties",
+            "Presidential decree before leaving office",
+            "Simple majority in the lower chamber"
+          ],
+          "answer": 0,
+          "explanation": "The alternative to a referendum is a three-fifths majority in both chambers.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "Macron moves to ‘trap’ successors with new budget rule",
+          "url": "https://www.politico.eu/article/emmanuel-macron-trap-successors-budget-rule-france/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-23-s811badf8",
+          "story_id": "s811badf8",
+          "topic": "top_headlines",
+          "question": "Why does the Kremlin's reaction to the Libya attacks signal broader concern?",
+          "options": [
+            "It warns of rising regional tension",
+            "It blames Libya for hosting the ship",
+            "It announces retaliation against Ukraine",
+            "It confirms the warship was destroyed"
+          ],
+          "answer": 0,
+          "explanation": "The Kremlin warned of escalating regional tensions while declining to comment directly on the attacks.",
+          "concept": null,
+          "headline": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-23-s69a09d67",
+          "story_id": "s69a09d67",
+          "topic": "top_headlines",
+          "question": "What does the reported pairing of a warship and a cargo ship being hit suggest?",
+          "options": [
+            "Only military vessels are now at risk at sea",
+            "Russia has pulled its fleet back to home waters",
+            "Libya has joined the war on Ukraine's side",
+            "Russian ships may be vulnerable far from the front"
+          ],
+          "answer": 3,
+          "explanation": "Hits on both a naval and a commercial ship far from Ukraine imply Russian vessels are at risk well away from the fighting.",
+          "concept": null,
+          "headline": "Ukraine shares video of strikes on Russian ships off Libya",
+          "url": "https://www.bbc.co.uk/news/videos/c6wy93q5wwqvo",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-23-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "A investor holds many tech shares and buys a hedge instead of selling them. What would make the hedge pay off?",
+          "options": [
+            "Tech prices stay flat while the option nears expiry",
+            "Tech prices fall only slightly, less than the hedge costs",
+            "Tech prices drop by more than the hedge costs",
+            "Tech prices rise sharply and the hedge is kept"
+          ],
+          "answer": 2,
+          "explanation": "The hedge only comes out ahead when the decline in tech shares is bigger than what the protection cost to buy.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Hedging a tech-heavy portfolio against a Nasdaq sell-off",
+          "url": "https://www.theguardian.com/business/2026/nov/23/falling-markets-will-i-lose-money-shares-tech-ai-investments",
+          "source": "Guardian business"
+        }
+      ]
     }
   ]
 }

@@ -2910,6 +2910,266 @@
           "source": "Guardian business"
         }
       ]
+    },
+    {
+      "date": "2026-11-24",
+      "stories": [
+        {
+          "id": "sc52ab606",
+          "topic": "insurance",
+          "headline": "Howden-backed Novark strengthens Bermuda team with four senior appointments",
+          "url": "https://www.artemis.bm/news/howden-backed-novark-strengthens-bermuda-team-with-four-senior-appointments/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s30228725",
+          "topic": "insurance",
+          "headline": "MS Amlin syndicate gets upsized $150m aggregate retro from Kanata Re 2026-1 cat bond",
+          "url": "https://www.artemis.bm/news/ms-amlin-syndicate-gets-upsized-150m-aggregate-retro-from-kanata-re-2026-1-cat-bond/",
+          "source": "Artemis"
+        },
+        {
+          "id": "s89344730",
+          "topic": "ai_markets",
+          "headline": "The Download: AI’s gas power boom and a consciousness reality check",
+          "url": "https://www.technologyreview.com/2026/11/24/1149669/the-download-data-centers-gas-ai-consciousness/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "s5845ed48",
+          "topic": "ai_markets",
+          "headline": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+          "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+          "source": "TechCrunch AI"
+        },
+        {
+          "id": "sde644119",
+          "topic": "macro_markets",
+          "headline": "Daniel E. Pinto appointed to the Bank of England’s Financial Policy Committee",
+          "url": "https://www.bankofengland.co.uk/news/2026/november/daniel-pinto-appointment-fpc",
+          "source": "Bank of England"
+        },
+        {
+          "id": "s58b60a21",
+          "topic": "macro_markets",
+          "headline": "U.S. Treasury Yields Tick Down Ahead of Inflation Data",
+          "url": "https://www.wsj.com/finance/jgb-futures-rise-buoyed-by-decline-in-crude-oil-prices-deebd8c8?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s3edc0539",
+          "topic": "geopolitics",
+          "headline": "Farage suggests he could appeal to Le Pen to block Britain rejoining the EU",
+          "url": "https://www.politico.eu/article/farage-le-pen-brexit-eu-accession-uk/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s1723e0c9",
+          "topic": "geopolitics",
+          "headline": "Ukraine's bid for NATO membership and more air defense remain controversial",
+          "url": "https://www.dw.com/en/ukraine-s-bid-for-nato-membership-and-more-air-defense-remain-controversial/a-80029852?maca=en-rss-en-top-1022-rdf",
+          "source": "DW"
+        },
+        {
+          "id": "s695f0dea",
+          "topic": "top_headlines",
+          "headline": "Israeli air strike kills Hamas internal security chief in Gaza",
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "sab355bf9",
+          "topic": "top_headlines",
+          "headline": "Record 5,200 heat-linked deaths estimated in England this year",
+          "url": "https://www.bbc.co.uk/news/articles/cq2e83egrez3o",
+          "source": "BBC top stories"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-24-sc52ab606",
+          "story_id": "sc52ab606",
+          "topic": "insurance",
+          "question": "Howden's launch of Novark in September extends the group's reach in which direction?",
+          "options": [
+            "Into retail insurance distribution for consumers",
+            "Into managing and administering ILS vehicles",
+            "Into reinsurance claims handling and settlement",
+            "Into direct underwriting of catastrophe risk"
+          ],
+          "answer": 1,
+          "explanation": "Novark adds management and administration for ILS and alternative capital to Howden's existing origination, structuring and placement work.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "Howden-backed Novark strengthens Bermuda team with four senior appointments",
+          "url": "https://www.artemis.bm/news/howden-backed-novark-strengthens-bermuda-team-with-four-senior-appointments/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-24-s89344730",
+          "story_id": "s89344730",
+          "topic": "ai_markets",
+          "question": "Why are developers building their own gas plants at data centres?",
+          "options": [
+            "Grid connections could take up to a decade",
+            "Climate rules now require off-grid supply",
+            "Gas power is cheaper than grid electricity",
+            "US grid operators have banned data centres"
+          ],
+          "answer": 0,
+          "explanation": "Developers avoid very long waits for grid connections by supplying their own gas power.",
+          "concept": {
+            "id": "hyperscaler_capex",
+            "label": "Hyperscaler capex"
+          },
+          "headline": "The Download: AI’s gas power boom and a consciousness reality check",
+          "url": "https://www.technologyreview.com/2026/11/24/1149669/the-download-data-centers-gas-ai-consciousness/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "2026-11-24-s5845ed48",
+          "story_id": "s5845ed48",
+          "topic": "ai_markets",
+          "question": "What is Amazon's reported Decart deal meant to achieve?",
+          "options": [
+            "Cut manufacturing costs at its foundry",
+            "Add a new cloud gaming business line",
+            "Secure supply of chips from Nvidia",
+            "Make its Trainium chips more efficient"
+          ],
+          "answer": 3,
+          "explanation": "The acquisition is aimed at improving Trainium efficiency through software to narrow the gap with Nvidia.",
+          "concept": {
+            "id": "chip_supply_chain",
+            "label": "The chip and compute supply chain"
+          },
+          "headline": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+          "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+          "source": "TechCrunch AI"
+        },
+        {
+          "id": "2026-11-24-sde644119",
+          "story_id": "sde644119",
+          "topic": "macro_markets",
+          "question": "In what capacity is Daniel E. Pinto joining the Bank of England's Financial Policy Committee?",
+          "options": [
+            "As the committee's deputy chair",
+            "As an external member",
+            "As a Treasury representative",
+            "As a Bank of England executive"
+          ],
+          "answer": 1,
+          "explanation": "The item states he joins the committee as an external member.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Daniel E. Pinto appointed to the Bank of England’s Financial Policy Committee",
+          "url": "https://www.bankofengland.co.uk/news/2026/november/daniel-pinto-appointment-fpc",
+          "source": "Bank of England"
+        },
+        {
+          "id": "2026-11-24-s3edc0539",
+          "story_id": "s3edc0539",
+          "topic": "geopolitics",
+          "question": "Why might a Le Pen presidency complicate any British attempt to rejoin the EU?",
+          "options": [
+            "French law obliges the president to back enlargement",
+            "French law lets presidents force a public vote",
+            "French parliament would need to approve entry unanimously",
+            "She would lead the EU's accession negotiating team"
+          ],
+          "answer": 1,
+          "explanation": "Under the French reforms Farage cites, the president must call a referendum on a new member unless both houses approve by three-fifths, so a sceptical president could put UK entry to a public vote.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "Farage suggests he could appeal to Le Pen to block Britain rejoining the EU",
+          "url": "https://www.politico.eu/article/farage-le-pen-brexit-eu-accession-uk/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-24-s1723e0c9",
+          "story_id": "s1723e0c9",
+          "topic": "geopolitics",
+          "question": "What is the main obstacle to Ukraine being accepted into NATO quickly?",
+          "options": [
+            "Ukraine has not yet applied formally",
+            "Zelenskyy has withdrawn the request",
+            "Members are not unanimous in backing it",
+            "Parliamentary assembly rules forbid it"
+          ],
+          "answer": 2,
+          "explanation": "NATO entry needs agreement from all members, and that agreement is missing.",
+          "concept": {
+            "id": "institutions",
+            "label": "The main institutions (EU, NATO, G7, UN)"
+          },
+          "headline": "Ukraine's bid for NATO membership and more air defense remain controversial",
+          "url": "https://www.dw.com/en/ukraine-s-bid-for-nato-membership-and-more-air-defense-remain-controversial/a-80029852?maca=en-rss-en-top-1022-rdf",
+          "source": "DW"
+        },
+        {
+          "id": "2026-11-24-s695f0dea",
+          "story_id": "s695f0dea",
+          "topic": "top_headlines",
+          "question": "How long had Naeem Abu Nahel held the Hamas internal security post when he was killed?",
+          "options": [
+            "Six months",
+            "One year",
+            "Two months",
+            "Two weeks"
+          ],
+          "answer": 2,
+          "explanation": "The item says he had held the post for two months.",
+          "concept": null,
+          "headline": "Israeli air strike kills Hamas internal security chief in Gaza",
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-24-sab355bf9",
+          "story_id": "sab355bf9",
+          "topic": "top_headlines",
+          "question": "How does this year's estimate of heat-linked deaths in England compare with the previous record?",
+          "options": [
+            "Roughly the same",
+            "About triple",
+            "About 50% higher",
+            "About double"
+          ],
+          "answer": 3,
+          "explanation": "The item says this year's figure is twice the earlier record.",
+          "concept": null,
+          "headline": "Record 5,200 heat-linked deaths estimated in England this year",
+          "url": "https://www.bbc.co.uk/news/articles/cq2e83egrez3o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-24-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "Why is the hedge described as a hedge rather than a directional bet?",
+          "options": [
+            "Options are only usable for protection",
+            "The news gives no view on market direction",
+            "The committee change signals falling sterling",
+            "Leverage makes directional trades too risky"
+          ],
+          "answer": 1,
+          "explanation": "Since the news implies no direction, the sensible setup is protection against surprises rather than a bet on a move.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Hedging sterling portfolio risk around central bank events",
+          "url": "https://www.bankofengland.co.uk/news/2026/november/daniel-pinto-appointment-fpc",
+          "source": "Bank of England"
+        }
+      ]
     }
   ]
 }

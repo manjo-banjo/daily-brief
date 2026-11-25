@@ -3170,6 +3170,308 @@
           "source": "Bank of England"
         }
       ]
+    },
+    {
+      "date": "2026-11-25",
+      "stories": [
+        {
+          "id": "s04d74bd0",
+          "topic": "insurance",
+          "headline": "Industry must not lose sight of traditional loss drivers amid emerging risks: Supercede",
+          "url": "https://www.reinsurancene.ws/industry-must-not-lose-sight-of-traditional-loss-drivers-amid-emerging-risks-supercede/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s135591d2",
+          "topic": "insurance",
+          "headline": "Hannover Re Capital Partners seeing “quite huge interest” from investors: Sehm",
+          "url": "https://www.artemis.bm/news/hannover-re-capital-partners-seeing-quite-huge-interest-from-investors-sehm/",
+          "source": "Artemis"
+        },
+        {
+          "id": "sc139db2c",
+          "topic": "ai_markets",
+          "headline": "Asian stock markets lose steam amid renewed AI fears",
+          "url": "https://www.cityam.com/asian-stock-markets-lose-steam-renewed-ai-fears-kospi/",
+          "source": "City AM"
+        },
+        {
+          "id": "sc4937692",
+          "topic": "ai_markets",
+          "headline": "Amazon is reportedly in talks to end Muse AI shopping block",
+          "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+          "source": "The Verge AI"
+        },
+        {
+          "id": "sa08fdc19",
+          "topic": "macro_markets",
+          "headline": "US inflation hits highest since May after prices climb 3.8% over the last year",
+          "url": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+          "source": "Guardian business"
+        },
+        {
+          "id": "s0130997c",
+          "topic": "macro_markets",
+          "headline": "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes for the central bank",
+          "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html",
+          "source": "CNBC economy"
+        },
+        {
+          "id": "sa537aafc",
+          "topic": "geopolitics",
+          "headline": "Von der Leyen: Energy ceasefire would show Putin is serious about peace talks",
+          "url": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "sef6dce5e",
+          "topic": "geopolitics",
+          "headline": "Trump announces new tariffs on EU, China despite US midterms defeat",
+          "url": "https://www.france24.com/en/americas/20261125-trump-announces-new-tariffs-eu-china-despite-us-midterms-defeat",
+          "source": "France 24"
+        },
+        {
+          "id": "s67136249",
+          "topic": "top_headlines",
+          "headline": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+          "url": "https://www.bbc.co.uk/news/articles/ckp80mjr9emyo",
+          "source": "BBC World"
+        },
+        {
+          "id": "s0a290543",
+          "topic": "top_headlines",
+          "headline": "Smoke seen from a mile away as army detonates US stockpile of bomb-making chemicals in Iowa",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/iowa-controlled-blast-lead-azide",
+          "source": "Guardian world"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-25-s04d74bd0",
+          "story_id": "s04d74bd0",
+          "topic": "insurance",
+          "question": "Why does softer property catastrophe pricing raise the stakes of a major North Atlantic hurricane?",
+          "options": [
+            "Cyber losses would spread into property lines",
+            "Reinsurers must pay claims at higher rates",
+            "Less pricing cushion to absorb the losses",
+            "Data centre exposures would be hit hardest"
+          ],
+          "answer": 2,
+          "explanation": "With prices under pressure, insurers collect less premium to absorb a big hurricane loss.",
+          "concept": {
+            "id": "underwriting_cycle",
+            "label": "The underwriting cycle"
+          },
+          "headline": "Industry must not lose sight of traditional loss drivers amid emerging risks: Supercede",
+          "url": "https://www.reinsurancene.ws/industry-must-not-lose-sight-of-traditional-loss-drivers-amid-emerging-risks-supercede/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-25-s135591d2",
+          "story_id": "s135591d2",
+          "topic": "insurance",
+          "question": "Which activity did Sehm name as part of the growing fee income business across ILS?",
+          "options": [
+            "Direct primary property underwriting",
+            "Casualty reserve financing",
+            "Cat bond transformer business",
+            "Life reinsurance sidecars"
+          ],
+          "answer": 2,
+          "explanation": "Sehm listed collateralized fronting and the cat bond transformer business as growing fee income areas.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "Hannover Re Capital Partners seeing “quite huge interest” from investors: Sehm",
+          "url": "https://www.artemis.bm/news/hannover-re-capital-partners-seeing-quite-huge-interest-from-investors-sehm/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-25-sc139db2c",
+          "story_id": "sc139db2c",
+          "topic": "ai_markets",
+          "question": "Why did the Kospi fall much more than the S&P 500 on renewed AI fears?",
+          "options": [
+            "A sharp fall in the Nikkei 225",
+            "Weaker futures on Wall Street overnight",
+            "Higher domestic inflation in South Korea",
+            "Heavy concentration in a few chipmakers"
+          ],
+          "answer": 3,
+          "explanation": "South Korea and Taiwan rely heavily on a few chipmakers, which were hit hardest by AI worries.",
+          "concept": {
+            "id": "ai_and_markets",
+            "label": "How AI moves markets"
+          },
+          "headline": "Asian stock markets lose steam amid renewed AI fears",
+          "url": "https://www.cityam.com/asian-stock-markets-lose-steam-renewed-ai-fears-kospi/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-25-sc4937692",
+          "story_id": "sc4937692",
+          "topic": "ai_markets",
+          "question": "Why might Muse shopping on Amazon threaten Amazon's revenue model?",
+          "options": [
+            "Ads need real people to see them",
+            "Product prices would be pushed lower",
+            "Muse would charge Amazon referral fees",
+            "Meta would take over Amazon's logistics"
+          ],
+          "answer": 0,
+          "explanation": "Amazon's advertising income relies on human shoppers viewing ads, which an AI agent would bypass.",
+          "concept": {
+            "id": "agents",
+            "label": "Agents"
+          },
+          "headline": "Amazon is reportedly in talks to end Muse AI shopping block",
+          "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+          "source": "The Verge AI"
+        },
+        {
+          "id": "2026-11-25-sa08fdc19",
+          "story_id": "sa08fdc19",
+          "topic": "macro_markets",
+          "question": "Energy-driven inflation of 3.8% arrives just before a Fed meeting. What does this do to the Fed's position?",
+          "options": [
+            "Pushes it to end its meeting early",
+            "Forces it to raise rates immediately",
+            "Gives it less room to cut rates",
+            "Weakens the case for holding rates"
+          ],
+          "answer": 2,
+          "explanation": "Inflation fed by energy prices makes it harder for the Fed to lower borrowing costs without worsening price pressures.",
+          "concept": {
+            "id": "inflation",
+            "label": "Inflation"
+          },
+          "headline": "US inflation hits highest since May after prices climb 3.8% over the last year",
+          "url": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+          "source": "Guardian business"
+        },
+        {
+          "id": "2026-11-25-s0130997c",
+          "story_id": "s0130997c",
+          "topic": "macro_markets",
+          "question": "How did the October PCE reading of 3.8% compare with what was expected?",
+          "options": [
+            "It fell short of the consensus slightly",
+            "It matched the consensus forecast",
+            "It was the first reading above 3%",
+            "It beat the consensus by 0.3 points"
+          ],
+          "answer": 1,
+          "explanation": "The consensus expected 3.8%, the same as the actual figure.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes for the central bank",
+          "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html",
+          "source": "CNBC economy"
+        },
+        {
+          "id": "2026-11-25-sa537aafc",
+          "story_id": "sa537aafc",
+          "topic": "geopolitics",
+          "question": "What would von der Leyen treat as evidence that Moscow is serious about negotiations?",
+          "options": [
+            "Acceptance of the 22nd sanctions package",
+            "A winter energy ceasefire and Black Sea truce",
+            "A Russian visa ban on EU officials",
+            "Repayment of Ukraine's 2027 loan"
+          ],
+          "answer": 1,
+          "explanation": "She said agreeing to those two truces would show seriousness.",
+          "concept": {
+            "id": "sanctions",
+            "label": "How sanctions work"
+          },
+          "headline": "Von der Leyen: Energy ceasefire would show Putin is serious about peace talks",
+          "url": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-25-sef6dce5e",
+          "story_id": "sef6dce5e",
+          "topic": "geopolitics",
+          "question": "What tariff level did a senior official say China could face?",
+          "options": [
+            "25 percent",
+            "20 percent",
+            "15 percent",
+            "10 percent"
+          ],
+          "answer": 1,
+          "explanation": "The official named 20 percent as the possible tariff on China.",
+          "concept": {
+            "id": "geopolitics_and_markets",
+            "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+          },
+          "headline": "Trump announces new tariffs on EU, China despite US midterms defeat",
+          "url": "https://www.france24.com/en/americas/20261125-trump-announces-new-tariffs-eu-china-despite-us-midterms-defeat",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-25-s67136249",
+          "story_id": "s67136249",
+          "topic": "top_headlines",
+          "question": "How long were the hostages held in the Colombian supermarket before police stormed it?",
+          "options": [
+            "17 hours",
+            "24 hours",
+            "12 hours",
+            "7 hours"
+          ],
+          "answer": 0,
+          "explanation": "The text says the siege lasted 17 hours.",
+          "concept": null,
+          "headline": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+          "url": "https://www.bbc.co.uk/news/articles/ckp80mjr9emyo",
+          "source": "BBC World"
+        },
+        {
+          "id": "2026-11-25-s0a290543",
+          "story_id": "s0a290543",
+          "topic": "top_headlines",
+          "question": "Why will locals watch the Iowa lead azide detonation closely afterwards?",
+          "options": [
+            "Stockpiles elsewhere remain untouched",
+            "Delays raised the cost for taxpayers",
+            "Toxic plumes could spread widely nearby",
+            "The blast destroyed local power lines"
+          ],
+          "answer": 2,
+          "explanation": "Toxic chemicals could spread over a large area, raising health and environmental concerns.",
+          "concept": null,
+          "headline": "Smoke seen from a mile away as army detonates US stockpile of bomb-making chemicals in Iowa",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/iowa-controlled-blast-lead-azide",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-25-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "Why does a hedge lose money if US shares rebound?",
+          "options": [
+            "Inflation rises as shares recover",
+            "Leverage forces the portfolio to be sold",
+            "Spread betting profits become taxable",
+            "The hedge gains only when indices fall"
+          ],
+          "answer": 3,
+          "explanation": "The hedge is built to gain when indices fall, so a rebound leaves only its cost.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Hedging a US equity portfolio against an inflation-led sell-off",
+          "url": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+          "source": "Guardian business"
+        }
+      ]
     }
   ]
 }

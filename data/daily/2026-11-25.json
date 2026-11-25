@@ -1,0 +1,435 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T16:02:48+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 7,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s04d74bd0",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Industry must not lose sight of traditional loss drivers amid emerging risks: Supercede",
+      "url": "https://www.reinsurancene.ws/industry-must-not-lose-sight-of-traditional-loss-drivers-amid-emerging-risks-supercede/",
+      "source": "Reinsurance News",
+      "published": "2026-11-25T12:00:08Z",
+      "headline_only": false,
+      "summary": "Supercede's Ben Rose has cautioned that the industry should not lose sight of the exposures that have historically driven its largest losses, even as AI, cyber and geopolitical risks gain focus. He said a significant North Atlantic hurricane landfall could test a property catastrophe market facing sustained pricing pressure, while casualty remains a concern given adverse prior-year reserve development and persistent social inflation. Rose also named data centre expansion driven by AI investment as \"one of the most interesting risks\" for 2027, and said cyber incidents could increasingly cause physical damage that spreads losses across property and other classes.",
+      "why_it_matters": "Softer pricing leaves less cushion if a major hurricane or further casualty reserve deterioration arrives, particularly if underwriting discipline weakens.",
+      "access_note": null,
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "s135591d2",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "Hannover Re Capital Partners seeing “quite huge interest” from investors: Sehm",
+      "url": "https://www.artemis.bm/news/hannover-re-capital-partners-seeing-quite-huge-interest-from-investors-sehm/",
+      "source": "Artemis",
+      "published": "2026-11-25T14:00:29Z",
+      "headline_only": false,
+      "summary": "Hannover Re board member Silke Sehm said at the reinsurer's investor day in London that investor interest in its ILS management unit, Hannover Re Capital Partners, is significant. She said fee income business is growing across all its ILS activities, including collateralized fronting and the cat bond transformer business, and that investors want to connect its nat cat business with third-party capital. Sven Althoff, board member for P&C business, said the company's approach to alternative capital has not changed, with ILS activities in property including collateralized fronting, cat bond transformer work and retrocession alongside ILS fund managers.",
+      "why_it_matters": "Growing investor appetite for third-party capital alongside a large reinsurer shows ILS is becoming a larger part of how nat cat risk is funded.",
+      "access_note": null,
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "sc139db2c",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Asian stock markets lose steam amid renewed AI fears",
+      "url": "https://www.cityam.com/asian-stock-markets-lose-steam-renewed-ai-fears-kospi/",
+      "source": "City AM",
+      "published": "2026-11-25T08:30:20Z",
+      "headline_only": false,
+      "summary": "Asian stock markets fell sharply on Wednesday after Wall Street closed lower on renewed AI trade fears. South Korea's Kospi tumbled 6.1 per cent to below 5,000 points as SK Hynix and Samsung Electronics shed more than 10 per cent, while Japan's Nikkei 225 slid 2.7 per cent and Taiwan sank 4.8 per cent. On Wall Street the S&P 500 closed 0.5 per cent lower and the Nasdaq 100 fell 1.9 per cent, and futures point to the S&P 500 losing a further 0.8 per cent at the open.",
+      "why_it_matters": "Investors are questioning the sustainability of the AI boom and rising debt, and markets such as South Korea and Taiwan are heavily concentrated in a handful of chipmakers.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "sc4937692",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+      "source": "The Verge AI",
+      "published": "2026-11-25T14:12:33Z",
+      "headline_only": false,
+      "summary": "Amazon has reportedly held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly centre on the kinds of products the agent recommends and the potential impact on Amazon's advertising revenue. Amazon is reportedly concerned about losing advertising revenue, since it depends on real people seeing ads, and about the quality of the product search results Muse would present.",
+      "why_it_matters": "Shopping agents that bypass human browsing could undermine the advertising income that supports Amazon's marketplace, so the terms of any deal bear on its revenue model.",
+      "access_note": null,
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "sa08fdc19",
+      "topic": "macro_markets",
+      "subtopic": "equities",
+      "title": "US inflation hits highest since May after prices climb 3.8% over the last year",
+      "url": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+      "source": "Guardian business",
+      "published": "2026-11-25T15:46:15Z",
+      "headline_only": false,
+      "summary": "US inflation rose 3.8% over the last year, the highest reading since May, amid soaring energy prices. It was the last inflation reading before a crucial Fed board meeting. The US stock sell-off continued on Wednesday morning, with the Nasdaq down over 4%, the S&P 500 down over 2.5% and the Dow down about 2%, as investors also worried about the AI trade.",
+      "why_it_matters": "Higher inflation driven by energy costs can limit how far the Fed can ease, and a sharp equity sell-off can weigh on global markets and UK-held US shares and funds.",
+      "access_note": "UK retail investors can get exposure to US equity indices through index ETFs and funds, futures, options, spread bets and CFDs, with US shares also held directly through a broker.",
+      "concept": {
+        "id": "inflation",
+        "label": "Inflation"
+      }
+    },
+    {
+      "id": "s0130997c",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes for the central bank",
+      "url": "https://www.cnbc.com/2026/11/25/pce-inflation-report-october-2026.html",
+      "source": "CNBC economy",
+      "published": "2026-11-25T14:18:45Z",
+      "headline_only": false,
+      "summary": "The personal consumption expenditures price index, the Fed's preferred inflation gauge, accelerated to 3.8% in October. The headline says this raises the 2027 stakes for the central bank. The Dow Jones consensus had expected an annual inflation rate of 3.8% for October.",
+      "why_it_matters": "The Fed's preferred gauge running at 3.8% shapes how the central bank sets interest rates, which feeds into bond yields, the dollar and equity valuations.",
+      "access_note": "UK retail investors can get exposure to US rate expectations through US Treasury or global bond ETFs, gilts and other bonds held directly, FX, futures, options, spread bets and CFDs.",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "sa537aafc",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "Von der Leyen: Energy ceasefire would show Putin is serious about peace talks",
+      "url": "https://www.politico.eu/article/von-der-leyen-energy-ceasefire-would-show-putin-is-serious-about-peace-talks/",
+      "source": "Politico Europe",
+      "published": "2026-11-25T12:09:47Z",
+      "headline_only": false,
+      "summary": "European Commission President Ursula von der Leyen said Russian agreement to a winter ceasefire on energy infrastructure and a Black Sea truce for Ukrainian food exports would show Moscow is serious about negotiations. The Commission on Monday proposed its 22nd sanctions package, including transaction bans on more Russian banks, restrictions on European firms helping Russia develop or maintain its energy infrastructure, an EU visa ban on current and former members of Russia's armed forces, and a ban on Europeans sitting on the governing bodies of Russian companies. She also outlined a new loan structure to cover Ukraine's 2027 needs, including €45 billion from the EU, and said a European team will join the next round of talks.",
+      "why_it_matters": "Tighter EU sanctions and committed Ukraine funding show Europe is pairing pressure on Russia with a seat at the US-brokered talks, shaping the outlook for the war and energy infrastructure.",
+      "access_note": null,
+      "concept": {
+        "id": "sanctions",
+        "label": "How sanctions work"
+      }
+    },
+    {
+      "id": "sef6dce5e",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Trump announces new tariffs on EU, China despite US midterms defeat",
+      "url": "https://www.france24.com/en/americas/20261125-trump-announces-new-tariffs-eu-china-despite-us-midterms-defeat",
+      "source": "France 24",
+      "published": "2026-11-25T14:38:47Z",
+      "headline_only": false,
+      "summary": "President Donald Trump's administration on Wednesday proposed new tariffs on some of the largest US trading partners, including the EU, Japan and Taiwan. A senior official said China could be hit with a 20 percent tariff. The announcement came weeks after a cost-of-living crisis led to a sweeping Republican defeat in the US midterms.",
+      "why_it_matters": "Fresh tariff proposals on major partners reignite global trade tensions, raising risks for trade-exposed companies and markets even after a political setback for the administration.",
+      "access_note": null,
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "s67136249",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+      "url": "https://www.bbc.co.uk/news/articles/ckp80mjr9emyo",
+      "source": "BBC World",
+      "published": "2026-11-25T11:45:16Z",
+      "headline_only": false,
+      "summary": "Colombian police stormed a supermarket to free around 20 shoppers and employees who had been held hostage. The ordeal lasted 17 hours. One gunman was killed in the operation.",
+      "why_it_matters": "A prolonged hostage siege ending in a police assault shows the security risk facing civilians in Colombia, though the text gives no detail on motive or casualties among hostages.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s0a290543",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Smoke seen from a mile away as army detonates US stockpile of bomb-making chemicals in Iowa",
+      "url": "https://www.theguardian.com/us-news/2026/nov/25/iowa-controlled-blast-lead-azide",
+      "source": "Guardian world",
+      "published": "2026-11-25T15:36:28Z",
+      "headline_only": false,
+      "summary": "The US Army detonated the nation's entire stockpile of lead azide in Iowa on Wednesday morning. The blast went ahead after multiple delays and despite public concern about potential health and environmental effects. A reporter for local news station KWQC saw a large amount of smoke from more than a mile away.",
+      "why_it_matters": "The controlled blast risks releasing plumes of toxic chemicals within a 100-mile radius, so its health and environmental effects will be watched closely by local residents.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Hedging a US equity portfolio against an inflation-led sell-off",
+    "based_on": "sa08fdc19",
+    "url": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+    "source": "Guardian business",
+    "what_the_trade_is": "The view is that US inflation at 3.8%, driven by soaring energy prices, could keep pressuring US shares after the Nasdaq, S&P 500 and Dow all fell sharply. A holder of US equities may want to limit losses if the sell-off continues.",
+    "how_it_is_expressed": "This is a hedge: a position that gains when an index falls, held alongside an existing equity portfolio, such as a put option or a short index position. The hedge offsets part of the loss on the portfolio rather than aiming for outright profit.",
+    "retail_access": "A UK retail investor could use index options, spread bets or CFDs on US indices, or inverse ETFs. Spread bets and CFDs are leveraged, so losses can exceed the initial margin, and spread betting profits are currently free of UK capital gains tax while CFD gains are taxable.",
+    "what_makes_it_work": "US equity indices need to keep falling so the hedge gains value and offsets losses on the underlying holdings.",
+    "what_breaks_it": "If shares rebound, the hedge loses money and its cost, such as an option premium or financing charges, reduces returns on the portfolio.",
+    "concept": {
+      "id": "hedging",
+      "label": "Hedging"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-25-s04d74bd0",
+      "story_id": "s04d74bd0",
+      "topic": "insurance",
+      "question": "Why does softer property catastrophe pricing raise the stakes of a major North Atlantic hurricane?",
+      "options": [
+        "Cyber losses would spread into property lines",
+        "Reinsurers must pay claims at higher rates",
+        "Less pricing cushion to absorb the losses",
+        "Data centre exposures would be hit hardest"
+      ],
+      "answer": 2,
+      "explanation": "With prices under pressure, insurers collect less premium to absorb a big hurricane loss.",
+      "evidence": "Softer pricing leaves less cushion if a major hurricane or further casualty reserve deterioration arrives",
+      "tests": "why",
+      "concept": {
+        "id": "underwriting_cycle",
+        "label": "The underwriting cycle"
+      }
+    },
+    {
+      "id": "2026-11-25-s135591d2",
+      "story_id": "s135591d2",
+      "topic": "insurance",
+      "question": "Which activity did Sehm name as part of the growing fee income business across ILS?",
+      "options": [
+        "Direct primary property underwriting",
+        "Casualty reserve financing",
+        "Cat bond transformer business",
+        "Life reinsurance sidecars"
+      ],
+      "answer": 2,
+      "explanation": "Sehm listed collateralized fronting and the cat bond transformer business as growing fee income areas.",
+      "evidence": "fee income business is growing across all its ILS activities, including collateralized fronting and the cat bond transformer business",
+      "tests": "fact",
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "2026-11-25-sc139db2c",
+      "story_id": "sc139db2c",
+      "topic": "ai_markets",
+      "question": "Why did the Kospi fall much more than the S&P 500 on renewed AI fears?",
+      "options": [
+        "A sharp fall in the Nikkei 225",
+        "Weaker futures on Wall Street overnight",
+        "Higher domestic inflation in South Korea",
+        "Heavy concentration in a few chipmakers"
+      ],
+      "answer": 3,
+      "explanation": "South Korea and Taiwan rely heavily on a few chipmakers, which were hit hardest by AI worries.",
+      "evidence": "markets such as South Korea and Taiwan are heavily concentrated in a handful of chipmakers",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-25-sc4937692",
+      "story_id": "sc4937692",
+      "topic": "ai_markets",
+      "question": "Why might Muse shopping on Amazon threaten Amazon's revenue model?",
+      "options": [
+        "Ads need real people to see them",
+        "Product prices would be pushed lower",
+        "Muse would charge Amazon referral fees",
+        "Meta would take over Amazon's logistics"
+      ],
+      "answer": 0,
+      "explanation": "Amazon's advertising income relies on human shoppers viewing ads, which an AI agent would bypass.",
+      "evidence": "it depends on real people seeing ads",
+      "tests": "why",
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "2026-11-25-sa08fdc19",
+      "story_id": "sa08fdc19",
+      "topic": "macro_markets",
+      "question": "Energy-driven inflation of 3.8% arrives just before a Fed meeting. What does this do to the Fed's position?",
+      "options": [
+        "Pushes it to end its meeting early",
+        "Forces it to raise rates immediately",
+        "Gives it less room to cut rates",
+        "Weakens the case for holding rates"
+      ],
+      "answer": 2,
+      "explanation": "Inflation fed by energy prices makes it harder for the Fed to lower borrowing costs without worsening price pressures.",
+      "evidence": "Higher inflation driven by energy costs can limit how far the Fed can ease",
+      "tests": "why",
+      "concept": {
+        "id": "inflation",
+        "label": "Inflation"
+      }
+    },
+    {
+      "id": "2026-11-25-s0130997c",
+      "story_id": "s0130997c",
+      "topic": "macro_markets",
+      "question": "How did the October PCE reading of 3.8% compare with what was expected?",
+      "options": [
+        "It fell short of the consensus slightly",
+        "It matched the consensus forecast",
+        "It was the first reading above 3%",
+        "It beat the consensus by 0.3 points"
+      ],
+      "answer": 1,
+      "explanation": "The consensus expected 3.8%, the same as the actual figure.",
+      "evidence": "The Dow Jones consensus had expected an annual inflation rate of 3.8% for October.",
+      "tests": "fact",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "2026-11-25-sa537aafc",
+      "story_id": "sa537aafc",
+      "topic": "geopolitics",
+      "question": "What would von der Leyen treat as evidence that Moscow is serious about negotiations?",
+      "options": [
+        "Acceptance of the 22nd sanctions package",
+        "A winter energy ceasefire and Black Sea truce",
+        "A Russian visa ban on EU officials",
+        "Repayment of Ukraine's 2027 loan"
+      ],
+      "answer": 1,
+      "explanation": "She said agreeing to those two truces would show seriousness.",
+      "evidence": "Russian agreement to a winter ceasefire on energy infrastructure and a Black Sea truce for Ukrainian food exports would show Moscow is serious about negotiations",
+      "tests": "fact",
+      "concept": {
+        "id": "sanctions",
+        "label": "How sanctions work"
+      }
+    },
+    {
+      "id": "2026-11-25-sef6dce5e",
+      "story_id": "sef6dce5e",
+      "topic": "geopolitics",
+      "question": "What tariff level did a senior official say China could face?",
+      "options": [
+        "25 percent",
+        "20 percent",
+        "15 percent",
+        "10 percent"
+      ],
+      "answer": 1,
+      "explanation": "The official named 20 percent as the possible tariff on China.",
+      "evidence": "A senior official said China could be hit with a 20 percent tariff.",
+      "tests": "fact",
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "2026-11-25-s67136249",
+      "story_id": "s67136249",
+      "topic": "top_headlines",
+      "question": "How long were the hostages held in the Colombian supermarket before police stormed it?",
+      "options": [
+        "17 hours",
+        "24 hours",
+        "12 hours",
+        "7 hours"
+      ],
+      "answer": 0,
+      "explanation": "The text says the siege lasted 17 hours.",
+      "evidence": "The ordeal lasted 17 hours.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-25-s0a290543",
+      "story_id": "s0a290543",
+      "topic": "top_headlines",
+      "question": "Why will locals watch the Iowa lead azide detonation closely afterwards?",
+      "options": [
+        "Stockpiles elsewhere remain untouched",
+        "Delays raised the cost for taxpayers",
+        "Toxic plumes could spread widely nearby",
+        "The blast destroyed local power lines"
+      ],
+      "answer": 2,
+      "explanation": "Toxic chemicals could spread over a large area, raising health and environmental concerns.",
+      "evidence": "The controlled blast risks releasing plumes of toxic chemicals within a 100-mile radius",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-25-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "Why does a hedge lose money if US shares rebound?",
+      "options": [
+        "Inflation rises as shares recover",
+        "Leverage forces the portfolio to be sold",
+        "Spread betting profits become taxable",
+        "The hedge gains only when indices fall"
+      ],
+      "answer": 3,
+      "explanation": "The hedge is built to gain when indices fall, so a rebound leaves only its cost.",
+      "evidence": "If shares rebound, the hedge loses money and its cost, such as an option premium or financing charges, reduces returns on the portfolio.",
+      "tests": "why",
+      "concept": {
+        "id": "hedging",
+        "label": "Hedging"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 7
+  },
+  "issues": []
+}

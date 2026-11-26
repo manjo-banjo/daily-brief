@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T15:46:04+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 7,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "sf45af2f6",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Fitch maintains ‘neutral’ outlook for APAC insurance sector in 2027",
+      "url": "https://www.reinsurancene.ws/fitch-maintains-neutral-outlook-for-apac-insurance-sector-in-2027/",
+      "source": "Reinsurance News",
+      "published": "2026-11-26T12:00:34Z",
+      "headline_only": false,
+      "summary": "Fitch Ratings has kept its 'neutral' outlook for the Asia-Pacific insurance sector in 2027, citing resilient earnings, sound capital buffers and disciplined underwriting. It expects non-life insurers to benefit from adequate pricing and generally favourable reinsurance conditions, while financial market volatility remains a key risk, particularly after higher equity allocations in China and significant equity exposure among Taiwanese life insurers. In Australia, Fitch also holds a 'neutral' outlook and forecasts non-life premium growth of 5% in 2027, compared with an estimated 4.6% in 2026.",
+      "why_it_matters": "Softer reinsurance conditions are letting Asia-Pacific insurers buy broader protection, but heavier equity exposure leaves their capital more open to investment market shocks.",
+      "access_note": null,
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "sad54b335",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "Property cat price reductions show no signs of easing at 1/1: Hannover Re’s Althoff",
+      "url": "https://www.reinsurancene.ws/property-cat-price-reductions-show-no-signs-of-easing-at-1-1-hannover-res-althoff/",
+      "source": "Reinsurance News",
+      "published": "2026-11-26T09:00:21Z",
+      "headline_only": false,
+      "summary": "Hannover Re's Sven Althoff said the reinsurer sees no sign that property cat rate reductions will slow at the 1 January 2027 renewals. Speaking at the firm's Investor Day in London, he said early renewal data points do not support the view that softening will decelerate after two years of falls, so it expects at least the same softening seen in 2026. Thorsten Steinmann said the focus is selected growth with selected clients, and noted that rates are rising in Colombia after a devastating earthquake, and in Venezuela.",
+      "why_it_matters": "Continued falls in property cat rates squeeze reinsurer margins and favour buyers, while loss-hit regions like Colombia show pricing can still harden locally.",
+      "access_note": null,
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "s9955375c",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "Semiconductor chips are the new oil. Here's why",
+      "url": "https://www.cnbc.com/2026/11/26/semiconductor-chips-are-the-new-oil-heres-why.html",
+      "source": "CNBC markets",
+      "published": "2026-11-26T13:19:25Z",
+      "headline_only": false,
+      "summary": "Semiconductor exports overtook oil and gas for the first time in 2026. The AI boom fuelled the rise in chip demand. No further detail is given on the countries or values involved.",
+      "why_it_matters": "Chips now outrank oil and gas in export terms, which shows how far AI demand is reshaping trade flows and the sectors investors treat as strategic.",
+      "access_note": null,
+      "concept": {
+        "id": "chip_supply_chain",
+        "label": "The chip and compute supply chain"
+      }
+    },
+    {
+      "id": "s2a99f168",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "How data centers are driving a US natural-gas boom",
+      "url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+      "source": "MIT Technology Review",
+      "published": "2026-11-25T17:00:00Z",
+      "headline_only": false,
+      "summary": "The data centre boom is helping to fuel a large natural-gas resurgence in the US. The local utility serving the Meta data centre in Louisiana went from three planned natural-gas plants to 10, and developers are now planning off-grid gas power plants. PJM, the country's largest grid operator, accepted 715 projects with over 200 gigawatts of capacity into its queue in August, nearly half of it natural gas.",
+      "why_it_matters": "AI power demand is defaulting to gas, which ties data centre growth to fossil-fuel build-out and raises emissions, as Meta's 45% rise shows.",
+      "access_note": null,
+      "concept": {
+        "id": "hyperscaler_capex",
+        "label": "Hyperscaler capex"
+      }
+    },
+    {
+      "id": "se7dd58ea",
+      "topic": "macro_markets",
+      "subtopic": "equities",
+      "title": "Nvidia rally runs out of steam as Wall Street battles AI jitters",
+      "url": "https://www.cityam.com/nvidia-rally-runs-out-of-steam-as-wall-street-battles-ai-jitters/",
+      "source": "City AM",
+      "published": "2026-11-26T14:30:25Z",
+      "headline_only": false,
+      "summary": "Global stocks rallied on Thursday after a volatile session on Wall Street, with the FTSE 100 up 1.5 per cent in morning trading, the Dax up two per cent and the Cac 40 up 1.8 per cent. On Wednesday the Nasdaq Composite fell as much as 4.6 per cent before closing 0.62 per cent lower, and the Nasdaq 100 briefly entered bear market territory, down 20 per cent from its October peak. Nvidia shares fell 3.9 per cent after S&P Global Ratings placed its AA credit rating on watch for a potential downgrade, citing board oversight and corporate governance, and US markets reopen for a shortened session on Friday.",
+      "why_it_matters": "Heavy US tech concentration means Nvidia's governance and export-control worries can swing global indices, including UK-held trackers, even when European markets rebound.",
+      "access_note": "UK retail investors can get exposure to these equity markets through index and sector ETFs, funds, individual shares, options, futures, and spread bets and CFDs.",
+      "concept": null
+    },
+    {
+      "id": "s6ae05fd0",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "Bank of England sounds alarm on ‘opaque’ AI financing",
+      "url": "https://www.cityam.com/bank-of-england-sounds-alarm-on-opaque-ai-financing/",
+      "source": "City AM",
+      "published": "2026-11-26T10:40:47Z",
+      "headline_only": false,
+      "summary": "The Bank of England's Financial Policy Committee warned that the \"rapid expansion\" and \"opaque\" financing of AI is increasing the risk of shocks spreading across markets. It said financing spans equity markets, public bond markets and private credit, and that AI-related companies providing finance to others is \"strengthening sectoral interconnections\". The committee said spillovers have been limited so far, but could lead globally active investors to deleverage in other markets, including sovereign debt markets, and that equity valuations \"remain stretched on some measures, despite recent falls\".",
+      "why_it_matters": "Circular, hard-to-trace financing means stress in AI-linked assets could reach other holdings, including bonds, so portfolio risk may be less diversified than it looks.",
+      "access_note": "UK retail investors can get exposure to the equity, public bond and private credit markets mentioned through shares, equity and bond ETFs, funds, gilts held directly, and investment trusts.",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "s20ddb0b7",
+      "topic": "geopolitics",
+      "subtopic": "elections",
+      "title": "Housing crisis on the ballot: Anger boils over ahead of Spanish election",
+      "url": "https://www.france24.com/en/tv-shows/focus/20261126-housing-crisis-on-the-ballot-anger-boils-over-ahead-of-spanish-election",
+      "source": "France 24",
+      "published": "2026-11-26T13:33:21Z",
+      "headline_only": false,
+      "summary": "Spaniards vote in a general election on Sunday, called after street protests for affordable housing. Anger grew after 87-year-old Maricarmen Abascal was evicted from her home of seven decades and parliament rejected two decrees meant to tackle the housing crisis. Prime Minister Pedro Sanchez called the snap election hoping the housing issue can galvanise his left-wing base.",
+      "why_it_matters": "Housing has pushed Spain's government into an early vote, so the result will show whether Sanchez's left-wing base can be mobilised around a single domestic issue.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s30d798fc",
+      "topic": "geopolitics",
+      "subtopic": "middle_east_energy",
+      "title": "‘Symbolic’: Why did UK sanction Yemen’s Houthis amid attacks on Saudi?",
+      "url": "https://www.aljazeera.com/news/2026/11/26/symbolic-why-did-uk-sanction-yemens-houthis-amid-attacks-on-saudi?traffic_source=rss",
+      "source": "Al Jazeera",
+      "published": "2026-11-26T12:10:49Z",
+      "headline_only": false,
+      "summary": "The UK has imposed sanctions on Yemen's Houthis, an Iran-backed group, and on its leaders. The government accuses them of undermining stability in the Middle East. The headline describes the move as symbolic and sets it against attacks on Saudi Arabia.",
+      "why_it_matters": "UK sanctions on the Houthis add to Western pressure on an Iran-backed group, though the move is described as largely symbolic rather than a change in conditions.",
+      "access_note": null,
+      "concept": {
+        "id": "sanctions",
+        "label": "How sanctions work"
+      }
+    },
+    {
+      "id": "sdb715307",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Storms across US disrupt travel and force Thanksgiving parade cancellations",
+      "url": "https://www.theguardian.com/us-news/2026/nov/26/storm-thanksgiving-parade-cancellations-severe-weather",
+      "source": "Guardian world",
+      "published": "2026-11-26T15:33:21Z",
+      "headline_only": false,
+      "summary": "Heavy rain, winds, flooding and high tides are hitting the eastern and western US, disrupting travel. At least two commercial Thanksgiving parades have been cancelled. The New York governor has declared a state of emergency in several parts of the state, and authorities in Philadelphia ordered the city's Thanksgiving Day parade off the streets, with it to be featured as an \"alternative TV event\".",
+      "why_it_matters": "Severe weather during a major US holiday period is disrupting travel and public events, and has prompted emergency measures in New York state.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "sa30dc74e",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Number of Neets in UK falls below a million as Burnham pushes to tackle crisis",
+      "url": "https://www.theguardian.com/society/2026/nov/26/neets-uk-young-people-education-employment-training-andy-burnham",
+      "source": "Guardian UK",
+      "published": "2026-11-26T13:43:51Z",
+      "headline_only": false,
+      "summary": "The number of young people across the UK not in education, employment or training (Neet) has fallen but remains close to a million. The Office for National Statistics said the figure fell by 22,000 in the three months to September, to 959,000. Ministers are preparing sweeping changes in response to Alan Milburn's report on young people and work, as Andy Burnham's government pushes to tackle the youth jobs crisis.",
+      "why_it_matters": "Youth joblessness remains close to its highest level in a decade, and the planned government changes could shape labour market policy and the supply of young workers.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Hedging a tech-heavy portfolio against a Nasdaq drawdown",
+    "based_on": "se7dd58ea",
+    "url": "https://www.cityam.com/nvidia-rally-runs-out-of-steam-as-wall-street-battles-ai-jitters/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is protection rather than direction: US tech has been volatile, with the Nasdaq 100 briefly 20 per cent below its October peak, and Nvidia faces a credit rating watch and export-control pressure. A holder of tech-heavy assets may want to limit losses if the swings return.",
+    "how_it_is_expressed": "A hedge, for example buying a put option on a Nasdaq-linked index, or a short position on a similar index, sized against the tech holdings. The hedge gains if the index falls, offsetting part of the loss on the underlying portfolio.",
+    "retail_access": "UK retail investors could use listed index options, spread bets or CFDs on Nasdaq indices, or inverse ETFs. Spread bets and CFDs are leveraged and use margin, so losses can exceed the initial deposit, while an option's loss is limited to the premium paid.",
+    "what_makes_it_work": "US tech indices need to fall far enough, and quickly enough, for the hedge's gain to outweigh its cost and offset losses on the holdings.",
+    "what_breaks_it": "If markets keep recovering, the hedge loses money through premium decay or adverse moves, and a mismatch with the actual holdings can leave the protection incomplete.",
+    "concept": {
+      "id": "hedging",
+      "label": "Hedging"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-26-sf45af2f6",
+      "story_id": "sf45af2f6",
+      "topic": "insurance",
+      "question": "What makes Fitch see financial market volatility as a key risk for the region's insurers?",
+      "options": [
+        "Inadequate pricing across non-life insurance lines",
+        "Tighter reinsurance conditions raising protection costs",
+        "Equity exposure at Chinese and Taiwanese insurers",
+        "Thin capital buffers at Australian life insurers"
+      ],
+      "answer": 2,
+      "explanation": "Fitch ties the volatility risk to larger stock holdings at Chinese and Taiwanese insurers.",
+      "evidence": "financial market volatility remains a key risk, particularly after higher equity allocations in China and significant equity exposure among Taiwanese life insurers",
+      "tests": "why",
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "2026-11-26-sad54b335",
+      "story_id": "sad54b335",
+      "topic": "insurance",
+      "question": "What explains property cat rates rising in Colombia while the wider market keeps softening?",
+      "options": [
+        "Heavier hurricane losses across the Americas",
+        "Hannover Re's plan for selected client growth",
+        "Local losses from a major earthquake",
+        "Reinsurers retreating after two years of falls"
+      ],
+      "answer": 2,
+      "explanation": "The item says Colombian rates are rising because of a devastating earthquake there.",
+      "evidence": "rates are rising in Colombia after a devastating earthquake",
+      "tests": "why",
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "2026-11-26-s9955375c",
+      "story_id": "s9955375c",
+      "topic": "ai_markets",
+      "question": "How did 2026 chip exports compare with oil and gas exports?",
+      "options": [
+        "Chips fell back behind them again",
+        "Chips overtook oil but not gas",
+        "Chips matched them for the first time",
+        "Chips overtook them for the first time"
+      ],
+      "answer": 3,
+      "explanation": "The item states chip exports overtook oil and gas for the first time in 2026.",
+      "evidence": "Semiconductor exports overtook oil and gas for the first time in 2026.",
+      "tests": "fact",
+      "concept": {
+        "id": "chip_supply_chain",
+        "label": "The chip and compute supply chain"
+      }
+    },
+    {
+      "id": "2026-11-26-s2a99f168",
+      "story_id": "s2a99f168",
+      "topic": "ai_markets",
+      "question": "What share of the 200-plus gigawatts PJM accepted into its queue in August was natural gas?",
+      "options": [
+        "Under a tenth of the capacity",
+        "About a quarter of the capacity",
+        "Nearly half of the capacity",
+        "Roughly two thirds of the capacity"
+      ],
+      "answer": 2,
+      "explanation": "The item says nearly half of the accepted capacity was natural gas.",
+      "evidence": "over 200 gigawatts of capacity into its queue in August, nearly half of it natural gas",
+      "tests": "fact",
+      "concept": {
+        "id": "hyperscaler_capex",
+        "label": "Hyperscaler capex"
+      }
+    },
+    {
+      "id": "2026-11-26-se7dd58ea",
+      "story_id": "se7dd58ea",
+      "topic": "macro_markets",
+      "question": "What triggered the 3.9 per cent fall in Nvidia shares?",
+      "options": [
+        "New export controls on China sales",
+        "A guidance cut after weak chip orders",
+        "European markets rallying away from tech",
+        "S&P flagged a possible credit downgrade"
+      ],
+      "answer": 3,
+      "explanation": "The drop followed S&P putting Nvidia's AA rating on watch for a downgrade.",
+      "evidence": "Nvidia shares fell 3.9 per cent after S&P Global Ratings placed its AA credit rating on watch for a potential downgrade",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-26-s6ae05fd0",
+      "story_id": "s6ae05fd0",
+      "topic": "macro_markets",
+      "question": "What mechanism does the Financial Policy Committee say could spread an AI-related shock across markets?",
+      "options": [
+        "Sharp falls already hitting equity valuations",
+        "Retail investors piling into AI-themed funds",
+        "Banks holding most AI debt on balance sheets",
+        "AI firms funding other companies, linking sectors"
+      ],
+      "answer": 3,
+      "explanation": "AI companies funding other firms ties sectors together, so stress can pass between them.",
+      "evidence": "AI-related companies providing finance to others is \"strengthening sectoral interconnections\"",
+      "tests": "why",
+      "concept": {
+        "id": "central_bank_policy",
+        "label": "Central bank policy"
+      }
+    },
+    {
+      "id": "2026-11-26-s20ddb0b7",
+      "story_id": "s20ddb0b7",
+      "topic": "geopolitics",
+      "question": "What was Sanchez's aim in calling the snap election?",
+      "options": [
+        "Secure backing for tighter eviction enforcement",
+        "Energise core supporters with housing anger",
+        "Pre-empt a coalition partner's withdrawal",
+        "Capitalise on falling inflation and growth"
+      ],
+      "answer": 1,
+      "explanation": "He hoped the housing issue would mobilise his left-wing supporters.",
+      "evidence": "Prime Minister Pedro Sanchez called the snap election hoping the housing issue can galvanise his left-wing base.",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-26-s30d798fc",
+      "story_id": "s30d798fc",
+      "topic": "geopolitics",
+      "question": "How does the item characterise the practical impact of the UK sanctions?",
+      "options": [
+        "Likely to end attacks on Saudi Arabia",
+        "A major blow to Houthi finances",
+        "Mostly symbolic, not changing conditions",
+        "A coordinated move with Saudi Arabia"
+      ],
+      "answer": 2,
+      "explanation": "The item calls the move largely symbolic rather than something that changes conditions.",
+      "evidence": "though the move is described as largely symbolic rather than a change in conditions",
+      "tests": "why",
+      "concept": {
+        "id": "sanctions",
+        "label": "How sanctions work"
+      }
+    },
+    {
+      "id": "2026-11-26-sdb715307",
+      "story_id": "sdb715307",
+      "topic": "top_headlines",
+      "question": "Philadelphia kept its Thanksgiving Day parade from going ahead on the streets amid the storms. What did the city do instead?",
+      "options": [
+        "Shortened the route to downtown only",
+        "Moved it to a later date",
+        "Shifted it to an indoor stadium",
+        "Presented it as a televised substitute"
+      ],
+      "answer": 3,
+      "explanation": "The city pulled the parade from the streets and planned to show it as a television event instead.",
+      "evidence": "authorities in Philadelphia ordered the city's Thanksgiving Day parade off the streets, with it to be featured as an \"alternative TV event\"",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-26-sa30dc74e",
+      "story_id": "sa30dc74e",
+      "topic": "top_headlines",
+      "question": "By how much did the UK Neet count fall in the three months to September?",
+      "options": [
+        "By about 32,000",
+        "By about 12,000",
+        "By about 95,000",
+        "By about 22,000"
+      ],
+      "answer": 3,
+      "explanation": "The ONS said the figure fell by 22,000 to 959,000.",
+      "evidence": "the figure fell by 22,000 in the three months to September, to 959,000",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-26-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "If tech indices keep rising, why would the hedge lose money?",
+      "options": [
+        "Forced sale of the tech holdings",
+        "The hedge doubles up the portfolio's losses",
+        "Margin calls hit the underlying holdings",
+        "Option time value erodes without payoff"
+      ],
+      "answer": 3,
+      "explanation": "Without a fall in the index, the hedge's cost decays and it never pays out.",
+      "evidence": "If markets keep recovering, the hedge loses money through premium decay or adverse moves",
+      "tests": "why",
+      "concept": {
+        "id": "hedging",
+        "label": "Hedging"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 7
+  },
+  "issues": []
+}

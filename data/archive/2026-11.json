@@ -3472,6 +3472,302 @@
           "source": "Guardian business"
         }
       ]
+    },
+    {
+      "date": "2026-11-26",
+      "stories": [
+        {
+          "id": "sf45af2f6",
+          "topic": "insurance",
+          "headline": "Fitch maintains ‘neutral’ outlook for APAC insurance sector in 2027",
+          "url": "https://www.reinsurancene.ws/fitch-maintains-neutral-outlook-for-apac-insurance-sector-in-2027/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "sad54b335",
+          "topic": "insurance",
+          "headline": "Property cat price reductions show no signs of easing at 1/1: Hannover Re’s Althoff",
+          "url": "https://www.reinsurancene.ws/property-cat-price-reductions-show-no-signs-of-easing-at-1-1-hannover-res-althoff/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s9955375c",
+          "topic": "ai_markets",
+          "headline": "Semiconductor chips are the new oil. Here's why",
+          "url": "https://www.cnbc.com/2026/11/26/semiconductor-chips-are-the-new-oil-heres-why.html",
+          "source": "CNBC markets"
+        },
+        {
+          "id": "s2a99f168",
+          "topic": "ai_markets",
+          "headline": "How data centers are driving a US natural-gas boom",
+          "url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "se7dd58ea",
+          "topic": "macro_markets",
+          "headline": "Nvidia rally runs out of steam as Wall Street battles AI jitters",
+          "url": "https://www.cityam.com/nvidia-rally-runs-out-of-steam-as-wall-street-battles-ai-jitters/",
+          "source": "City AM"
+        },
+        {
+          "id": "s6ae05fd0",
+          "topic": "macro_markets",
+          "headline": "Bank of England sounds alarm on ‘opaque’ AI financing",
+          "url": "https://www.cityam.com/bank-of-england-sounds-alarm-on-opaque-ai-financing/",
+          "source": "City AM"
+        },
+        {
+          "id": "s20ddb0b7",
+          "topic": "geopolitics",
+          "headline": "Housing crisis on the ballot: Anger boils over ahead of Spanish election",
+          "url": "https://www.france24.com/en/tv-shows/focus/20261126-housing-crisis-on-the-ballot-anger-boils-over-ahead-of-spanish-election",
+          "source": "France 24"
+        },
+        {
+          "id": "s30d798fc",
+          "topic": "geopolitics",
+          "headline": "‘Symbolic’: Why did UK sanction Yemen’s Houthis amid attacks on Saudi?",
+          "url": "https://www.aljazeera.com/news/2026/11/26/symbolic-why-did-uk-sanction-yemens-houthis-amid-attacks-on-saudi?traffic_source=rss",
+          "source": "Al Jazeera"
+        },
+        {
+          "id": "sdb715307",
+          "topic": "top_headlines",
+          "headline": "Storms across US disrupt travel and force Thanksgiving parade cancellations",
+          "url": "https://www.theguardian.com/us-news/2026/nov/26/storm-thanksgiving-parade-cancellations-severe-weather",
+          "source": "Guardian world"
+        },
+        {
+          "id": "sa30dc74e",
+          "topic": "top_headlines",
+          "headline": "Number of Neets in UK falls below a million as Burnham pushes to tackle crisis",
+          "url": "https://www.theguardian.com/society/2026/nov/26/neets-uk-young-people-education-employment-training-andy-burnham",
+          "source": "Guardian UK"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-26-sf45af2f6",
+          "story_id": "sf45af2f6",
+          "topic": "insurance",
+          "question": "What makes Fitch see financial market volatility as a key risk for the region's insurers?",
+          "options": [
+            "Inadequate pricing across non-life insurance lines",
+            "Tighter reinsurance conditions raising protection costs",
+            "Equity exposure at Chinese and Taiwanese insurers",
+            "Thin capital buffers at Australian life insurers"
+          ],
+          "answer": 2,
+          "explanation": "Fitch ties the volatility risk to larger stock holdings at Chinese and Taiwanese insurers.",
+          "concept": {
+            "id": "reinsurance_renewals",
+            "label": "Reinsurance and the 1/1 renewals"
+          },
+          "headline": "Fitch maintains ‘neutral’ outlook for APAC insurance sector in 2027",
+          "url": "https://www.reinsurancene.ws/fitch-maintains-neutral-outlook-for-apac-insurance-sector-in-2027/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-26-sad54b335",
+          "story_id": "sad54b335",
+          "topic": "insurance",
+          "question": "What explains property cat rates rising in Colombia while the wider market keeps softening?",
+          "options": [
+            "Heavier hurricane losses across the Americas",
+            "Hannover Re's plan for selected client growth",
+            "Local losses from a major earthquake",
+            "Reinsurers retreating after two years of falls"
+          ],
+          "answer": 2,
+          "explanation": "The item says Colombian rates are rising because of a devastating earthquake there.",
+          "concept": {
+            "id": "reinsurance_renewals",
+            "label": "Reinsurance and the 1/1 renewals"
+          },
+          "headline": "Property cat price reductions show no signs of easing at 1/1: Hannover Re’s Althoff",
+          "url": "https://www.reinsurancene.ws/property-cat-price-reductions-show-no-signs-of-easing-at-1-1-hannover-res-althoff/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-26-s9955375c",
+          "story_id": "s9955375c",
+          "topic": "ai_markets",
+          "question": "How did 2026 chip exports compare with oil and gas exports?",
+          "options": [
+            "Chips fell back behind them again",
+            "Chips overtook oil but not gas",
+            "Chips matched them for the first time",
+            "Chips overtook them for the first time"
+          ],
+          "answer": 3,
+          "explanation": "The item states chip exports overtook oil and gas for the first time in 2026.",
+          "concept": {
+            "id": "chip_supply_chain",
+            "label": "The chip and compute supply chain"
+          },
+          "headline": "Semiconductor chips are the new oil. Here's why",
+          "url": "https://www.cnbc.com/2026/11/26/semiconductor-chips-are-the-new-oil-heres-why.html",
+          "source": "CNBC markets"
+        },
+        {
+          "id": "2026-11-26-s2a99f168",
+          "story_id": "s2a99f168",
+          "topic": "ai_markets",
+          "question": "What share of the 200-plus gigawatts PJM accepted into its queue in August was natural gas?",
+          "options": [
+            "Under a tenth of the capacity",
+            "About a quarter of the capacity",
+            "Nearly half of the capacity",
+            "Roughly two thirds of the capacity"
+          ],
+          "answer": 2,
+          "explanation": "The item says nearly half of the accepted capacity was natural gas.",
+          "concept": {
+            "id": "hyperscaler_capex",
+            "label": "Hyperscaler capex"
+          },
+          "headline": "How data centers are driving a US natural-gas boom",
+          "url": "https://www.technologyreview.com/2026/11/25/1149836/data-centers-gas-power-plants/",
+          "source": "MIT Technology Review"
+        },
+        {
+          "id": "2026-11-26-se7dd58ea",
+          "story_id": "se7dd58ea",
+          "topic": "macro_markets",
+          "question": "What triggered the 3.9 per cent fall in Nvidia shares?",
+          "options": [
+            "New export controls on China sales",
+            "A guidance cut after weak chip orders",
+            "European markets rallying away from tech",
+            "S&P flagged a possible credit downgrade"
+          ],
+          "answer": 3,
+          "explanation": "The drop followed S&P putting Nvidia's AA rating on watch for a downgrade.",
+          "concept": null,
+          "headline": "Nvidia rally runs out of steam as Wall Street battles AI jitters",
+          "url": "https://www.cityam.com/nvidia-rally-runs-out-of-steam-as-wall-street-battles-ai-jitters/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-26-s6ae05fd0",
+          "story_id": "s6ae05fd0",
+          "topic": "macro_markets",
+          "question": "What mechanism does the Financial Policy Committee say could spread an AI-related shock across markets?",
+          "options": [
+            "Sharp falls already hitting equity valuations",
+            "Retail investors piling into AI-themed funds",
+            "Banks holding most AI debt on balance sheets",
+            "AI firms funding other companies, linking sectors"
+          ],
+          "answer": 3,
+          "explanation": "AI companies funding other firms ties sectors together, so stress can pass between them.",
+          "concept": {
+            "id": "central_bank_policy",
+            "label": "Central bank policy"
+          },
+          "headline": "Bank of England sounds alarm on ‘opaque’ AI financing",
+          "url": "https://www.cityam.com/bank-of-england-sounds-alarm-on-opaque-ai-financing/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-26-s20ddb0b7",
+          "story_id": "s20ddb0b7",
+          "topic": "geopolitics",
+          "question": "What was Sanchez's aim in calling the snap election?",
+          "options": [
+            "Secure backing for tighter eviction enforcement",
+            "Energise core supporters with housing anger",
+            "Pre-empt a coalition partner's withdrawal",
+            "Capitalise on falling inflation and growth"
+          ],
+          "answer": 1,
+          "explanation": "He hoped the housing issue would mobilise his left-wing supporters.",
+          "concept": null,
+          "headline": "Housing crisis on the ballot: Anger boils over ahead of Spanish election",
+          "url": "https://www.france24.com/en/tv-shows/focus/20261126-housing-crisis-on-the-ballot-anger-boils-over-ahead-of-spanish-election",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-26-s30d798fc",
+          "story_id": "s30d798fc",
+          "topic": "geopolitics",
+          "question": "How does the item characterise the practical impact of the UK sanctions?",
+          "options": [
+            "Likely to end attacks on Saudi Arabia",
+            "A major blow to Houthi finances",
+            "Mostly symbolic, not changing conditions",
+            "A coordinated move with Saudi Arabia"
+          ],
+          "answer": 2,
+          "explanation": "The item calls the move largely symbolic rather than something that changes conditions.",
+          "concept": {
+            "id": "sanctions",
+            "label": "How sanctions work"
+          },
+          "headline": "‘Symbolic’: Why did UK sanction Yemen’s Houthis amid attacks on Saudi?",
+          "url": "https://www.aljazeera.com/news/2026/11/26/symbolic-why-did-uk-sanction-yemens-houthis-amid-attacks-on-saudi?traffic_source=rss",
+          "source": "Al Jazeera"
+        },
+        {
+          "id": "2026-11-26-sdb715307",
+          "story_id": "sdb715307",
+          "topic": "top_headlines",
+          "question": "Philadelphia kept its Thanksgiving Day parade from going ahead on the streets amid the storms. What did the city do instead?",
+          "options": [
+            "Shortened the route to downtown only",
+            "Moved it to a later date",
+            "Shifted it to an indoor stadium",
+            "Presented it as a televised substitute"
+          ],
+          "answer": 3,
+          "explanation": "The city pulled the parade from the streets and planned to show it as a television event instead.",
+          "concept": null,
+          "headline": "Storms across US disrupt travel and force Thanksgiving parade cancellations",
+          "url": "https://www.theguardian.com/us-news/2026/nov/26/storm-thanksgiving-parade-cancellations-severe-weather",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-26-sa30dc74e",
+          "story_id": "sa30dc74e",
+          "topic": "top_headlines",
+          "question": "By how much did the UK Neet count fall in the three months to September?",
+          "options": [
+            "By about 32,000",
+            "By about 12,000",
+            "By about 95,000",
+            "By about 22,000"
+          ],
+          "answer": 3,
+          "explanation": "The ONS said the figure fell by 22,000 to 959,000.",
+          "concept": null,
+          "headline": "Number of Neets in UK falls below a million as Burnham pushes to tackle crisis",
+          "url": "https://www.theguardian.com/society/2026/nov/26/neets-uk-young-people-education-employment-training-andy-burnham",
+          "source": "Guardian UK"
+        },
+        {
+          "id": "2026-11-26-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "If tech indices keep rising, why would the hedge lose money?",
+          "options": [
+            "Forced sale of the tech holdings",
+            "The hedge doubles up the portfolio's losses",
+            "Margin calls hit the underlying holdings",
+            "Option time value erodes without payoff"
+          ],
+          "answer": 3,
+          "explanation": "Without a fall in the index, the hedge's cost decays and it never pays out.",
+          "concept": {
+            "id": "hedging",
+            "label": "Hedging"
+          },
+          "headline": "Hedging a tech-heavy portfolio against a Nasdaq drawdown",
+          "url": "https://www.cityam.com/nvidia-rally-runs-out-of-steam-as-wall-street-battles-ai-jitters/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }

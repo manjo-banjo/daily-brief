@@ -1,0 +1,346 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T15:34:45+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 5,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "s819b45f0",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "Starr confirms underwriting and claims leadership structure for International and London divisions",
+      "url": "https://www.reinsurancene.ws/starr-confirms-underwriting-and-claims-leadership-structure-for-international-and-london-divisions/",
+      "source": "Reinsurance News",
+      "published": "2026-11-27T08:00:07Z",
+      "headline_only": false,
+      "summary": "Starr has confirmed a new underwriting and claims leadership structure across its International and London divisions, effective immediately. The International team includes heads of aviation, casualty, marine, professional lines, specialty, onshore energy, offshore energy and construction, plus a Chief Claims Officer, International, Greg Long. The London business will be led by Stuart Scott, President of UK and EME, building on the alignment of underwriting across Lloyd's Syndicate 1919 and Starr International (Europe) Limited.",
+      "why_it_matters": "Clearer lines of accountability across Starr's London and international underwriting aim to support growth while keeping the underwriting discipline the firm says is central to its business.",
+      "access_note": null,
+      "concept": {
+        "id": "lloyds",
+        "label": "How Lloyd's works"
+      }
+    },
+    {
+      "id": "s5865fb5a",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "Cat bonds hold rate advantage, as principal loss remains primary risk for investors: King Ridge",
+      "url": "https://www.artemis.bm/news/cat-bonds-hold-rate-advantage-as-principal-loss-remains-primary-risk-for-investors-king-ridge/",
+      "source": "Artemis",
+      "published": "2026-11-27T14:00:27Z",
+      "headline_only": false,
+      "summary": "A King Ridge Capital Advisors report says catastrophe bonds differ from traditional fixed-rate bonds in their sensitivity to interest rates, while the main risk for investors remains loss of principal. Coupons generally include a floating short-term rate component, and investor money sits in a segregated collateral account, generally invested in U.S. Treasury money market funds. The report says the Swiss Re Cat Bond Index generated a compound annual return of 5.59% in nine years between 2002 and 2025, against 1.00% for the Bloomberg US Aggregate.",
+      "why_it_matters": "Because coupons float with short-term rates, cat bond prices are driven more by catastrophe events and modelled risk than by rate moves, which changes how investors assess the asset class.",
+      "access_note": null,
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "s5516835f",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "How AI agents are testing retailers on Black Friday",
+      "url": "https://www.cityam.com/how-ai-agents-are-testing-retailers-on-black-friday/",
+      "source": "City AM",
+      "published": "2026-11-27T12:31:39Z",
+      "headline_only": false,
+      "summary": "Retailers are facing a new kind of fraud this Black Friday as AI shopping agents change how consumers shop and pay online. AI shopping activity is now 77 times higher than a year ago and 11 times higher than three months ago, according to Forter, while Darktrace found daily Black Friday phishing volumes rose more than thirteenfold in the first three weeks of November compared with October. Forter has identified more than 2,000 active fraud rings across retailers it monitors, which account for around $1.5 trillion in commerce.",
+      "why_it_matters": "Agent-driven shopping is a new sales channel that also brings fraud risk, forcing retailers to choose between blocking agents, as Amazon did with Meta's Muse, or embracing them, as Walmart has.",
+      "access_note": null,
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "s0fbf0f5e",
+      "topic": "ai_markets",
+      "subtopic": "market_implications",
+      "title": "The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?",
+      "url": "https://www.cnbc.com/2026/11/27/tech-download-jensen-huang-ai-market.html",
+      "source": "CNBC technology",
+      "published": "2026-11-27T12:00:22Z",
+      "headline_only": false,
+      "summary": "AI stocks have fallen in recent times. Investors are questioning whether the AI boom is sustainable. The headline asks whether Jensen Huang's return will be the spark the shaky AI market needs.",
+      "why_it_matters": "Doubts about the durability of the AI boom are weighing on AI share prices, which matters for portfolios exposed to the sector.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "s02f46b10",
+      "topic": "macro_markets",
+      "subtopic": "central_banks",
+      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+      "url": "https://www.ecb.europa.eu/press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
+      "source": "ECB press releases",
+      "published": "2026-11-27T14:00:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s22b89d2e",
+      "topic": "macro_markets",
+      "subtopic": "commodities",
+      "title": "U.S. Natural Gas Futures Fall as Front Month Shifts to January",
+      "url": "https://www.wsj.com/finance/commodities-futures/u-s-natural-gas-futures-fall-as-front-month-shifts-to-january-3b1ef621?mod=rss_markets_main",
+      "source": "WSJ markets",
+      "published": "2026-11-27T14:35:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s4048360d",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "‘Islam is Sharia’: Germany’s far-right leader attacks Le Pen on Muslims and Europe",
+      "url": "https://www.politico.eu/article/islam-sharia-germany-far-right-leader-alice-weidel-attacks-marine-le-pen-muslims-europe/",
+      "source": "Politico Europe",
+      "published": "2026-11-27T08:59:14Z",
+      "headline_only": false,
+      "summary": "Alice Weidel, co-leader of the Alternative for Germany (AfD), which the text calls Germany's most popular party, criticised Marine Le Pen in an interview with a new weekly WELT video podcast published Friday. She rejected Le Pen's call for a \"Europe of nations\" to replace a \"German Europe\", saying Le Pen had \"perhaps misunderstood something, or doesn't see how the money flows\", and noted Germany pays the largest portion of the EU budget. Weidel also said more than the 2.6 million people her co-leader Tino Chrupalla named should leave Germany, including the roughly 250,000 already obliged to leave and all 900,000 Syrians.",
+      "why_it_matters": "Open friction between the AfD and National Rally shows the European far right is not a united bloc, which matters as Le Pen runs for the French presidency.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s5f210f0c",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Trump embraced Xi, then slapped new tariffs on China: What’s his game plan?",
+      "url": "https://www.aljazeera.com/features/2026/11/27/trump-embraced-xi-then-slapped-new-tariffs-on-china-whats-his-game-plan?traffic_source=rss",
+      "source": "Al Jazeera",
+      "published": "2026-11-27T12:48:44Z",
+      "headline_only": false,
+      "summary": "President Trump has introduced a new tariff regime that targets China hardest. This follows his warm approach to Xi. Trump and Xi are due to meet again in Miami in a few weeks.",
+      "why_it_matters": "New tariffs aimed mainly at China, just before a leaders' meeting, raise uncertainty over US-China trade terms that affect global supply chains and markets.",
+      "access_note": null,
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "s78f86d24",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "DWP ‘cyber incident’ knocks almost all pensions and benefits systems offline",
+      "url": "https://www.theguardian.com/politics/2026/nov/27/dwp-cyber-incident-pensions-benefits-systems-offline",
+      "source": "Guardian UK",
+      "published": "2026-11-27T14:28:22Z",
+      "headline_only": false,
+      "summary": "Almost all pensions and benefits systems in the UK are unavailable after a \"cyber incident\" at the Department for Work and Pensions. Anyone trying to check their state pension, apply for disability benefits or claim universal credit could not do so on Friday morning. Department officials say welfare payments will continue to be made despite the outage.",
+      "why_it_matters": "A cyber incident has disabled core welfare systems, raising questions about the resilience of government IT even though payments are said to be continuing.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s768a2063",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "EU leaders fail to bridge budget splits as talks stall",
+      "url": "https://www.bbc.co.uk/news/articles/cw4gnm3m9deno",
+      "source": "BBC World",
+      "published": "2026-11-27T06:11:55Z",
+      "headline_only": false,
+      "summary": "EU leaders have failed to bridge splits over the bloc's budget, and talks have stalled. Aid for Ukraine was among the disputes between members. EU members hope to conclude the talks by the end of the year.",
+      "why_it_matters": "A stalled budget deal leaves funding priorities, including Ukraine aid, unresolved with a year-end target to meet.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": null,
+  "quiz": [
+    {
+      "id": "2026-11-27-s819b45f0",
+      "story_id": "s819b45f0",
+      "topic": "insurance",
+      "question": "What outcome is Starr's new leadership structure for London and international underwriting meant to produce?",
+      "options": [
+        "Reduced reliance on Lloyd's Syndicate capacity",
+        "Expansion without loosening risk selection standards",
+        "Lower expenses through merging its two legal entities",
+        "Faster entry into new lines like cyber and life"
+      ],
+      "answer": 1,
+      "explanation": "Clearer accountability is meant to help the firm grow while keeping its careful approach to taking on risk.",
+      "evidence": "Clearer lines of accountability across Starr's London and international underwriting aim to support growth while keeping the underwriting discipline the firm says is central to its business.",
+      "tests": "why",
+      "concept": {
+        "id": "lloyds",
+        "label": "How Lloyd's works"
+      }
+    },
+    {
+      "id": "2026-11-27-s5865fb5a",
+      "story_id": "s5865fb5a",
+      "topic": "insurance",
+      "question": "Why are cat bond prices less affected by interest rate moves than ordinary fixed-rate bonds?",
+      "options": [
+        "Coupons adjust with short-term rates",
+        "Collateral is held in long-dated government bonds",
+        "Investors hedge rate exposure with swaps",
+        "Coupons are fixed but priced at a discount"
+      ],
+      "answer": 0,
+      "explanation": "Because the coupon adjusts with short-term rates, rate changes matter less, leaving catastrophe events and modelled risk as the main drivers.",
+      "evidence": "Coupons generally include a floating short-term rate component",
+      "tests": "why",
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "2026-11-27-s5516835f",
+      "story_id": "s5516835f",
+      "topic": "ai_markets",
+      "question": "What dilemma does agent-driven shopping create for retailers?",
+      "options": [
+        "Whether to block AI agents or embrace them",
+        "Whether to use phishing filters or fraud rings",
+        "Whether to cut prices or raise them",
+        "Whether to sell online or in stores"
+      ],
+      "answer": 0,
+      "explanation": "Agents bring both sales and fraud risk, so retailers must decide whether to block them as Amazon did or accept them as Walmart did.",
+      "evidence": "forcing retailers to choose between blocking agents, as Amazon did with Meta's Muse, or embracing them, as Walmart has",
+      "tests": "why",
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "2026-11-27-s0fbf0f5e",
+      "story_id": "s0fbf0f5e",
+      "topic": "ai_markets",
+      "question": "What is the stated concern weighing on AI share prices?",
+      "options": [
+        "Doubts the AI boom can last",
+        "Falling demand for consumer devices",
+        "Rising interest rates on tech debt",
+        "Tighter rules on chip exports"
+      ],
+      "answer": 0,
+      "explanation": "Investors are questioning whether the AI boom is sustainable, which is pressuring AI stocks.",
+      "evidence": "Investors are questioning whether the AI boom is sustainable.",
+      "tests": "why",
+      "concept": {
+        "id": "ai_and_markets",
+        "label": "How AI moves markets"
+      }
+    },
+    {
+      "id": "2026-11-27-s4048360d",
+      "story_id": "s4048360d",
+      "topic": "geopolitics",
+      "question": "What does Weidel's criticism of Le Pen's \"Europe of nations\" idea mainly reveal about the European far right?",
+      "options": [
+        "It backs Le Pen's presidential run",
+        "It is losing support in Germany",
+        "It is divided, not a single bloc",
+        "It agrees on EU budget reform"
+      ],
+      "answer": 2,
+      "explanation": "A public dispute between the AfD and National Rally shows the two parties do not act as one camp.",
+      "evidence": "Open friction between the AfD and National Rally shows the European far right is not a united bloc",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-27-s5f210f0c",
+      "story_id": "s5f210f0c",
+      "topic": "geopolitics",
+      "question": "Which country does Trump's new tariff regime target hardest?",
+      "options": [
+        "Germany",
+        "Mexico",
+        "Canada",
+        "China"
+      ],
+      "answer": 3,
+      "explanation": "The text says the new tariffs hit China hardest, despite Trump's earlier warm approach to Xi.",
+      "evidence": "President Trump has introduced a new tariff regime that targets China hardest.",
+      "tests": "fact",
+      "concept": {
+        "id": "geopolitics_and_markets",
+        "label": "How geopolitics reaches markets (energy, risk premia, safe havens)"
+      }
+    },
+    {
+      "id": "2026-11-27-s78f86d24",
+      "story_id": "s78f86d24",
+      "topic": "top_headlines",
+      "question": "Which fact limited the immediate harm to claimants from the Department for Work and Pensions outage?",
+      "options": [
+        "Only disability benefit services were affected",
+        "Online claims were redirected to phone lines",
+        "Payments to recipients were still going out",
+        "Systems were restored by Friday afternoon"
+      ],
+      "answer": 2,
+      "explanation": "Although online services for checking and claiming were down, officials said money would still be paid.",
+      "evidence": "Department officials say welfare payments will continue to be made despite the outage.",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-27-s768a2063",
+      "story_id": "s768a2063",
+      "topic": "top_headlines",
+      "question": "What follows from EU leaders failing to bridge budget splits?",
+      "options": [
+        "Ukraine aid is cancelled",
+        "Members agree a smaller budget",
+        "Funding priorities stay unresolved",
+        "The year-end target is dropped"
+      ],
+      "answer": 2,
+      "explanation": "With talks stalled, no deal exists, so spending priorities such as Ukraine aid remain undecided.",
+      "evidence": "A stalled budget deal leaves funding priorities, including Ukraine aid, unresolved with a year-end target to meet.",
+      "tests": "why",
+      "concept": null
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 6
+  },
+  "issues": []
+}

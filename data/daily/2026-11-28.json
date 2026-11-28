@@ -1,0 +1,406 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T14:30:29+00:00",
+  "edition": "daily",
+  "status": "full",
+  "read_minutes": 6,
+  "topics": [
+    {
+      "id": "insurance",
+      "label": "Insurance"
+    },
+    {
+      "id": "ai_markets",
+      "label": "AI and markets"
+    },
+    {
+      "id": "macro_markets",
+      "label": "Macro and markets"
+    },
+    {
+      "id": "geopolitics",
+      "label": "Geopolitics"
+    },
+    {
+      "id": "top_headlines",
+      "label": "Top headlines"
+    }
+  ],
+  "stories": [
+    {
+      "id": "sbd4d00dc",
+      "topic": "insurance",
+      "subtopic": "corporate",
+      "title": "JP Morgan flags reinsurance among the most challenging markets in 2027 European outlook",
+      "url": "https://www.reinsurancene.ws/jp-morgan-flags-reinsurance-among-the-most-challenging-markets-in-2027-european-outlook/",
+      "source": "Reinsurance News",
+      "published": "2026-11-27T17:00:43Z",
+      "headline_only": false,
+      "summary": "J.P. Morgan expects further double-digit declines in property catastrophe reinsurance pricing at the January 2027 renewals. It cites strong reinsurer returns, lighter-than-usual natural catastrophe experience in 2026 and new forms of capital entering the industry, and notes price reductions of up to 20% at some renewals. Normalised combined ratio guidance for the four largest European reinsurers is around 94% for 2026E, against 94% in 2013 and as high as 98% in 2017, and commercial lines prices are expected to fall by mid-single digits in 2027, mainly in Property.",
+      "why_it_matters": "Reinsurance pricing is softening from strong margins as new capital arrives, so reinsurer and commercial property earnings face pressure even though profitability remains strong.",
+      "access_note": null,
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "s68784774",
+      "topic": "insurance",
+      "subtopic": "specialty",
+      "title": "ILS funds upward trajectory continues in 2026, average October return hits 1.07%: ILS Advisers",
+      "url": "https://www.artemis.bm/news/ils-funds-upward-trajectory-continues-in-2026-average-october-return-hits-1-07-ils-advisers/",
+      "source": "Artemis",
+      "published": "2026-11-27T15:30:46Z",
+      "headline_only": false,
+      "summary": "ILS fund performance kept rising in October 2026, with the average return at 1.07% on the ILS Advisers Fund Index. That was the third-highest month of the year so far, taking the average for the first ten months of 2026 to 9.59%, after August was revised up to 1.60% and September came in at 1.55%. October's catastrophe events, including Hurricane Isaias (initial insured loss estimates of USD 1–5 billion) and a magnitude 7.7 earthquake in Panama, are not expected to have a meaningful impact on the ILS market, and Artemis data shows Rule 144A catastrophe bond issuance tracking towards a new annual record high in 2026.",
+      "why_it_matters": "Strong returns with limited losses from October's catastrophe events support investor appetite, which feeds record cat bond issuance and adds capacity to the market.",
+      "access_note": null,
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "sce271fc5",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+      "url": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo",
+      "source": "BBC top stories",
+      "published": "2026-11-28T11:35:34Z",
+      "headline_only": false,
+      "summary": "OpenAI has counter-sued Apple. The ChatGPT-maker alleges that Apple stole trade secrets through a former employee. The text gives no further detail on the claims, the court or the timing.",
+      "why_it_matters": "A legal fight between a leading AI lab and a major device maker could affect how the two firms compete and cooperate on AI products.",
+      "access_note": null,
+      "concept": {
+        "id": "ai_lab_economics",
+        "label": "How AI labs make money"
+      }
+    },
+    {
+      "id": "sdd0a4889",
+      "topic": "ai_markets",
+      "subtopic": "market_development",
+      "title": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+      "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+      "source": "CNBC technology",
+      "published": "2026-11-27T16:43:14Z",
+      "headline_only": false,
+      "summary": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop. They are hitting roadblocks at Amazon and other retailers. A growing number of sites are threatening to stunt the agents' growth.",
+      "why_it_matters": "If large retailers block AI agents, the route to turning agents into a source of commerce revenue narrows, which limits a possible new income stream for AI firms.",
+      "access_note": null,
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "sa898d04f",
+      "topic": "macro_markets",
+      "subtopic": "rates",
+      "title": "Treasury Yields Gain As U.S. Equities Rally",
+      "url": "https://www.wsj.com/finance/investing/short-term-jgb-yields-rise-on-elevated-tokyo-inflation-data-713a900b?mod=rss_markets_main",
+      "source": "WSJ markets",
+      "published": "2026-11-27T21:10:00Z",
+      "headline_only": true,
+      "summary": null,
+      "why_it_matters": null,
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "s10caba19",
+      "topic": "macro_markets",
+      "subtopic": "equities",
+      "title": "Marlboro man strikes match on tobacco dealmaking",
+      "url": "https://www.cityam.com/marlboro-man-strikes-match-on-tobacco-dealmaking/",
+      "source": "City AM",
+      "published": "2026-11-28T08:00:00Z",
+      "headline_only": false,
+      "summary": "Altria said on Thursday it is weighing a possible cash takeover of Imperial Brands, the FTSE 100 cigarette maker. The US firm said it could bid with a third party, which Bloomberg suggested could be Japan Tobacco, and that any offer is likely to be solely in cash. Imperial said it had not had any discussions with, or received any approach from, Altria, though it would consider any proposal, and its market value rose above £26bn.",
+      "why_it_matters": "Bid speculation lifted a FTSE 100 constituent's value, and a deal would remove another large company from the London market, affecting UK index and tracker holders.",
+      "access_note": "A UK retail investor can get exposure to a FTSE 100 share through the shares themselves, UK equity index funds and ETFs, options, and spread bets or CFDs.",
+      "concept": null
+    },
+    {
+      "id": "s9a7606e0",
+      "topic": "geopolitics",
+      "subtopic": "russia_ukraine_europe",
+      "title": "‘An advocate for Russia’: Kushner’s Putin comments spark outrage in Europe",
+      "url": "https://www.politico.eu/article/an-advocate-for-russia-jared-kushner-vladimir-putin-comments-spark-outrage-europe/",
+      "source": "Politico Europe",
+      "published": "2026-11-27T20:10:58Z",
+      "headline_only": false,
+      "summary": "Donald Trump’s peace envoy Jared Kushner drew anger in Kyiv and among Ukraine’s European allies after calling Vladimir Putin a “grandmaster of politics” in a podcast interview released Wednesday. He also said Putin “showed restraint” by not using nuclear weapons and described the conflict as “effectively a proxy war where Europe is funding and arming Ukraine against Russia.” Oleksandr Merezhko, chair of Ukraine’s parliamentary foreign affairs committee, demanded Kushner be removed from the peace negotiations with Moscow.",
+      "why_it_matters": "Open friction between Washington and Kyiv, with US-brokered talks in Abu Dhabi producing no breakthrough, makes a near-term peace deal look less likely and strains transatlantic unity.",
+      "access_note": null,
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "s6d5e1aa6",
+      "topic": "geopolitics",
+      "subtopic": "us_china",
+      "title": "Taiwan awaits local election results as China watches",
+      "url": "https://www.france24.com/en/taiwan-awaits-local-election-results-as-china-watches",
+      "source": "France 24",
+      "published": "2026-11-28T10:49:21Z",
+      "headline_only": false,
+      "summary": "Taiwan is awaiting the results of a local election. Taiwan media outlets reported on Saturday that Taipei Mayor Chiang Wan-an is leading the vote count. His opponent is Puma Shen.",
+      "why_it_matters": "Taiwan's politics are closely watched in Beijing, so the result of this contest may shape the tone of cross-strait relations, a key risk for markets and chip supply chains.",
+      "access_note": null,
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "s15e872c3",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Two staff killed in Israeli strike on Gaza medical clinic, MSF says",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y10yydln3o",
+      "source": "BBC top stories",
+      "published": "2026-11-28T10:34:58Z",
+      "headline_only": false,
+      "summary": "Two staff members were killed in an Israeli strike on a medical clinic in Gaza, according to MSF. The Israeli military says it targeted \"Hamas terrorists\" in the strike. The World Health Organization has condemned the strike.",
+      "why_it_matters": "A strike that kills medical staff at a clinic draws international condemnation and adds to scrutiny of how the Israeli military conducts operations in Gaza.",
+      "access_note": null,
+      "concept": null
+    },
+    {
+      "id": "sf6bede13",
+      "topic": "top_headlines",
+      "subtopic": null,
+      "title": "Spain to vote in election that could put far right in power for first time since Franco",
+      "url": "https://www.theguardian.com/world/2026/nov/28/spain-vote-election-could-far-right-power-first-time-franco",
+      "source": "Guardian world",
+      "published": "2026-11-28T11:00:39Z",
+      "headline_only": false,
+      "summary": "Spaniards vote on Sunday in a snap general election that could put a far-right party in government for the first time since the country's return to democracy after the death of Gen Francisco Franco in 1975. Socialist prime minister Pedro Sánchez called the vote in October, although the next election was not due until summer next year. He did so after three rightwing and far-right parties voted down emergency legislation his government had proposed to address the country's housing crisis.",
+      "why_it_matters": "A defeat for Sánchez to a coalition including the far-right Vox would change who governs Spain, a result with political weight well beyond its borders.",
+      "access_note": null,
+      "concept": null
+    }
+  ],
+  "market_idea": {
+    "id": "idea",
+    "topic": "macro_markets",
+    "title": "Event-driven position on a possible cash takeover bid",
+    "based_on": "s10caba19",
+    "url": "https://www.cityam.com/marlboro-man-strikes-match-on-tobacco-dealmaking/",
+    "source": "City AM",
+    "what_the_trade_is": "The view is that a possible cash offer for Imperial Brands could lead to a bid being made, with the shares already above £26bn in market value after Altria's statement. Imperial said it had not received any approach, so the outcome is uncertain.",
+    "how_it_is_expressed": "It is an outright position in the target's shares, where the payoff depends on whether a firm offer emerges. A hedge could pair it with a short position in a sector peer, though the story does not name one.",
+    "retail_access": "A UK retail investor could use the shares directly, options, or spread bets and CFDs. Spread bets and CFDs use leverage and margin, which magnify losses as well as gains, and shares held in an ISA are free of capital gains tax.",
+    "what_makes_it_work": "Altria, possibly with a third party, would need to make a firm cash offer that the market views as better than the current share price.",
+    "what_breaks_it": "No offer may be made, since Imperial said it has had no approach, and the share price could then give back the speculation-driven gain.",
+    "concept": {
+      "id": "retail_instruments",
+      "label": "Instruments a UK retail investor can use (leverage, margin, tax)"
+    },
+    "disclaimer": "An explanation of a trade in the news, not a recommendation."
+  },
+  "quiz": [
+    {
+      "id": "2026-11-28-sbd4d00dc",
+      "story_id": "sbd4d00dc",
+      "topic": "insurance",
+      "question": "What underpins the expected fall in January 2027 property catastrophe reinsurance prices?",
+      "options": [
+        "Rising combined ratios pushing reinsurers toward thinner margins",
+        "Falling commercial lines prices dragging reinsurance rates lower",
+        "Strong reinsurer profits and new capital arriving",
+        "Heavy 2026 catastrophe losses and capital leaving the sector"
+      ],
+      "answer": 2,
+      "explanation": "The softening is attributed to strong reinsurer returns, a light catastrophe year and new capital entering the industry.",
+      "evidence": "It cites strong reinsurer returns, lighter-than-usual natural catastrophe experience in 2026 and new forms of capital entering the industry",
+      "tests": "why",
+      "concept": {
+        "id": "reinsurance_renewals",
+        "label": "Reinsurance and the 1/1 renewals"
+      }
+    },
+    {
+      "id": "2026-11-28-s68784774",
+      "story_id": "s68784774",
+      "topic": "insurance",
+      "question": "How are October's hurricane and Panama earthquake expected to affect the ILS market?",
+      "options": [
+        "Losses are expected to cut fund returns sharply",
+        "They are expected to pause cat bond issuance",
+        "They pushed October returns to the year's high",
+        "Neither is expected to hurt it much"
+      ],
+      "answer": 3,
+      "explanation": "The text says these events are not expected to have a meaningful impact on the ILS market.",
+      "evidence": "are not expected to have a meaningful impact on the ILS market",
+      "tests": "why",
+      "concept": {
+        "id": "cat_bonds_ils",
+        "label": "Cat bonds and ILS"
+      }
+    },
+    {
+      "id": "2026-11-28-sce271fc5",
+      "story_id": "sce271fc5",
+      "topic": "ai_markets",
+      "question": "What does OpenAI allege in its counter-suit against Apple?",
+      "options": [
+        "Apple infringed patents through its assistant features",
+        "Apple broke a supply contract for AI chips",
+        "Apple copied ChatGPT code into its own products",
+        "Apple took trade secrets via a former employee"
+      ],
+      "answer": 3,
+      "explanation": "OpenAI claims Apple stole trade secrets by way of a former employee.",
+      "evidence": "The ChatGPT-maker alleges that Apple stole trade secrets through a former employee.",
+      "tests": "fact",
+      "concept": {
+        "id": "ai_lab_economics",
+        "label": "How AI labs make money"
+      }
+    },
+    {
+      "id": "2026-11-28-sdd0a4889",
+      "story_id": "sdd0a4889",
+      "topic": "ai_markets",
+      "question": "If large retailers keep blocking AI shopping agents, what is most directly at risk?",
+      "options": [
+        "AI firms' hopes of earning from commerce",
+        "Users' access to ordinary search engines",
+        "Retailers' sales through their mobile apps",
+        "Retailers' own online advertising income"
+      ],
+      "answer": 0,
+      "explanation": "Blocking narrows the path to making agents a revenue source for AI firms.",
+      "evidence": "the route to turning agents into a source of commerce revenue narrows",
+      "tests": "why",
+      "concept": {
+        "id": "agents",
+        "label": "Agents"
+      }
+    },
+    {
+      "id": "2026-11-28-s10caba19",
+      "story_id": "s10caba19",
+      "topic": "macro_markets",
+      "question": "How did Imperial Brands respond to Altria's statement about a possible takeover?",
+      "options": [
+        "It confirmed talks with Altria and Japan Tobacco",
+        "It said no approach or talks had occurred",
+        "It rejected the idea as undervaluing the company",
+        "It opened a formal process to seek bidders"
+      ],
+      "answer": 1,
+      "explanation": "Imperial said it had had no discussions with Altria and had received no approach.",
+      "evidence": "Imperial said it had not had any discussions with, or received any approach from, Altria",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-28-s9a7606e0",
+      "story_id": "s9a7606e0",
+      "topic": "geopolitics",
+      "question": "Given that the Abu Dhabi talks produced no breakthrough, what follows from the row over Kushner's remarks?",
+      "options": [
+        "Chances of an early settlement have dimmed",
+        "Kushner is likely to be removed immediately",
+        "Russia is likely to agree a ceasefire soon",
+        "Europe is likely to cut funding for Ukraine"
+      ],
+      "answer": 0,
+      "explanation": "Open friction between Washington and Kyiv makes a near-term peace deal less likely.",
+      "evidence": "makes a near-term peace deal look less likely and strains transatlantic unity",
+      "tests": "why",
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "2026-11-28-s6d5e1aa6",
+      "story_id": "s6d5e1aa6",
+      "topic": "geopolitics",
+      "question": "Why does Beijing care about the result of Taiwan's local election?",
+      "options": [
+        "It could shift the tone of ties with China",
+        "It sets Taiwan's semiconductor export quotas",
+        "It decides whether Taiwan holds a referendum",
+        "It determines the size of US arms sales"
+      ],
+      "answer": 0,
+      "explanation": "Beijing watches Taiwan's politics closely because results may shape the tone of cross-strait relations.",
+      "evidence": "so the result of this contest may shape the tone of cross-strait relations",
+      "tests": "why",
+      "concept": {
+        "id": "flashpoints",
+        "label": "Key flashpoints"
+      }
+    },
+    {
+      "id": "2026-11-28-s15e872c3",
+      "story_id": "s15e872c3",
+      "topic": "top_headlines",
+      "question": "What reason did the Israeli military give for the strike on the clinic?",
+      "options": [
+        "It was targeting Hamas militants",
+        "It denied carrying out the strike",
+        "It was hitting a suspected weapons depot",
+        "It was answering rocket fire from the clinic"
+      ],
+      "answer": 0,
+      "explanation": "The military said it was targeting Hamas terrorists.",
+      "evidence": "The Israeli military says it targeted \"Hamas terrorists\" in the strike.",
+      "tests": "fact",
+      "concept": null
+    },
+    {
+      "id": "2026-11-28-sf6bede13",
+      "story_id": "sf6bede13",
+      "topic": "top_headlines",
+      "question": "What prompted Sánchez to call the early election?",
+      "options": [
+        "Opponents defeated his emergency housing legislation",
+        "Vox won regional elections in October",
+        "A coalition partner quit over budget disputes",
+        "He lost a confidence vote over corruption"
+      ],
+      "answer": 0,
+      "explanation": "He called the vote after rightwing and far-right parties voted down his housing emergency legislation.",
+      "evidence": "three rightwing and far-right parties voted down emergency legislation his government had proposed to address the country's housing crisis",
+      "tests": "why",
+      "concept": null
+    },
+    {
+      "id": "2026-11-28-idea",
+      "story_id": "idea",
+      "topic": "macro_markets",
+      "question": "What must happen for the event-driven trade on Imperial Brands to pay off?",
+      "options": [
+        "Altria sells its stake to Japan Tobacco",
+        "Imperial's market value falls below £26bn",
+        "Imperial confirms talks and rejects any proposal",
+        "A firm cash bid arrives that beats the share price"
+      ],
+      "answer": 3,
+      "explanation": "The payoff depends on a firm cash offer that the market views as better than the current share price.",
+      "evidence": "Altria, possibly with a third party, would need to make a firm cash offer that the market views as better than the current share price.",
+      "tests": "why",
+      "concept": {
+        "id": "retail_instruments",
+        "label": "Instruments a UK retail investor can use (leverage, margin, tax)"
+      }
+    }
+  ],
+  "llm": {
+    "provider": "claude_code",
+    "model": "default",
+    "calls": 6
+  },
+  "issues": []
+}

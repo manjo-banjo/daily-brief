@@ -4004,6 +4004,284 @@
           "source": "BBC World"
         }
       ]
+    },
+    {
+      "date": "2026-11-28",
+      "stories": [
+        {
+          "id": "sbd4d00dc",
+          "topic": "insurance",
+          "headline": "JP Morgan flags reinsurance among the most challenging markets in 2027 European outlook",
+          "url": "https://www.reinsurancene.ws/jp-morgan-flags-reinsurance-among-the-most-challenging-markets-in-2027-european-outlook/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "s68784774",
+          "topic": "insurance",
+          "headline": "ILS funds upward trajectory continues in 2026, average October return hits 1.07%: ILS Advisers",
+          "url": "https://www.artemis.bm/news/ils-funds-upward-trajectory-continues-in-2026-average-october-return-hits-1-07-ils-advisers/",
+          "source": "Artemis"
+        },
+        {
+          "id": "sce271fc5",
+          "topic": "ai_markets",
+          "headline": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+          "url": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "sdd0a4889",
+          "topic": "ai_markets",
+          "headline": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+          "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+          "source": "CNBC technology"
+        },
+        {
+          "id": "sa898d04f",
+          "topic": "macro_markets",
+          "headline": "Treasury Yields Gain As U.S. Equities Rally",
+          "url": "https://www.wsj.com/finance/investing/short-term-jgb-yields-rise-on-elevated-tokyo-inflation-data-713a900b?mod=rss_markets_main",
+          "source": "WSJ markets"
+        },
+        {
+          "id": "s10caba19",
+          "topic": "macro_markets",
+          "headline": "Marlboro man strikes match on tobacco dealmaking",
+          "url": "https://www.cityam.com/marlboro-man-strikes-match-on-tobacco-dealmaking/",
+          "source": "City AM"
+        },
+        {
+          "id": "s9a7606e0",
+          "topic": "geopolitics",
+          "headline": "‘An advocate for Russia’: Kushner’s Putin comments spark outrage in Europe",
+          "url": "https://www.politico.eu/article/an-advocate-for-russia-jared-kushner-vladimir-putin-comments-spark-outrage-europe/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "s6d5e1aa6",
+          "topic": "geopolitics",
+          "headline": "Taiwan awaits local election results as China watches",
+          "url": "https://www.france24.com/en/taiwan-awaits-local-election-results-as-china-watches",
+          "source": "France 24"
+        },
+        {
+          "id": "s15e872c3",
+          "topic": "top_headlines",
+          "headline": "Two staff killed in Israeli strike on Gaza medical clinic, MSF says",
+          "url": "https://www.bbc.co.uk/news/articles/cm5y10yydln3o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "sf6bede13",
+          "topic": "top_headlines",
+          "headline": "Spain to vote in election that could put far right in power for first time since Franco",
+          "url": "https://www.theguardian.com/world/2026/nov/28/spain-vote-election-could-far-right-power-first-time-franco",
+          "source": "Guardian world"
+        }
+      ],
+      "questions": [
+        {
+          "id": "2026-11-28-sbd4d00dc",
+          "story_id": "sbd4d00dc",
+          "topic": "insurance",
+          "question": "What underpins the expected fall in January 2027 property catastrophe reinsurance prices?",
+          "options": [
+            "Rising combined ratios pushing reinsurers toward thinner margins",
+            "Falling commercial lines prices dragging reinsurance rates lower",
+            "Strong reinsurer profits and new capital arriving",
+            "Heavy 2026 catastrophe losses and capital leaving the sector"
+          ],
+          "answer": 2,
+          "explanation": "The softening is attributed to strong reinsurer returns, a light catastrophe year and new capital entering the industry.",
+          "concept": {
+            "id": "reinsurance_renewals",
+            "label": "Reinsurance and the 1/1 renewals"
+          },
+          "headline": "JP Morgan flags reinsurance among the most challenging markets in 2027 European outlook",
+          "url": "https://www.reinsurancene.ws/jp-morgan-flags-reinsurance-among-the-most-challenging-markets-in-2027-european-outlook/",
+          "source": "Reinsurance News"
+        },
+        {
+          "id": "2026-11-28-s68784774",
+          "story_id": "s68784774",
+          "topic": "insurance",
+          "question": "How are October's hurricane and Panama earthquake expected to affect the ILS market?",
+          "options": [
+            "Losses are expected to cut fund returns sharply",
+            "They are expected to pause cat bond issuance",
+            "They pushed October returns to the year's high",
+            "Neither is expected to hurt it much"
+          ],
+          "answer": 3,
+          "explanation": "The text says these events are not expected to have a meaningful impact on the ILS market.",
+          "concept": {
+            "id": "cat_bonds_ils",
+            "label": "Cat bonds and ILS"
+          },
+          "headline": "ILS funds upward trajectory continues in 2026, average October return hits 1.07%: ILS Advisers",
+          "url": "https://www.artemis.bm/news/ils-funds-upward-trajectory-continues-in-2026-average-october-return-hits-1-07-ils-advisers/",
+          "source": "Artemis"
+        },
+        {
+          "id": "2026-11-28-sce271fc5",
+          "story_id": "sce271fc5",
+          "topic": "ai_markets",
+          "question": "What does OpenAI allege in its counter-suit against Apple?",
+          "options": [
+            "Apple infringed patents through its assistant features",
+            "Apple broke a supply contract for AI chips",
+            "Apple copied ChatGPT code into its own products",
+            "Apple took trade secrets via a former employee"
+          ],
+          "answer": 3,
+          "explanation": "OpenAI claims Apple stole trade secrets by way of a former employee.",
+          "concept": {
+            "id": "ai_lab_economics",
+            "label": "How AI labs make money"
+          },
+          "headline": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+          "url": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-28-sdd0a4889",
+          "story_id": "sdd0a4889",
+          "topic": "ai_markets",
+          "question": "If large retailers keep blocking AI shopping agents, what is most directly at risk?",
+          "options": [
+            "AI firms' hopes of earning from commerce",
+            "Users' access to ordinary search engines",
+            "Retailers' sales through their mobile apps",
+            "Retailers' own online advertising income"
+          ],
+          "answer": 0,
+          "explanation": "Blocking narrows the path to making agents a revenue source for AI firms.",
+          "concept": {
+            "id": "agents",
+            "label": "Agents"
+          },
+          "headline": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+          "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+          "source": "CNBC technology"
+        },
+        {
+          "id": "2026-11-28-s10caba19",
+          "story_id": "s10caba19",
+          "topic": "macro_markets",
+          "question": "How did Imperial Brands respond to Altria's statement about a possible takeover?",
+          "options": [
+            "It confirmed talks with Altria and Japan Tobacco",
+            "It said no approach or talks had occurred",
+            "It rejected the idea as undervaluing the company",
+            "It opened a formal process to seek bidders"
+          ],
+          "answer": 1,
+          "explanation": "Imperial said it had had no discussions with Altria and had received no approach.",
+          "concept": null,
+          "headline": "Marlboro man strikes match on tobacco dealmaking",
+          "url": "https://www.cityam.com/marlboro-man-strikes-match-on-tobacco-dealmaking/",
+          "source": "City AM"
+        },
+        {
+          "id": "2026-11-28-s9a7606e0",
+          "story_id": "s9a7606e0",
+          "topic": "geopolitics",
+          "question": "Given that the Abu Dhabi talks produced no breakthrough, what follows from the row over Kushner's remarks?",
+          "options": [
+            "Chances of an early settlement have dimmed",
+            "Kushner is likely to be removed immediately",
+            "Russia is likely to agree a ceasefire soon",
+            "Europe is likely to cut funding for Ukraine"
+          ],
+          "answer": 0,
+          "explanation": "Open friction between Washington and Kyiv makes a near-term peace deal less likely.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "‘An advocate for Russia’: Kushner’s Putin comments spark outrage in Europe",
+          "url": "https://www.politico.eu/article/an-advocate-for-russia-jared-kushner-vladimir-putin-comments-spark-outrage-europe/",
+          "source": "Politico Europe"
+        },
+        {
+          "id": "2026-11-28-s6d5e1aa6",
+          "story_id": "s6d5e1aa6",
+          "topic": "geopolitics",
+          "question": "Why does Beijing care about the result of Taiwan's local election?",
+          "options": [
+            "It could shift the tone of ties with China",
+            "It sets Taiwan's semiconductor export quotas",
+            "It decides whether Taiwan holds a referendum",
+            "It determines the size of US arms sales"
+          ],
+          "answer": 0,
+          "explanation": "Beijing watches Taiwan's politics closely because results may shape the tone of cross-strait relations.",
+          "concept": {
+            "id": "flashpoints",
+            "label": "Key flashpoints"
+          },
+          "headline": "Taiwan awaits local election results as China watches",
+          "url": "https://www.france24.com/en/taiwan-awaits-local-election-results-as-china-watches",
+          "source": "France 24"
+        },
+        {
+          "id": "2026-11-28-s15e872c3",
+          "story_id": "s15e872c3",
+          "topic": "top_headlines",
+          "question": "What reason did the Israeli military give for the strike on the clinic?",
+          "options": [
+            "It was targeting Hamas militants",
+            "It denied carrying out the strike",
+            "It was hitting a suspected weapons depot",
+            "It was answering rocket fire from the clinic"
+          ],
+          "answer": 0,
+          "explanation": "The military said it was targeting Hamas terrorists.",
+          "concept": null,
+          "headline": "Two staff killed in Israeli strike on Gaza medical clinic, MSF says",
+          "url": "https://www.bbc.co.uk/news/articles/cm5y10yydln3o",
+          "source": "BBC top stories"
+        },
+        {
+          "id": "2026-11-28-sf6bede13",
+          "story_id": "sf6bede13",
+          "topic": "top_headlines",
+          "question": "What prompted Sánchez to call the early election?",
+          "options": [
+            "Opponents defeated his emergency housing legislation",
+            "Vox won regional elections in October",
+            "A coalition partner quit over budget disputes",
+            "He lost a confidence vote over corruption"
+          ],
+          "answer": 0,
+          "explanation": "He called the vote after rightwing and far-right parties voted down his housing emergency legislation.",
+          "concept": null,
+          "headline": "Spain to vote in election that could put far right in power for first time since Franco",
+          "url": "https://www.theguardian.com/world/2026/nov/28/spain-vote-election-could-far-right-power-first-time-franco",
+          "source": "Guardian world"
+        },
+        {
+          "id": "2026-11-28-idea",
+          "story_id": "idea",
+          "topic": "macro_markets",
+          "question": "What must happen for the event-driven trade on Imperial Brands to pay off?",
+          "options": [
+            "Altria sells its stake to Japan Tobacco",
+            "Imperial's market value falls below £26bn",
+            "Imperial confirms talks and rejects any proposal",
+            "A firm cash bid arrives that beats the share price"
+          ],
+          "answer": 3,
+          "explanation": "The payoff depends on a firm cash offer that the market views as better than the current share price.",
+          "concept": {
+            "id": "retail_instruments",
+            "label": "Instruments a UK retail investor can use (leverage, margin, tax)"
+          },
+          "headline": "Event-driven position on a possible cash takeover bid",
+          "url": "https://www.cityam.com/marlboro-man-strikes-match-on-tobacco-dealmaking/",
+          "source": "City AM"
+        }
+      ]
     }
   ]
 }
